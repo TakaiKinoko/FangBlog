@@ -9,15 +9,29 @@
         "edges": [
           {
             "node": {
-              "id": "d1d0a483-646c-56db-bae5-fd42b2f06372",
-              "excerpt": "This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about warps, why using warps from a SIMD…",
+              "id": "863e4c7d-c15f-5dc9-ada5-e86eb540e778",
+              "excerpt": "This is the fourth post in a series about what I learnt in my GPU class at NYU this past fall. Here I collected several examples that showcase how the CUDA…",
               "fields": {
-                "slug": "/cuda3-thread-divergence/",
+                "slug": "/cuda4-sync/",
                 "readingTime": { "text": "1 min read" }
               },
               "frontmatter": {
                 "date": "December 07, 2019",
-                "title": "What I Learnt About The CUDA Parallel Programming Model - 3.               \n More On Thread Divergence"
+                "title": "The CUDA Parallel Programming Model - 4.               \n Syncthreads Examples"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "d1d0a483-646c-56db-bae5-fd42b2f06372",
+              "excerpt": "This is the third post in a series about what I learnt in my GPU class at NYU this past fall. Here I dive a bit deeper than the previous post into thread…",
+              "fields": {
+                "slug": "/cuda3-thread-divergence/",
+                "readingTime": { "text": "4 min read" }
+              },
+              "frontmatter": {
+                "date": "December 07, 2019",
+                "title": "The CUDA Parallel Programming Model - 3.               \n More On Thread Divergence"
               }
             }
           },
@@ -31,7 +45,7 @@
               },
               "frontmatter": {
                 "date": "December 06, 2019",
-                "title": "What I Learnt About The CUDA Parallel Programming Model - 2. Warps"
+                "title": "The CUDA Parallel Programming Model - 2. Warps"
               }
             }
           },
@@ -45,7 +59,7 @@
               },
               "frontmatter": {
                 "date": "December 05, 2019",
-                "title": "What I Learnt About The CUDA Parallel Programming Model - 1"
+                "title": "The CUDA Parallel Programming Model - 1"
               }
             }
           }

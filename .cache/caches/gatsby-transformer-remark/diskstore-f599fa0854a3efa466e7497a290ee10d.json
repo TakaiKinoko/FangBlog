@@ -1,0 +1,52 @@
+{
+  "expireTime": 9007200830475889000,
+  "key": "transformer-remark-markdown-html-ast-9ccd7e53c94a29e9d519f6d6b617addb-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "This is the third post in a series about what I learnt in my GPU class at NYU this past fall. Here I dive a bit deeper than the previous post into thread divergence.",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 166, "offset": 166 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 166, "offset": 166 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Why Use Control Construct At All?",
+            "position": {
+              "start": { "line": 4, "column": 4, "offset": 171 },
+              "end": { "line": 4, "column": 37, "offset": 204 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 168 },
+          "end": { "line": 4, "column": 37, "offset": 204 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 4, "column": 37, "offset": 204 }
+    }
+  }
+}

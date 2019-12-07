@@ -1,5 +1,5 @@
 ---
-title: "What I Learnt About The CUDA Parallel Programming Model - 2. Warps"
+title: "The CUDA Parallel Programming Model - 2. Warps"
 date: "2019-12-06T23:12:03.284Z"
 cover: "global.jpg"
 ---

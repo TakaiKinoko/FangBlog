@@ -6,12 +6,13 @@
     "data": {
       "allSitePage": {
         "nodes": [
+          { "path": "/cuda4-sync/" },
+          { "path": "/cuda3-thread-divergence/" },
+          { "path": "/cuda2-warp/" },
+          { "path": "/cuda1/" },
           { "path": "/404/" },
           { "path": "/" },
-          { "path": "/404.html" },
-          { "path": "/cuda1/" },
-          { "path": "/cuda2-warp/" },
-          { "path": "/cuda3-thread-divergence/" }
+          { "path": "/404.html" }
         ]
       }
     },

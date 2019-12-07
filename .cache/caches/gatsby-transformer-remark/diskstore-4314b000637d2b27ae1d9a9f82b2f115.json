@@ -1,0 +1,342 @@
+{
+  "expireTime": 9007200830476272000,
+  "key": "transformer-remark-markdown-ast-9fffdebabab6846f731b600e4679ecac-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is the third post in a series about what I learnt in my GPU class at NYU this past fall. Here I dive a bit deeper than the previous post into thread divergence.",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 166, "offset": 166 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 166, "offset": 166 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Using Control Construct with Thread Divergence",
+            "position": {
+              "start": { "line": 4, "column": 4, "offset": 171 },
+              "end": { "line": 4, "column": 50, "offset": 217 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 168 },
+          "end": { "line": 4, "column": 50, "offset": 217 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A prevalent reason for using a control construct with thread divergence is ",
+            "position": {
+              "start": { "line": 5, "column": 1, "offset": 218 },
+              "end": { "line": 5, "column": 76, "offset": 293 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "handling boundary conditions",
+                "position": {
+                  "start": { "line": 5, "column": 78, "offset": 295 },
+                  "end": { "line": 5, "column": 106, "offset": 323 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 5, "column": 76, "offset": 293 },
+              "end": { "line": 5, "column": 108, "offset": 325 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " when mapping threads to data. ",
+            "position": {
+              "start": { "line": 5, "column": 108, "offset": 325 },
+              "end": { "line": 5, "column": 139, "offset": 356 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 5, "column": 1, "offset": 218 },
+          "end": { "line": 5, "column": 139, "offset": 356 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "This is usually because the ",
+                    "position": {
+                      "start": { "line": 6, "column": 3, "offset": 359 },
+                      "end": { "line": 6, "column": 31, "offset": 387 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "emphasis",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "total number of threads",
+                        "position": {
+                          "start": { "line": 6, "column": 32, "offset": 388 },
+                          "end": { "line": 6, "column": 55, "offset": 411 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 6, "column": 31, "offset": 387 },
+                      "end": { "line": 6, "column": 56, "offset": 412 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " needs to be a ",
+                    "position": {
+                      "start": { "line": 6, "column": 56, "offset": 412 },
+                      "end": { "line": 6, "column": 71, "offset": 427 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "emphasis",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "multiple of the block size",
+                        "position": {
+                          "start": { "line": 6, "column": 72, "offset": 428 },
+                          "end": { "line": 6, "column": 98, "offset": 454 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 6, "column": 71, "offset": 427 },
+                      "end": { "line": 6, "column": 99, "offset": 455 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " whereas the size of the data can be an arbitrary number. ",
+                    "position": {
+                      "start": { "line": 6, "column": 99, "offset": 455 },
+                      "end": { "line": 6, "column": 157, "offset": 513 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 6, "column": 3, "offset": 359 },
+                  "end": { "line": 6, "column": 157, "offset": 513 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 357 },
+              "end": { "line": 6, "column": 157, "offset": 513 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 357 },
+          "end": { "line": 6, "column": 157, "offset": 513 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "example with a vector addition kernel",
+            "position": {
+              "start": { "line": 8, "column": 6, "offset": 520 },
+              "end": { "line": 8, "column": 43, "offset": 557 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 515 },
+          "end": { "line": 8, "column": 43, "offset": 557 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A vector addition kernel:",
+            "position": {
+              "start": { "line": 9, "column": 1, "offset": 558 },
+              "end": { "line": 9, "column": 26, "offset": 583 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 9, "column": 1, "offset": 558 },
+          "end": { "line": 9, "column": 26, "offset": 583 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": null,
+        "value": "<div class=\"gatsby-highlight\" data-language=\"text\"><pre class=\"language-text\"><code class=\"language-text\"></code></pre></div>",
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 584 },
+          "end": { "line": 13, "column": 4, "offset": 593 },
+          "indent": [1, 1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": " we had an if ",
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 594 },
+              "end": { "line": 14, "column": 15, "offset": 608 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">(i&lt;n)</code>",
+            "position": {
+              "start": { "line": 14, "column": 15, "offset": 608 },
+              "end": { "line": 14, "column": 26, "offset": 619 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " statement in addVecKernel. This is because not all vector lengths can be expressed as multiples of the block size. For example, assume that the vector length is 1003. Assume that we picked 64 as block size. One would need to launch 16 thread blocks to process all the 1003 vector elements. However, the 16 thread blocks would have 1024 threads. We need to disable the last 21 threads in thread block 15 from doing work not expected/allowed by the original program. Keep in mind that these 16 blocks are partitioned into 32 warps. Only the last warp will have control divergence.",
+            "position": {
+              "start": { "line": 14, "column": 26, "offset": 619 },
+              "end": { "line": 14, "column": 605, "offset": 1198 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 594 },
+          "end": { "line": 14, "column": 605, "offset": 1198 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Note that the performance impact of control divergence decreases with the size of the vectors being processed. For a vector length of 100, one of the four warps will have control divergence, which can have significant impact on performance. For a vector size of 1000, only one out of the 32 warps will have control divergence. That is, control divergence will affect only about 3% of the execution time. Even if it doubles the execution time of the warp, the net impact to the total execution time will be about 3%. Obviously, if the vector length is 10,000 or more, only one of the 313 warps will have control divergence. The impact of control divergence will be much less than 1%!",
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 1200 },
+              "end": { "line": 16, "column": 683, "offset": 1882 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 16, "column": 1, "offset": 1200 },
+          "end": { "line": 16, "column": 683, "offset": 1882 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For two-dimensional data, such as the color-to-greyscale conversion example, if-statements are also used to handle the boundary conditions for threads that operate at the edge of the data. In Fig. 3.2, to process the 76×62 picture, we used 20 =5*4 two-dimensional blocks that consist of 16×16 threads each. Each block will be partitioned into 8 warps, each one consists of two rows of a block. There are a total 160 warps (8 warps per block) involved.",
+            "position": {
+              "start": { "line": 18, "column": 1, "offset": 1884 },
+              "end": { "line": 18, "column": 452, "offset": 2335 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 18, "column": 1, "offset": 1884 },
+          "end": { "line": 18, "column": 452, "offset": 2335 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To analyze the impact of control divergence, refer to Fig. 3.5. None of the warps in the 12 blocks in region 1 will have control divergence. There are 12*8 =96 warps in region 1. For region 2, all the 24 warps will have control divergence. For region 3, note that all the bottom warps are mapped to data that are completely outside the picture. As a result, none of them will pass the if-condition. The reader should verify that these warps would have had control divergence if the picture had an odd number of pixels in the vertical dimension. Since they all follow the same control flow path, none of these 32 warps will have control divergence! In region 4, the first seven warps will have control divergence but the last warp will not. All in all, 31 out of the 160 warps will have control divergence.",
+            "position": {
+              "start": { "line": 20, "column": 1, "offset": 2337 },
+              "end": { "line": 20, "column": 806, "offset": 3142 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 20, "column": 1, "offset": 2337 },
+          "end": { "line": 20, "column": 806, "offset": 3142 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 20, "column": 806, "offset": 3142 }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830475889000,
+  "key": "transformer-remark-markdown-html-9ccd7e53c94a29e9d519f6d6b617addb-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<p>This is the third post in a series about what I learnt in my GPU class at NYU this past fall. Here I dive a bit deeper than the previous post into thread divergence.</p>\n<h2>Why Use Control Construct At All?</h2>"
+}
