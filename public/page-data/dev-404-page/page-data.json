@@ -6,9 +6,6 @@
     "data": {
       "allSitePage": {
         "nodes": [
-          { "path": "/text-headings/" },
-          { "path": "/here-another/" },
-          { "path": "/hello-world/" },
           { "path": "/404/" },
           { "path": "/" },
           { "path": "/404.html" },

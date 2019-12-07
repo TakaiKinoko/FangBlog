@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830434290000,
+  "key": "transformer-remark-markdown-html-5e5204a006498fae0f2a84ed29384998-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<p>This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about <strong>warps and SIMD hardward</strong>.</p>"
+}

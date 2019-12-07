@@ -1,0 +1,240 @@
+{
+  "expireTime": 9007200830434651000,
+  "key": "transformer-remark-markdown-ast-583234af828d84cbbdfd7a40db3560ce-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 122, "offset": 122 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "warps and SIMD hardward",
+                "position": {
+                  "start": { "line": 2, "column": 124, "offset": 124 },
+                  "end": { "line": 2, "column": 147, "offset": 147 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 122, "offset": 122 },
+              "end": { "line": 2, "column": 149, "offset": 149 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": { "line": 2, "column": 149, "offset": 149 },
+              "end": { "line": 2, "column": 150, "offset": 150 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 150, "offset": 150 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Kernel Threads Hierarchy",
+            "position": {
+              "start": { "line": 4, "column": 4, "offset": 155 },
+              "end": { "line": 4, "column": 28, "offset": 179 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 152 },
+          "end": { "line": 4, "column": 28, "offset": 179 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Recall that launching a CUDA kernel will generate a grid of threads organized as a ",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 181 },
+              "end": { "line": 6, "column": 84, "offset": 264 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "two-level",
+                "position": {
+                  "start": { "line": 6, "column": 86, "offset": 266 },
+                  "end": { "line": 6, "column": 95, "offset": 275 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 84, "offset": 264 },
+              "end": { "line": 6, "column": 97, "offset": 277 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " hierarchy. ",
+            "position": {
+              "start": { "line": 6, "column": 97, "offset": 277 },
+              "end": { "line": 6, "column": 109, "offset": 289 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 181 },
+          "end": { "line": 6, "column": 109, "offset": 289 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "loose": true,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "top level: a 1/2/3-dimensional array of blocks.",
+                    "position": {
+                      "start": { "line": 8, "column": 4, "offset": 294 },
+                      "end": { "line": 8, "column": 51, "offset": 341 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 8, "column": 4, "offset": 294 },
+                  "end": { "line": 8, "column": 51, "offset": 341 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 291 },
+              "end": { "line": 9, "column": 1, "offset": 342 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "bottom level: each block consists of a 1/2/3-dimensional array of threads.",
+                    "position": {
+                      "start": { "line": 10, "column": 4, "offset": 346 },
+                      "end": { "line": 10, "column": 78, "offset": 420 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 10, "column": 4, "offset": 346 },
+                  "end": { "line": 10, "column": 78, "offset": 420 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 343 },
+              "end": { "line": 10, "column": 78, "offset": 420 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 291 },
+          "end": { "line": 10, "column": 78, "offset": 420 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Conceptually, threads in a block can execute in any order, just like blocks.",
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 422 },
+              "end": { "line": 12, "column": 77, "offset": 498 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 422 },
+          "end": { "line": 12, "column": 77, "offset": 498 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When an algorithm needs to ",
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 500 },
+              "end": { "line": 14, "column": 28, "offset": 527 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 500 },
+          "end": { "line": 14, "column": 28, "offset": 527 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 14, "column": 28, "offset": 527 }
+    }
+  }
+}

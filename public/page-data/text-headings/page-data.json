@@ -21,10 +21,7 @@
     "pageContext": {
       "isCreatedByStatefulCreatePages": false,
       "slug": "/text-headings/",
-      "previous": {
-        "fields": { "slug": "/here-another/" },
-        "frontmatter": { "title": "Images and Embeds" }
-      },
+      "previous": null,
       "next": {
         "fields": { "slug": "/cuda1/" },
         "frontmatter": {

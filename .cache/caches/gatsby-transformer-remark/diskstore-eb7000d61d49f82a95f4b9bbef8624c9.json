@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830434374000,
+  "key": "transformer-remark-markdown-html-9fef7c0ee9734113aa8376af4958909a-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<p>This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about <strong>warps and SIMD hardward</strong>.</p>\n<h2>Kernel Threads Hierarchy</h2>\n<p>Recall that launching a CUDA kernel will generate a grid of threads </p>"
+}
