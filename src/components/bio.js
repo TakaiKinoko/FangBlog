@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
+import React from "react";
+import styled from "styled-components";
+import { StaticQuery, graphql } from "gatsby";
 
-import media from '../utils/media';
-import Github from '../images/social/github.svg';
-import Hat from '../images/social/hat.svg';
-import LinkedIn from '../images/social/linkedin.svg'
-import Beanie from '../images/beanie-icon.png'
+import media from "../utils/media";
+import Github from "../images/social/github.svg";
+import Hat from "../images/social/hat.svg";
+import LinkedIn from "../images/social/linkedin.svg";
+import Beanie from "../images/beanie-icon.png";
 
 const Container = styled.div`
   display: flex;
@@ -40,7 +40,7 @@ const Name = styled.h3`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  font-family: 'system';
+  font-family: "system";
 `;
 
 const TagLine = styled.sub`
@@ -74,12 +74,16 @@ const BeanieIcon = styled.img`
   padding: 1.5rem 1rem;
 `;
 
-
 const Bio = () => (
   <StaticQuery
     query={bioQuery}
     render={data => {
-      const { author, authorTagline1, authorTagline2, social } = data.site.siteMetadata;
+      const {
+        author,
+        authorTagline1,
+        authorTagline2,
+        social
+      } = data.site.siteMetadata;
       return (
         <Container>
           <TextContainer>
@@ -87,7 +91,7 @@ const Bio = () => (
             <TagLine>{authorTagline1}</TagLine>
             <TagLine>{authorTagline2}</TagLine>
             <a
-              href={`https://github.com/${social.Github}`}
+              href={`https://github.com/${social.github}`}
               target="_blank"
               rel="noopener noreferrer"
             >
