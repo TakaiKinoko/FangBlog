@@ -117,3 +117,7 @@ Use `thread(0,0)` in `block(0,0)` as an example.
   - `Row * Width + k = 0*4+1 = 1`
   - `k * Width + Col = 1*4+0 = 4`
   - We are accessing `M[1]` and `N[4]`, which are the 1D equivalent of `M(0,1)` and `N(1,0)`
+
+## Tiled Kernel
+
+To see how to use tiling (corner turning) technique to overcome the fact that row-wise access of matrix M cannot be coalesced, see _Corner Turning_ section in [The CUDA Parallel Programming Model - 5.Memory Coalescing](./cuda5-coalesce).

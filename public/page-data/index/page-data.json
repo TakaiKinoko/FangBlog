@@ -41,7 +41,7 @@
               "excerpt": "This post talks about a key factor to CUDA kernel performace: accessing data in the globle memory. CUDA applications tend to process a massive amount of data…",
               "fields": {
                 "slug": "/cuda5-coalesce/",
-                "readingTime": { "text": "4 min read" }
+                "readingTime": { "text": "9 min read" }
               },
               "frontmatter": {
                 "date": "December 07, 2019",
