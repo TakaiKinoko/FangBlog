@@ -26,9 +26,9 @@
         "frontmatter": { "title": "Images and Embeds" }
       },
       "next": {
-        "fields": { "slug": "/cuda/" },
+        "fields": { "slug": "/cuda1/" },
         "frontmatter": {
-          "title": "What I Learnt About The CUDA Parallel Programming Model"
+          "title": "What I Learnt About The CUDA Parallel Programming Model - 1"
         }
       }
     }

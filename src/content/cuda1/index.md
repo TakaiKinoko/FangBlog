@@ -1,7 +1,10 @@
 ---
-title: "What I Learnt About The CUDA Parallel Programming Model"
-date: "2019-12-06T22:12:03.284Z"
+title: "What I Learnt About The CUDA Parallel Programming Model - 1"
+date: "2019-12-06T20:12:03.284Z"
+cover: "global.jpg"
 ---
+
+I took the [_Graphics Processing Units_](https://cs.nyu.edu/courses/fall19/CSCI-GA.3033-004/) course at NYU this past fall. This is the first post in a series about what I learnt. Buckle up for lots of technical details!
 
 ## TABLE OF CONTENTS
 
@@ -110,4 +113,38 @@ CPU and GPU has **separate memory spaces** => data must be moved from CPU to GPU
 
 ### global memory
 
-- accessible to all threads as well as the host (CPU)
+1. accessible to all threads as well as the host (CPU)
+
+1. **host** allocate and deallocate the global memory
+
+1. data is first initialized here for the GPU to work on
+
+![global](./global.png)
+
+### shared memory
+
+1. each thread block has its own
+
+1. much faster than local or global memory
+
+1. requires special handling to get max performance
+
+1. only exists for the lifetime of the block
+
+![global](./shared.png)
+
+### local memory
+
+1. only exists for the lifetime of the thread
+
+1. generally handled automatically by the **compiler**
+
+![global](./local.png)
+
+### constant and texture memory
+
+read-only, accessible by all threads
+
+- constant memory: used to cache values that are shared by all functional units
+
+- texture memory is optimized for texturing operations provided by the hardware
