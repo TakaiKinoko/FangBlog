@@ -1,0 +1,804 @@
+{
+  "expireTime": 9007200830431214000,
+  "key": "transformer-remark-markdown-html-ast-655bdf41367db72e8bc1a959e4fc398d-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Probably because you are using it wrong.",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 41, "offset": 41 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 41, "offset": 41 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "If you browse Stackoverflow for React questions, this is one of the most common questions that you will find. Well, it is this or other versions of the same question. All this after Stackoverflow marks questions as duplicates.",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 43 },
+              "end": { "line": 4, "column": 227, "offset": 269 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 43 },
+          "end": { "line": 4, "column": 227, "offset": 269 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"js\"><pre class=\"language-js\"><code class=\"language-js\"><span class=\"token keyword\">function</span> <span class=\"token function\">handleChange</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n    value<span class=\"token punctuation\">:</span> newValue<span class=\"token punctuation\">,</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>value<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span> <span class=\"token comment\">//Why is my state not updated?</span>\n<span class=\"token punctuation\">}</span></code></pre></div>",
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 271 },
+          "end": { "line": 13, "column": 4, "offset": 422 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Why is your state not getting updated?",
+            "position": {
+              "start": { "line": 15, "column": 1, "offset": 424 },
+              "end": { "line": 15, "column": 39, "offset": 462 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 15, "column": 1, "offset": 424 },
+          "end": { "line": 15, "column": 39, "offset": 462 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Straight out of ",
+            "position": {
+              "start": { "line": 17, "column": 1, "offset": 464 },
+              "end": { "line": 17, "column": 17, "offset": 480 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "a",
+            "properties": {
+              "href": "https://reactjs.org/docs/state-and-lifecycle.html#state-updates-may-be-asynchronous"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "React docs",
+                "position": {
+                  "start": { "line": 17, "column": 18, "offset": 481 },
+                  "end": { "line": 17, "column": 28, "offset": 491 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 17, "column": 17, "offset": 480 },
+              "end": { "line": 17, "column": 114, "offset": 577 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": { "line": 17, "column": 114, "offset": 577 },
+              "end": { "line": 17, "column": 116, "offset": 579 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">setState</code>",
+            "position": {
+              "start": { "line": 17, "column": 116, "offset": 579 },
+              "end": { "line": 17, "column": 126, "offset": 589 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " may be asynchronous. What does that mean?",
+            "position": {
+              "start": { "line": 17, "column": 126, "offset": 589 },
+              "end": { "line": 17, "column": 168, "offset": 631 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 17, "column": 1, "offset": 464 },
+          "end": { "line": 17, "column": 168, "offset": 631 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Let’s find out.",
+            "position": {
+              "start": { "line": 19, "column": 1, "offset": 633 },
+              "end": { "line": 19, "column": 16, "offset": 648 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 19, "column": 1, "offset": 633 },
+          "end": { "line": 19, "column": 16, "offset": 648 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"js\"><pre class=\"language-js\"><code class=\"language-js\"><span class=\"token function\">setTimeout</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'foo'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token number\">0</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\nconsole<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'bar'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span></code></pre></div>",
+        "position": {
+          "start": { "line": 21, "column": 1, "offset": 650 },
+          "end": { "line": 24, "column": 4, "offset": 720 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "What is the output?",
+            "position": {
+              "start": { "line": 26, "column": 1, "offset": 722 },
+              "end": { "line": 26, "column": 20, "offset": 741 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 26, "column": 1, "offset": 722 },
+          "end": { "line": 26, "column": 20, "offset": 741 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "First the second ",
+            "position": {
+              "start": { "line": 28, "column": 1, "offset": 743 },
+              "end": { "line": 28, "column": 18, "offset": 760 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">console.log</code>",
+            "position": {
+              "start": { "line": 28, "column": 18, "offset": 760 },
+              "end": { "line": 28, "column": 31, "offset": 773 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " fires and then the first one inside the ",
+            "position": {
+              "start": { "line": 28, "column": 31, "offset": 773 },
+              "end": { "line": 28, "column": 72, "offset": 814 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">setTimeout</code>",
+            "position": {
+              "start": { "line": 28, "column": 72, "offset": 814 },
+              "end": { "line": 28, "column": 84, "offset": 826 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " function. This happens because ",
+            "position": {
+              "start": { "line": 28, "column": 84, "offset": 826 },
+              "end": { "line": 28, "column": 116, "offset": 858 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">setTimeout</code>",
+            "position": {
+              "start": { "line": 28, "column": 116, "offset": 858 },
+              "end": { "line": 28, "column": 128, "offset": 870 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is asynchronous and is moved to the browser thread. So the code that runs after ",
+            "position": {
+              "start": { "line": 28, "column": 128, "offset": 870 },
+              "end": { "line": 28, "column": 209, "offset": 951 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">setTimeout</code>",
+            "position": {
+              "start": { "line": 28, "column": 209, "offset": 951 },
+              "end": { "line": 28, "column": 221, "offset": 963 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " gets executed however small the timeout is.",
+            "position": {
+              "start": { "line": 28, "column": 221, "offset": 963 },
+              "end": { "line": 28, "column": 265, "offset": 1007 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 28, "column": 1, "offset": 743 },
+          "end": { "line": 28, "column": 265, "offset": 1007 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Same is the case with ",
+            "position": {
+              "start": { "line": 30, "column": 1, "offset": 1009 },
+              "end": { "line": 30, "column": 23, "offset": 1031 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">setState</code>",
+            "position": {
+              "start": { "line": 30, "column": 23, "offset": 1031 },
+              "end": { "line": 30, "column": 33, "offset": 1041 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " Because of it’s asynchronous state, the statement after is being called before the actual ",
+            "position": {
+              "start": { "line": 30, "column": 33, "offset": 1041 },
+              "end": { "line": 30, "column": 124, "offset": 1132 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">setState</code>",
+            "position": {
+              "start": { "line": 30, "column": 124, "offset": 1132 },
+              "end": { "line": 30, "column": 134, "offset": 1142 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " function.",
+            "position": {
+              "start": { "line": 30, "column": 134, "offset": 1142 },
+              "end": { "line": 30, "column": 144, "offset": 1152 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 30, "column": 1, "offset": 1009 },
+          "end": { "line": 30, "column": 144, "offset": 1152 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "hr",
+        "properties": {},
+        "children": [],
+        "position": {
+          "start": { "line": 32, "column": 1, "offset": 1154 },
+          "end": { "line": 32, "column": 4, "offset": 1157 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "How do we fix this?",
+            "position": {
+              "start": { "line": 34, "column": 5, "offset": 1163 },
+              "end": { "line": 34, "column": 24, "offset": 1182 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 34, "column": 1, "offset": 1159 },
+          "end": { "line": 34, "column": 24, "offset": 1182 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"js\"><pre class=\"language-js\"><code class=\"language-js\"><span class=\"token keyword\">function</span> <span class=\"token function\">handleChange</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>\n    <span class=\"token punctuation\">{</span>\n      value<span class=\"token punctuation\">:</span> newValue<span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> <span class=\"token punctuation\">{</span>\n      console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>value<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span></code></pre></div>",
+        "position": {
+          "start": { "line": 36, "column": 1, "offset": 1184 },
+          "end": { "line": 47, "column": 4, "offset": 1339 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">setState</code>",
+            "position": {
+              "start": { "line": 49, "column": 1, "offset": 1341 },
+              "end": { "line": 49, "column": 11, "offset": 1351 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " actually comes with a callback version. All you have to do is provide the function to be run after the ",
+            "position": {
+              "start": { "line": 49, "column": 11, "offset": 1351 },
+              "end": { "line": 49, "column": 115, "offset": 1455 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">setState</code>",
+            "position": {
+              "start": { "line": 49, "column": 115, "offset": 1455 },
+              "end": { "line": 49, "column": 125, "offset": 1465 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is executed. Here, you can give whatever action you wanted to perform once the setState is done.",
+            "position": {
+              "start": { "line": 49, "column": 125, "offset": 1465 },
+              "end": { "line": 49, "column": 222, "offset": 1562 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 49, "column": 1, "offset": 1341 },
+          "end": { "line": 49, "column": 222, "offset": 1562 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Since you might already have the result you are going to ",
+            "position": {
+              "start": { "line": 51, "column": 1, "offset": 1564 },
+              "end": { "line": 51, "column": 58, "offset": 1621 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">setState</code>",
+            "position": {
+              "start": { "line": 51, "column": 58, "offset": 1621 },
+              "end": { "line": 51, "column": 68, "offset": 1631 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " with, it might be better to utilise that result for regular operations rather than using the callback.",
+            "position": {
+              "start": { "line": 51, "column": 68, "offset": 1631 },
+              "end": { "line": 51, "column": 171, "offset": 1734 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 51, "column": 1, "offset": 1564 },
+          "end": { "line": 51, "column": 171, "offset": 1734 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "PS: You could also just use ",
+            "position": {
+              "start": { "line": 53, "column": 1, "offset": 1736 },
+              "end": { "line": 53, "column": 29, "offset": 1764 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">console.log(this.state.value)</code>",
+            "position": {
+              "start": { "line": 53, "column": 29, "offset": 1764 },
+              "end": { "line": 53, "column": 60, "offset": 1795 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " in ",
+            "position": {
+              "start": { "line": 53, "column": 60, "offset": 1795 },
+              "end": { "line": 53, "column": 64, "offset": 1799 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">render()</code>",
+            "position": {
+              "start": { "line": 53, "column": 64, "offset": 1799 },
+              "end": { "line": 53, "column": 74, "offset": 1809 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " function or ",
+            "position": {
+              "start": { "line": 53, "column": 74, "offset": 1809 },
+              "end": { "line": 53, "column": 87, "offset": 1822 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">componentDidUpdate()</code>",
+            "position": {
+              "start": { "line": 53, "column": 87, "offset": 1822 },
+              "end": { "line": 53, "column": 109, "offset": 1844 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " but I’m guessing you already knew that.",
+            "position": {
+              "start": { "line": 53, "column": 109, "offset": 1844 },
+              "end": { "line": 53, "column": 149, "offset": 1884 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 53, "column": 1, "offset": 1736 },
+          "end": { "line": 53, "column": 149, "offset": 1884 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Why is it asynchronous?",
+            "position": {
+              "start": { "line": 55, "column": 5, "offset": 1890 },
+              "end": { "line": 55, "column": 28, "offset": 1913 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 55, "column": 1, "offset": 1886 },
+          "end": { "line": 55, "column": 28, "offset": 1913 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Now that you know how to fix it, you can leave.",
+            "position": {
+              "start": { "line": 57, "column": 1, "offset": 1915 },
+              "end": { "line": 57, "column": 48, "offset": 1962 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 57, "column": 1, "offset": 1915 },
+          "end": { "line": 57, "column": 48, "offset": 1962 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Or you can stay and figure out why is it made asynchronous. ",
+            "position": {
+              "start": { "line": 59, "column": 1, "offset": 1964 },
+              "end": { "line": 59, "column": 61, "offset": 2024 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "em",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Doesn’t it make React slower?",
+                "position": {
+                  "start": { "line": 59, "column": 62, "offset": 2025 },
+                  "end": { "line": 59, "column": 91, "offset": 2054 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 59, "column": 61, "offset": 2024 },
+              "end": { "line": 59, "column": 92, "offset": 2055 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 59, "column": 1, "offset": 1964 },
+          "end": { "line": 59, "column": 92, "offset": 2055 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "From the docs:",
+            "position": {
+              "start": { "line": 61, "column": 1, "offset": 2057 },
+              "end": { "line": 61, "column": 15, "offset": 2071 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 61, "column": 1, "offset": 2057 },
+          "end": { "line": 61, "column": 15, "offset": 2071 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "blockquote",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "React may batch multiple ",
+                "position": {
+                  "start": { "line": 63, "column": 3, "offset": 2075 },
+                  "end": { "line": 63, "column": 28, "offset": 2100 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">setState()</code>",
+                "position": {
+                  "start": { "line": 63, "column": 28, "offset": 2100 },
+                  "end": { "line": 63, "column": 40, "offset": 2112 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " calls into a single update for performance.",
+                "position": {
+                  "start": { "line": 63, "column": 40, "offset": 2112 },
+                  "end": { "line": 63, "column": 84, "offset": 2156 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 63, "column": 3, "offset": 2075 },
+              "end": { "line": 63, "column": 84, "offset": 2156 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 63, "column": 1, "offset": 2073 },
+          "end": { "line": 63, "column": 84, "offset": 2156 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "blockquote",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Because ",
+                "position": {
+                  "start": { "line": 65, "column": 3, "offset": 2160 },
+                  "end": { "line": 65, "column": 11, "offset": 2168 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">this.props</code>",
+                "position": {
+                  "start": { "line": 65, "column": 11, "offset": 2168 },
+                  "end": { "line": 65, "column": 23, "offset": 2180 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " and ",
+                "position": {
+                  "start": { "line": 65, "column": 23, "offset": 2180 },
+                  "end": { "line": 65, "column": 28, "offset": 2185 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">this.state</code>",
+                "position": {
+                  "start": { "line": 65, "column": 28, "offset": 2185 },
+                  "end": { "line": 65, "column": 40, "offset": 2197 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " may be updated asynchronously, you should not rely on their values for calculating the next state.",
+                "position": {
+                  "start": { "line": 65, "column": 40, "offset": 2197 },
+                  "end": { "line": 65, "column": 139, "offset": 2296 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 65, "column": 3, "offset": 2160 },
+              "end": { "line": 65, "column": 139, "offset": 2296 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 65, "column": 1, "offset": 2158 },
+          "end": { "line": 65, "column": 139, "offset": 2296 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Yes, that is just it. React it doing this for performance. You might not feel the need for it in a small application. But in a larger application where a lot of state updates may be taking place simultaneously, batching state updates comes as a boon.",
+            "position": {
+              "start": { "line": 67, "column": 1, "offset": 2298 },
+              "end": { "line": 67, "column": 251, "offset": 2548 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 67, "column": 1, "offset": 2298 },
+          "end": { "line": 67, "column": 251, "offset": 2548 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": { "line": 69, "column": 1, "offset": 2550 },
+              "end": { "line": 69, "column": 5, "offset": 2554 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">setState</code>",
+            "position": {
+              "start": { "line": 69, "column": 5, "offset": 2554 },
+              "end": { "line": 69, "column": 15, "offset": 2564 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " comes with several other neat tricks as well, with ",
+            "position": {
+              "start": { "line": 69, "column": 15, "offset": 2564 },
+              "end": { "line": 69, "column": 67, "offset": 2616 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">prevState</code>",
+            "position": {
+              "start": { "line": 69, "column": 67, "offset": 2616 },
+              "end": { "line": 69, "column": 78, "offset": 2627 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " which you should definitely check out if you are new to React or may be just haven’t heard of it.",
+            "position": {
+              "start": { "line": 69, "column": 78, "offset": 2627 },
+              "end": { "line": 69, "column": 176, "offset": 2725 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 69, "column": 1, "offset": 2550 },
+          "end": { "line": 69, "column": 176, "offset": 2725 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 70, "column": 1, "offset": 2726 }
+    }
+  }
+}

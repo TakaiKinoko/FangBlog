@@ -5,12 +5,10 @@
   </a>
 </p>
 <h1 align="center">
-  Minimalist Blog Starter
+  Minimalist Blog 
 </h1>
 
 This project with `styled-components` shows off a minimalist blog layout.
-
-![Blog Screenshot](docs/blog.png)
 
 **[See Live Demo](https://vigilant-leakey-a4f8cd.netlify.com/)**
 
