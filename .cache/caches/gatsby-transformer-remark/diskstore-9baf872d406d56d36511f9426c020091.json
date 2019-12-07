@@ -1,0 +1,276 @@
+{
+  "expireTime": 9007200830485900000,
+  "key": "transformer-remark-markdown-html-ast-5d643d733c333bf7f8d79da3930f2510-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Notation",
+            "position": {
+              "start": { "line": 2, "column": 4, "offset": 4 },
+              "end": { "line": 2, "column": 12, "offset": 12 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 12, "offset": 12 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Matrix ",
+                "position": {
+                  "start": { "line": 3, "column": 3, "offset": 15 },
+                  "end": { "line": 3, "column": 10, "offset": 22 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">M</code>",
+                "position": {
+                  "start": { "line": 3, "column": 10, "offset": 22 },
+                  "end": { "line": 3, "column": 17, "offset": 29 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 3, "column": 1, "offset": 13 },
+              "end": { "line": 3, "column": 17, "offset": 29 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Matrix ",
+                "position": {
+                  "start": { "line": 4, "column": 3, "offset": 32 },
+                  "end": { "line": 4, "column": 10, "offset": 39 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">N</code>",
+                "position": {
+                  "start": { "line": 4, "column": 10, "offset": 39 },
+                  "end": { "line": 4, "column": 17, "offset": 46 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 30 },
+              "end": { "line": 4, "column": 17, "offset": 46 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Output Matrix ",
+                "position": {
+                  "start": { "line": 5, "column": 3, "offset": 49 },
+                  "end": { "line": 5, "column": 17, "offset": 63 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">P</code>",
+                "position": {
+                  "start": { "line": 5, "column": 17, "offset": 63 },
+                  "end": { "line": 5, "column": 24, "offset": 70 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 5, "column": 1, "offset": 47 },
+              "end": { "line": 5, "column": 24, "offset": 70 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "row counter: ",
+                "position": {
+                  "start": { "line": 6, "column": 3, "offset": 73 },
+                  "end": { "line": 6, "column": 16, "offset": 86 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">i</code>",
+                "position": {
+                  "start": { "line": 6, "column": 16, "offset": 86 },
+                  "end": { "line": 6, "column": 23, "offset": 93 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 71 },
+              "end": { "line": 6, "column": 23, "offset": 93 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "column counter: ",
+                "position": {
+                  "start": { "line": 7, "column": 3, "offset": 96 },
+                  "end": { "line": 7, "column": 19, "offset": 112 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">j</code>",
+                "position": {
+                  "start": { "line": 7, "column": 19, "offset": 112 },
+                  "end": { "line": 7, "column": 26, "offset": 119 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 7, "column": 1, "offset": 94 },
+              "end": { "line": 7, "column": 26, "offset": 119 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">P(i, j)</code>",
+                "position": {
+                  "start": { "line": 8, "column": 3, "offset": 122 },
+                  "end": { "line": 8, "column": 16, "offset": 135 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " is the element at ",
+                "position": {
+                  "start": { "line": 8, "column": 16, "offset": 135 },
+                  "end": { "line": 8, "column": 35, "offset": 154 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">Row-th</code>",
+                "position": {
+                  "start": { "line": 8, "column": 35, "offset": 154 },
+                  "end": { "line": 8, "column": 47, "offset": 166 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " position in the vertical direction and ",
+                "position": {
+                  "start": { "line": 8, "column": 47, "offset": 166 },
+                  "end": { "line": 8, "column": 87, "offset": 206 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">Col-th</code>",
+                "position": {
+                  "start": { "line": 8, "column": 87, "offset": 206 },
+                  "end": { "line": 8, "column": 99, "offset": 218 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " position in the horizontal direction",
+                "position": {
+                  "start": { "line": 8, "column": 99, "offset": 218 },
+                  "end": { "line": 8, "column": 136, "offset": 255 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 120 },
+              "end": { "line": 8, "column": 136, "offset": 255 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 3, "column": 1, "offset": 13 },
+          "end": { "line": 8, "column": 136, "offset": 255 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "As shown in Fig. 4.2, PRow,Col (the small square in P) is the inner product of the vector formed from the Rowth row of M (shown as a horizontal strip in M) and the vector formed from the Colth column of N (shown as a vertical strip in N). ",
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 257 },
+              "end": { "line": 10, "column": 240, "offset": 496 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 257 },
+          "end": { "line": 10, "column": 240, "offset": 496 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 498 },
+          "end": { "line": 12, "column": 4, "offset": 501 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 13, "column": 1, "offset": 502 }
+    }
+  }
+}

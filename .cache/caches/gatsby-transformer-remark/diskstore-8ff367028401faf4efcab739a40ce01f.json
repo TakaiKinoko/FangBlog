@@ -1,0 +1,12 @@
+{
+  "expireTime": 9007200830485469000,
+  "key": "transformer-remark-markdown-ast-0ed2aa7fda34fd811585f4ed638f345d-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 4, "column": 1, "offset": 3 }
+    }
+  }
+}

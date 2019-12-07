@@ -1,0 +1,2144 @@
+{
+  "expireTime": 9007200830488086000,
+  "key": "transformer-remark-markdown-ast-c7c33b7ea6fa3995ef8b6181a180c222-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Notation",
+            "position": {
+              "start": { "line": 2, "column": 4, "offset": 4 },
+              "end": { "line": 2, "column": 12, "offset": 12 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 12, "offset": 12 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Matrix ",
+                    "position": {
+                      "start": { "line": 3, "column": 3, "offset": 15 },
+                      "end": { "line": 3, "column": 10, "offset": 22 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">M</code>",
+                    "position": {
+                      "start": { "line": 3, "column": 10, "offset": 22 },
+                      "end": { "line": 3, "column": 17, "offset": 29 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 3, "column": 3, "offset": 15 },
+                  "end": { "line": 3, "column": 17, "offset": 29 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 3, "column": 1, "offset": 13 },
+              "end": { "line": 3, "column": 17, "offset": 29 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Matrix ",
+                    "position": {
+                      "start": { "line": 4, "column": 3, "offset": 32 },
+                      "end": { "line": 4, "column": 10, "offset": 39 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">N</code>",
+                    "position": {
+                      "start": { "line": 4, "column": 10, "offset": 39 },
+                      "end": { "line": 4, "column": 17, "offset": 46 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 4, "column": 3, "offset": 32 },
+                  "end": { "line": 4, "column": 17, "offset": 46 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 30 },
+              "end": { "line": 4, "column": 17, "offset": 46 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Output Matrix ",
+                    "position": {
+                      "start": { "line": 5, "column": 3, "offset": 49 },
+                      "end": { "line": 5, "column": 17, "offset": 63 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">P</code>",
+                    "position": {
+                      "start": { "line": 5, "column": 17, "offset": 63 },
+                      "end": { "line": 5, "column": 24, "offset": 70 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 5, "column": 3, "offset": 49 },
+                  "end": { "line": 5, "column": 24, "offset": 70 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 5, "column": 1, "offset": 47 },
+              "end": { "line": 5, "column": 24, "offset": 70 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "row counter: ",
+                    "position": {
+                      "start": { "line": 6, "column": 3, "offset": 73 },
+                      "end": { "line": 6, "column": 16, "offset": 86 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">i</code>",
+                    "position": {
+                      "start": { "line": 6, "column": 16, "offset": 86 },
+                      "end": { "line": 6, "column": 23, "offset": 93 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 6, "column": 3, "offset": 73 },
+                  "end": { "line": 6, "column": 23, "offset": 93 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 71 },
+              "end": { "line": 6, "column": 23, "offset": 93 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "column counter: ",
+                    "position": {
+                      "start": { "line": 7, "column": 3, "offset": 96 },
+                      "end": { "line": 7, "column": 19, "offset": 112 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">j</code>",
+                    "position": {
+                      "start": { "line": 7, "column": 19, "offset": 112 },
+                      "end": { "line": 7, "column": 26, "offset": 119 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 7, "column": 3, "offset": 96 },
+                  "end": { "line": 7, "column": 26, "offset": 119 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 7, "column": 1, "offset": 94 },
+              "end": { "line": 7, "column": 26, "offset": 119 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">P(Row, Col)</code>",
+                    "position": {
+                      "start": { "line": 8, "column": 3, "offset": 122 },
+                      "end": { "line": 8, "column": 20, "offset": 139 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " is the element at ",
+                    "position": {
+                      "start": { "line": 8, "column": 20, "offset": 139 },
+                      "end": { "line": 8, "column": 39, "offset": 158 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">Row-th</code>",
+                    "position": {
+                      "start": { "line": 8, "column": 39, "offset": 158 },
+                      "end": { "line": 8, "column": 51, "offset": 170 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " position in the vertical direction and ",
+                    "position": {
+                      "start": { "line": 8, "column": 51, "offset": 170 },
+                      "end": { "line": 8, "column": 91, "offset": 210 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">Col-th</code>",
+                    "position": {
+                      "start": { "line": 8, "column": 91, "offset": 210 },
+                      "end": { "line": 8, "column": 103, "offset": 222 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " position in the horizontal direction",
+                    "position": {
+                      "start": { "line": 8, "column": 103, "offset": 222 },
+                      "end": { "line": 8, "column": 140, "offset": 259 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 8, "column": 3, "offset": 122 },
+                  "end": { "line": 8, "column": 140, "offset": 259 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 120 },
+              "end": { "line": 8, "column": 140, "offset": 259 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 3, "column": 1, "offset": 13 },
+          "end": { "line": 8, "column": 140, "offset": 259 },
+          "indent": [1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "As shown in the picture below, ",
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 261 },
+              "end": { "line": 10, "column": 32, "offset": 292 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">P(Row,Col)</code>",
+            "position": {
+              "start": { "line": 10, "column": 32, "offset": 292 },
+              "end": { "line": 10, "column": 48, "offset": 308 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " (the small square in P) is the inner product of:",
+            "position": {
+              "start": { "line": 10, "column": 48, "offset": 308 },
+              "end": { "line": 10, "column": 97, "offset": 357 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 261 },
+          "end": { "line": 10, "column": 97, "offset": 357 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "the ",
+                    "position": {
+                      "start": { "line": 11, "column": 3, "offset": 360 },
+                      "end": { "line": 11, "column": 7, "offset": 364 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">Row-th</code>",
+                    "position": {
+                      "start": { "line": 11, "column": 7, "offset": 364 },
+                      "end": { "line": 11, "column": 19, "offset": 376 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " row of M ",
+                    "position": {
+                      "start": { "line": 11, "column": 19, "offset": 376 },
+                      "end": { "line": 11, "column": 29, "offset": 386 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 11, "column": 3, "offset": 360 },
+                  "end": { "line": 11, "column": 29, "offset": 386 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 11, "column": 1, "offset": 358 },
+              "end": { "line": 11, "column": 29, "offset": 386 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "the ",
+                    "position": {
+                      "start": { "line": 12, "column": 3, "offset": 389 },
+                      "end": { "line": 12, "column": 7, "offset": 393 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">Col-th</code>",
+                    "position": {
+                      "start": { "line": 12, "column": 7, "offset": 393 },
+                      "end": { "line": 12, "column": 19, "offset": 405 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " column of N ",
+                    "position": {
+                      "start": { "line": 12, "column": 19, "offset": 405 },
+                      "end": { "line": 12, "column": 32, "offset": 418 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 12, "column": 3, "offset": 389 },
+                  "end": { "line": 12, "column": 32, "offset": 418 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 387 },
+              "end": { "line": 12, "column": 32, "offset": 418 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 11, "column": 1, "offset": 358 },
+          "end": { "line": 12, "column": 32, "offset": 418 },
+          "indent": [1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./matmult.jpg",
+            "alt": "matmul",
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 420 },
+              "end": { "line": 14, "column": 25, "offset": 444 },
+              "indent": []
+            },
+            "value": "<a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/832d47291d72e9a03f794315730c528c/7377b/matmult.jpg\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 93.02083333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAMFAQIE/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAABv+bMJGCx1AD/xAAbEAEBAAEFAAAAAAAAAAAAAAABAAIDEBESIf/aAAgBAQABBQK1Zs312QZxOOuN/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGBAAAwEBAAAAAAAAAAAAAAAAACExECD/2gAIAQEABj8C4eMhD//EABwQAAICAgMAAAAAAAAAAAAAAAABETEhYUFRcf/aAAgBAQABPyEuvCXEDoXQ2w2+pKQmSWBqn//aAAwDAQACAAMAAAAQ88A8/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPxAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPxAf/8QAHRABAAICAgMAAAAAAAAAAAAAAQARMUEhYVGh4f/aAAgBAQABPxCZfaC5grZCOB6P2W0oHJbFPFGm6nsUI+zG6lwXh8T/2Q=='); background-size: cover; display: block;\"\n    ></span>\n    <img\n        class=\"gatsby-resp-image-image\"\n        style=\"width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;\"\n        alt=\"matmul\"\n        title=\"\"\n        src=\"/static/832d47291d72e9a03f794315730c528c/1697e/matmult.jpg\"\n        srcset=\"/static/832d47291d72e9a03f794315730c528c/a2cfd/matmult.jpg 148w,\n/static/832d47291d72e9a03f794315730c528c/3348f/matmult.jpg 295w,\n/static/832d47291d72e9a03f794315730c528c/1697e/matmult.jpg 590w,\n/static/832d47291d72e9a03f794315730c528c/6a00a/matmult.jpg 885w,\n/static/832d47291d72e9a03f794315730c528c/7377b/matmult.jpg 960w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n      />\n  </span>\n  </a>"
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 420 },
+          "end": { "line": 14, "column": 25, "offset": 444 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Indexing",
+            "position": {
+              "start": { "line": 16, "column": 4, "offset": 449 },
+              "end": { "line": 16, "column": 12, "offset": 457 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 16, "column": 1, "offset": 446 },
+          "end": { "line": 16, "column": 12, "offset": 457 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The row index for the P element is: ",
+            "position": {
+              "start": { "line": 18, "column": 1, "offset": 459 },
+              "end": { "line": 18, "column": 37, "offset": 495 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 18, "column": 1, "offset": 459 },
+          "end": { "line": 18, "column": 37, "offset": 495 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">Row = blockIdx.y * blockDim.y + threadIdx.y</code>",
+            "position": {
+              "start": { "line": 20, "column": 1, "offset": 497 },
+              "end": { "line": 20, "column": 50, "offset": 546 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 20, "column": 1, "offset": 497 },
+          "end": { "line": 20, "column": 50, "offset": 546 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The column index for the P element is: ",
+            "position": {
+              "start": { "line": 22, "column": 1, "offset": 548 },
+              "end": { "line": 22, "column": 40, "offset": 587 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 22, "column": 1, "offset": 548 },
+          "end": { "line": 22, "column": 40, "offset": 587 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">Col = blockIdx.x * blockDim.x + threadIdx.x</code>",
+            "position": {
+              "start": { "line": 24, "column": 1, "offset": 589 },
+              "end": { "line": 24, "column": 50, "offset": 638 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 24, "column": 1, "offset": 589 },
+          "end": { "line": 24, "column": 50, "offset": 638 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "With this one-to-one mapping, the ",
+            "position": {
+              "start": { "line": 26, "column": 1, "offset": 640 },
+              "end": { "line": 26, "column": 35, "offset": 674 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">Row</code>",
+            "position": {
+              "start": { "line": 26, "column": 35, "offset": 674 },
+              "end": { "line": 26, "column": 44, "offset": 683 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": { "line": 26, "column": 44, "offset": 683 },
+              "end": { "line": 26, "column": 49, "offset": 688 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">Col</code>",
+            "position": {
+              "start": { "line": 26, "column": 49, "offset": 688 },
+              "end": { "line": 26, "column": 58, "offset": 697 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " thread indexes are also the row and column indexes for output array",
+            "position": {
+              "start": { "line": 26, "column": 58, "offset": 697 },
+              "end": { "line": 26, "column": 126, "offset": 765 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 26, "column": 1, "offset": 640 },
+          "end": { "line": 26, "column": 126, "offset": 765 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Simple Kernel Using One Thread",
+            "position": {
+              "start": { "line": 28, "column": 4, "offset": 770 },
+              "end": { "line": 28, "column": 34, "offset": 800 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 28, "column": 1, "offset": 767 },
+          "end": { "line": 28, "column": 34, "offset": 800 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Note that the ",
+            "position": {
+              "start": { "line": 29, "column": 1, "offset": 801 },
+              "end": { "line": 29, "column": 15, "offset": 815 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">Width</code>",
+            "position": {
+              "start": { "line": 29, "column": 15, "offset": 815 },
+              "end": { "line": 29, "column": 26, "offset": 826 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " used below is the ",
+            "position": {
+              "start": { "line": 29, "column": 26, "offset": 826 },
+              "end": { "line": 29, "column": 45, "offset": 845 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">Width</code>",
+            "position": {
+              "start": { "line": 29, "column": 45, "offset": 845 },
+              "end": { "line": 29, "column": 56, "offset": 856 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " in the picture above.",
+            "position": {
+              "start": { "line": 29, "column": 56, "offset": 856 },
+              "end": { "line": 29, "column": 78, "offset": 878 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 29, "column": 1, "offset": 801 },
+          "end": { "line": 29, "column": 78, "offset": 878 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "c",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\">__global__ <span class=\"token keyword\">void</span> MatrixMulKernel <span class=\"token punctuation\">(</span><span class=\"token keyword\">float</span><span class=\"token operator\">*</span> M<span class=\"token punctuation\">,</span> <span class=\"token keyword\">float</span><span class=\"token operator\">*</span> N<span class=\"token punctuation\">,</span> <span class=\"token keyword\">float</span><span class=\"token operator\">*</span> P<span class=\"token punctuation\">,</span> <span class=\"token keyword\">int</span> Width<span class=\"token punctuation\">)</span><span class=\"token punctuation\">{</span>\n    <span class=\"token comment\">// calculate the row index of the P element and M</span>\n    <span class=\"token keyword\">int</span> Row <span class=\"token operator\">=</span> blockIdx<span class=\"token punctuation\">.</span>y <span class=\"token operator\">*</span> blockDim<span class=\"token punctuation\">.</span>y <span class=\"token operator\">+</span> threadIdx<span class=\"token punctuation\">.</span>y<span class=\"token punctuation\">;</span>\n    <span class=\"token comment\">// calculate the col index of the P element and N</span>\n    <span class=\"token keyword\">int</span> Col <span class=\"token operator\">=</span> blockIdx<span class=\"token punctuation\">.</span>x <span class=\"token operator\">*</span> blockDim<span class=\"token punctuation\">.</span>x <span class=\"token operator\">+</span> threadIdx<span class=\"token punctuation\">.</span>x<span class=\"token punctuation\">;</span>\n\n    <span class=\"token keyword\">if</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>Row <span class=\"token operator\">&lt;</span> Width<span class=\"token punctuation\">)</span> <span class=\"token operator\">&amp;&amp;</span> <span class=\"token punctuation\">(</span>Col <span class=\"token operator\">&lt;</span> Width<span class=\"token operator\">></span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">{</span>\n        <span class=\"token keyword\">float</span> Pvalue <span class=\"token operator\">=</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n        <span class=\"token comment\">//each thread computes one element of the block sub-matrix</span>\n        <span class=\"token keyword\">for</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">int</span> k <span class=\"token operator\">=</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span> k <span class=\"token operator\">&lt;</span> Width<span class=\"token punctuation\">;</span> k<span class=\"token operator\">++</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n            Pvalue <span class=\"token operator\">+</span><span class=\"token operator\">=</span> M<span class=\"token punctuation\">[</span>Row<span class=\"token operator\">*</span>Width <span class=\"token operator\">+</span> k<span class=\"token punctuation\">]</span> <span class=\"token operator\">*</span> N<span class=\"token punctuation\">[</span>k<span class=\"token operator\">*</span>Width <span class=\"token operator\">+</span> Col<span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n        <span class=\"token punctuation\">}</span>\n        P<span class=\"token punctuation\">[</span>Row <span class=\"token operator\">*</span> Width <span class=\"token operator\">+</span> Col<span class=\"token punctuation\">]</span> <span class=\"token operator\">=</span> Pvalue<span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">}</span></code></pre></div>",
+        "position": {
+          "start": { "line": 31, "column": 1, "offset": 880 },
+          "end": { "line": 47, "column": 4, "offset": 1469 },
+          "indent": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "memory access of the for loop",
+            "position": {
+              "start": { "line": 48, "column": 6, "offset": 1475 },
+              "end": { "line": 48, "column": 35, "offset": 1504 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 48, "column": 1, "offset": 1470 },
+          "end": { "line": 48, "column": 35, "offset": 1504 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In every iteration of the loop, ",
+            "position": {
+              "start": { "line": 50, "column": 1, "offset": 1506 },
+              "end": { "line": 50, "column": 33, "offset": 1538 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "two global memory accesses",
+                "position": {
+                  "start": { "line": 50, "column": 35, "offset": 1540 },
+                  "end": { "line": 50, "column": 61, "offset": 1566 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 50, "column": 33, "offset": 1538 },
+              "end": { "line": 50, "column": 63, "offset": 1568 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " are performed for one floating-point multiplication and one floating-point addition. ",
+            "position": {
+              "start": { "line": 50, "column": 63, "offset": 1568 },
+              "end": { "line": 50, "column": 149, "offset": 1654 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 50, "column": 1, "offset": 1506 },
+          "end": { "line": 50, "column": 149, "offset": 1654 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "One global memory access fetches an M element",
+                    "position": {
+                      "start": { "line": 52, "column": 3, "offset": 1658 },
+                      "end": { "line": 52, "column": 48, "offset": 1703 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 52, "column": 3, "offset": 1658 },
+                  "end": { "line": 52, "column": 48, "offset": 1703 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 52, "column": 1, "offset": 1656 },
+              "end": { "line": 52, "column": 48, "offset": 1703 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "the other fetches an N element",
+                    "position": {
+                      "start": { "line": 53, "column": 3, "offset": 1706 },
+                      "end": { "line": 53, "column": 33, "offset": 1736 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 53, "column": 3, "offset": 1706 },
+                  "end": { "line": 53, "column": 33, "offset": 1736 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 53, "column": 1, "offset": 1704 },
+              "end": { "line": 53, "column": 33, "offset": 1736 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 52, "column": 1, "offset": 1656 },
+          "end": { "line": 53, "column": 33, "offset": 1736 },
+          "indent": [1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "One floating-point operation multiplies the M and N elements fetched, and the other accumulates the product into Pvalue. ",
+            "position": {
+              "start": { "line": 55, "column": 1, "offset": 1738 },
+              "end": { "line": 55, "column": 122, "offset": 1859 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 55, "column": 1, "offset": 1738 },
+          "end": { "line": 55, "column": 122, "offset": 1859 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Thus, the ",
+            "position": {
+              "start": { "line": 57, "column": 1, "offset": 1861 },
+              "end": { "line": 57, "column": 11, "offset": 1871 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "compute-to-global-memory-access ratio",
+                "position": {
+                  "start": { "line": 57, "column": 13, "offset": 1873 },
+                  "end": { "line": 57, "column": 50, "offset": 1910 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 57, "column": 11, "offset": 1871 },
+              "end": { "line": 57, "column": 52, "offset": 1912 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " of the loop is 1.0. ",
+            "position": {
+              "start": { "line": 57, "column": 52, "offset": 1912 },
+              "end": { "line": 57, "column": 73, "offset": 1933 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 57, "column": 1, "offset": 1861 },
+          "end": { "line": 57, "column": 73, "offset": 1933 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This ratio will likely result in less than 2% utilization of the peak execution speed of the modern GPUs. We need to increase the ratio by at least an order of magnitude for the computation throughput of modern devices to achieve good utilization. In the next section, we will show that we can use special memory types in CUDA devices to accomplish this goal.",
+            "position": {
+              "start": { "line": 59, "column": 1, "offset": 1935 },
+              "end": { "line": 59, "column": 360, "offset": 2294 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 59, "column": 1, "offset": 1935 },
+          "end": { "line": 59, "column": 360, "offset": 2294 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Execution of the Matrix Multiplication Kernel Within A Block",
+            "position": {
+              "start": { "line": 61, "column": 4, "offset": 2299 },
+              "end": { "line": 61, "column": 64, "offset": 2359 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 61, "column": 1, "offset": 2296 },
+          "end": { "line": 61, "column": 64, "offset": 2359 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "setting",
+            "position": {
+              "start": { "line": 63, "column": 6, "offset": 2366 },
+              "end": { "line": 63, "column": 13, "offset": 2373 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 63, "column": 1, "offset": 2361 },
+          "end": { "line": 63, "column": 13, "offset": 2373 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": true,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "size of ",
+                    "position": {
+                      "start": { "line": 64, "column": 3, "offset": 2376 },
+                      "end": { "line": 64, "column": 11, "offset": 2384 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">P</code>",
+                    "position": {
+                      "start": { "line": 64, "column": 11, "offset": 2384 },
+                      "end": { "line": 64, "column": 18, "offset": 2391 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " is 4×4",
+                    "position": {
+                      "start": { "line": 64, "column": 18, "offset": 2391 },
+                      "end": { "line": 64, "column": 25, "offset": 2398 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 64, "column": 3, "offset": 2376 },
+                  "end": { "line": 64, "column": 25, "offset": 2398 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 64, "column": 1, "offset": 2374 },
+              "end": { "line": 65, "column": 1, "offset": 2399 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">BLOCK_WIDTH = 2</code>",
+                    "position": {
+                      "start": { "line": 66, "column": 3, "offset": 2402 },
+                      "end": { "line": 66, "column": 24, "offset": 2423 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 66, "column": 3, "offset": 2402 },
+                  "end": { "line": 66, "column": 24, "offset": 2423 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 66, "column": 1, "offset": 2400 },
+              "end": { "line": 66, "column": 24, "offset": 2423 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 64, "column": 1, "offset": 2374 },
+          "end": { "line": 66, "column": 24, "offset": 2423 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "map threads to P",
+            "position": {
+              "start": { "line": 68, "column": 6, "offset": 2430 },
+              "end": { "line": 68, "column": 22, "offset": 2446 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 68, "column": 1, "offset": 2425 },
+          "end": { "line": 68, "column": 22, "offset": 2446 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "With:",
+            "position": {
+              "start": { "line": 69, "column": 1, "offset": 2447 },
+              "end": { "line": 69, "column": 6, "offset": 2452 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 69, "column": 1, "offset": 2447 },
+          "end": { "line": 69, "column": 6, "offset": 2452 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "blocks that are 2×2 arrays of threads",
+                    "position": {
+                      "start": { "line": 70, "column": 3, "offset": 2455 },
+                      "end": { "line": 70, "column": 40, "offset": 2492 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 70, "column": 3, "offset": 2455 },
+                  "end": { "line": 70, "column": 40, "offset": 2492 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 70, "column": 1, "offset": 2453 },
+              "end": { "line": 70, "column": 40, "offset": 2492 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "each thread calculating one P element",
+                    "position": {
+                      "start": { "line": 71, "column": 3, "offset": 2495 },
+                      "end": { "line": 71, "column": 40, "offset": 2532 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 71, "column": 3, "offset": 2495 },
+                  "end": { "line": 71, "column": 40, "offset": 2532 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 71, "column": 1, "offset": 2493 },
+              "end": { "line": 71, "column": 40, "offset": 2532 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 70, "column": 1, "offset": 2453 },
+          "end": { "line": 71, "column": 40, "offset": 2532 },
+          "indent": [1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./execution.jpg",
+            "alt": "execution",
+            "position": {
+              "start": { "line": 73, "column": 1, "offset": 2534 },
+              "end": { "line": 73, "column": 30, "offset": 2563 },
+              "indent": []
+            },
+            "value": "<a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/80715c267350989128c917d4d67a1a69/61cf7/execution.jpg\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 93.19526627218934%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIDAQX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAH25vA3B2QgH//EABsQAAIDAAMAAAAAAAAAAAAAAAEhAAIREjEy/9oACAEBAAEFAlORgYxSnVlUeQTn/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGBAAAgMAAAAAAAAAAAAAAAAAADEBECD/2gAIAQEABj8CVyPP/8QAHBAAAgEFAQAAAAAAAAAAAAAAAAEhETFBUXHB/9oACAEBAAE/IbMacFAqG4xquBr2XMyO2NE2M4f/2gAMAwEAAgADAAAAELMHAP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8QH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8QH//EAB4QAQEAAgICAwAAAAAAAAAAAAERAFEhQTFxgaHB/9oACAEBAAE/EEr0LQ+mCKYlqly6IooimSK8rWsAOPR6a9ZteXnFFieH5x0IUvRrIv4M/9k='); background-size: cover; display: block;\"\n    ></span>\n    <img\n        class=\"gatsby-resp-image-image\"\n        style=\"width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;\"\n        alt=\"execution\"\n        title=\"\"\n        src=\"/static/80715c267350989128c917d4d67a1a69/1697e/execution.jpg\"\n        srcset=\"/static/80715c267350989128c917d4d67a1a69/a2cfd/execution.jpg 148w,\n/static/80715c267350989128c917d4d67a1a69/3348f/execution.jpg 295w,\n/static/80715c267350989128c917d4d67a1a69/1697e/execution.jpg 590w,\n/static/80715c267350989128c917d4d67a1a69/61cf7/execution.jpg 676w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n      />\n  </span>\n  </a>"
+          }
+        ],
+        "position": {
+          "start": { "line": 73, "column": 1, "offset": 2534 },
+          "end": { "line": 73, "column": 30, "offset": 2563 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The P matrix is now divided into four tiles, and each block calculates one tile.",
+            "position": {
+              "start": { "line": 75, "column": 1, "offset": 2565 },
+              "end": { "line": 75, "column": 81, "offset": 2645 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 75, "column": 1, "offset": 2565 },
+          "end": { "line": 75, "column": 81, "offset": 2645 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "In the example, ",
+                    "position": {
+                      "start": { "line": 77, "column": 3, "offset": 2649 },
+                      "end": { "line": 77, "column": 19, "offset": 2665 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">thread(0,0)</code>",
+                    "position": {
+                      "start": { "line": 77, "column": 19, "offset": 2665 },
+                      "end": { "line": 77, "column": 36, "offset": 2682 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " of ",
+                    "position": {
+                      "start": { "line": 77, "column": 36, "offset": 2682 },
+                      "end": { "line": 77, "column": 40, "offset": 2686 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">block(0,0)</code>",
+                    "position": {
+                      "start": { "line": 77, "column": 40, "offset": 2686 },
+                      "end": { "line": 77, "column": 56, "offset": 2702 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " calculates ",
+                    "position": {
+                      "start": { "line": 77, "column": 56, "offset": 2702 },
+                      "end": { "line": 77, "column": 68, "offset": 2714 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">P(0,0)</code>",
+                    "position": {
+                      "start": { "line": 77, "column": 68, "offset": 2714 },
+                      "end": { "line": 77, "column": 80, "offset": 2726 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 77, "column": 3, "offset": 2649 },
+                  "end": { "line": 77, "column": 80, "offset": 2726 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 77, "column": 1, "offset": 2647 },
+              "end": { "line": 77, "column": 80, "offset": 2726 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">thread(0,0)</code>",
+                    "position": {
+                      "start": { "line": 78, "column": 3, "offset": 2729 },
+                      "end": { "line": 78, "column": 20, "offset": 2746 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " of ",
+                    "position": {
+                      "start": { "line": 78, "column": 20, "offset": 2746 },
+                      "end": { "line": 78, "column": 24, "offset": 2750 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">block(1,0)</code>",
+                    "position": {
+                      "start": { "line": 78, "column": 24, "offset": 2750 },
+                      "end": { "line": 78, "column": 40, "offset": 2766 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " calculates ",
+                    "position": {
+                      "start": { "line": 78, "column": 40, "offset": 2766 },
+                      "end": { "line": 78, "column": 52, "offset": 2778 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">P(2,0)</code>",
+                    "position": {
+                      "start": { "line": 78, "column": 52, "offset": 2778 },
+                      "end": { "line": 78, "column": 64, "offset": 2790 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 78, "column": 3, "offset": 2729 },
+                  "end": { "line": 78, "column": 64, "offset": 2790 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 78, "column": 1, "offset": 2727 },
+              "end": { "line": 78, "column": 64, "offset": 2790 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 77, "column": 1, "offset": 2647 },
+          "end": { "line": 78, "column": 64, "offset": 2790 },
+          "indent": [1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "actions of one thread block",
+            "position": {
+              "start": { "line": 80, "column": 6, "offset": 2797 },
+              "end": { "line": 80, "column": 33, "offset": 2824 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 80, "column": 1, "offset": 2792 },
+          "end": { "line": 80, "column": 33, "offset": 2824 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The picture below illustrates the multiplication operations in each thread block. ",
+            "position": {
+              "start": { "line": 81, "column": 1, "offset": 2825 },
+              "end": { "line": 81, "column": 83, "offset": 2907 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 81, "column": 1, "offset": 2825 },
+          "end": { "line": 81, "column": 83, "offset": 2907 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Threads in block (0,0) produce four dot products. ",
+            "position": {
+              "start": { "line": 83, "column": 1, "offset": 2909 },
+              "end": { "line": 83, "column": 51, "offset": 2959 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 83, "column": 1, "offset": 2909 },
+          "end": { "line": 83, "column": 51, "offset": 2959 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./block.jpg",
+            "alt": "execution of one thread block",
+            "position": {
+              "start": { "line": 85, "column": 1, "offset": 2961 },
+              "end": { "line": 85, "column": 46, "offset": 3006 },
+              "indent": []
+            },
+            "value": "<a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/8a6ac4a5ad16d10fb7057c2042b31ad6/f4f50/block.jpg\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 97.9320531757755%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAEFAgMG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHoKTfjm2g1IkJB/8QAGxAAAQQDAAAAAAAAAAAAAAAAAAECAwQUIDL/2gAIAQEAAQUCL3ZlKTP1/8QAFREBAQAAAAAAAAAAAAAAAAAAASD/2gAIAQMBAT8BRj//xAAWEQADAAAAAAAAAAAAAAAAAAABAiD/2gAIAQIBAT8BDR//xAAdEAABAgcAAAAAAAAAAAAAAAABAAIQERIgMkGh/9oACAEBAAY/Ak2GPE00AzGxb//EABsQAAICAwEAAAAAAAAAAAAAAAABEbEQIDFh/9oACAEBAAE/IStePQJm6GPrGiP/2gAMAwEAAgADAAAAEAAIAP/EABYRAAMAAAAAAAAAAAAAAAAAAAEgMf/aAAgBAwEBPxAKp//EABYRAQEBAAAAAAAAAAAAAAAAAAEgIf/aAAgBAgEBPxAVMY//xAAgEAADAAAFBQAAAAAAAAAAAAAAATERIUFx8VFhkbHR/9oACAEBAAE/EDs57hays5l9HtIR4lN+Ba7iWVfnYayrnUS2n//Z'); background-size: cover; display: block;\"\n    ></span>\n    <img\n        class=\"gatsby-resp-image-image\"\n        style=\"width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;\"\n        alt=\"execution of one thread block\"\n        title=\"\"\n        src=\"/static/8a6ac4a5ad16d10fb7057c2042b31ad6/1697e/block.jpg\"\n        srcset=\"/static/8a6ac4a5ad16d10fb7057c2042b31ad6/a2cfd/block.jpg 148w,\n/static/8a6ac4a5ad16d10fb7057c2042b31ad6/3348f/block.jpg 295w,\n/static/8a6ac4a5ad16d10fb7057c2042b31ad6/1697e/block.jpg 590w,\n/static/8a6ac4a5ad16d10fb7057c2042b31ad6/f4f50/block.jpg 677w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n      />\n  </span>\n  </a>"
+          }
+        ],
+        "position": {
+          "start": { "line": 85, "column": 1, "offset": 2961 },
+          "end": { "line": 85, "column": 46, "offset": 3006 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "the execution of the for-loop",
+            "position": {
+              "start": { "line": 88, "column": 6, "offset": 3014 },
+              "end": { "line": 88, "column": 35, "offset": 3043 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 88, "column": 1, "offset": 3009 },
+          "end": { "line": 88, "column": 36, "offset": 3044 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use ",
+            "position": {
+              "start": { "line": 89, "column": 1, "offset": 3045 },
+              "end": { "line": 89, "column": 5, "offset": 3049 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">thread(0,0)</code>",
+            "position": {
+              "start": { "line": 89, "column": 5, "offset": 3049 },
+              "end": { "line": 89, "column": 22, "offset": 3066 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " in ",
+            "position": {
+              "start": { "line": 89, "column": 22, "offset": 3066 },
+              "end": { "line": 89, "column": 26, "offset": 3070 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">block(0,0)</code>",
+            "position": {
+              "start": { "line": 89, "column": 26, "offset": 3070 },
+              "end": { "line": 89, "column": 42, "offset": 3086 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " as an example. ",
+            "position": {
+              "start": { "line": 89, "column": 42, "offset": 3086 },
+              "end": { "line": 89, "column": 58, "offset": 3102 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 89, "column": 1, "offset": 3045 },
+          "end": { "line": 89, "column": 58, "offset": 3102 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "During the 0th iteration (k=0):",
+                    "position": {
+                      "start": { "line": 91, "column": 3, "offset": 3106 },
+                      "end": { "line": 91, "column": 34, "offset": 3137 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 91, "column": 3, "offset": 3106 },
+                  "end": { "line": 91, "column": 34, "offset": 3137 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "loose": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">Row * Width + k = 0*4+0 = 0</code>",
+                            "position": {
+                              "start": {
+                                "line": 92,
+                                "column": 7,
+                                "offset": 3144
+                              },
+                              "end": {
+                                "line": 92,
+                                "column": 40,
+                                "offset": 3177
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "value": " ",
+                            "position": {
+                              "start": {
+                                "line": 92,
+                                "column": 40,
+                                "offset": 3177
+                              },
+                              "end": {
+                                "line": 92,
+                                "column": 41,
+                                "offset": 3178
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 92, "column": 7, "offset": 3144 },
+                          "end": { "line": 92, "column": 41, "offset": 3178 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 92, "column": 5, "offset": 3142 },
+                      "end": { "line": 92, "column": 41, "offset": 3178 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">k * Width + Col= 0*4+0 = 0</code>",
+                            "position": {
+                              "start": {
+                                "line": 93,
+                                "column": 7,
+                                "offset": 3185
+                              },
+                              "end": {
+                                "line": 93,
+                                "column": 39,
+                                "offset": 3217
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 93, "column": 7, "offset": 3185 },
+                          "end": { "line": 93, "column": 39, "offset": 3217 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 93, "column": 5, "offset": 3183 },
+                      "end": { "line": 93, "column": 39, "offset": 3217 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Therefore, we are accessing ",
+                            "position": {
+                              "start": {
+                                "line": 94,
+                                "column": 7,
+                                "offset": 3224
+                              },
+                              "end": {
+                                "line": 94,
+                                "column": 35,
+                                "offset": 3252
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">M[0]</code>",
+                            "position": {
+                              "start": {
+                                "line": 94,
+                                "column": 35,
+                                "offset": 3252
+                              },
+                              "end": {
+                                "line": 94,
+                                "column": 45,
+                                "offset": 3262
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "value": " and ",
+                            "position": {
+                              "start": {
+                                "line": 94,
+                                "column": 45,
+                                "offset": 3262
+                              },
+                              "end": {
+                                "line": 94,
+                                "column": 50,
+                                "offset": 3267
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">N[0]</code>",
+                            "position": {
+                              "start": {
+                                "line": 94,
+                                "column": 50,
+                                "offset": 3267
+                              },
+                              "end": {
+                                "line": 94,
+                                "column": 60,
+                                "offset": 3277
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "value": ", which are the 1D equivalent of ",
+                            "position": {
+                              "start": {
+                                "line": 94,
+                                "column": 60,
+                                "offset": 3277
+                              },
+                              "end": {
+                                "line": 94,
+                                "column": 93,
+                                "offset": 3310
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">M(0,0)</code>",
+                            "position": {
+                              "start": {
+                                "line": 94,
+                                "column": 93,
+                                "offset": 3310
+                              },
+                              "end": {
+                                "line": 94,
+                                "column": 105,
+                                "offset": 3322
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "value": " and ",
+                            "position": {
+                              "start": {
+                                "line": 94,
+                                "column": 105,
+                                "offset": 3322
+                              },
+                              "end": {
+                                "line": 94,
+                                "column": 110,
+                                "offset": 3327
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">N(0,0)</code>",
+                            "position": {
+                              "start": {
+                                "line": 94,
+                                "column": 110,
+                                "offset": 3327
+                              },
+                              "end": {
+                                "line": 94,
+                                "column": 122,
+                                "offset": 3339
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 94, "column": 7, "offset": 3224 },
+                          "end": { "line": 94, "column": 122, "offset": 3339 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 94, "column": 5, "offset": 3222 },
+                      "end": { "line": 94, "column": 122, "offset": 3339 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 92, "column": 5, "offset": 3142 },
+                  "end": { "line": 94, "column": 122, "offset": 3339 },
+                  "indent": [5, 5]
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 91, "column": 1, "offset": 3104 },
+              "end": { "line": 94, "column": 122, "offset": 3339 },
+              "indent": [1, 1, 1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "During the 1st iteration (k=1):",
+                    "position": {
+                      "start": { "line": 95, "column": 3, "offset": 3342 },
+                      "end": { "line": 95, "column": 34, "offset": 3373 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 95, "column": 3, "offset": 3342 },
+                  "end": { "line": 95, "column": 34, "offset": 3373 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "loose": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">Row * Width + k = 0*4+1 = 1</code>",
+                            "position": {
+                              "start": {
+                                "line": 96,
+                                "column": 7,
+                                "offset": 3380
+                              },
+                              "end": {
+                                "line": 96,
+                                "column": 40,
+                                "offset": 3413
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 96, "column": 7, "offset": 3380 },
+                          "end": { "line": 96, "column": 40, "offset": 3413 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 96, "column": 5, "offset": 3378 },
+                      "end": { "line": 96, "column": 40, "offset": 3413 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">k * Width + Col = 1*4+0 = 4</code>",
+                            "position": {
+                              "start": {
+                                "line": 97,
+                                "column": 7,
+                                "offset": 3420
+                              },
+                              "end": {
+                                "line": 97,
+                                "column": 40,
+                                "offset": 3453
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 97, "column": 7, "offset": 3420 },
+                          "end": { "line": 97, "column": 40, "offset": 3453 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 97, "column": 5, "offset": 3418 },
+                      "end": { "line": 97, "column": 40, "offset": 3453 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "We are accessing ",
+                            "position": {
+                              "start": {
+                                "line": 98,
+                                "column": 7,
+                                "offset": 3460
+                              },
+                              "end": {
+                                "line": 98,
+                                "column": 24,
+                                "offset": 3477
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">M[1]</code>",
+                            "position": {
+                              "start": {
+                                "line": 98,
+                                "column": 24,
+                                "offset": 3477
+                              },
+                              "end": {
+                                "line": 98,
+                                "column": 34,
+                                "offset": 3487
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "value": " and ",
+                            "position": {
+                              "start": {
+                                "line": 98,
+                                "column": 34,
+                                "offset": 3487
+                              },
+                              "end": {
+                                "line": 98,
+                                "column": 39,
+                                "offset": 3492
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">N[4]</code>",
+                            "position": {
+                              "start": {
+                                "line": 98,
+                                "column": 39,
+                                "offset": 3492
+                              },
+                              "end": {
+                                "line": 98,
+                                "column": 49,
+                                "offset": 3502
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "value": ", which are the 1D equivalent of ",
+                            "position": {
+                              "start": {
+                                "line": 98,
+                                "column": 49,
+                                "offset": 3502
+                              },
+                              "end": {
+                                "line": 98,
+                                "column": 82,
+                                "offset": 3535
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">M(0,1)</code>",
+                            "position": {
+                              "start": {
+                                "line": 98,
+                                "column": 82,
+                                "offset": 3535
+                              },
+                              "end": {
+                                "line": 98,
+                                "column": 94,
+                                "offset": 3547
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "value": " and ",
+                            "position": {
+                              "start": {
+                                "line": 98,
+                                "column": 94,
+                                "offset": 3547
+                              },
+                              "end": {
+                                "line": 98,
+                                "column": 99,
+                                "offset": 3552
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">N(1,0)</code>",
+                            "position": {
+                              "start": {
+                                "line": 98,
+                                "column": 99,
+                                "offset": 3552
+                              },
+                              "end": {
+                                "line": 98,
+                                "column": 111,
+                                "offset": 3564
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 98, "column": 7, "offset": 3460 },
+                          "end": { "line": 98, "column": 111, "offset": 3564 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 98, "column": 5, "offset": 3458 },
+                      "end": { "line": 98, "column": 111, "offset": 3564 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 96, "column": 5, "offset": 3378 },
+                  "end": { "line": 98, "column": 111, "offset": 3564 },
+                  "indent": [5, 5]
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 95, "column": 1, "offset": 3340 },
+              "end": { "line": 98, "column": 111, "offset": 3564 },
+              "indent": [1, 1, 1]
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 91, "column": 1, "offset": 3104 },
+          "end": { "line": 98, "column": 111, "offset": 3564 },
+          "indent": [1, 1, 1, 1, 1, 1, 1]
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 98, "column": 111, "offset": 3564 }
+    }
+  }
+}

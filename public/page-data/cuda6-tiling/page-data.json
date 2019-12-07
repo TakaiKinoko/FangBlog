@@ -1,0 +1,38 @@
+{
+  "componentChunkName": "component---src-templates-blog-post-js",
+  "path": "/cuda6-tiling/",
+  "webpackCompilationHash": "",
+  "result": {
+    "data": {
+      "site": {
+        "siteMetadata": { "title": "FANG'S NOTEBOOK", "author": "Fang Cabrera" }
+      },
+      "markdownRemark": {
+        "id": "1496b751-5bc3-57bd-a11c-0e9360e0cf9a",
+        "excerpt": "",
+        "html": "",
+        "fields": { "readingTime": { "text": "0 min read" } },
+        "frontmatter": {
+          "title": "The CUDA Parallel Programming Model - 6.Tiling",
+          "date": "December 07, 2019"
+        }
+      }
+    },
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": false,
+      "slug": "/cuda6-tiling/",
+      "previous": {
+        "fields": { "slug": "/cuda5-coalesce/" },
+        "frontmatter": {
+          "title": "The CUDA Parallel Programming Model - 5.Memory Coalescing"
+        }
+      },
+      "next": {
+        "fields": { "slug": "/cuda7-matrixmult/" },
+        "frontmatter": {
+          "title": "CUDA Programming Examples - 1. Matrix Multiplication"
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,0 @@
-{
-  "expireTime": 9007200830434617000,
-  "key": "transformer-remark-markdown-html-5159e6a57126c5fe50bbe489b1a7b9b3-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
-  "val": "<p>This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about <strong>warps and SIMD hardward</strong>.</p>\n<h2>Kernel Threads Hierarchy</h2>\n<p>Recall that launching a CUDA kernel will generate a grid of threads organized as a <strong>two-level</strong> hierarchy. </p>\n<ol>\n<li>\n<p>top level: a 1/2/3-dimensional array of blocks.</p>\n</li>\n<li>\n<p>bottom level: each block consists of a 1/2/3-dimensional array of threads.</p>\n</li>\n</ol>\n<h2></h2>\n<p>Conceptually, threads in a block can execute in any order, just like blocks.</p>"
-}

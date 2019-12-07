@@ -1,0 +1,38 @@
+{
+  "componentChunkName": "component---src-templates-blog-post-js",
+  "path": "/cuda5-memory/",
+  "webpackCompilationHash": "",
+  "result": {
+    "data": {
+      "site": {
+        "siteMetadata": { "title": "FANG'S NOTEBOOK", "author": "Fang Cabrera" }
+      },
+      "markdownRemark": {
+        "id": "00815244-e56a-5742-88e1-3316aa1fb83e",
+        "excerpt": "This post talks about a key factor to CUDA kernel performace: accessing data in the globle memory. Global Memory Bandwidth CUDA applications…",
+        "html": "<p>This post talks about a key factor to CUDA kernel performace: accessing data in the globle memory.</p>\n<h2>Global Memory Bandwidth</h2>\n<p>CUDA applications tend to process a massive amount of data from the global memory within a short period of time. <strong>Tiling</strong> techniques are engineered that utilize <strong>shared memories</strong> to reduce the total amount of data that must be accessed from the global memory</p>\n<h2>Memory Coalescing</h2>",
+        "fields": { "readingTime": { "text": "1 min read" } },
+        "frontmatter": {
+          "title": "The CUDA Parallel Programming Model - 5.               \n Memory Coalescing",
+          "date": "December 07, 2019"
+        }
+      }
+    },
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": false,
+      "slug": "/cuda5-memory/",
+      "previous": {
+        "fields": { "slug": "/cuda4-sync/" },
+        "frontmatter": {
+          "title": "The CUDA Parallel Programming Model - 4.               \n Syncthreads Examples"
+        }
+      },
+      "next": {
+        "fields": { "slug": "/cuda5-coalesce/" },
+        "frontmatter": {
+          "title": "The CUDA Parallel Programming Model - 5.               \n Memory Coalescing"
+        }
+      }
+    }
+  }
+}

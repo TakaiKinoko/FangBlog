@@ -1,5 +1,0 @@
-{
-  "expireTime": 9007200830434330000,
-  "key": "transformer-remark-markdown-html-d09d02e51cf9a53d5c21b0f92ae16770-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
-  "val": "<p>This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about <strong>warps and SIMD hardward</strong>.</p>\n<h2>kernel threads hierarchy</h2>"
-}

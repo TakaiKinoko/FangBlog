@@ -1,0 +1,351 @@
+{
+  "expireTime": 9007200830485805000,
+  "key": "transformer-remark-markdown-ast-0eb59b5824a49b8d8a5b082d9d67ac30-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Notation",
+            "position": {
+              "start": { "line": 2, "column": 4, "offset": 4 },
+              "end": { "line": 2, "column": 12, "offset": 12 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 12, "offset": 12 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Matrix ",
+                    "position": {
+                      "start": { "line": 3, "column": 3, "offset": 15 },
+                      "end": { "line": 3, "column": 10, "offset": 22 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">M</code>",
+                    "position": {
+                      "start": { "line": 3, "column": 10, "offset": 22 },
+                      "end": { "line": 3, "column": 17, "offset": 29 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 3, "column": 3, "offset": 15 },
+                  "end": { "line": 3, "column": 17, "offset": 29 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 3, "column": 1, "offset": 13 },
+              "end": { "line": 3, "column": 17, "offset": 29 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Matrix ",
+                    "position": {
+                      "start": { "line": 4, "column": 3, "offset": 32 },
+                      "end": { "line": 4, "column": 10, "offset": 39 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">N</code>",
+                    "position": {
+                      "start": { "line": 4, "column": 10, "offset": 39 },
+                      "end": { "line": 4, "column": 17, "offset": 46 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 4, "column": 3, "offset": 32 },
+                  "end": { "line": 4, "column": 17, "offset": 46 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 30 },
+              "end": { "line": 4, "column": 17, "offset": 46 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Output Matrix ",
+                    "position": {
+                      "start": { "line": 5, "column": 3, "offset": 49 },
+                      "end": { "line": 5, "column": 17, "offset": 63 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">P</code>",
+                    "position": {
+                      "start": { "line": 5, "column": 17, "offset": 63 },
+                      "end": { "line": 5, "column": 24, "offset": 70 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 5, "column": 3, "offset": 49 },
+                  "end": { "line": 5, "column": 24, "offset": 70 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 5, "column": 1, "offset": 47 },
+              "end": { "line": 5, "column": 24, "offset": 70 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "row counter: ",
+                    "position": {
+                      "start": { "line": 6, "column": 3, "offset": 73 },
+                      "end": { "line": 6, "column": 16, "offset": 86 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">i</code>",
+                    "position": {
+                      "start": { "line": 6, "column": 16, "offset": 86 },
+                      "end": { "line": 6, "column": 23, "offset": 93 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 6, "column": 3, "offset": 73 },
+                  "end": { "line": 6, "column": 23, "offset": 93 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 71 },
+              "end": { "line": 6, "column": 23, "offset": 93 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "column counter: ",
+                    "position": {
+                      "start": { "line": 7, "column": 3, "offset": 96 },
+                      "end": { "line": 7, "column": 19, "offset": 112 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">j</code>",
+                    "position": {
+                      "start": { "line": 7, "column": 19, "offset": 112 },
+                      "end": { "line": 7, "column": 26, "offset": 119 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 7, "column": 3, "offset": 96 },
+                  "end": { "line": 7, "column": 26, "offset": 119 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 7, "column": 1, "offset": 94 },
+              "end": { "line": 7, "column": 26, "offset": 119 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">P(i, Col)</code>",
+                    "position": {
+                      "start": { "line": 8, "column": 3, "offset": 122 },
+                      "end": { "line": 8, "column": 18, "offset": 137 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " is the element at ",
+                    "position": {
+                      "start": { "line": 8, "column": 18, "offset": 137 },
+                      "end": { "line": 8, "column": 37, "offset": 156 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">Row-th</code>",
+                    "position": {
+                      "start": { "line": 8, "column": 37, "offset": 156 },
+                      "end": { "line": 8, "column": 49, "offset": 168 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " position in the vertical direction and ",
+                    "position": {
+                      "start": { "line": 8, "column": 49, "offset": 168 },
+                      "end": { "line": 8, "column": 89, "offset": 208 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">Col-th</code>",
+                    "position": {
+                      "start": { "line": 8, "column": 89, "offset": 208 },
+                      "end": { "line": 8, "column": 101, "offset": 220 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " position in the horizontal direction",
+                    "position": {
+                      "start": { "line": 8, "column": 101, "offset": 220 },
+                      "end": { "line": 8, "column": 138, "offset": 257 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 8, "column": 3, "offset": 122 },
+                  "end": { "line": 8, "column": 138, "offset": 257 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 120 },
+              "end": { "line": 8, "column": 138, "offset": 257 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 3, "column": 1, "offset": 13 },
+          "end": { "line": 8, "column": 138, "offset": 257 },
+          "indent": [1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When performing a matrix multiplication, each element of the output matrix P is an inner product of a row of M and a column of N. We will continue to use the convention where PRow,Col is the element at Rowth position in the vertical direction and Colth position in the horizontal direction. As shown in Fig. 4.2, PRow,Col (the small square in P) is the inner product of the vector formed from the Rowth row of M (shown as a horizontal strip in M) and the vector formed from the Colth column of N (shown as a vertical strip in N). The inner product, also called the dot product, of two vectors is the sum of products of the individual vector elements, i.e., image. For instance,",
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 259 },
+              "end": { "line": 10, "column": 678, "offset": 936 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 259 },
+          "end": { "line": 10, "column": 678, "offset": 936 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 938 },
+          "end": { "line": 12, "column": 4, "offset": 941 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 13, "column": 1, "offset": 942 }
+    }
+  }
+}

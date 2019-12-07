@@ -1,0 +1,1185 @@
+{
+  "expireTime": 9007200830484092000,
+  "key": "transformer-remark-markdown-ast-2ac735874b921fff1367374d7377924b-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This post talks about a key factor to CUDA kernel performace: accessing data in the globle memory.",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 99, "offset": 99 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 99, "offset": 99 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "CUDA applications tend to process a massive amount of data from the global memory within a short period of time. ",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 101 },
+              "end": { "line": 4, "column": 114, "offset": 214 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 101 },
+          "end": { "line": 4, "column": 114, "offset": 214 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Tiling",
+                "position": {
+                  "start": { "line": 6, "column": 3, "offset": 218 },
+                  "end": { "line": 6, "column": 9, "offset": 224 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 216 },
+              "end": { "line": 6, "column": 11, "offset": 226 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " techniques are engineered that utilize ",
+            "position": {
+              "start": { "line": 6, "column": 11, "offset": 226 },
+              "end": { "line": 6, "column": 51, "offset": 266 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "shared memories",
+                "position": {
+                  "start": { "line": 6, "column": 53, "offset": 268 },
+                  "end": { "line": 6, "column": 68, "offset": 283 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 51, "offset": 266 },
+              "end": { "line": 6, "column": 70, "offset": 285 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " to reduce the total amount of data that must be acessed from the global memory (read about tiling techniques here ",
+            "position": {
+              "start": { "line": 6, "column": 70, "offset": 285 },
+              "end": { "line": 6, "column": 185, "offset": 400 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/cuda6-tiling",
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 6.Tiling",
+                "position": {
+                  "start": { "line": 6, "column": 186, "offset": 401 },
+                  "end": { "line": 6, "column": 232, "offset": 447 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 185, "offset": 400 },
+              "end": { "line": 6, "column": 248, "offset": 463 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": "). ",
+            "position": {
+              "start": { "line": 6, "column": 248, "offset": 463 },
+              "end": { "line": 6, "column": 251, "offset": 466 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 216 },
+          "end": { "line": 6, "column": 251, "offset": 466 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "I this post we talk about ",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 468 },
+              "end": { "line": 8, "column": 27, "offset": 494 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "memory coalescing",
+                "position": {
+                  "start": { "line": 8, "column": 29, "offset": 496 },
+                  "end": { "line": 8, "column": 46, "offset": 513 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 27, "offset": 494 },
+              "end": { "line": 8, "column": 48, "offset": 515 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " techniques that can more effectively move data from the global memory into ",
+            "position": {
+              "start": { "line": 8, "column": 48, "offset": 515 },
+              "end": { "line": 8, "column": 124, "offset": 591 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "shared memories and registers",
+                "position": {
+                  "start": { "line": 8, "column": 126, "offset": 593 },
+                  "end": { "line": 8, "column": 155, "offset": 622 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 124, "offset": 591 },
+              "end": { "line": 8, "column": 157, "offset": 624 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ". ",
+            "position": {
+              "start": { "line": 8, "column": 157, "offset": 624 },
+              "end": { "line": 8, "column": 159, "offset": 626 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 468 },
+          "end": { "line": 8, "column": 159, "offset": 626 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Memory coalescing techniques are often used ",
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 628 },
+              "end": { "line": 10, "column": 45, "offset": 672 },
+              "indent": []
+            }
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "in conjunction with tiling techniques",
+                "position": {
+                  "start": { "line": 10, "column": 46, "offset": 673 },
+                  "end": { "line": 10, "column": 83, "offset": 710 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 45, "offset": 672 },
+              "end": { "line": 10, "column": 84, "offset": 711 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " to allow CUDA devices to reach their performance potential by more efficiently utilizing the global memory bandwidth.",
+            "position": {
+              "start": { "line": 10, "column": 84, "offset": 711 },
+              "end": { "line": 10, "column": 202, "offset": 829 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 628 },
+          "end": { "line": 10, "column": 202, "offset": 829 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Global Memory Bandwidth",
+            "position": {
+              "start": { "line": 12, "column": 4, "offset": 834 },
+              "end": { "line": 12, "column": 27, "offset": 857 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 831 },
+          "end": { "line": 12, "column": 27, "offset": 857 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The global memory of a CUDA device is implemented with DRAMs.",
+            "position": {
+              "start": { "line": 13, "column": 1, "offset": 858 },
+              "end": { "line": 13, "column": 62, "offset": 919 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 13, "column": 1, "offset": 858 },
+          "end": { "line": 13, "column": 62, "offset": 919 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "DRAM is slow",
+            "position": {
+              "start": { "line": 15, "column": 6, "offset": 926 },
+              "end": { "line": 15, "column": 18, "offset": 938 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 15, "column": 1, "offset": 921 },
+          "end": { "line": 15, "column": 18, "offset": 938 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Data bits are stored in DRAM cells that are small capacitors, where the presence or absence of a ",
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 939 },
+              "end": { "line": 16, "column": 98, "offset": 1036 },
+              "indent": []
+            }
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "tiny amount of electrical charge",
+                "position": {
+                  "start": { "line": 16, "column": 99, "offset": 1037 },
+                  "end": { "line": 16, "column": 131, "offset": 1069 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 16, "column": 98, "offset": 1036 },
+              "end": { "line": 16, "column": 132, "offset": 1070 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " distinguishes between 0 and 1. ",
+            "position": {
+              "start": { "line": 16, "column": 132, "offset": 1070 },
+              "end": { "line": 16, "column": 164, "offset": 1102 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 16, "column": 1, "offset": 939 },
+          "end": { "line": 16, "column": 164, "offset": 1102 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Reading data from a DRAM cell requires the small capacitor to use its tiny electrical charge to drive a highly capacitive line leading to a sensor and set off its detection mechanism that determines whether a sufficient amount of charge is present in the capacitor to qualify as a “1”. This process takes 10 s of nanoseconds in modern DRAM chips. ",
+            "position": {
+              "start": { "line": 18, "column": 1, "offset": 1104 },
+              "end": { "line": 18, "column": 348, "offset": 1451 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "This is in sharp contrast with the sub-nanosecond clock cycle time of modern computing devices",
+                "position": {
+                  "start": { "line": 18, "column": 350, "offset": 1453 },
+                  "end": { "line": 18, "column": 444, "offset": 1547 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 18, "column": 348, "offset": 1451 },
+              "end": { "line": 18, "column": 446, "offset": 1549 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ". ",
+            "position": {
+              "start": { "line": 18, "column": 446, "offset": 1549 },
+              "end": { "line": 18, "column": 448, "offset": 1551 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 18, "column": 1, "offset": 1104 },
+          "end": { "line": 18, "column": 448, "offset": 1551 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "parallelism and memory access throughput",
+            "position": {
+              "start": { "line": 20, "column": 6, "offset": 1558 },
+              "end": { "line": 20, "column": 46, "offset": 1598 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 20, "column": 1, "offset": 1553 },
+          "end": { "line": 20, "column": 46, "offset": 1598 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Because this is a very slow process relative to the desired data access speed (sub-nanosecond access per byte), modern DRAMs ",
+            "position": {
+              "start": { "line": 21, "column": 1, "offset": 1599 },
+              "end": { "line": 21, "column": 126, "offset": 1724 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "use parallelism to increase their rate of data access",
+                "position": {
+                  "start": { "line": 21, "column": 128, "offset": 1726 },
+                  "end": { "line": 21, "column": 181, "offset": 1779 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 21, "column": 126, "offset": 1724 },
+              "end": { "line": 21, "column": 183, "offset": 1781 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ", commonly referred to as ",
+            "position": {
+              "start": { "line": 21, "column": 183, "offset": 1781 },
+              "end": { "line": 21, "column": 209, "offset": 1807 },
+              "indent": []
+            }
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "memory access throughput",
+                "position": {
+                  "start": { "line": 21, "column": 210, "offset": 1808 },
+                  "end": { "line": 21, "column": 234, "offset": 1832 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 21, "column": 209, "offset": 1807 },
+              "end": { "line": 21, "column": 235, "offset": 1833 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": { "line": 21, "column": 235, "offset": 1833 },
+              "end": { "line": 21, "column": 236, "offset": 1834 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 21, "column": 1, "offset": 1599 },
+          "end": { "line": 21, "column": 236, "offset": 1834 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "DRAM bursts",
+            "position": {
+              "start": { "line": 23, "column": 6, "offset": 1841 },
+              "end": { "line": 23, "column": 17, "offset": 1852 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 23, "column": 1, "offset": 1836 },
+          "end": { "line": 23, "column": 17, "offset": 1852 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Each time a DRAM location is accessed, ",
+            "position": {
+              "start": { "line": 24, "column": 1, "offset": 1853 },
+              "end": { "line": 24, "column": 40, "offset": 1892 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "a range of consecutive locations that includes the requested location are actually accessed",
+                "position": {
+                  "start": { "line": 24, "column": 42, "offset": 1894 },
+                  "end": { "line": 24, "column": 133, "offset": 1985 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 24, "column": 40, "offset": 1892 },
+              "end": { "line": 24, "column": 135, "offset": 1987 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ". ",
+            "position": {
+              "start": { "line": 24, "column": 135, "offset": 1987 },
+              "end": { "line": 24, "column": 137, "offset": 1989 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 24, "column": 1, "offset": 1853 },
+          "end": { "line": 24, "column": 137, "offset": 1989 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Many sensors are provided in each DRAM chip and they work in parallel. Each senses the content of a bit within these consecutive locations. ",
+            "position": {
+              "start": { "line": 26, "column": 1, "offset": 1991 },
+              "end": { "line": 26, "column": 141, "offset": 2131 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 26, "column": 1, "offset": 1991 },
+          "end": { "line": 26, "column": 141, "offset": 2131 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Once detected by the sensors, the data from all these consecutive locations can be transferred at very high-speed to the processor. These consecutive locations accessed and delivered are referred to as ",
+            "position": {
+              "start": { "line": 28, "column": 1, "offset": 2133 },
+              "end": { "line": 28, "column": 203, "offset": 2335 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "DRAM bursts",
+                "position": {
+                  "start": { "line": 28, "column": 205, "offset": 2337 },
+                  "end": { "line": 28, "column": 216, "offset": 2348 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 28, "column": 203, "offset": 2335 },
+              "end": { "line": 28, "column": 218, "offset": 2350 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ". ",
+            "position": {
+              "start": { "line": 28, "column": 218, "offset": 2350 },
+              "end": { "line": 28, "column": 220, "offset": 2352 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 28, "column": 1, "offset": 2133 },
+          "end": { "line": 28, "column": 220, "offset": 2352 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "motivation",
+            "position": {
+              "start": { "line": 30, "column": 6, "offset": 2359 },
+              "end": { "line": 30, "column": 16, "offset": 2369 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 30, "column": 1, "offset": 2354 },
+          "end": { "line": 30, "column": 16, "offset": 2369 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If an application makes focused use of data from these bursts, the DRAMs can supply the data at a much higher rate than if a truly random sequence of locations were accessed.",
+            "position": {
+              "start": { "line": 31, "column": 1, "offset": 2370 },
+              "end": { "line": 31, "column": 175, "offset": 2544 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 31, "column": 1, "offset": 2370 },
+          "end": { "line": 31, "column": 175, "offset": 2544 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Memory Coalescing",
+            "position": {
+              "start": { "line": 33, "column": 4, "offset": 2549 },
+              "end": { "line": 33, "column": 21, "offset": 2566 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 33, "column": 1, "offset": 2546 },
+          "end": { "line": 33, "column": 22, "offset": 2567 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Current CUDA devices employ a technique that allows the programmers to achieve high global memory access efficiency by ",
+            "position": {
+              "start": { "line": 35, "column": 1, "offset": 2569 },
+              "end": { "line": 35, "column": 120, "offset": 2688 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "organizing memory accesses of threads into favorable patterns",
+                "position": {
+                  "start": { "line": 35, "column": 122, "offset": 2690 },
+                  "end": { "line": 35, "column": 183, "offset": 2751 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 35, "column": 120, "offset": 2688 },
+              "end": { "line": 35, "column": 185, "offset": 2753 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ". ",
+            "position": {
+              "start": { "line": 35, "column": 185, "offset": 2753 },
+              "end": { "line": 35, "column": 187, "offset": 2755 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 35, "column": 1, "offset": 2569 },
+          "end": { "line": 35, "column": 187, "offset": 2755 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "how?",
+            "position": {
+              "start": { "line": 37, "column": 6, "offset": 2762 },
+              "end": { "line": 37, "column": 10, "offset": 2766 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 37, "column": 1, "offset": 2757 },
+          "end": { "line": 37, "column": 10, "offset": 2766 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": true,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "This technique takes advantage of the fact that ",
+                    "position": {
+                      "start": { "line": 38, "column": 3, "offset": 2769 },
+                      "end": { "line": 38, "column": 51, "offset": 2817 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "threads in a warp execute the same instruction at any given point in time",
+                        "position": {
+                          "start": { "line": 38, "column": 53, "offset": 2819 },
+                          "end": { "line": 38, "column": 126, "offset": 2892 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 38, "column": 51, "offset": 2817 },
+                      "end": { "line": 38, "column": 128, "offset": 2894 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ". ",
+                    "position": {
+                      "start": { "line": 38, "column": 128, "offset": 2894 },
+                      "end": { "line": 38, "column": 130, "offset": 2896 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 38, "column": 3, "offset": 2769 },
+                  "end": { "line": 38, "column": 130, "offset": 2896 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 38, "column": 1, "offset": 2767 },
+              "end": { "line": 39, "column": 1, "offset": 2897 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The most favorable access pattern is achieved when all threads in a warp access consecutive global memory locations. ",
+                    "position": {
+                      "start": { "line": 40, "column": 3, "offset": 2900 },
+                      "end": { "line": 40, "column": 120, "offset": 3017 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 40, "column": 3, "offset": 2900 },
+                  "end": { "line": 40, "column": 120, "offset": 3017 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 40, "column": 1, "offset": 2898 },
+              "end": { "line": 41, "column": 1, "offset": 3018 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "When all threads in a warp execute a load instruction, the hardware detects whether they access consecutive global memory locations. If that’s the case, the hardware combines (",
+                    "position": {
+                      "start": { "line": 42, "column": 3, "offset": 3021 },
+                      "end": { "line": 42, "column": 179, "offset": 3197 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "coalesces",
+                        "position": {
+                          "start": {
+                            "line": 42,
+                            "column": 181,
+                            "offset": 3199
+                          },
+                          "end": { "line": 42, "column": 190, "offset": 3208 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 42, "column": 179, "offset": 3197 },
+                      "end": { "line": 42, "column": 192, "offset": 3210 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ") all these accesses into a consolidated access to consecutive DRAM locations. ",
+                    "position": {
+                      "start": { "line": 42, "column": 192, "offset": 3210 },
+                      "end": { "line": 42, "column": 271, "offset": 3289 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 42, "column": 3, "offset": 3021 },
+                  "end": { "line": 42, "column": 271, "offset": 3289 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 42, "column": 1, "offset": 3019 },
+              "end": { "line": 43, "column": 1, "offset": 3290 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "For example, for a given load instruction of a warp, if thread 0 accesses global memory location N2, thread 1 location N+1, thread 2 location N+2, and so on, all these accesses will be coalesced into a single request for consecutive locations when accessing the DRAMs. ",
+                    "position": {
+                      "start": { "line": 44, "column": 3, "offset": 3293 },
+                      "end": { "line": 44, "column": 272, "offset": 3562 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 44, "column": 3, "offset": 3293 },
+                  "end": { "line": 44, "column": 272, "offset": 3562 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 44, "column": 1, "offset": 3291 },
+              "end": { "line": 45, "column": 1, "offset": 3563 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Such coalesced access allows the DRAMs to deliver data as a burst.",
+                    "position": {
+                      "start": { "line": 46, "column": 3, "offset": 3566 },
+                      "end": { "line": 46, "column": 69, "offset": 3632 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 46, "column": 3, "offset": 3566 },
+                  "end": { "line": 46, "column": 69, "offset": 3632 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 46, "column": 1, "offset": 3564 },
+              "end": { "line": 46, "column": 69, "offset": 3632 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 38, "column": 1, "offset": 2767 },
+          "end": { "line": 46, "column": 69, "offset": 3632 },
+          "indent": [1, 1, 1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "how to effectively use the coalescing hardware?",
+            "position": {
+              "start": { "line": 48, "column": 6, "offset": 3639 },
+              "end": { "line": 48, "column": 53, "offset": 3686 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 48, "column": 1, "offset": 3634 },
+          "end": { "line": 48, "column": 53, "offset": 3686 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Recall from ",
+            "position": {
+              "start": { "line": 50, "column": 1, "offset": 3688 },
+              "end": { "line": 50, "column": 13, "offset": 3700 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/cuda2-warp",
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 2. Warps",
+                "position": {
+                  "start": { "line": 50, "column": 14, "offset": 3701 },
+                  "end": { "line": 50, "column": 60, "offset": 3747 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 50, "column": 13, "offset": 3700 },
+              "end": { "line": 50, "column": 74, "offset": 3761 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " that multidimensional array elements in CUDA are placed into the linearly addressed memory space according to the ",
+            "position": {
+              "start": { "line": 50, "column": 74, "offset": 3761 },
+              "end": { "line": 50, "column": 189, "offset": 3876 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "row-major",
+                "position": {
+                  "start": { "line": 50, "column": 191, "offset": 3878 },
+                  "end": { "line": 50, "column": 200, "offset": 3887 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 50, "column": 189, "offset": 3876 },
+              "end": { "line": 50, "column": 202, "offset": 3889 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " convention. ",
+            "position": {
+              "start": { "line": 50, "column": 202, "offset": 3889 },
+              "end": { "line": 50, "column": 215, "offset": 3902 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 50, "column": 1, "offset": 3688 },
+          "end": { "line": 50, "column": 215, "offset": 3902 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 5,
+        "children": [
+          {
+            "type": "text",
+            "value": "unfavorable data access pattern",
+            "position": {
+              "start": { "line": 52, "column": 7, "offset": 3910 },
+              "end": { "line": 52, "column": 38, "offset": 3941 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 52, "column": 1, "offset": 3904 },
+          "end": { "line": 52, "column": 38, "offset": 3941 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./unfavorable.png",
+            "alt": "unfavorable",
+            "position": {
+              "start": { "line": 53, "column": 1, "offset": 3942 },
+              "end": { "line": 53, "column": 34, "offset": 3975 },
+              "indent": []
+            },
+            "value": "<a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/c34bd1d42541a79b84d3d7fec169ff8a/f3cbc/unfavorable.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 79.12087912087912%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC5UlEQVQ4y3WU709SURjH+ZvyhVZTU8HfgrrqZa964ZpzrshQBK6mYPljvcnMH2kOEEEJXDHFNb0KISr4A0TRFolTa5Foxiu8fDv3qqSCZ/vsOTvnud99z32ec3hIMmKxWHwe/n2IWdqGlSUP1tf8WJx3Y2J8EvT0LNyuZdhnHVhd9sbzeVeFzsWO/h5g+5cP/p1lOD1TWNqwY8FLw+6ehM11imP5Mxfd63YEfqzhZ3gnUfCEOeHmi9+sqOjMQHV3ASpacyEeKETDWBkoUxkazOUclPl0TpnKIdblQGt7Ad5FV1cFH73NRHVPHipf8yEezEe9sRjSkaIEZKNCPB3OJoItpw4ZholzwkQ5wfmtCUgMAihMIijMQsg+lKB+NDlyo4gInjmMRqPJ6oL5r1ZyDD4REkFqJB+ygiRKk8DmiPVE0E4EHQ4H5ubm4HK5QNM0vGsehEN/MLdhQa02G5ShGLLhItRqCiHTFUKhT4QylECizYJuRgVeJBJBMBhEIBDA6uoq9vd3OYduzxhUnWno6MuBqusOatvSoezMREdvFtp6stB+gY5ektOZCtMEBZ7P5+MEQ6EQEdsn7OEoHMGC7yPkAxlQagvQrMmDaiifi01qguYybI58IB2GqSbw/H4/nE4n2KNbLBbicgXB7T24iEPlm5toJw7berPRyjojMRntfXwou4hDK3W5D7nWAcNFJynKE0MupOZS1JqEqIsjQp1ZxEV2nYXNeTwigPrLy/99eA5z1ocLW1ZIdLlQGEu5tpCNCCEn/VZPCiDVk8oahGRPxK1RxjI80wswZE8ieN7Yjs1PqFLfQo2ej5oRPip7M3FXkoJ7kht4oErF/foUPHx1G5JRsj8sQJUmDe9nGhOvHhM7PfLmrhv90wqobUpCMwZnmtBtodA3/hxqugV91ga8m2yE2t7M5fTTctDe0UTBq6/N1RE+OMT3QPDafd51T9flX8Fw5WJv1fkFOD4+PstjLuX+AwVM8AWhWiQRAAAAAElFTkSuQmCC'); background-size: cover; display: block;\"\n    ></span>\n    <img\n        class=\"gatsby-resp-image-image\"\n        style=\"width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;\"\n        alt=\"unfavorable\"\n        title=\"\"\n        src=\"/static/c34bd1d42541a79b84d3d7fec169ff8a/d7711/unfavorable.png\"\n        srcset=\"/static/c34bd1d42541a79b84d3d7fec169ff8a/a695b/unfavorable.png 148w,\n/static/c34bd1d42541a79b84d3d7fec169ff8a/2f273/unfavorable.png 295w,\n/static/c34bd1d42541a79b84d3d7fec169ff8a/d7711/unfavorable.png 590w,\n/static/c34bd1d42541a79b84d3d7fec169ff8a/f3cbc/unfavorable.png 728w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n      />\n  </span>\n  </a>"
+          }
+        ],
+        "position": {
+          "start": { "line": 53, "column": 1, "offset": 3942 },
+          "end": { "line": 53, "column": 34, "offset": 3975 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 5,
+        "children": [
+          {
+            "type": "text",
+            "value": "favorable data access pattern",
+            "position": {
+              "start": { "line": 55, "column": 7, "offset": 3983 },
+              "end": { "line": 55, "column": 36, "offset": 4012 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 55, "column": 1, "offset": 3977 },
+          "end": { "line": 55, "column": 36, "offset": 4012 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./favorable.png",
+            "alt": "favorable",
+            "position": {
+              "start": { "line": 56, "column": 1, "offset": 4013 },
+              "end": { "line": 56, "column": 30, "offset": 4042 },
+              "indent": []
+            },
+            "value": "<a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/4fab173c0bc9c21451ad8321291049a0/2add1/favorable.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block;  max-width: 494px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 116.59919028340082%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAABYlAAAWJQFJUiTwAAADKElEQVQ4y61VWU9aQRT25/SpTbTaxKUKuKCC8NJWH5omrjFtUmvACBcw0kSronWtMVaMNi0qOwKuxRgrIJqmkcTgUvvSN1PfrE1Yvs4dwGiBJq1O8nEuc7/zzZlz58xJAxnhSBihcIgiQp7Pf51j17+LjU8bcHs24bDPw+F0wOX6iO1tH7xbXiwuLsC15mLdEQwFqW+YIC0SiSBhhIE9fwDuDQ9Wl1xYW3djbXUdy+TZ49mBd9NH5/f3DhNc09ifg+9fsBGwwXu4AHfACd/xEraOluA7WsbO1xUEPhvh+7YK/54d/l0LvMcrdN57uIjNgIP6xEEFZ9wa1I1louF1PpqmOHjIZOHZOActc0WQfuBiVH0LzXPF6BjJQm9fOl7oiyHV8SCdKUwAFTTvDKFak40aNQ+SKT4qW3LwdLAI7XYxVAYhtD2ZYKxi9E1wMfzmPuQ2Mm+sgNJUAZUpauOggnpPPySzXDCzIkjflUJlqYDCKIDCJIR8ToAhdQYYiwia8QIMjeRCZhVByb43CmMQgDFE/8cEByCZ4aDNLIbSHCWwUFmEkEzzwTy/AwWJ6rKgwiC4EFMRH5U1GsQVQZVJdCEWj5CZLcewOh1yqyiJoIBsUwjpdCmatXzCTykovLAqYid77kJuThRk2OhIZA19PFTJc2iqkggKrwgqDeWY6MqA3JIkQnYHegGqOwvICeEl5vC/BImt7SpAY39hqhz+e4S1rwrwmMmDjOT7WoI0hyRvT9rzUCXLoQtcW7CNfJTqjnxUtmbTI3e9LbPHhog0DhSirot7AzmM8diSa6MH+wYivFp6sQgN3gFay7T0LhW6gi1+4qDtJpeDRYzetxx6OcjIRaFkF2N5xhguXw6z7l406XLJKmVoNfDRqudDpo9aub4E45230WIqQ/dYDvoH70FqLiPvSy54cS5rqaB9exIvTVXQ2OvRPV9zBRpbNd4PC9Bpr8Xo9CNMaB+g01mPHltNApcFEYwgFAohGAzS3pAAMs/2ivgIxeZScZP3lD/Gj9NTOJ1O0k88ODv7+Vcu3TIrmgq05xzsQ6vVQqfT4eTkJNrHwuGk/N+EUBpQSH2NtQAAAABJRU5ErkJggg=='); background-size: cover; display: block;\"\n    ></span>\n    <img\n        class=\"gatsby-resp-image-image\"\n        style=\"width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;\"\n        alt=\"favorable\"\n        title=\"\"\n        src=\"/static/4fab173c0bc9c21451ad8321291049a0/2add1/favorable.png\"\n        srcset=\"/static/4fab173c0bc9c21451ad8321291049a0/4a568/favorable.png 148w,\n/static/4fab173c0bc9c21451ad8321291049a0/5c55c/favorable.png 295w,\n/static/4fab173c0bc9c21451ad8321291049a0/2add1/favorable.png 494w\"\n        sizes=\"(max-width: 494px) 100vw, 494px\"\n      />\n  </span>\n  </a>"
+          }
+        ],
+        "position": {
+          "start": { "line": 56, "column": 1, "offset": 4013 },
+          "end": { "line": 56, "column": 30, "offset": 4042 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 56, "column": 30, "offset": 4042 }
+    }
+  }
+}

@@ -23,7 +23,9 @@
       "slug": "/cuda2-warp/",
       "previous": {
         "fields": { "slug": "/cuda1/" },
-        "frontmatter": { "title": "The CUDA Parallel Programming Model - 1" }
+        "frontmatter": {
+          "title": "The CUDA Parallel Programming Model - 1. Concepts"
+        }
       },
       "next": {
         "fields": { "slug": "/cuda3-thread-divergence/" },

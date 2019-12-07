@@ -9,6 +9,48 @@
         "edges": [
           {
             "node": {
+              "id": "1be4c6f2-8a65-571c-a557-efe16b22fa54",
+              "excerpt": "Notation Matrix  Matrix  Output Matrix  row counter:  column counter:   is the element at   position in the vertical direction and   position in the horizontal…",
+              "fields": {
+                "slug": "/cuda7-matrixmult/",
+                "readingTime": { "text": "3 min read" }
+              },
+              "frontmatter": {
+                "date": "December 07, 2019",
+                "title": "CUDA Programming Examples - 1. Matrix Multiplication"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "1496b751-5bc3-57bd-a11c-0e9360e0cf9a",
+              "excerpt": "",
+              "fields": {
+                "slug": "/cuda6-tiling/",
+                "readingTime": { "text": "0 min read" }
+              },
+              "frontmatter": {
+                "date": "December 07, 2019",
+                "title": "The CUDA Parallel Programming Model - 6.Tiling"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "24b545e9-74b6-5be9-8d6a-f33611aa8b5e",
+              "excerpt": "This post talks about a key factor to CUDA kernel performace: accessing data in the globle memory. CUDA applications tend to process a massive amount of data…",
+              "fields": {
+                "slug": "/cuda5-coalesce/",
+                "readingTime": { "text": "4 min read" }
+              },
+              "frontmatter": {
+                "date": "December 07, 2019",
+                "title": "The CUDA Parallel Programming Model - 5.Memory Coalescing"
+              }
+            }
+          },
+          {
+            "node": {
               "id": "863e4c7d-c15f-5dc9-ada5-e86eb540e778",
               "excerpt": "This is the fourth post in a series about what I learnt in my GPU class at NYU this past fall. Here I collected several examples that showcase how the CUDA…",
               "fields": {
@@ -59,7 +101,7 @@
               },
               "frontmatter": {
                 "date": "December 05, 2019",
-                "title": "The CUDA Parallel Programming Model - 1"
+                "title": "The CUDA Parallel Programming Model - 1. Concepts"
               }
             }
           }

@@ -1,5 +1,0 @@
-{
-  "expireTime": 9007200830479730000,
-  "key": "transformer-remark-markdown-html-65a45d3174d23c05263373b990096e5f-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
-  "val": "<p>This is the third post in a series about what I learnt in my GPU class at NYU this past fall. Here I collected several examples that showcase how the CUDA <code class=\"language-text\">__syncthreads()</code> command should (or should not) be used.</p>\n<h2>Example 1</h2>\n<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\"></code></pre></div>"
-}
