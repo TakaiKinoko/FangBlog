@@ -1,0 +1,33 @@
+{
+  "componentChunkName": "component---src-templates-blog-post-js",
+  "path": "/cuda3-thread-divergence/",
+  "webpackCompilationHash": "",
+  "result": {
+    "data": {
+      "site": {
+        "siteMetadata": { "title": "FANG'S NOTEBOOK", "author": "Fang Cabrera" }
+      },
+      "markdownRemark": {
+        "id": "d1d0a483-646c-56db-bae5-fd42b2f06372",
+        "excerpt": "This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about warps, why using…",
+        "html": "<p>This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about warps, why using warps from a SIMD hardware standpoint, and how warps can be a dangerous thing to deal with.</p>",
+        "fields": { "readingTime": { "text": "1 min read" } },
+        "frontmatter": {
+          "title": "What I Learnt About The CUDA Parallel Programming Model - 3.               \n More On Thread Divergence",
+          "date": "December 07, 2019"
+        }
+      }
+    },
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": false,
+      "slug": "/cuda3-thread-divergence/",
+      "previous": {
+        "fields": { "slug": "/cuda2-warp/" },
+        "frontmatter": {
+          "title": "What I Learnt About The CUDA Parallel Programming Model - 2. Warps"
+        }
+      },
+      "next": null
+    }
+  }
+}

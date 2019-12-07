@@ -14,7 +14,7 @@
         "fields": { "readingTime": { "text": "4 min read" } },
         "frontmatter": {
           "title": "What I Learnt About The CUDA Parallel Programming Model - 1",
-          "date": "December 06, 2019"
+          "date": "December 05, 2019"
         }
       }
     },
@@ -23,9 +23,9 @@
       "slug": "/cuda1/",
       "previous": null,
       "next": {
-        "fields": { "slug": "/cuda2/" },
+        "fields": { "slug": "/cuda2-warp/" },
         "frontmatter": {
-          "title": "What I Learnt About The CUDA Parallel Programming Model - 2"
+          "title": "What I Learnt About The CUDA Parallel Programming Model - 2. Warps"
         }
       }
     }

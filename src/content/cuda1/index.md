@@ -1,6 +1,6 @@
 ---
 title: "What I Learnt About The CUDA Parallel Programming Model - 1"
-date: "2019-12-06T20:12:03.284Z"
+date: "2019-12-05T20:12:03.284Z"
 cover: "global.jpg"
 ---
 

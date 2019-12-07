@@ -10,7 +10,8 @@
           { "path": "/" },
           { "path": "/404.html" },
           { "path": "/cuda1/" },
-          { "path": "/cuda2/" }
+          { "path": "/cuda2-warp/" },
+          { "path": "/cuda3-thread-divergence/" }
         ]
       }
     },

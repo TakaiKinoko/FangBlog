@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830475536000,
+  "key": "transformer-remark-markdown-html-a85edb1cbf5c1907e93e2eac9a81d5c1-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<p>This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about warps, why using warps from a SIMD hardware standpoint, and how warps can be a dangerous thing to deal with.</p>"
+}

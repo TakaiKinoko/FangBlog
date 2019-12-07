@@ -1,1 +1,57 @@
-{"componentChunkName":"component---src-pages-index-js","path":"/","webpackCompilationHash":"","result":{"data":{"site":{"siteMetadata":{"title":"FANG'S NOTEBOOK"}},"allMarkdownRemark":{"edges":[{"node":{"id":"fa2ee5aa-dd46-59d1-9984-6289fedad9b8","excerpt":"This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about warps, why using warps from a SIMD…","fields":{"slug":"/cuda2-warp/","readingTime":{"text":"6 min read"}},"frontmatter":{"date":"December 06, 2019","title":"What I Learnt About The CUDA Parallel Programming Model - 2"}}},{"node":{"id":"e92f1d62-ed13-5144-a5b9-ea2222379d8d","excerpt":"I took the  Graphics Processing Units  course at NYU this past fall. This is the first post in a series about what I learnt. Buckle up for lots of technical…","fields":{"slug":"/cuda1/","readingTime":{"text":"4 min read"}},"frontmatter":{"date":"December 06, 2019","title":"What I Learnt About The CUDA Parallel Programming Model - 1"}}}]}},"pageContext":{"isCreatedByStatefulCreatePages":true}}}
+{
+  "componentChunkName": "component---src-pages-index-js",
+  "path": "/",
+  "webpackCompilationHash": "",
+  "result": {
+    "data": {
+      "site": { "siteMetadata": { "title": "FANG'S NOTEBOOK" } },
+      "allMarkdownRemark": {
+        "edges": [
+          {
+            "node": {
+              "id": "d1d0a483-646c-56db-bae5-fd42b2f06372",
+              "excerpt": "This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about warps, why using warps from a SIMD…",
+              "fields": {
+                "slug": "/cuda3-thread-divergence/",
+                "readingTime": { "text": "1 min read" }
+              },
+              "frontmatter": {
+                "date": "December 07, 2019",
+                "title": "What I Learnt About The CUDA Parallel Programming Model - 3.               \n More On Thread Divergence"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "fa2ee5aa-dd46-59d1-9984-6289fedad9b8",
+              "excerpt": "This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about warps, why using warps from a SIMD…",
+              "fields": {
+                "slug": "/cuda2-warp/",
+                "readingTime": { "text": "6 min read" }
+              },
+              "frontmatter": {
+                "date": "December 06, 2019",
+                "title": "What I Learnt About The CUDA Parallel Programming Model - 2. Warps"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "e92f1d62-ed13-5144-a5b9-ea2222379d8d",
+              "excerpt": "I took the  Graphics Processing Units  course at NYU this past fall. This is the first post in a series about what I learnt. Buckle up for lots of technical…",
+              "fields": {
+                "slug": "/cuda1/",
+                "readingTime": { "text": "4 min read" }
+              },
+              "frontmatter": {
+                "date": "December 05, 2019",
+                "title": "What I Learnt About The CUDA Parallel Programming Model - 1"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "pageContext": { "isCreatedByStatefulCreatePages": true }
+  }
+}
