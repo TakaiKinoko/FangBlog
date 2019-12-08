@@ -1,0 +1,1630 @@
+{
+  "expireTime": 9007200830584124000,
+  "key": "transformer-remark-markdown-html-ast-28a258e978d967d0b1a6fea1733a9b29-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "0. Review",
+            "position": {
+              "start": { "line": 2, "column": 4, "offset": 4 },
+              "end": { "line": 2, "column": 13, "offset": 13 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 13, "offset": 13 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "CUDA’s Physical Architecture",
+            "position": {
+              "start": { "line": 4, "column": 5, "offset": 19 },
+              "end": { "line": 4, "column": 33, "offset": 47 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 15 },
+          "end": { "line": 4, "column": 33, "offset": 47 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "SMs",
+            "position": {
+              "start": { "line": 6, "column": 6, "offset": 54 },
+              "end": { "line": 6, "column": 9, "offset": 57 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 49 },
+          "end": { "line": 6, "column": 9, "offset": 57 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "CUDA-capable GPU cards are composed of one or more ",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 59 },
+              "end": { "line": 8, "column": 52, "offset": 110 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Streaming Multiprocessors (SMs)",
+                "position": {
+                  "start": { "line": 8, "column": 54, "offset": 112 },
+                  "end": { "line": 8, "column": 85, "offset": 143 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 52, "offset": 110 },
+              "end": { "line": 8, "column": 87, "offset": 145 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", which are an ",
+            "position": {
+              "start": { "line": 8, "column": 87, "offset": 145 },
+              "end": { "line": 8, "column": 102, "offset": 160 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "em",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "abstraction",
+                "position": {
+                  "start": { "line": 8, "column": 103, "offset": 161 },
+                  "end": { "line": 8, "column": 114, "offset": 172 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 102, "offset": 160 },
+              "end": { "line": 8, "column": 115, "offset": 173 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " of the underlying hardware.",
+            "position": {
+              "start": { "line": 8, "column": 115, "offset": 173 },
+              "end": { "line": 8, "column": 143, "offset": 201 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 59 },
+          "end": { "line": 8, "column": 143, "offset": 201 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "cores",
+            "position": {
+              "start": { "line": 10, "column": 6, "offset": 208 },
+              "end": { "line": 10, "column": 11, "offset": 213 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 203 },
+          "end": { "line": 10, "column": 11, "offset": 213 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Each SM has a set of ",
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 215 },
+              "end": { "line": 12, "column": 22, "offset": 236 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Streaming Processors (SPs)",
+                "position": {
+                  "start": { "line": 12, "column": 24, "offset": 238 },
+                  "end": { "line": 12, "column": 50, "offset": 264 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 12, "column": 22, "offset": 236 },
+              "end": { "line": 12, "column": 52, "offset": 266 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", also called CUDA cores, which ",
+            "position": {
+              "start": { "line": 12, "column": 52, "offset": 266 },
+              "end": { "line": 12, "column": 84, "offset": 298 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "share a cache of shared memory",
+                "position": {
+                  "start": { "line": 12, "column": 86, "offset": 300 },
+                  "end": { "line": 12, "column": 116, "offset": 330 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 12, "column": 84, "offset": 298 },
+              "end": { "line": 12, "column": 118, "offset": 332 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " that is faster than the GPU’s global memory but that can only be accessed by the threads running on the SPs the that SM. These streaming processors are the “cores” that execute instructions.",
+            "position": {
+              "start": { "line": 12, "column": 118, "offset": 332 },
+              "end": { "line": 12, "column": 309, "offset": 523 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 215 },
+          "end": { "line": 12, "column": 309, "offset": 523 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "cores/SM",
+            "position": {
+              "start": { "line": 14, "column": 6, "offset": 530 },
+              "end": { "line": 14, "column": 14, "offset": 538 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 525 },
+          "end": { "line": 14, "column": 14, "offset": 538 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The numbers of SPs/cores in an SM and the number of SMs depend on your device.",
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 540 },
+              "end": { "line": 16, "column": 79, "offset": 618 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 16, "column": 1, "offset": 540 },
+          "end": { "line": 16, "column": 79, "offset": 618 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "It is important to realize, however, that regardless of GPU model, there ",
+            "position": {
+              "start": { "line": 18, "column": 1, "offset": 620 },
+              "end": { "line": 18, "column": 74, "offset": 693 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "are many more CUDA cores in a GPU than in a typical multicore CPU",
+                "position": {
+                  "start": { "line": 18, "column": 76, "offset": 695 },
+                  "end": { "line": 18, "column": 141, "offset": 760 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 18, "column": 74, "offset": 693 },
+              "end": { "line": 18, "column": 143, "offset": 762 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ": hundreds or thousands more. For example, the Kepler Streaming Multiprocessor design, dubbed SMX, contains 192 single-precision CUDA cores, 64 double-precision units, 32 special function units, and 32 load/store units.",
+            "position": {
+              "start": { "line": 18, "column": 143, "offset": 762 },
+              "end": { "line": 18, "column": 362, "offset": 981 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 18, "column": 1, "offset": 620 },
+          "end": { "line": 18, "column": 362, "offset": 981 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "warps, SM and cores",
+            "position": {
+              "start": { "line": 20, "column": 6, "offset": 988 },
+              "end": { "line": 20, "column": 25, "offset": 1007 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 20, "column": 1, "offset": 983 },
+          "end": { "line": 20, "column": 25, "offset": 1007 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "CUDA ",
+            "position": {
+              "start": { "line": 22, "column": 1, "offset": 1009 },
+              "end": { "line": 22, "column": 6, "offset": 1014 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "cores are grouped together",
+                "position": {
+                  "start": { "line": 22, "column": 8, "offset": 1016 },
+                  "end": { "line": 22, "column": 34, "offset": 1042 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 22, "column": 6, "offset": 1014 },
+              "end": { "line": 22, "column": 36, "offset": 1044 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to perform instructions in a ",
+            "position": {
+              "start": { "line": 22, "column": 36, "offset": 1044 },
+              "end": { "line": 22, "column": 66, "offset": 1074 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "warp",
+                "position": {
+                  "start": { "line": 22, "column": 68, "offset": 1076 },
+                  "end": { "line": 22, "column": 72, "offset": 1080 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 22, "column": 66, "offset": 1074 },
+              "end": { "line": 22, "column": 74, "offset": 1082 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " of threads. Warp simply means a group of threads that are scheduled together to execute the same instructions in lockstep.",
+            "position": {
+              "start": { "line": 22, "column": 74, "offset": 1082 },
+              "end": { "line": 22, "column": 197, "offset": 1205 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 22, "column": 1, "offset": 1009 },
+          "end": { "line": 22, "column": 197, "offset": 1205 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Depending on the model of GPU, the ",
+            "position": {
+              "start": { "line": 24, "column": 1, "offset": 1207 },
+              "end": { "line": 24, "column": 36, "offset": 1242 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "cores",
+                "position": {
+                  "start": { "line": 24, "column": 38, "offset": 1244 },
+                  "end": { "line": 24, "column": 43, "offset": 1249 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 24, "column": 36, "offset": 1242 },
+              "end": { "line": 24, "column": 45, "offset": 1251 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " may be double or quadruple pumped so that they ",
+            "position": {
+              "start": { "line": 24, "column": 45, "offset": 1251 },
+              "end": { "line": 24, "column": 93, "offset": 1299 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "execute one instruction on two or four threads",
+                "position": {
+                  "start": { "line": 24, "column": 95, "offset": 1301 },
+                  "end": { "line": 24, "column": 141, "offset": 1347 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 24, "column": 93, "offset": 1299 },
+              "end": { "line": 24, "column": 143, "offset": 1349 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " in as many clock cycles.",
+            "position": {
+              "start": { "line": 24, "column": 143, "offset": 1349 },
+              "end": { "line": 24, "column": 168, "offset": 1374 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 24, "column": 1, "offset": 1207 },
+          "end": { "line": 24, "column": 168, "offset": 1374 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "element",
+            "tagName": "em",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "For instance, Tesla devices use a group of 8 quadpumped cores to execute a single warp. If there are less than 32 threads scheduled in the warp, it will still take as long to execute the instructions.",
+                "position": {
+                  "start": { "line": 26, "column": 2, "offset": 1377 },
+                  "end": { "line": 26, "column": 202, "offset": 1577 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 26, "column": 1, "offset": 1376 },
+              "end": { "line": 26, "column": 203, "offset": 1578 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 26, "column": 1, "offset": 1376 },
+          "end": { "line": 26, "column": 203, "offset": 1578 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "All CUDA cards to date use a warp size of 32.",
+            "position": {
+              "start": { "line": 28, "column": 1, "offset": 1580 },
+              "end": { "line": 28, "column": 46, "offset": 1625 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 28, "column": 1, "offset": 1580 },
+          "end": { "line": 28, "column": 46, "offset": 1625 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Each ",
+            "position": {
+              "start": { "line": 30, "column": 1, "offset": 1627 },
+              "end": { "line": 30, "column": 6, "offset": 1632 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "SM",
+                "position": {
+                  "start": { "line": 30, "column": 8, "offset": 1634 },
+                  "end": { "line": 30, "column": 10, "offset": 1636 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 30, "column": 6, "offset": 1632 },
+              "end": { "line": 30, "column": 12, "offset": 1638 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " has at least one ",
+            "position": {
+              "start": { "line": 30, "column": 12, "offset": 1638 },
+              "end": { "line": 30, "column": 30, "offset": 1656 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "warp scheduler",
+                "position": {
+                  "start": { "line": 30, "column": 32, "offset": 1658 },
+                  "end": { "line": 30, "column": 46, "offset": 1672 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 30, "column": 30, "offset": 1656 },
+              "end": { "line": 30, "column": 48, "offset": 1674 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", which is responsible for executing 32 threads.",
+            "position": {
+              "start": { "line": 30, "column": 48, "offset": 1674 },
+              "end": { "line": 30, "column": 96, "offset": 1722 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 30, "column": 1, "offset": 1627 },
+          "end": { "line": 30, "column": 96, "offset": 1722 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "tiling",
+            "position": {
+              "start": { "line": 32, "column": 6, "offset": 1729 },
+              "end": { "line": 32, "column": 12, "offset": 1735 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 32, "column": 1, "offset": 1724 },
+          "end": { "line": 32, "column": 12, "offset": 1735 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The programmer is responsible for ensuring that the threads are being assigned efficiently for code that is designed to run on the GPU. The assignment of threads is done virtually in the code using what is sometimes referred to as a ‘tiling’ scheme of blocks of threads that form a grid. Programmers define a kernel function that will be executed on the CUDA card using a particular tiling scheme.",
+            "position": {
+              "start": { "line": 34, "column": 1, "offset": 1737 },
+              "end": { "line": 34, "column": 398, "offset": 2134 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 34, "column": 1, "offset": 1737 },
+          "end": { "line": 34, "column": 398, "offset": 2134 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "CUDA’s Virtual Architecture",
+            "position": {
+              "start": { "line": 36, "column": 5, "offset": 2140 },
+              "end": { "line": 36, "column": 32, "offset": 2167 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 36, "column": 1, "offset": 2136 },
+          "end": { "line": 36, "column": 32, "offset": 2167 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "When programming in CUDA we work with blocks of threads and grids of blocks. What is the relationship between this virtual architecture and the CUDA card’s physical architecture?",
+            "position": {
+              "start": { "line": 38, "column": 1, "offset": 2169 },
+              "end": { "line": 38, "column": 179, "offset": 2347 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 38, "column": 1, "offset": 2169 },
+          "end": { "line": 38, "column": 179, "offset": 2347 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "block",
+            "position": {
+              "start": { "line": 40, "column": 6, "offset": 2354 },
+              "end": { "line": 40, "column": 11, "offset": 2359 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 40, "column": 1, "offset": 2349 },
+          "end": { "line": 40, "column": 11, "offset": 2359 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "When kernels are launched, each ",
+            "position": {
+              "start": { "line": 42, "column": 1, "offset": 2361 },
+              "end": { "line": 42, "column": 33, "offset": 2393 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "block",
+                "position": {
+                  "start": { "line": 42, "column": 35, "offset": 2395 },
+                  "end": { "line": 42, "column": 40, "offset": 2400 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 42, "column": 33, "offset": 2393 },
+              "end": { "line": 42, "column": 42, "offset": 2402 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " in a grid is assigned to a ",
+            "position": {
+              "start": { "line": 42, "column": 42, "offset": 2402 },
+              "end": { "line": 42, "column": 70, "offset": 2430 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Streaming Multiprocessor",
+                "position": {
+                  "start": { "line": 42, "column": 72, "offset": 2432 },
+                  "end": { "line": 42, "column": 96, "offset": 2456 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 42, "column": 70, "offset": 2430 },
+              "end": { "line": 42, "column": 98, "offset": 2458 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". This allows threads in a block to use ",
+            "position": {
+              "start": { "line": 42, "column": 98, "offset": 2458 },
+              "end": { "line": 42, "column": 138, "offset": 2498 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "shared",
+                "position": {
+                  "start": { "line": 42, "column": 140, "offset": 2500 },
+                  "end": { "line": 42, "column": 146, "offset": 2506 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 42, "column": 138, "offset": 2498 },
+              "end": { "line": 42, "column": 148, "offset": 2508 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " memory. If a block doesn’t use the full resources of the SM then multiple blocks may be assigned at once. If all of the SMs are busy then the extra blocks will have to wait until a SM becomes free.",
+            "position": {
+              "start": { "line": 42, "column": 148, "offset": 2508 },
+              "end": { "line": 42, "column": 346, "offset": 2706 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 42, "column": 1, "offset": 2361 },
+          "end": { "line": 42, "column": 346, "offset": 2706 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "threads",
+            "position": {
+              "start": { "line": 44, "column": 6, "offset": 2713 },
+              "end": { "line": 44, "column": 13, "offset": 2720 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 44, "column": 1, "offset": 2708 },
+          "end": { "line": 44, "column": 13, "offset": 2720 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "element",
+            "tagName": "em",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Once a block is assigned to an SM",
+                "position": {
+                  "start": { "line": 46, "column": 2, "offset": 2723 },
+                  "end": { "line": 46, "column": 35, "offset": 2756 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 46, "column": 1, "offset": 2722 },
+              "end": { "line": 46, "column": 36, "offset": 2757 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", it’s threads are split into warps by the warp scheduler and executed on the CUDA cores.",
+            "position": {
+              "start": { "line": 46, "column": 36, "offset": 2757 },
+              "end": { "line": 46, "column": 125, "offset": 2846 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 46, "column": 1, "offset": 2722 },
+          "end": { "line": 46, "column": 125, "offset": 2846 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Since the same instructions are executed on each thread in the warp simultaneously it’s generally a bad idea to have conditionals in kernel code. This type of code is sometimes called ",
+            "position": {
+              "start": { "line": 48, "column": 1, "offset": 2848 },
+              "end": { "line": 48, "column": 185, "offset": 3032 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "divergent",
+                "position": {
+                  "start": { "line": 48, "column": 187, "offset": 3034 },
+                  "end": { "line": 48, "column": 196, "offset": 3043 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 48, "column": 185, "offset": 3032 },
+              "end": { "line": 48, "column": 198, "offset": 3045 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ": when some threads in a warp are unable to execute the same instruction as other threads in a warp, those threads are diverged and do no work.",
+            "position": {
+              "start": { "line": 48, "column": 198, "offset": 3045 },
+              "end": { "line": 48, "column": 341, "offset": 3188 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 48, "column": 1, "offset": 2848 },
+          "end": { "line": 48, "column": 341, "offset": 3188 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "warp’s context switch",
+            "position": {
+              "start": { "line": 50, "column": 6, "offset": 3195 },
+              "end": { "line": 50, "column": 27, "offset": 3216 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 50, "column": 1, "offset": 3190 },
+          "end": { "line": 50, "column": 27, "offset": 3216 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Due to the hugely increased number of registers, a ",
+            "position": {
+              "start": { "line": 52, "column": 1, "offset": 3218 },
+              "end": { "line": 52, "column": 52, "offset": 3269 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "warp’s context (it’s registers, program counter etc.) stays on chip for the life of the warp",
+                "position": {
+                  "start": { "line": 52, "column": 54, "offset": 3271 },
+                  "end": { "line": 52, "column": 146, "offset": 3363 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 52, "column": 52, "offset": 3269 },
+              "end": { "line": 52, "column": 148, "offset": 3365 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". This means there is no additional cost to switching between warps vs executing the next step of a given warp. This allows the GPU to switch to hide some of it’s memory latency by switching to a new warp while it waits for a costly read.",
+            "position": {
+              "start": { "line": 52, "column": 148, "offset": 3365 },
+              "end": { "line": 52, "column": 386, "offset": 3603 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 52, "column": 1, "offset": 3218 },
+          "end": { "line": 52, "column": 386, "offset": 3603 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Block Assignment",
+            "position": {
+              "start": { "line": 54, "column": 4, "offset": 3608 },
+              "end": { "line": 54, "column": 20, "offset": 3624 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 54, "column": 1, "offset": 3605 },
+          "end": { "line": 54, "column": 20, "offset": 3624 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ol",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Before a block is assgined to an SM, it’s given all the resources it needs beforehands.",
+                    "position": {
+                      "start": { "line": 56, "column": 4, "offset": 3629 },
+                      "end": { "line": 56, "column": 91, "offset": 3716 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 56, "column": 4, "offset": 3629 },
+                  "end": { "line": 56, "column": 91, "offset": 3716 }
+                }
+              },
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "These resources include:",
+                    "position": {
+                      "start": { "line": 58, "column": 4, "offset": 3721 },
+                      "end": { "line": 58, "column": 28, "offset": 3745 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 58, "column": 4, "offset": 3721 },
+                  "end": { "line": 58, "column": 28, "offset": 3745 }
+                }
+              },
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "ul",
+                "properties": {},
+                "children": [
+                  { "type": "text", "value": "\n" },
+                  {
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
+                      { "type": "text", "value": "\n" },
+                      {
+                        "type": "element",
+                        "tagName": "p",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "shared memory",
+                            "position": {
+                              "start": {
+                                "line": 60,
+                                "column": 6,
+                                "offset": 3752
+                              },
+                              "end": {
+                                "line": 60,
+                                "column": 19,
+                                "offset": 3765
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 60, "column": 6, "offset": 3752 },
+                          "end": { "line": 60, "column": 19, "offset": 3765 }
+                        }
+                      },
+                      { "type": "text", "value": "\n" }
+                    ],
+                    "position": {
+                      "start": { "line": 60, "column": 4, "offset": 3750 },
+                      "end": { "line": 61, "column": 1, "offset": 3766 }
+                    }
+                  },
+                  { "type": "text", "value": "\n" },
+                  {
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
+                      { "type": "text", "value": "\n" },
+                      {
+                        "type": "element",
+                        "tagName": "p",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "registers",
+                            "position": {
+                              "start": {
+                                "line": 62,
+                                "column": 6,
+                                "offset": 3772
+                              },
+                              "end": {
+                                "line": 62,
+                                "column": 15,
+                                "offset": 3781
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 62, "column": 6, "offset": 3772 },
+                          "end": { "line": 62, "column": 15, "offset": 3781 }
+                        }
+                      },
+                      { "type": "text", "value": "\n" }
+                    ],
+                    "position": {
+                      "start": { "line": 62, "column": 4, "offset": 3770 },
+                      "end": { "line": 63, "column": 1, "offset": 3782 }
+                    }
+                  },
+                  { "type": "text", "value": "\n" },
+                  {
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
+                      { "type": "text", "value": "\n" },
+                      {
+                        "type": "element",
+                        "tagName": "p",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "a slot in the SM scheduler",
+                            "position": {
+                              "start": {
+                                "line": 64,
+                                "column": 6,
+                                "offset": 3788
+                              },
+                              "end": {
+                                "line": 64,
+                                "column": 32,
+                                "offset": 3814
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 64, "column": 6, "offset": 3788 },
+                          "end": { "line": 64, "column": 32, "offset": 3814 }
+                        }
+                      },
+                      { "type": "text", "value": "\n" }
+                    ],
+                    "position": {
+                      "start": { "line": 64, "column": 4, "offset": 3786 },
+                      "end": { "line": 64, "column": 32, "offset": 3814 }
+                    }
+                  },
+                  { "type": "text", "value": "\n" }
+                ],
+                "position": {
+                  "start": { "line": 60, "column": 4, "offset": 3750 },
+                  "end": { "line": 64, "column": 32, "offset": 3814 }
+                }
+              },
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "raw",
+                    "value": "<a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/be4180c5f4948a409943a556e2c0cda1/02b03/block.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 88.43930635838151%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEUUlEQVQ4y3WU+09TBxTH+2/shy2Lmg11Iz62mcUlywIRcUoBnfOXxZhlm0Md4w1RQECXbFnELYoRyeRRHgPkISAPobaUtrSlL4q2lEKBOtxchpqhqaXw2WlhWWa2m/vN9957Ts79nvM99ypgmZWVZRxTASweP56Fx3gePBF+ssZ/I3L/n7H1Z78sEg4/RsEqkZMu/TR1PU5Ms2AOCObBNPcPos8EpvkXILFRYfNsiOXwohSUI7S8gtvfjT9QxZS/Cu/M1Sgi9/5AJdOBWib8/Xhmapicr2dyThXFVECF734DvsB1xv1mQuFnawXDItHmzEKv243T/iF2617uuhIJLqUSeqrk6dIn+Pxn0Krfw2xKYNyRgNedyKPfkwg9O0Twz3h889UERZgi0nBoBSbtxcxoEvFqDuLTpkQxPZyCfzgJv/koXs95ZgwH8OlTmRmV2Ggqs6ZU5s2HuG/Zyz1PvdQJR2a4KraAoyODgZzNtGbtpCNrBx2ZgpwddGfHYr6wh/HhQnTFsbRJvDtnOx0Z22nL3E5X7k50ha9j11dH7F1XKC3ftRQyrU5gWpOCS60UJcn4NMJ39uPUfiIjOIdfu48ZrZJ7g0rcd5RyLeqlC1dvHM4JFcur6wrDolBT/zU3c7fSmf02jv79OHr20S4qu3N3YOs/gtVQRGf+Nrrz38JQHc+kMZWuM7voyn8HdcUuPHONYkp4zZTnUtF3rxiXdi9TMpNp10csTB3GPpTMrE2J13UMj7sU74gYNqDE7zjI/cmPcQwmMykz9Y4mcNfXsD5DaVmYAdtZLt9M5NKNZK73HKLdcIRLbUqutB+gbuAoJvc31A8eoOpmMrW9KXRJvPpWMjV9B6np3YPeVc9KpOXIUq+Ky626AgprdnP6ahzftyZS1Z9ESV0cBVff53LPYYbkhSWqD8i5HEdxbTyVA0mUNuwhryKeUtW7aJx1UjBqyop8erLt7gr6LCdR27MZtGZgdOdx25pNv+Ur9O6zOGevoR3/THCKPnMaBnc6Wlcag7ZT9JqOYZvulC8lhGJuMcgfT54yNlCDqSEPa0uRcD6OthIMDUUMV+cKF2JsKmGkNpOx5gJMjQU4bpzB2piFvfU0JlUGVmOfrM1zFJqJX/HOPsBYeZyR/Fexn98miMVW9iadGZtRpW2m8USM8Gs0nnyD5lNbuJ23BWtZbDTXUrYNXc7LWLp+jO6zom1ojIePljDd+gn1leMY60WBQF+Tw51r6VibCjCL4jXkYWnMR1uVjqE2VzqRvNo8hio+x6zrXVM4sbAsChcwVX6Ks+gV7GVbcJTFYCuJoSN9Iz+nbaApbSNNX26g4YsNtJzYRG/mJpySYy+NwXFuK7bTL2HuvBDdZ0Uw+Fw2XH4/6nYsrd8x1vEDY+0XBeUYW8vRNV9gpLkcQ0t5lHXr12s5F6P5lpZvMRm1ojAYcTks7gTxPhQs8i/4Hv0/Xsz1/rYkP9hF/gJ+F2IFO4iVVAAAAABJRU5ErkJggg=='); background-size: cover; display: block;\"\n    ></span>\n    <img\n        class=\"gatsby-resp-image-image\"\n        style=\"width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;\"\n        alt=\"block\"\n        title=\"\"\n        src=\"/static/be4180c5f4948a409943a556e2c0cda1/d7711/block.png\"\n        srcset=\"/static/be4180c5f4948a409943a556e2c0cda1/a695b/block.png 148w,\n/static/be4180c5f4948a409943a556e2c0cda1/2f273/block.png 295w,\n/static/be4180c5f4948a409943a556e2c0cda1/d7711/block.png 590w,\n/static/be4180c5f4948a409943a556e2c0cda1/02b03/block.png 692w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n      />\n  </span>\n  </a>",
+                    "position": {
+                      "start": { "line": 66, "column": 4, "offset": 3819 },
+                      "end": { "line": 66, "column": 25, "offset": 3840 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 66, "column": 4, "offset": 3819 },
+                  "end": { "line": 66, "column": 25, "offset": 3840 }
+                }
+              },
+              { "type": "text", "value": "\n" }
+            ],
+            "position": {
+              "start": { "line": 56, "column": 1, "offset": 3626 },
+              "end": { "line": 67, "column": 1, "offset": 3841 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Why not give blocks SPs too?",
+                    "position": {
+                      "start": { "line": 68, "column": 4, "offset": 3845 },
+                      "end": { "line": 68, "column": 32, "offset": 3873 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 68, "column": 4, "offset": 3845 },
+                  "end": { "line": 68, "column": 32, "offset": 3873 }
+                }
+              },
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "ul",
+                "properties": {},
+                "children": [
+                  { "type": "text", "value": "\n" },
+                  {
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "There are way more blocks than SPs!",
+                        "position": {
+                          "start": { "line": 70, "column": 6, "offset": 3880 },
+                          "end": { "line": 70, "column": 41, "offset": 3915 }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 70, "column": 4, "offset": 3878 },
+                      "end": { "line": 70, "column": 41, "offset": 3915 }
+                    }
+                  },
+                  { "type": "text", "value": "\n" }
+                ],
+                "position": {
+                  "start": { "line": 70, "column": 4, "offset": 3878 },
+                  "end": { "line": 70, "column": 41, "offset": 3915 }
+                }
+              },
+              { "type": "text", "value": "\n" }
+            ],
+            "position": {
+              "start": { "line": 68, "column": 1, "offset": 3842 },
+              "end": { "line": 71, "column": 1, "offset": 3916 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Why don’t we assign these resources after the block is assigned?",
+                    "position": {
+                      "start": { "line": 72, "column": 4, "offset": 3920 },
+                      "end": { "line": 72, "column": 68, "offset": 3984 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 72, "column": 4, "offset": 3920 },
+                  "end": { "line": 72, "column": 68, "offset": 3984 }
+                }
+              },
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "First, more on CUDA runtime:",
+                    "position": {
+                      "start": { "line": 74, "column": 4, "offset": 3989 },
+                      "end": { "line": 74, "column": 32, "offset": 4017 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 74, "column": 4, "offset": 3989 },
+                  "end": { "line": 74, "column": 32, "offset": 4017 }
+                }
+              },
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "h3",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Notes On CUDA Runtime",
+                    "position": {
+                      "start": { "line": 76, "column": 8, "offset": 4026 },
+                      "end": { "line": 76, "column": 29, "offset": 4047 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 76, "column": 4, "offset": 4022 },
+                  "end": { "line": 76, "column": 29, "offset": 4047 }
+                }
+              },
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "ul",
+                "properties": {},
+                "children": [
+                  { "type": "text", "value": "\n" },
+                  {
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
+                      { "type": "text", "value": "\n" },
+                      {
+                        "type": "element",
+                        "tagName": "p",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "The runtime system:",
+                            "position": {
+                              "start": {
+                                "line": 78,
+                                "column": 6,
+                                "offset": 4054
+                              },
+                              "end": {
+                                "line": 78,
+                                "column": 25,
+                                "offset": 4073
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 78, "column": 6, "offset": 4054 },
+                          "end": { "line": 78, "column": 25, "offset": 4073 }
+                        }
+                      },
+                      { "type": "text", "value": "\n" }
+                    ],
+                    "position": {
+                      "start": { "line": 78, "column": 4, "offset": 4052 },
+                      "end": { "line": 79, "column": 1, "offset": 4074 }
+                    }
+                  },
+                  { "type": "text", "value": "\n" },
+                  {
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
+                      { "type": "text", "value": "\n" },
+                      {
+                        "type": "element",
+                        "tagName": "p",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "maintains a list of blocks to be executed",
+                            "position": {
+                              "start": {
+                                "line": 80,
+                                "column": 8,
+                                "offset": 4082
+                              },
+                              "end": {
+                                "line": 80,
+                                "column": 49,
+                                "offset": 4123
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 80, "column": 8, "offset": 4082 },
+                          "end": { "line": 80, "column": 49, "offset": 4123 }
+                        }
+                      },
+                      { "type": "text", "value": "\n" }
+                    ],
+                    "position": {
+                      "start": { "line": 80, "column": 5, "offset": 4079 },
+                      "end": { "line": 81, "column": 1, "offset": 4124 }
+                    }
+                  },
+                  { "type": "text", "value": "\n" },
+                  {
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
+                      { "type": "text", "value": "\n" },
+                      {
+                        "type": "element",
+                        "tagName": "p",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "assigns new blocks to SM as they compute previously assigned blocks",
+                            "position": {
+                              "start": {
+                                "line": 82,
+                                "column": 8,
+                                "offset": 4132
+                              },
+                              "end": {
+                                "line": 82,
+                                "column": 75,
+                                "offset": 4199
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 82, "column": 8, "offset": 4132 },
+                          "end": { "line": 82, "column": 75, "offset": 4199 }
+                        }
+                      },
+                      { "type": "text", "value": "\n" }
+                    ],
+                    "position": {
+                      "start": { "line": 82, "column": 5, "offset": 4129 },
+                      "end": { "line": 83, "column": 1, "offset": 4200 }
+                    }
+                  },
+                  { "type": "text", "value": "\n" },
+                  {
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
+                      { "type": "text", "value": "\n" },
+                      {
+                        "type": "element",
+                        "tagName": "p",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "CUDA runtime automatically reduces the number of blocks assgined to each SM until resource usage is under limit.",
+                            "position": {
+                              "start": {
+                                "line": 84,
+                                "column": 6,
+                                "offset": 4206
+                              },
+                              "end": {
+                                "line": 84,
+                                "column": 118,
+                                "offset": 4318
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 84, "column": 6, "offset": 4206 },
+                          "end": { "line": 84, "column": 118, "offset": 4318 }
+                        }
+                      },
+                      { "type": "text", "value": "\n" }
+                    ],
+                    "position": {
+                      "start": { "line": 84, "column": 4, "offset": 4204 },
+                      "end": { "line": 84, "column": 118, "offset": 4318 }
+                    }
+                  },
+                  { "type": "text", "value": "\n" }
+                ],
+                "position": {
+                  "start": { "line": 78, "column": 4, "offset": 4052 },
+                  "end": { "line": 84, "column": 118, "offset": 4318 }
+                }
+              },
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Then, coming back to the point that we have ",
+                    "position": {
+                      "start": { "line": 86, "column": 4, "offset": 4323 },
+                      "end": { "line": 86, "column": 48, "offset": 4367 }
+                    }
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "strong",
+                    "properties": {},
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "zero-cost context switch for warps",
+                        "position": {
+                          "start": { "line": 86, "column": 50, "offset": 4369 },
+                          "end": { "line": 86, "column": 84, "offset": 4403 }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 86, "column": 48, "offset": 4367 },
+                      "end": { "line": 86, "column": 86, "offset": 4405 }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " now, preassign resources to blocks (which in terms of execution is a bunch of warps) will make it that when warps are scheduled, their resources are already on-chip. So effectively we can achieve ",
+                    "position": {
+                      "start": { "line": 86, "column": 86, "offset": 4405 },
+                      "end": { "line": 86, "column": 283, "offset": 4602 }
+                    }
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "strong",
+                    "properties": {},
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "zero-cost scheduling",
+                        "position": {
+                          "start": {
+                            "line": 86,
+                            "column": 285,
+                            "offset": 4604
+                          },
+                          "end": { "line": 86, "column": 305, "offset": 4624 }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 86, "column": 283, "offset": 4602 },
+                      "end": { "line": 86, "column": 307, "offset": 4626 }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": { "line": 86, "column": 307, "offset": 4626 },
+                      "end": { "line": 86, "column": 308, "offset": 4627 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 86, "column": 4, "offset": 4323 },
+                  "end": { "line": 86, "column": 308, "offset": 4627 }
+                }
+              },
+              { "type": "text", "value": "\n" }
+            ],
+            "position": {
+              "start": { "line": 72, "column": 1, "offset": 3917 },
+              "end": { "line": 86, "column": 308, "offset": 4627 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 56, "column": 1, "offset": 3626 },
+          "end": { "line": 86, "column": 308, "offset": 4627 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 88, "column": 1, "offset": 4629 }
+    }
+  }
+}

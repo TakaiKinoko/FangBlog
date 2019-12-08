@@ -29,7 +29,7 @@
       },
       "next": {
         "fields": { "slug": "/cudaRandom/" },
-        "frontmatter": { "title": "Some CUDA Related Q&As" }
+        "frontmatter": { "title": "Some CUDA Related Questions" }
       }
     }
   }
