@@ -10,7 +10,7 @@
           {
             "node": {
               "id": "53baaded-057f-5df7-a592-c0173552cd00",
-              "excerpt": "In this post, I talk about what happends when blocks are assigned to SMs, as well as CUDA code optimization across GPU architectures. Before this, I thought it…",
+              "excerpt": "In this post, I talk about what happens when blocks are assigned to SMs, as well as CUDA code optimization across GPU architecture. Before this, I thought it…",
               "fields": {
                 "slug": "/cudaRandom/",
                 "readingTime": { "text": "9 min read" }

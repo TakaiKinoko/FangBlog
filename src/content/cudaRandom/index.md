@@ -3,7 +3,7 @@ title: "Some CUDA Related Questions"
 date: "2019-12-08T10:10:03.284Z"
 ---
 
-In this post, I talk about what happends when blocks are assigned to SMs, as well as CUDA code optimization across GPU architectures. Before this, I thought it was necessary to recap how CUDA's virtual architecure maps to the physical and vice-versa.
+In this post, I talk about what happens when blocks are assigned to SMs, as well as CUDA code optimization across GPU architecture. Before this, I thought it was necessary to recap how CUDA's virtual architecure maps to the physical and vice-versa.
 
 ## Table Of Content
 
