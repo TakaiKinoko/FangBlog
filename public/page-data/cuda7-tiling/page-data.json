@@ -22,15 +22,15 @@
       "isCreatedByStatefulCreatePages": false,
       "slug": "/cuda7-tiling/",
       "previous": {
-        "fields": { "slug": "/cuda6-memoryparallel/" },
+        "fields": { "slug": "/cuda5-coalesce/" },
         "frontmatter": {
-          "title": "The CUDA Parallel Programming Model - 6. Memory Parallelism"
+          "title": "The CUDA Parallel Programming Model - 5.Memory Coalescing"
         }
       },
       "next": {
-        "fields": { "slug": "/cudaProg1-matrixmult/" },
+        "fields": { "slug": "/cuda6-memoryparallel/" },
         "frontmatter": {
-          "title": "CUDA Programming - 1. Matrix Multiplication"
+          "title": "The CUDA Parallel Programming Model - 6. Memory Parallelism"
         }
       }
     }

@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import styled, { createGlobalStyle } from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import styled, { createGlobalStyle } from "styled-components";
+import { StaticQuery, graphql } from "gatsby";
 
-import Header from './header';
-import media from '../utils/media';
+import Header from "./header";
+import media from "../utils/media";
 
 const GlobalStyles = createGlobalStyle`
+  background: papayawhip;
+
   @font-face {
     font-family: system;
     font-style: normal;
@@ -31,15 +33,22 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.6rem;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1 {
+    color: teal;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
   }
 
   h2 {
+        color: salmon;
     font-size: 2.5rem;
   }
 
   h3 {
+    color: rebeccapurple;
     font-size: 2.4rem;
   }
 
@@ -61,6 +70,10 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
     font-size: medium;
   }
+`;
+
+const Container = styled.div`
+  background: rgb(255, 255, 240);
 `;
 
 const Footer = styled.footer`
@@ -93,12 +106,14 @@ class Layout extends Component {
           }
         `}
         render={data => (
-          <>
-            <Header title={data.site.siteMetadata.title} />
-            <Content>{children}</Content>
-            <Footer />
-            <GlobalStyles />
-          </>
+          <Container>
+            <>
+              <Header title={data.site.siteMetadata.title} />
+              <Content>{children}</Content>
+              <Footer />
+              <GlobalStyles />
+            </>
+          </Container>
         )}
       />
     );
@@ -106,7 +121,7 @@ class Layout extends Component {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Layout;

@@ -33,17 +33,20 @@ const ImageContainer = styled.div`
 `;
 
 const Name = styled.h3`
-  font-size: 2.4rem;
-  letter-spacing: 0.1rem;
+  color: teal;
+  font-size: 2.6rem;
   font-weight: 800;
-  margin-bottom: 1rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-family: "system";
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin: 0;
+
+  ${media.phone`
+    text-align: center;
+  `}
 `;
 
 const TagLine = styled.sub`
+  color: black;
   font-weight: normal;
   font-size: 1.6rem;
   margin: 0;

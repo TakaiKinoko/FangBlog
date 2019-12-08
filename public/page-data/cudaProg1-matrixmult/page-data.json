@@ -22,9 +22,9 @@
       "isCreatedByStatefulCreatePages": false,
       "slug": "/cudaProg1-matrixmult/",
       "previous": {
-        "fields": { "slug": "/cuda7-tiling/" },
+        "fields": { "slug": "/cuda6-memoryparallel/" },
         "frontmatter": {
-          "title": "The CUDA Parallel Programming Model - 6.Tiling"
+          "title": "The CUDA Parallel Programming Model - 6. Memory Parallelism"
         }
       },
       "next": {

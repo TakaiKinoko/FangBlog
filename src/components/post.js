@@ -1,11 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-import StyledLink from '../utils/styled-link';
-import media from '../utils/media';
+import StyledLink from "../utils/styled-link";
+import media from "../utils/media";
 
 const Container = styled.div`
+  background: rgb(255, 255, 240);
   padding: 1rem 0;
   margin: 1rem 0;
 
@@ -20,6 +21,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h4`
+  color: teal;
   margin-bottom: 0.2rem;
   font-size: 2.2rem;
 `;
@@ -43,13 +45,13 @@ Post.propTypes = {
     id: PropTypes.string.isRequired,
     frontmatter: PropTypes.shape({
       title: PropTypes.string.isRequired,
-      date: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired
     }),
     fields: PropTypes.shape({
-      slug: PropTypes.string.isRequired,
+      slug: PropTypes.string.isRequired
     }),
-    excerpt: PropTypes.string.isRequired,
-  }),
+    excerpt: PropTypes.string.isRequired
+  })
 };
 
 export default Post;

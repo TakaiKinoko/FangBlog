@@ -1,5 +1,0 @@
-{
-  "expireTime": 9007200830497362000,
-  "key": "transformer-remark-markdown-html-39ae7be11180e6cc0c99fc98b5d72460-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
-  "val": "<p>DRAM bursting alone is not sufficient to realize the level of DRAM access bandwidth required by modern processors. In this post, I’ll talk more about how to achieve better memory parallelism.</p>"
-}

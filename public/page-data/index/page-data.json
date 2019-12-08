@@ -37,20 +37,6 @@
           },
           {
             "node": {
-              "id": "444cfd98-bb37-592d-972d-7ff27a50935c",
-              "excerpt": "",
-              "fields": {
-                "slug": "/cuda7-tiling/",
-                "readingTime": { "text": "0 min read" }
-              },
-              "frontmatter": {
-                "date": "December 07, 2019",
-                "title": "The CUDA Parallel Programming Model - 6.Tiling"
-              }
-            }
-          },
-          {
-            "node": {
               "id": "ad729c81-c4a4-5f4d-b769-d5875d86e57e",
               "excerpt": "DRAM bursting alone is not sufficient to realize the level of DRAM access bandwidth required by modern processors. In this post, I’ll talk more about how to…",
               "fields": {
@@ -60,6 +46,20 @@
               "frontmatter": {
                 "date": "December 07, 2019",
                 "title": "The CUDA Parallel Programming Model - 6. Memory Parallelism"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "444cfd98-bb37-592d-972d-7ff27a50935c",
+              "excerpt": "",
+              "fields": {
+                "slug": "/cuda7-tiling/",
+                "readingTime": { "text": "0 min read" }
+              },
+              "frontmatter": {
+                "date": "December 07, 2019",
+                "title": "The CUDA Parallel Programming Model - 6.Tiling"
               }
             }
           },

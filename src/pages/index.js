@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import { graphql } from 'gatsby';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import { graphql } from "gatsby";
+import styled from "styled-components";
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import Bio from '../components/bio';
-import Post from '../components/post';
-import media from '../utils/media';
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Bio from "../components/bio";
+import Post from "../components/post";
+import media from "../utils/media";
 
 const Title = styled.h3`
+  color: salmon;
   font-weight: 800;
   font-size: 2.6rem;
   margin: 6rem 0 0;
@@ -18,21 +19,27 @@ const Title = styled.h3`
   `}
 `;
 
+const Container = styled.div`
+  background: rgb(255, 255, 240);
+`;
+
 class BlogIndex extends Component {
   render() {
     const { data } = this.props;
     const posts = data.allMarkdownRemark.edges;
     return (
-      <Layout>
-        <SEO title="All Posts" keywords={[`gatsby`, `blog`, `react`]} />
-        <Bio />
-        <main>
-          <Title>Latest Posts</Title>
-          {posts.map(({ node }) => {
-            return <Post key={node.id} node={node} />;
-          })}
-        </main>
-      </Layout>
+      <Container>
+        <Layout>
+          <SEO title="All Posts" keywords={[`gatsby`, `blog`, `react`]} />
+          <Bio />
+          <main>
+            <Title>Latest Posts</Title>
+            {posts.map(({ node }) => {
+              return <Post key={node.id} node={node} />;
+            })}
+          </main>
+        </Layout>
+      </Container>
     );
   }
 }

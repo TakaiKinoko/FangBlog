@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-import StyledLink from '../utils/styled-link';
-import media from '../utils/media';
+import StyledLink from "../utils/styled-link";
+import media from "../utils/media";
 
 const Container = styled.nav`
   background: salmon;
@@ -29,18 +29,18 @@ const Title = styled.h1`
 
 const Header = ({ title }) => (
   <Container>
-    <StyledLink to={'/'}>
+    <StyledLink to={"/"}>
       <Title>{title}</Title>
     </StyledLink>
   </Container>
 );
 
 Header.defaultProps = {
-  title: '',
+  title: ""
 };
 
 Header.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string
 };
 
 export default Header;

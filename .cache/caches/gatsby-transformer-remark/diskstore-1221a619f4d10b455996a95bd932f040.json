@@ -1,5 +1,0 @@
-{
-  "expireTime": 9007200830485689000,
-  "key": "transformer-remark-markdown-html-50664cb4dbc38b67ddc8a5bcf9b21a18-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
-  "val": "<h2>Notation</h2>\n<ul>\n<li>Matrix M</li>\n<li>Matrix N</li>\n<li>Output Matrix P</li>\n<li>row counter: i</li>\n<li>column counter: j</li>\n</ul>\n<p>When performing a matrix multiplication, each element of the output matrix P is an inner product of a row of M and a column of N. We will continue to use the convention where PRow,Col is the element at Rowth position in the vertical direction and Colth position in the horizontal direction. As shown in Fig. 4.2, PRow,Col (the small square in P) is the inner product of the vector formed from the Rowth row of M (shown as a horizontal strip in M) and the vector formed from the Colth column of N (shown as a vertical strip in N). The inner product, also called the dot product, of two vectors is the sum of products of the individual vector elements, i.e., image. For instance,</p>\n<h2></h2>"
-}

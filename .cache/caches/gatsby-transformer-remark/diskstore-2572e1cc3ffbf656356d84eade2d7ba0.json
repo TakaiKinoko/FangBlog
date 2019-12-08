@@ -1,5 +1,0 @@
-{
-  "expireTime": 9007200830485930000,
-  "key": "transformer-remark-markdown-html-961f520187e069b8509160144b8aea52-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
-  "val": "<h2>Notation</h2>\n<ul>\n<li>Matrix <code class=\"language-text\">M</code></li>\n<li>Matrix <code class=\"language-text\">N</code></li>\n<li>Output Matrix <code class=\"language-text\">P</code></li>\n<li>row counter: <code class=\"language-text\">i</code></li>\n<li>column counter: <code class=\"language-text\">j</code></li>\n<li><code class=\"language-text\">P(i, j)</code> is the element at <code class=\"language-text\">Row-th</code> position in the vertical direction and <code class=\"language-text\">Col-th</code> position in the horizontal direction</li>\n</ul>\n<p>As shown in the picture below, PRow,Col (the small square in P) is the inner product of the vector formed from the Rowth row of M (shown as a horizontal strip in M) and the vector formed from the Colth column of N (shown as a vertical strip in N). </p>\n<h2></h2>"
-}
