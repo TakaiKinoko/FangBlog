@@ -24,7 +24,7 @@
       "previous": {
         "fields": { "slug": "/cuda7-tiling/" },
         "frontmatter": {
-          "title": "The CUDA Parallel Programming Model - 6.Tiling"
+          "title": "The CUDA Parallel Programming Model - 7.Tiling"
         }
       },
       "next": {

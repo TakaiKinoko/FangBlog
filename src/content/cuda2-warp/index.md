@@ -37,6 +37,12 @@ Recall that launching a CUDA kernel will generate a grid of threads organized as
 
 1. bottom level: each block consists of a 1/2/3-dimensional array of threads.
 
+### Thread Assignment
+
+- Threads are assigned to execution **resources** on a **block-by-block** basis.
+
+- But the unit of thread scheduling is warp.
+
 ### Synchronization of threads?
 
 Conceptually, threads in a block can execute in any order, just like blocks.
@@ -52,6 +58,8 @@ Due to hardware cost considerations, CUDA devices currently bundle multiple thre
 - 🧐**Each thread block is partitioned into warps**.
 
 - The execution of warps is implemented by an SIMD hardware.
+
+- warps can be executed by the SMs in any order. No way to tell who's going to finish first.
 
 #### practical reasons
 
@@ -89,7 +97,7 @@ This is called Single-Instruction-Multiple-Data in processor design.
 
 ## How Are Blocks Partitioned?
 
-Based on thread indices.
+Based on thread indices. Thread IDs within a warp are consecutive and increasing.
 
 1. Example with _1D thread block_:
 
@@ -129,6 +137,8 @@ Based on thread indices.
 ## Warp Execution
 
 All threads of a warp are executed by the SIMD hardware as a bundle, where the same instruction is run for all threads.
+
+Warp is the unit of **thread scheduling** in SMs.
 
 ### when is it good?
 

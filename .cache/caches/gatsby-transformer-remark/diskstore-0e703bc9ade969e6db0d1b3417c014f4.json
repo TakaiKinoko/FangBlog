@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830567133000,
+  "key": "transformer-remark-markdown-html-ed69f096effc0b818f9dde1c50ba9c79-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<h2>Block Assignment</h2>\n<p>Before a block is assgined to an SM, it’s given all the resources it needs beforehands.</p>\n<p>These resources include:</p>\n<div class=\"gatsby-highlight\" data-language=\"text\"><pre class=\"language-text\"><code class=\"language-text\">* shared memory\n\n* registers\n\n* a slot in the SM scheduler\n\n![block](./block.png)</code></pre></div>\n<p>Why don’t we assign these resources after the block is assigned?</p>\n<p>First, more on CUDA runtime:</p>\n<h3>Notes On CUDA Runtime</h3>\n<ul>\n<li>\n<p>The runtime system:</p>\n<ul>\n<li>\n<p>maintains a list of blocks to be executed</p>\n</li>\n<li>\n<p>assigns new blocks to SM as they compute previously assigned blocks</p>\n</li>\n</ul>\n</li>\n<li>\n<p>CUDA runtime automatically reduces the number of blocks assgined to each SM until resource usage is under limit.</p>\n</li>\n</ul>"
+}

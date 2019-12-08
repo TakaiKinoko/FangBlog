@@ -1,0 +1,177 @@
+{
+  "expireTime": 9007200830565169000,
+  "key": "transformer-remark-markdown-ast-e8b1a659a34b43f80ca138ba0d8b1e0f-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Block Assignment",
+            "position": {
+              "start": { "line": 2, "column": 4, "offset": 4 },
+              "end": { "line": 2, "column": 20, "offset": 20 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 20, "offset": 20 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Before a block is assgined to an SM, it’s given all the resources it needs beforehands.",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 22 },
+              "end": { "line": 4, "column": 88, "offset": 109 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 22 },
+          "end": { "line": 4, "column": 88, "offset": 109 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "These resources include: ",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 111 },
+              "end": { "line": 6, "column": 26, "offset": 136 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 111 },
+          "end": { "line": 6, "column": 26, "offset": 136 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": true,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "shared memory",
+                    "position": {
+                      "start": { "line": 8, "column": 3, "offset": 140 },
+                      "end": { "line": 8, "column": 16, "offset": 153 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 8, "column": 3, "offset": 140 },
+                  "end": { "line": 8, "column": 16, "offset": 153 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 138 },
+              "end": { "line": 9, "column": 1, "offset": 154 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "registers",
+                    "position": {
+                      "start": { "line": 10, "column": 3, "offset": 157 },
+                      "end": { "line": 10, "column": 12, "offset": 166 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 10, "column": 3, "offset": 157 },
+                  "end": { "line": 10, "column": 12, "offset": 166 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 155 },
+              "end": { "line": 11, "column": 1, "offset": 167 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "a slot in the SM scheduler",
+                    "position": {
+                      "start": { "line": 12, "column": 3, "offset": 170 },
+                      "end": { "line": 12, "column": 29, "offset": 196 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 12, "column": 3, "offset": 170 },
+                  "end": { "line": 12, "column": 29, "offset": 196 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 168 },
+              "end": { "line": 12, "column": 29, "offset": 196 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 138 },
+          "end": { "line": 12, "column": 29, "offset": 196 },
+          "indent": [1, 1, 1, 1]
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 12, "column": 29, "offset": 196 }
+    }
+  }
+}

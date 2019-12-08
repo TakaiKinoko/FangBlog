@@ -28,7 +28,7 @@
         }
       },
       "next": {
-        "fields": { "slug": "/install-virtualenv/" },
+        "fields": { "slug": "/install-reprozip/" },
         "frontmatter": {
           "title": "Packing Files With Reprozip On MacOS Via Vagrant"
         }

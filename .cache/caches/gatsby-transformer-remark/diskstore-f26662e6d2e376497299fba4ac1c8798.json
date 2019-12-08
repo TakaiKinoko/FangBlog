@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830565186000,
+  "key": "transformer-remark-markdown-html-a715d08985c354ceb9ccaf50600d005f-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<h2>Block Assignment</h2>\n<p>Before a block is assgined to an SM, it’s given all the resources it needs beforehands.</p>\n<p>These resources include: </p>\n<ul>\n<li>\n<p>shared memory</p>\n</li>\n<li>\n<p>registers</p>\n</li>\n<li>\n<p>a slot in the SM scheduler</p>\n</li>\n</ul>\n<p>Why don’t we assign these resources after </p>"
+}

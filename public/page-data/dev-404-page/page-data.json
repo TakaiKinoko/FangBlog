@@ -6,7 +6,8 @@
     "data": {
       "allSitePage": {
         "nodes": [
-          { "path": "/install-virtualenv/" },
+          { "path": "/cudaRandom/" },
+          { "path": "/install-reprozip/" },
           { "path": "/cudaProg2-Variables/" },
           { "path": "/cudaProg1-matrixmult/" },
           { "path": "/cuda6-memoryparallel/" },

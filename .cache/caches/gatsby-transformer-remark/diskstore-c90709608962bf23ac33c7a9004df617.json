@@ -1,0 +1,1199 @@
+{
+  "expireTime": 9007200830564692000,
+  "key": "transformer-remark-markdown-ast-045327eb4e9b3c083ad2362f5a0455b2-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "I recently had to pack a project with ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 39, "offset": 39 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Reprozip",
+                "position": {
+                  "start": { "line": 2, "column": 41, "offset": 41 },
+                  "end": { "line": 2, "column": 49, "offset": 49 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 39, "offset": 39 },
+              "end": { "line": 2, "column": 51, "offset": 51 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " where all the dependencies can be nicely preserved. Reprozip uses ptrace and thus only works on Linux, which means I had to set up a linux environment on my Mac. I mean, you can’t call yourself a software engineer without having a Linux (virtual) machine, can you?! 😓",
+            "position": {
+              "start": { "line": 2, "column": 51, "offset": 51 },
+              "end": { "line": 2, "column": 320, "offset": 320 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 320, "offset": 320 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In case someone out there are faced with the same task, I’ve documented my setup process in this post.",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 322 },
+              "end": { "line": 4, "column": 103, "offset": 424 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 322 },
+          "end": { "line": 4, "column": 103, "offset": 424 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "My Environment",
+            "position": {
+              "start": { "line": 6, "column": 4, "offset": 429 },
+              "end": { "line": 6, "column": 18, "offset": 443 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 426 },
+          "end": { "line": 6, "column": 18, "offset": 443 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "macOS Catalina 10.15.1",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 445 },
+              "end": { "line": 8, "column": 23, "offset": 467 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 445 },
+          "end": { "line": 8, "column": 23, "offset": 467 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Install Reprozip",
+            "position": {
+              "start": { "line": 10, "column": 4, "offset": 472 },
+              "end": { "line": 10, "column": 20, "offset": 488 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 469 },
+          "end": { "line": 10, "column": 20, "offset": 488 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Install VirtualBox Or Equivalent",
+            "position": {
+              "start": { "line": 12, "column": 5, "offset": 494 },
+              "end": { "line": 12, "column": 37, "offset": 526 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 490 },
+          "end": { "line": 12, "column": 37, "offset": 526 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Vagrant needs VirtualBox to run.",
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 528 },
+              "end": { "line": 14, "column": 33, "offset": 560 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 528 },
+          "end": { "line": 14, "column": 33, "offset": 560 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Download installer here: ",
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 562 },
+              "end": { "line": 16, "column": 26, "offset": 587 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://www.virtualbox.org/wiki/Downloads",
+            "children": [
+              {
+                "type": "text",
+                "value": "https://www.virtualbox.org/wiki/Downloads",
+                "position": {
+                  "start": { "line": 16, "column": 26, "offset": 587 },
+                  "end": { "line": 16, "column": 67, "offset": 628 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 16, "column": 26, "offset": 587 },
+              "end": { "line": 16, "column": 67, "offset": 628 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 16, "column": 1, "offset": 562 },
+          "end": { "line": 16, "column": 67, "offset": 628 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If the installer failed, you may need to enable its kernel extension in: ",
+            "position": {
+              "start": { "line": 18, "column": 1, "offset": 630 },
+              "end": { "line": 18, "column": 74, "offset": 703 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "System Preferences → Security & Privacy → General",
+                "position": {
+                  "start": { "line": 18, "column": 76, "offset": 705 },
+                  "end": { "line": 18, "column": 125, "offset": 754 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 18, "column": 74, "offset": 703 },
+              "end": { "line": 18, "column": 127, "offset": 756 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 18, "column": 1, "offset": 630 },
+          "end": { "line": 18, "column": 127, "offset": 756 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Install Vagrant Or Equivalent",
+            "position": {
+              "start": { "line": 20, "column": 5, "offset": 762 },
+              "end": { "line": 20, "column": 34, "offset": 791 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 20, "column": 1, "offset": 758 },
+          "end": { "line": 20, "column": 34, "offset": 791 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Download the installer for MacOS from ",
+            "position": {
+              "start": { "line": 22, "column": 1, "offset": 793 },
+              "end": { "line": 22, "column": 39, "offset": 831 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://www.vagrantup.com/downloads.html",
+            "children": [
+              {
+                "type": "text",
+                "value": "https://www.vagrantup.com/downloads.html",
+                "position": {
+                  "start": { "line": 22, "column": 39, "offset": 831 },
+                  "end": { "line": 22, "column": 79, "offset": 871 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 22, "column": 39, "offset": 831 },
+              "end": { "line": 22, "column": 79, "offset": 871 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": { "line": 22, "column": 79, "offset": 871 },
+              "end": { "line": 22, "column": 80, "offset": 872 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 22, "column": 1, "offset": 793 },
+          "end": { "line": 22, "column": 80, "offset": 872 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Click, install, done.",
+            "position": {
+              "start": { "line": 24, "column": 1, "offset": 874 },
+              "end": { "line": 24, "column": 22, "offset": 895 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 24, "column": 1, "offset": 874 },
+          "end": { "line": 24, "column": 22, "offset": 895 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Then create ",
+            "position": {
+              "start": { "line": 26, "column": 1, "offset": 897 },
+              "end": { "line": 26, "column": 13, "offset": 909 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">Vagrantfile</code>",
+            "position": {
+              "start": { "line": 26, "column": 13, "offset": 909 },
+              "end": { "line": 26, "column": 26, "offset": 922 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ":",
+            "position": {
+              "start": { "line": 26, "column": 26, "offset": 922 },
+              "end": { "line": 26, "column": 27, "offset": 923 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 26, "column": 1, "offset": 897 },
+          "end": { "line": 26, "column": 27, "offset": 923 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ vagrant init hashicorp/bionic64</code></pre></div>",
+        "position": {
+          "start": { "line": 28, "column": 1, "offset": 925 },
+          "end": { "line": 30, "column": 4, "offset": 968 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Set up VM:",
+            "position": {
+              "start": { "line": 32, "column": 1, "offset": 970 },
+              "end": { "line": 32, "column": 11, "offset": 980 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 32, "column": 1, "offset": 970 },
+          "end": { "line": 32, "column": 11, "offset": 980 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ vagrant up</code></pre></div>",
+        "position": {
+          "start": { "line": 34, "column": 1, "offset": 982 },
+          "end": { "line": 36, "column": 4, "offset": 1004 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "After running the above two commands, you will have a fully running virtual machine in VirtualBox running Ubuntu 12.04 LTS 64-bit.",
+            "position": {
+              "start": { "line": 38, "column": 1, "offset": 1006 },
+              "end": { "line": 38, "column": 131, "offset": 1136 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 38, "column": 1, "offset": 1006 },
+          "end": { "line": 38, "column": 131, "offset": 1136 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "ssh into VM",
+            "position": {
+              "start": { "line": 40, "column": 5, "offset": 1142 },
+              "end": { "line": 40, "column": 16, "offset": 1153 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 40, "column": 1, "offset": 1138 },
+          "end": { "line": 40, "column": 16, "offset": 1153 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ vagrant ssh</code></pre></div>",
+        "position": {
+          "start": { "line": 42, "column": 1, "offset": 1155 },
+          "end": { "line": 44, "column": 4, "offset": 1178 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Set up virtualenv",
+            "position": {
+              "start": { "line": 46, "column": 5, "offset": 1184 },
+              "end": { "line": 46, "column": 22, "offset": 1201 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 46, "column": 1, "offset": 1180 },
+          "end": { "line": 46, "column": 22, "offset": 1201 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "IMPORTANT",
+                "position": {
+                  "start": { "line": 48, "column": 3, "offset": 1205 },
+                  "end": { "line": 48, "column": 12, "offset": 1214 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 48, "column": 1, "offset": 1203 },
+              "end": { "line": 48, "column": 14, "offset": 1216 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ": make sure to run an update on the package index in the VM before procedding:",
+            "position": {
+              "start": { "line": 48, "column": 14, "offset": 1216 },
+              "end": { "line": 48, "column": 92, "offset": 1294 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 48, "column": 1, "offset": 1203 },
+          "end": { "line": 48, "column": 92, "offset": 1294 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ sudo apt update</code></pre></div>",
+        "position": {
+          "start": { "line": 50, "column": 1, "offset": 1296 },
+          "end": { "line": 52, "column": 4, "offset": 1323 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "install ",
+            "position": {
+              "start": { "line": 54, "column": 6, "offset": 1330 },
+              "end": { "line": 54, "column": 14, "offset": 1338 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">virtualenv</code>",
+            "position": {
+              "start": { "line": 54, "column": 14, "offset": 1338 },
+              "end": { "line": 54, "column": 26, "offset": 1350 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " with ",
+            "position": {
+              "start": { "line": 54, "column": 26, "offset": 1350 },
+              "end": { "line": 54, "column": 32, "offset": 1356 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">pip</code>",
+            "position": {
+              "start": { "line": 54, "column": 32, "offset": 1356 },
+              "end": { "line": 54, "column": 37, "offset": 1361 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 54, "column": 1, "offset": 1325 },
+          "end": { "line": 54, "column": 37, "offset": 1361 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ sudo apt install virtualenv</code></pre></div>",
+        "position": {
+          "start": { "line": 56, "column": 1, "offset": 1363 },
+          "end": { "line": 58, "column": 4, "offset": 1402 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "check if installation was successful:",
+            "position": {
+              "start": { "line": 60, "column": 1, "offset": 1404 },
+              "end": { "line": 60, "column": 38, "offset": 1441 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 60, "column": 1, "offset": 1404 },
+          "end": { "line": 60, "column": 38, "offset": 1441 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ virtualenv --version</code></pre></div>",
+        "position": {
+          "start": { "line": 62, "column": 1, "offset": 1443 },
+          "end": { "line": 64, "column": 4, "offset": 1475 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "create an env",
+            "position": {
+              "start": { "line": 66, "column": 6, "offset": 1482 },
+              "end": { "line": 66, "column": 19, "offset": 1495 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 66, "column": 1, "offset": 1477 },
+          "end": { "line": 66, "column": 19, "offset": 1495 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ virtualenv -p /usr/bin/python &lt;name&gt;</code></pre></div>",
+        "position": {
+          "start": { "line": 68, "column": 1, "offset": 1497 },
+          "end": { "line": 70, "column": 4, "offset": 1545 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "activate an env",
+            "position": {
+              "start": { "line": 72, "column": 6, "offset": 1552 },
+              "end": { "line": 72, "column": 21, "offset": 1567 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 72, "column": 1, "offset": 1547 },
+          "end": { "line": 72, "column": 21, "offset": 1567 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ source DBenv/bin/activate</code></pre></div>",
+        "position": {
+          "start": { "line": 74, "column": 1, "offset": 1569 },
+          "end": { "line": 76, "column": 4, "offset": 1606 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Install Pre-reqs For Reprozip",
+            "position": {
+              "start": { "line": 78, "column": 5, "offset": 1612 },
+              "end": { "line": 78, "column": 34, "offset": 1641 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 78, "column": 1, "offset": 1608 },
+          "end": { "line": 78, "column": 34, "offset": 1641 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ sudo apt-get install python-dev\n$ sudo apt-get install python-pip\n$ sudo apt-get install sqlite3\n$ sudo apt-get install libsqlite3-dev</code></pre></div>",
+        "position": {
+          "start": { "line": 80, "column": 1, "offset": 1643 },
+          "end": { "line": 85, "column": 4, "offset": 1789 },
+          "indent": [1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Finally, Install Reprozip",
+            "position": {
+              "start": { "line": 87, "column": 5, "offset": 1795 },
+              "end": { "line": 87, "column": 30, "offset": 1820 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 87, "column": 1, "offset": 1791 },
+          "end": { "line": 87, "column": 30, "offset": 1820 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ pip install reprozip\n$ pip install reprounzip</code></pre></div>",
+        "position": {
+          "start": { "line": 89, "column": 1, "offset": 1822 },
+          "end": { "line": 92, "column": 4, "offset": 1879 },
+          "indent": [1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Run Reprozip",
+            "position": {
+              "start": { "line": 94, "column": 4, "offset": 1884 },
+              "end": { "line": 94, "column": 16, "offset": 1896 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 94, "column": 1, "offset": 1881 },
+          "end": { "line": 94, "column": 16, "offset": 1896 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Bring The Executable Into The Environment For Packaging",
+            "position": {
+              "start": { "line": 96, "column": 5, "offset": 1902 },
+              "end": { "line": 96, "column": 60, "offset": 1957 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 96, "column": 1, "offset": 1898 },
+          "end": { "line": 96, "column": 60, "offset": 1957 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In order to use ",
+            "position": {
+              "start": { "line": 98, "column": 1, "offset": 1959 },
+              "end": { "line": 98, "column": 17, "offset": 1975 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">scp</code>",
+            "position": {
+              "start": { "line": 98, "column": 17, "offset": 1975 },
+              "end": { "line": 98, "column": 22, "offset": 1980 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ", we need to install a plugin:",
+            "position": {
+              "start": { "line": 98, "column": 22, "offset": 1980 },
+              "end": { "line": 98, "column": 52, "offset": 2010 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 98, "column": 1, "offset": 1959 },
+          "end": { "line": 98, "column": 52, "offset": 2010 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ vagrant plugin install vagrant-scp</code></pre></div>",
+        "position": {
+          "start": { "line": 100, "column": 1, "offset": 2012 },
+          "end": { "line": 102, "column": 4, "offset": 2058 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Note that this goes from ",
+            "position": {
+              "start": { "line": 104, "column": 1, "offset": 2060 },
+              "end": { "line": 104, "column": 26, "offset": 2085 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "local",
+                "position": {
+                  "start": { "line": 104, "column": 28, "offset": 2087 },
+                  "end": { "line": 104, "column": 33, "offset": 2092 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 104, "column": 26, "offset": 2085 },
+              "end": { "line": 104, "column": 35, "offset": 2094 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " to ",
+            "position": {
+              "start": { "line": 104, "column": 35, "offset": 2094 },
+              "end": { "line": 104, "column": 39, "offset": 2098 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "linux",
+                "position": {
+                  "start": { "line": 104, "column": 41, "offset": 2100 },
+                  "end": { "line": 104, "column": 46, "offset": 2105 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 104, "column": 39, "offset": 2098 },
+              "end": { "line": 104, "column": 48, "offset": 2107 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ":",
+            "position": {
+              "start": { "line": 104, "column": 48, "offset": 2107 },
+              "end": { "line": 104, "column": 49, "offset": 2108 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 104, "column": 1, "offset": 2060 },
+          "end": { "line": 104, "column": 49, "offset": 2108 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ vagrant scp &lt;local_path&gt; [vm_name]:&lt;remote_path&gt;</code></pre></div>",
+        "position": {
+          "start": { "line": 106, "column": 1, "offset": 2110 },
+          "end": { "line": 108, "column": 4, "offset": 2170 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "More about how scp in/out of a Vagrant VM: ",
+            "position": {
+              "start": { "line": 110, "column": 1, "offset": 2172 },
+              "end": { "line": 110, "column": 44, "offset": 2215 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://github.com/invernizzi/vagrant-scp",
+            "children": [
+              {
+                "type": "text",
+                "value": "https://github.com/invernizzi/vagrant-scp",
+                "position": {
+                  "start": { "line": 110, "column": 44, "offset": 2215 },
+                  "end": { "line": 110, "column": 85, "offset": 2256 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 110, "column": 44, "offset": 2215 },
+              "end": { "line": 110, "column": 85, "offset": 2256 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": { "line": 110, "column": 85, "offset": 2256 },
+              "end": { "line": 110, "column": 86, "offset": 2257 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 110, "column": 1, "offset": 2172 },
+          "end": { "line": 110, "column": 86, "offset": 2257 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In case you didn’t know your ",
+            "position": {
+              "start": { "line": 112, "column": 1, "offset": 2259 },
+              "end": { "line": 112, "column": 30, "offset": 2288 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "linkReference",
+                "identifier": "vm_name",
+                "referenceType": "shortcut",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "vm_name",
+                    "position": {
+                      "start": { "line": 112, "column": 33, "offset": 2291 },
+                      "end": { "line": 112, "column": 40, "offset": 2298 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 112, "column": 32, "offset": 2290 },
+                  "end": { "line": 112, "column": 41, "offset": 2299 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 112, "column": 30, "offset": 2288 },
+              "end": { "line": 112, "column": 43, "offset": 2301 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " just like myself, here’s how you track it down:",
+            "position": {
+              "start": { "line": 112, "column": 43, "offset": 2301 },
+              "end": { "line": 112, "column": 91, "offset": 2349 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 112, "column": 1, "offset": 2259 },
+          "end": { "line": 112, "column": 91, "offset": 2349 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ vagrant status</code></pre></div>",
+        "position": {
+          "start": { "line": 114, "column": 1, "offset": 2351 },
+          "end": { "line": 116, "column": 4, "offset": 2377 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Run Trace and Pack",
+            "position": {
+              "start": { "line": 118, "column": 5, "offset": 2383 },
+              "end": { "line": 118, "column": 23, "offset": 2401 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 118, "column": 1, "offset": 2379 },
+          "end": { "line": 118, "column": 23, "offset": 2401 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "We’ll first trace all the system calls in execution by using Reprozip trace command:",
+            "position": {
+              "start": { "line": 120, "column": 1, "offset": 2403 },
+              "end": { "line": 120, "column": 85, "offset": 2487 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 120, "column": 1, "offset": 2403 },
+          "end": { "line": 120, "column": 85, "offset": 2487 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ reprozip trace &lt;command&gt;</code></pre></div>",
+        "position": {
+          "start": { "line": 122, "column": 1, "offset": 2489 },
+          "end": { "line": 124, "column": 4, "offset": 2525 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./reprotrace.png",
+            "alt": "reprozip trace",
+            "position": {
+              "start": { "line": 126, "column": 1, "offset": 2527 },
+              "end": { "line": 126, "column": 36, "offset": 2562 },
+              "indent": []
+            },
+            "value": "<a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/a55b2973a385e178d5d84a2b4aa6d409/ba061/reprotrace.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 35.62970936490851%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABI0lEQVQoz4WR6Y6CMBRGeQ5kFRcISAiCQCxLQdxwElFn3v9NvuF2gtHEZH6c3PYmPf16K/Vdg0vf4Xy+YH84ot0fcH38oL/dce1vuD++0V2+UHGOquLgdY1mt0PdNEOvBmM5tlsmYHkBaVO6CEsfSZIgCAKE6zVWqxVs28ZiscB0OoWqqpBl+Q1FUUSf6mQyEdBaKg8F0mKDNM2Q53Tb9k8chvB9H8vlErPZDIZhQNd1UU3TFJWEmqa9IZ2OJ/CqHoSpkMVxLEQEial6nvfs0QXz+VzwUch5hSRNhIiIokikIxzHeaajw5RwfCZBAtq/iiXGGLIsw3qYHUFCEpOQ5kiJaJbj4dc0HxOScDf8Wtu2qIcfLMsSruuKZJZliVTEf6KRX1GJ1D93e/o1AAAAAElFTkSuQmCC'); background-size: cover; display: block;\"\n    ></span>\n    <img\n        class=\"gatsby-resp-image-image\"\n        style=\"width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;\"\n        alt=\"reprozip trace\"\n        title=\"\"\n        src=\"/static/a55b2973a385e178d5d84a2b4aa6d409/d7711/reprotrace.png\"\n        srcset=\"/static/a55b2973a385e178d5d84a2b4aa6d409/a695b/reprotrace.png 148w,\n/static/a55b2973a385e178d5d84a2b4aa6d409/2f273/reprotrace.png 295w,\n/static/a55b2973a385e178d5d84a2b4aa6d409/d7711/reprotrace.png 590w,\n/static/a55b2973a385e178d5d84a2b4aa6d409/5e66f/reprotrace.png 885w,\n/static/a55b2973a385e178d5d84a2b4aa6d409/466de/reprotrace.png 1180w,\n/static/a55b2973a385e178d5d84a2b4aa6d409/76253/reprotrace.png 1770w,\n/static/a55b2973a385e178d5d84a2b4aa6d409/ba061/reprotrace.png 1858w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n      />\n  </span>\n  </a>"
+          }
+        ],
+        "position": {
+          "start": { "line": 126, "column": 1, "offset": 2527 },
+          "end": { "line": 126, "column": 36, "offset": 2562 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ reprozip pack &lt;pack-name&gt;</code></pre></div>",
+        "position": {
+          "start": { "line": 128, "column": 1, "offset": 2564 },
+          "end": { "line": 130, "column": 4, "offset": 2601 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "It gives an .rpz file which can then be ",
+            "position": {
+              "start": { "line": 132, "column": 1, "offset": 2603 },
+              "end": { "line": 132, "column": 41, "offset": 2643 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">scp</code>",
+            "position": {
+              "start": { "line": 132, "column": 41, "offset": 2643 },
+              "end": { "line": 132, "column": 46, "offset": 2648 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": "ed to other system environments and be unzipped and ran.",
+            "position": {
+              "start": { "line": 132, "column": 46, "offset": 2648 },
+              "end": { "line": 132, "column": 102, "offset": 2704 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 132, "column": 1, "offset": 2603 },
+          "end": { "line": 132, "column": 102, "offset": 2704 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Terminate a VM",
+            "position": {
+              "start": { "line": 134, "column": 5, "offset": 2710 },
+              "end": { "line": 134, "column": 19, "offset": 2724 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 134, "column": 1, "offset": 2706 },
+          "end": { "line": 134, "column": 19, "offset": 2724 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "when you are done playing around, you can terminate the virtual machine with:",
+            "position": {
+              "start": { "line": 136, "column": 1, "offset": 2726 },
+              "end": { "line": 136, "column": 78, "offset": 2803 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 136, "column": 1, "offset": 2726 },
+          "end": { "line": 136, "column": 78, "offset": 2803 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "sh",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"sh\"><pre class=\"language-sh\"><code class=\"language-sh\">$ vagrant destroy</code></pre></div>",
+        "position": {
+          "start": { "line": 138, "column": 1, "offset": 2805 },
+          "end": { "line": 140, "column": 4, "offset": 2832 },
+          "indent": [1, 1]
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 141, "column": 1, "offset": 2833 }
+    }
+  }
+}
