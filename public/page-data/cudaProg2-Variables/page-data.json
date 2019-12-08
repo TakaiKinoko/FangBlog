@@ -27,7 +27,12 @@
           "title": "CUDA Programming - 1. Matrix Multiplication"
         }
       },
-      "next": null
+      "next": {
+        "fields": { "slug": "/install-virtualenv/" },
+        "frontmatter": {
+          "title": "Packing Files With Reprozip On MacOS Via Vagrant"
+        }
+      }
     }
   }
 }
