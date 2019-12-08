@@ -1,0 +1,355 @@
+{
+  "expireTime": 9007200830510848000,
+  "key": "transformer-remark-markdown-html-ast-8dd9202ae92d8fa0a449b0d08a7b021c-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "CUDA Variable Type Qualifiers",
+            "position": {
+              "start": { "line": 2, "column": 4, "offset": 4 },
+              "end": { "line": 2, "column": 33, "offset": 33 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 33, "offset": 33 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/a4b97b85e330f441950542551e0ed2ca/d3ccf/qualifiers.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 40.03466204506066%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABWUlEQVQozz1R23aDMAzj/z9vW9t1jAAj3BNubSktpZrlne7BxyKRJTkEJm3xts9w+Cqxl/o4WJi0R9neUTSLFrH5GfAuvNA4hLHD/lggzuTsILNhpbzH44kgzTx2nxbH7wrHqMLuaJHYAbW/o/Gr1B1u2FDUs/AyRIlDkvUiaJHmowQp8B236KYntg0IhmFA3/da5/MZ3nvBHdqmUezaFqNw5vmCuq7RdR6cYee99w6Xy0XSPfB8SsIsE9cogjEx4jgGv40xijnIGqcJVVXpOUXzPP+fYbfWaqBNIgYEJNPtdDqhLEu0koqYd8Rd12EcRx0kds4pj/dFUajpuq5/CV+OFOUwO8mNrPx6CorRME1T5XCGPApzI2IaaUJechW6k8CeJImKUoREFnlcjwIs8mgahqHO00wF+SOYgP12u+H1k5ZlwfV61XOu/+rksuZ5Vg7NJnlj3nPlXxtcVw8Ff4nLAAAAAElFTkSuQmCC'); background-size: cover; display: block;\"\n    ></span>\n    <img\n        class=\"gatsby-resp-image-image\"\n        style=\"width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;\"\n        alt=\"variable qualifiers\"\n        title=\"\"\n        src=\"/static/a4b97b85e330f441950542551e0ed2ca/d7711/qualifiers.png\"\n        srcset=\"/static/a4b97b85e330f441950542551e0ed2ca/a695b/qualifiers.png 148w,\n/static/a4b97b85e330f441950542551e0ed2ca/2f273/qualifiers.png 295w,\n/static/a4b97b85e330f441950542551e0ed2ca/d7711/qualifiers.png 590w,\n/static/a4b97b85e330f441950542551e0ed2ca/5e66f/qualifiers.png 885w,\n/static/a4b97b85e330f441950542551e0ed2ca/d3ccf/qualifiers.png 1154w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n      />\n  </span>\n  </a>",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 35 },
+              "end": { "line": 4, "column": 41, "offset": 75 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 35 },
+          "end": { "line": 4, "column": 41, "offset": 75 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "lifetime == kernel?",
+            "position": {
+              "start": { "line": 6, "column": 6, "offset": 82 },
+              "end": { "line": 6, "column": 25, "offset": 101 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 77 },
+          "end": { "line": 6, "column": 25, "offset": 101 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "If the lifetime of a variable is within a kernel execution, it must be declared ",
+                    "position": {
+                      "start": { "line": 8, "column": 3, "offset": 105 },
+                      "end": { "line": 8, "column": 83, "offset": 185 }
+                    }
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "strong",
+                    "properties": {},
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "within the kernel function body",
+                        "position": {
+                          "start": { "line": 8, "column": 85, "offset": 187 },
+                          "end": { "line": 8, "column": 116, "offset": 218 }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 8, "column": 83, "offset": 185 },
+                      "end": { "line": 8, "column": 118, "offset": 220 }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " and will be available for use only ",
+                    "position": {
+                      "start": { "line": 8, "column": 118, "offset": 220 },
+                      "end": { "line": 8, "column": 154, "offset": 256 }
+                    }
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "strong",
+                    "properties": {},
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "by the kernel code",
+                        "position": {
+                          "start": { "line": 8, "column": 156, "offset": 258 },
+                          "end": { "line": 8, "column": 174, "offset": 276 }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 8, "column": 154, "offset": 256 },
+                      "end": { "line": 8, "column": 176, "offset": 278 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 8, "column": 3, "offset": 105 },
+                  "end": { "line": 8, "column": 176, "offset": 278 }
+                }
+              },
+              { "type": "text", "value": "\n" }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 103 },
+              "end": { "line": 9, "column": 1, "offset": 279 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "If the kernel is invoked several times, the value of the variable is not maintained across these invocations. Each invocation must initialize the variable in order to use them",
+                    "position": {
+                      "start": { "line": 10, "column": 3, "offset": 282 },
+                      "end": { "line": 10, "column": 178, "offset": 457 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 10, "column": 3, "offset": 282 },
+                  "end": { "line": 10, "column": 178, "offset": 457 }
+                }
+              },
+              { "type": "text", "value": "\n" }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 280 },
+              "end": { "line": 10, "column": 178, "offset": 457 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 103 },
+          "end": { "line": 10, "column": 178, "offset": 457 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "lifetime == application?",
+            "position": {
+              "start": { "line": 12, "column": 6, "offset": 464 },
+              "end": { "line": 12, "column": 30, "offset": 488 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 459 },
+          "end": { "line": 12, "column": 30, "offset": 488 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "if the lifetime of a variable continues throughout the entire application, it must be declared ",
+                    "position": {
+                      "start": { "line": 14, "column": 3, "offset": 492 },
+                      "end": { "line": 14, "column": 98, "offset": 587 }
+                    }
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "strong",
+                    "properties": {},
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "outside of any function body",
+                        "position": {
+                          "start": { "line": 14, "column": 100, "offset": 589 },
+                          "end": { "line": 14, "column": 128, "offset": 617 }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 14, "column": 98, "offset": 587 },
+                      "end": { "line": 14, "column": 130, "offset": 619 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 14, "column": 3, "offset": 492 },
+                  "end": { "line": 14, "column": 130, "offset": 619 }
+                }
+              },
+              { "type": "text", "value": "\n" }
+            ],
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 490 },
+              "end": { "line": 15, "column": 1, "offset": 620 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The contents of these variables are maintained throughout the execution of the application and available to all kernels",
+                    "position": {
+                      "start": { "line": 16, "column": 3, "offset": 623 },
+                      "end": { "line": 16, "column": 122, "offset": 742 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 16, "column": 3, "offset": 623 },
+                  "end": { "line": 16, "column": 122, "offset": 742 }
+                }
+              },
+              { "type": "text", "value": "\n" }
+            ],
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 621 },
+              "end": { "line": 16, "column": 122, "offset": 742 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 490 },
+          "end": { "line": 16, "column": 122, "offset": 742 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "scalar variables",
+            "position": {
+              "start": { "line": 18, "column": 6, "offset": 749 },
+              "end": { "line": 18, "column": 22, "offset": 765 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 18, "column": 1, "offset": 744 },
+          "end": { "line": 18, "column": 22, "offset": 765 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "as shown in the picture above, all ",
+            "position": {
+              "start": { "line": 20, "column": 1, "offset": 767 },
+              "end": { "line": 20, "column": 36, "offset": 802 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 20, "column": 1, "offset": 767 },
+          "end": { "line": 20, "column": 36, "offset": 802 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 20, "column": 36, "offset": 802 }
+    }
+  }
+}

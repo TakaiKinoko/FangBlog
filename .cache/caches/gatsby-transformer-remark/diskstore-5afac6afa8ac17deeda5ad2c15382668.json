@@ -1,0 +1,105 @@
+{
+  "expireTime": 9007200830497399000,
+  "key": "transformer-remark-markdown-html-ast-b0fd5ca0b8d95c72f4d6de1bc0c40fd2-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "DRAM bursting alone is not sufficient to realize the level of DRAM access bandwidth required by modern processors. In this post, I’ll talk more about how to achieve better memory parallelism.",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 192, "offset": 192 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 192, "offset": 192 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Forms of Parallel Organization",
+            "position": {
+              "start": { "line": 5, "column": 4, "offset": 198 },
+              "end": { "line": 5, "column": 34, "offset": 228 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 5, "column": 1, "offset": 195 },
+          "end": { "line": 5, "column": 34, "offset": 228 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "banks",
+                "position": {
+                  "start": { "line": 7, "column": 3, "offset": 232 },
+                  "end": { "line": 7, "column": 8, "offset": 237 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 7, "column": 1, "offset": 230 },
+              "end": { "line": 7, "column": 8, "offset": 237 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "channels",
+                "position": {
+                  "start": { "line": 8, "column": 3, "offset": 240 },
+                  "end": { "line": 8, "column": 11, "offset": 248 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 238 },
+              "end": { "line": 8, "column": 11, "offset": 248 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 7, "column": 1, "offset": 230 },
+          "end": { "line": 8, "column": 11, "offset": 248 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 8, "column": 11, "offset": 248 }
+    }
+  }
+}

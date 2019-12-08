@@ -1,0 +1,24 @@
+{
+  "componentChunkName": "component---src-templates-blog-post-js",
+  "path": "/cuda8-matrixmult/",
+  "webpackCompilationHash": "",
+  "result": {
+    "data": {
+      "site": {
+        "siteMetadata": { "title": "FANG'S NOTEBOOK", "author": "Fang Cabrera" }
+      },
+      "markdownRemark": null
+    },
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": false,
+      "slug": "/cuda8-matrixmult/",
+      "previous": {
+        "fields": { "slug": "/cuda7-tiling/" },
+        "frontmatter": {
+          "title": "The CUDA Parallel Programming Model - 6.Tiling"
+        }
+      },
+      "next": null
+    }
+  }
+}

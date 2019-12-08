@@ -6,7 +6,6 @@
     "data": {
       "allSitePage": {
         "nodes": [
-          { "path": "/cuda6-tiling/" },
           { "path": "/cuda5-coalesce/" },
           { "path": "/cuda4-sync/" },
           { "path": "/cuda3-thread-divergence/" },
@@ -15,7 +14,10 @@
           { "path": "/404/" },
           { "path": "/" },
           { "path": "/404.html" },
-          { "path": "/cuda7-matrixmult/" }
+          { "path": "/cuda7-tiling/" },
+          { "path": "/cuda6-memoryparallel/" },
+          { "path": "/cudaProg1-matrixmult/" },
+          { "path": "/cudaProg2-Variables/" }
         ]
       }
     },

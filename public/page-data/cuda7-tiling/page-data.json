@@ -1,0 +1,38 @@
+{
+  "componentChunkName": "component---src-templates-blog-post-js",
+  "path": "/cuda7-tiling/",
+  "webpackCompilationHash": "",
+  "result": {
+    "data": {
+      "site": {
+        "siteMetadata": { "title": "FANG'S NOTEBOOK", "author": "Fang Cabrera" }
+      },
+      "markdownRemark": {
+        "id": "444cfd98-bb37-592d-972d-7ff27a50935c",
+        "excerpt": "",
+        "html": "",
+        "fields": { "readingTime": { "text": "0 min read" } },
+        "frontmatter": {
+          "title": "The CUDA Parallel Programming Model - 6.Tiling",
+          "date": "December 07, 2019"
+        }
+      }
+    },
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": false,
+      "slug": "/cuda7-tiling/",
+      "previous": {
+        "fields": { "slug": "/cuda6-memoryparallel/" },
+        "frontmatter": {
+          "title": "The CUDA Parallel Programming Model - 6. Memory Parallelism"
+        }
+      },
+      "next": {
+        "fields": { "slug": "/cudaProg1-matrixmult/" },
+        "frontmatter": {
+          "title": "CUDA Programming - 1. Matrix Multiplication"
+        }
+      }
+    }
+  }
+}

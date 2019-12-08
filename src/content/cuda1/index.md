@@ -20,6 +20,14 @@ I took the [_Graphics Processing Units_](https://cs.nyu.edu/courses/fall19/CSCI-
    1. execution picture
 1. Thread ID
 1. Memory Hierarchy
+   1. between CPU and GPU
+   1. global memory
+   1. shared memory
+   1. local memory
+   1. registers
+   1. constant and texture memory
+   1. principle behind the design of memory hierarchy
+   1. more on the difference between shared memory and registers in a CUDA device
 
 ## Some Concepts
 
@@ -107,9 +115,17 @@ TODO
 
 ## Memory Hierarchy
 
+![memory architecture](./memory.jpg)
+
 ### between CPU and GPU
 
 CPU and GPU has **separate memory spaces** => data must be moved from CPU to GPU before computation starts, as well as moved back to CPU once processing has completed.
+
+Host can **write or read** global memory and constant memory by calling API function.
+
+(Note that device can only read constant memory. But it's short-latency and high-bandwidth)
+
+Shared memory and registers are on-chip memories that are not visible to the host.
 
 ### global memory
 
@@ -123,6 +139,8 @@ CPU and GPU has **separate memory spaces** => data must be moved from CPU to GPU
 
 ### shared memory
 
+1. on-chip
+
 1. each thread block has its own
 
 1. much faster than local or global memory
@@ -135,16 +153,78 @@ CPU and GPU has **separate memory spaces** => data must be moved from CPU to GPU
 
 ### local memory
 
+1. on-chip
+
 1. only exists for the lifetime of the thread
 
 1. generally handled automatically by the **compiler**
 
 ![global](./local.png)
 
+### registers
+
+1. each thread can only access its own registers
+
+1. a kernel function typically uses registers to hold frequently accessed variables that are private to each thread
+
 ### constant and texture memory
 
 read-only, accessible by all threads
 
-- constant memory: used to cache values that are shared by all functional units
+- constant memory: used to cache values that are shared by all functional units.
 
 - texture memory is optimized for texturing operations provided by the hardware
+
+### principle behind the design of memory hierarchy
+
+To improve **compute-to-global-memory-access ratio** and thus achieve high execution speed.
+
+### more on the difference between shared memory and registers in a CUDA device
+
+Although both on-chip, they differ significantly in functionality and cost of access.
+
+![shared v.s. registers](./shared&registers.jpg)
+
+#### background knowledge on how processors access different memory types
+
+##### global memory
+
+- off the processor chip
+
+- implemented with DRAM technology, which implies long access latencies and relatively low access bandwidths
+
+##### registers
+
+- correspond to the Register File of the von Neumann model
+
+- on-chip, which implies very short access latency and drastically higher access bandwidth compared with the global memory
+
+- furthermore, when a variable is stored in a register, its accesses **no longer consume off-chip global memory bandwidth**. This reduced bandwidth consumption will be reflected as an increased compute-to-global-memory-access ratio.
+
+##### how does ALU treat them differently
+
+- each access to registers involves **fewer instructions** than an access to the global memory. Arithmetic instructions in most modern processors have “built-in” register operands.
+
+  - For instance:
+    ```c
+    fadd r1, r2, r3
+    ```
+
+- meanwhile, if an operand value is in the global memory, the processor needs to perform a memory **load** operation to make the operand value available to the ALU
+  - For instance:
+    ```c
+    load r2, r4, offset
+    fadd r1, r2, r3
+    ```
+
+#### shared v.s. global
+
+- When the processor accesses data that reside in the shared memory, it needs to perform a memory load operation, similar to accessing data in the global memory.
+
+- However, because shared memory resides on-chip, it can be accessed with much lower latency and much higher throughput than the global memory.
+
+#### shared v.s. registers
+
+- Shared memory has longer latency and lower bandwidth than registers because of the need to perform a **load** operation.
+
+- In computer architecture terminology, the shared memory is a form of _scratchpad_ memory.

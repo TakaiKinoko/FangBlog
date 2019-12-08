@@ -22,7 +22,7 @@
       "isCreatedByStatefulCreatePages": false,
       "slug": "/cuda7-matrixmult/",
       "previous": {
-        "fields": { "slug": "/cuda6-tiling/" },
+        "fields": { "slug": "/cuda7-tiling/" },
         "frontmatter": {
           "title": "The CUDA Parallel Programming Model - 6.Tiling"
         }

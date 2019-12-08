@@ -1,0 +1,32 @@
+{
+  "expireTime": 9007200830497349000,
+  "key": "transformer-remark-markdown-html-ast-0d9e6afb159f04b202f924786de3c974-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "DRAM bursting alone is not sufficient to realize the level of DRAM access bandwidth required by modern processors. In this post, I’ll ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 135, "offset": 135 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 135, "offset": 135 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 3, "column": 1, "offset": 136 }
+    }
+  }
+}

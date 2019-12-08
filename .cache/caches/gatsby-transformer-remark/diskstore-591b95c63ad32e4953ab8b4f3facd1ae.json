@@ -1,0 +1,52 @@
+{
+  "expireTime": 9007200830497377000,
+  "key": "transformer-remark-markdown-html-ast-c87e4e7197a1d3add2fceda9e6ff9857-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "DRAM bursting alone is not sufficient to realize the level of DRAM access bandwidth required by modern processors. In this post, I’ll talk more about how to achieve better memory parallelism.",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 192, "offset": 192 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 192, "offset": 192 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Forms of",
+            "position": {
+              "start": { "line": 5, "column": 4, "offset": 198 },
+              "end": { "line": 5, "column": 12, "offset": 206 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 5, "column": 1, "offset": 195 },
+          "end": { "line": 5, "column": 13, "offset": 207 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 5, "column": 13, "offset": 207 }
+    }
+  }
+}

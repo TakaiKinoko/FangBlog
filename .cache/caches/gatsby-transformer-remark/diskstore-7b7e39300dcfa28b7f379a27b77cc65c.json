@@ -1,0 +1,982 @@
+{
+  "expireTime": 9007200830511281000,
+  "key": "transformer-remark-markdown-ast-ec8ae98c544a893269e1c3af6b4dd768-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "CUDA Variable Type Qualifiers",
+            "position": {
+              "start": { "line": 2, "column": 4, "offset": 4 },
+              "end": { "line": 2, "column": 33, "offset": 33 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 33, "offset": 33 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./qualifiers.png",
+            "alt": "variable qualifiers",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 35 },
+              "end": { "line": 4, "column": 41, "offset": 75 },
+              "indent": []
+            },
+            "value": "<a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/a4b97b85e330f441950542551e0ed2ca/d3ccf/qualifiers.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 40.03466204506066%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABWUlEQVQozz1R23aDMAzj/z9vW9t1jAAj3BNubSktpZrlne7BxyKRJTkEJm3xts9w+Cqxl/o4WJi0R9neUTSLFrH5GfAuvNA4hLHD/lggzuTsILNhpbzH44kgzTx2nxbH7wrHqMLuaJHYAbW/o/Gr1B1u2FDUs/AyRIlDkvUiaJHmowQp8B236KYntg0IhmFA3/da5/MZ3nvBHdqmUezaFqNw5vmCuq7RdR6cYee99w6Xy0XSPfB8SsIsE9cogjEx4jgGv40xijnIGqcJVVXpOUXzPP+fYbfWaqBNIgYEJNPtdDqhLEu0koqYd8Rd12EcRx0kds4pj/dFUajpuq5/CV+OFOUwO8mNrPx6CorRME1T5XCGPApzI2IaaUJechW6k8CeJImKUoREFnlcjwIs8mgahqHO00wF+SOYgP12u+H1k5ZlwfV61XOu/+rksuZ5Vg7NJnlj3nPlXxtcVw8Ff4nLAAAAAElFTkSuQmCC'); background-size: cover; display: block;\"\n    ></span>\n    <img\n        class=\"gatsby-resp-image-image\"\n        style=\"width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;\"\n        alt=\"variable qualifiers\"\n        title=\"\"\n        src=\"/static/a4b97b85e330f441950542551e0ed2ca/d7711/qualifiers.png\"\n        srcset=\"/static/a4b97b85e330f441950542551e0ed2ca/a695b/qualifiers.png 148w,\n/static/a4b97b85e330f441950542551e0ed2ca/2f273/qualifiers.png 295w,\n/static/a4b97b85e330f441950542551e0ed2ca/d7711/qualifiers.png 590w,\n/static/a4b97b85e330f441950542551e0ed2ca/5e66f/qualifiers.png 885w,\n/static/a4b97b85e330f441950542551e0ed2ca/d3ccf/qualifiers.png 1154w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n      />\n  </span>\n  </a>"
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 35 },
+          "end": { "line": 4, "column": 41, "offset": 75 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "lifetime == kernel?",
+            "position": {
+              "start": { "line": 6, "column": 6, "offset": 82 },
+              "end": { "line": 6, "column": 25, "offset": 101 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 77 },
+          "end": { "line": 6, "column": 25, "offset": 101 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": true,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "If the lifetime of a variable is within a kernel execution, it must be declared ",
+                    "position": {
+                      "start": { "line": 8, "column": 3, "offset": 105 },
+                      "end": { "line": 8, "column": 83, "offset": 185 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "within the kernel function body",
+                        "position": {
+                          "start": { "line": 8, "column": 85, "offset": 187 },
+                          "end": { "line": 8, "column": 116, "offset": 218 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 8, "column": 83, "offset": 185 },
+                      "end": { "line": 8, "column": 118, "offset": 220 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " and will be available for use only ",
+                    "position": {
+                      "start": { "line": 8, "column": 118, "offset": 220 },
+                      "end": { "line": 8, "column": 154, "offset": 256 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "by the kernel code",
+                        "position": {
+                          "start": { "line": 8, "column": 156, "offset": 258 },
+                          "end": { "line": 8, "column": 174, "offset": 276 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 8, "column": 154, "offset": 256 },
+                      "end": { "line": 8, "column": 176, "offset": 278 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 8, "column": 3, "offset": 105 },
+                  "end": { "line": 8, "column": 176, "offset": 278 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 103 },
+              "end": { "line": 9, "column": 1, "offset": 279 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "If the kernel is invoked several times, the value of the variable is not maintained across these invocations. Each invocation must initialize the variable in order to use them",
+                    "position": {
+                      "start": { "line": 10, "column": 3, "offset": 282 },
+                      "end": { "line": 10, "column": 178, "offset": 457 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 10, "column": 3, "offset": 282 },
+                  "end": { "line": 10, "column": 178, "offset": 457 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 280 },
+              "end": { "line": 10, "column": 178, "offset": 457 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 103 },
+          "end": { "line": 10, "column": 178, "offset": 457 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "lifetime == application?",
+            "position": {
+              "start": { "line": 12, "column": 6, "offset": 464 },
+              "end": { "line": 12, "column": 30, "offset": 488 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 459 },
+          "end": { "line": 12, "column": 30, "offset": 488 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": true,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "if the lifetime of a variable continues throughout the entire application, it must be declared ",
+                    "position": {
+                      "start": { "line": 14, "column": 3, "offset": 492 },
+                      "end": { "line": 14, "column": 98, "offset": 587 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "outside of any function body",
+                        "position": {
+                          "start": { "line": 14, "column": 100, "offset": 589 },
+                          "end": { "line": 14, "column": 128, "offset": 617 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 14, "column": 98, "offset": 587 },
+                      "end": { "line": 14, "column": 130, "offset": 619 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 14, "column": 3, "offset": 492 },
+                  "end": { "line": 14, "column": 130, "offset": 619 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 490 },
+              "end": { "line": 15, "column": 1, "offset": 620 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The contents of these variables are maintained throughout the execution of the application and available to all kernels",
+                    "position": {
+                      "start": { "line": 16, "column": 3, "offset": 623 },
+                      "end": { "line": 16, "column": 122, "offset": 742 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 16, "column": 3, "offset": 623 },
+                  "end": { "line": 16, "column": 122, "offset": 742 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 621 },
+              "end": { "line": 16, "column": 122, "offset": 742 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 490 },
+          "end": { "line": 16, "column": 122, "offset": 742 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "scalar variables",
+            "position": {
+              "start": { "line": 18, "column": 6, "offset": 749 },
+              "end": { "line": 18, "column": 22, "offset": 765 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 18, "column": 1, "offset": 744 },
+          "end": { "line": 18, "column": 22, "offset": 765 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": true,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "as shown in the picture above, all automatic scalar variables declared in ",
+                    "position": {
+                      "start": { "line": 20, "column": 3, "offset": 769 },
+                      "end": { "line": 20, "column": 77, "offset": 843 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "kernel and device",
+                        "position": {
+                          "start": { "line": 20, "column": 79, "offset": 845 },
+                          "end": { "line": 20, "column": 96, "offset": 862 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 20, "column": 77, "offset": 843 },
+                      "end": { "line": 20, "column": 98, "offset": 864 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " functions are placed into registers. ",
+                    "position": {
+                      "start": { "line": 20, "column": 98, "offset": 864 },
+                      "end": { "line": 20, "column": 136, "offset": 902 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 20, "column": 3, "offset": 769 },
+                  "end": { "line": 20, "column": 136, "offset": 902 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 20, "column": 1, "offset": 767 },
+              "end": { "line": 21, "column": 1, "offset": 903 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The ",
+                    "position": {
+                      "start": { "line": 22, "column": 3, "offset": 906 },
+                      "end": { "line": 22, "column": 7, "offset": 910 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "scopes",
+                        "position": {
+                          "start": { "line": 22, "column": 9, "offset": 912 },
+                          "end": { "line": 22, "column": 15, "offset": 918 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 22, "column": 7, "offset": 910 },
+                      "end": { "line": 22, "column": 17, "offset": 920 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " of these automatic variables are ",
+                    "position": {
+                      "start": { "line": 22, "column": 17, "offset": 920 },
+                      "end": { "line": 22, "column": 51, "offset": 954 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "within individual threads",
+                        "position": {
+                          "start": { "line": 22, "column": 53, "offset": 956 },
+                          "end": { "line": 22, "column": 78, "offset": 981 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 22, "column": 51, "offset": 954 },
+                      "end": { "line": 22, "column": 80, "offset": 983 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": { "line": 22, "column": 80, "offset": 983 },
+                      "end": { "line": 22, "column": 81, "offset": 984 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 22, "column": 3, "offset": 906 },
+                  "end": { "line": 22, "column": 81, "offset": 984 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "loose": true,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "loose": true,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "When a kernel function declares an automatic variable, a private copy of that variable is generated for every thread that executes the kernel function.",
+                            "position": {
+                              "start": {
+                                "line": 24,
+                                "column": 7,
+                                "offset": 992
+                              },
+                              "end": {
+                                "line": 24,
+                                "column": 158,
+                                "offset": 1143
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 24, "column": 7, "offset": 992 },
+                          "end": { "line": 24, "column": 158, "offset": 1143 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 24, "column": 5, "offset": 990 },
+                      "end": { "line": 25, "column": 1, "offset": 1144 },
+                      "indent": [1]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "loose": true,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "When a thread terminates, all its automatic variables also cease to exist. Note that accessing these variables is extremely fast and parallel; however, one must be careful ",
+                            "position": {
+                              "start": {
+                                "line": 26,
+                                "column": 7,
+                                "offset": 1151
+                              },
+                              "end": {
+                                "line": 26,
+                                "column": 179,
+                                "offset": 1323
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "emphasis",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "not to exceed the limited capacity",
+                                "position": {
+                                  "start": {
+                                    "line": 26,
+                                    "column": 180,
+                                    "offset": 1324
+                                  },
+                                  "end": {
+                                    "line": 26,
+                                    "column": 214,
+                                    "offset": 1358
+                                  },
+                                  "indent": []
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 26,
+                                "column": 179,
+                                "offset": 1323
+                              },
+                              "end": {
+                                "line": 26,
+                                "column": 215,
+                                "offset": 1359
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "value": " of the register storage in hardware implementations.",
+                            "position": {
+                              "start": {
+                                "line": 26,
+                                "column": 215,
+                                "offset": 1359
+                              },
+                              "end": {
+                                "line": 26,
+                                "column": 268,
+                                "offset": 1412
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 26, "column": 7, "offset": 1151 },
+                          "end": { "line": 26, "column": 268, "offset": 1412 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 26, "column": 5, "offset": 1149 },
+                      "end": { "line": 27, "column": 5, "offset": 1417 },
+                      "indent": [5]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Using a large number of registers can negatively affect the number of active threads assigned to each SM.",
+                            "position": {
+                              "start": {
+                                "line": 28,
+                                "column": 7,
+                                "offset": 1424
+                              },
+                              "end": {
+                                "line": 28,
+                                "column": 112,
+                                "offset": 1529
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 28, "column": 7, "offset": 1424 },
+                          "end": { "line": 28, "column": 112, "offset": 1529 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 28, "column": 5, "offset": 1422 },
+                      "end": { "line": 28, "column": 112, "offset": 1529 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 24, "column": 5, "offset": 990 },
+                  "end": { "line": 28, "column": 112, "offset": 1529 },
+                  "indent": [1, 5, 5, 5]
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 22, "column": 1, "offset": 904 },
+              "end": { "line": 28, "column": 112, "offset": 1529 },
+              "indent": [1, 1, 1, 1, 1, 1]
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 20, "column": 1, "offset": 767 },
+          "end": { "line": 28, "column": 112, "offset": 1529 },
+          "indent": [1, 1, 1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "array variables",
+            "position": {
+              "start": { "line": 30, "column": 6, "offset": 1536 },
+              "end": { "line": 30, "column": 21, "offset": 1551 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 30, "column": 1, "offset": 1531 },
+          "end": { "line": 30, "column": 21, "offset": 1551 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Automatic array variables are not stored in registers.",
+            "position": {
+              "start": { "line": 32, "column": 1, "offset": 1553 },
+              "end": { "line": 32, "column": 55, "offset": 1607 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 32, "column": 1, "offset": 1553 },
+          "end": { "line": 32, "column": 55, "offset": 1607 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "They are stored into the global memory",
+                    "position": {
+                      "start": { "line": 34, "column": 3, "offset": 1611 },
+                      "end": { "line": 34, "column": 41, "offset": 1649 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 34, "column": 3, "offset": 1611 },
+                  "end": { "line": 34, "column": 41, "offset": 1649 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 34, "column": 1, "offset": 1609 },
+              "end": { "line": 34, "column": 41, "offset": 1649 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "may incur long access delays and potential access congestions",
+                    "position": {
+                      "start": { "line": 35, "column": 3, "offset": 1652 },
+                      "end": { "line": 35, "column": 64, "offset": 1713 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 35, "column": 3, "offset": 1652 },
+                  "end": { "line": 35, "column": 64, "offset": 1713 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 35, "column": 1, "offset": 1650 },
+              "end": { "line": 35, "column": 64, "offset": 1713 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 34, "column": 1, "offset": 1609 },
+          "end": { "line": 35, "column": 64, "offset": 1713 },
+          "indent": [1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Similar to automatic scalar variables, the scope of these arrays is limited to individual threads; i.e., a private version of each automatic array is created for and used by every thread.",
+            "position": {
+              "start": { "line": 37, "column": 1, "offset": 1715 },
+              "end": { "line": 37, "column": 188, "offset": 1902 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 37, "column": 1, "offset": 1715 },
+          "end": { "line": 37, "column": 188, "offset": 1902 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Once a thread terminates its execution, the contents of its automatic array variables also cease to exist. ",
+            "position": {
+              "start": { "line": 39, "column": 1, "offset": 1904 },
+              "end": { "line": 39, "column": 108, "offset": 2011 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 39, "column": 1, "offset": 1904 },
+          "end": { "line": 39, "column": 108, "offset": 2011 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">__shared__</code>",
+            "position": {
+              "start": { "line": 42, "column": 6, "offset": 2019 },
+              "end": { "line": 42, "column": 22, "offset": 2035 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 42, "column": 1, "offset": 2014 },
+          "end": { "line": 42, "column": 22, "offset": 2035 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Declares a shared variable in CUDA. ",
+            "position": {
+              "start": { "line": 44, "column": 1, "offset": 2037 },
+              "end": { "line": 44, "column": 37, "offset": 2073 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 44, "column": 1, "offset": 2037 },
+          "end": { "line": 44, "column": 37, "offset": 2073 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "An optional “",
+                    "position": {
+                      "start": { "line": 46, "column": 3, "offset": 2077 },
+                      "end": { "line": 46, "column": 16, "offset": 2090 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "device",
+                        "position": {
+                          "start": { "line": 46, "column": 18, "offset": 2092 },
+                          "end": { "line": 46, "column": 24, "offset": 2098 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 46, "column": 16, "offset": 2090 },
+                      "end": { "line": 46, "column": 26, "offset": 2100 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": "” in front of “",
+                    "position": {
+                      "start": { "line": 46, "column": 26, "offset": 2100 },
+                      "end": { "line": 46, "column": 41, "offset": 2115 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "shared",
+                        "position": {
+                          "start": { "line": 46, "column": 43, "offset": 2117 },
+                          "end": { "line": 46, "column": 49, "offset": 2123 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 46, "column": 41, "offset": 2115 },
+                      "end": { "line": 46, "column": 51, "offset": 2125 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": "” keyword may also be added in the declaration to achieve the same effect. ",
+                    "position": {
+                      "start": { "line": 46, "column": 51, "offset": 2125 },
+                      "end": { "line": 46, "column": 126, "offset": 2200 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 46, "column": 3, "offset": 2077 },
+                  "end": { "line": 46, "column": 126, "offset": 2200 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 46, "column": 1, "offset": 2075 },
+              "end": { "line": 46, "column": 126, "offset": 2200 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 46, "column": 1, "offset": 2075 },
+          "end": { "line": 46, "column": 126, "offset": 2200 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Such declaration typically resides within a kernel function or a device function. Shared variables reside in the shared memory. The scope of a shared variable is within a thread block; i.e., all threads in a block see the same version of a shared variable. A private version of the shared variable is created for and used by each thread block during kernel execution. The lifetime of a shared variable is within the duration of the kernel. When a kernel terminates its execution, the contents of its shared variables cease to exist. As discussed earlier, shared variables are an efficient means for threads within a block to collaborate with one another. Accessing shared variables from the shared memory is extremely fast and highly parallel. CUDA programmers often use shared variables to hold the portion of global memory data that are heavily used in a kernel execution phase. ",
+            "position": {
+              "start": { "line": 48, "column": 1, "offset": 2202 },
+              "end": { "line": 48, "column": 882, "offset": 3083 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 48, "column": 1, "offset": 2202 },
+          "end": { "line": 48, "column": 882, "offset": 3083 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 48, "column": 882, "offset": 3083 }
+    }
+  }
+}
