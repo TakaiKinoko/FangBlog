@@ -6,7 +6,8 @@ import media from "../utils/media";
 import Github from "../images/social/github.svg";
 import Hat from "../images/social/hat.svg";
 import LinkedIn from "../images/social/linkedin.svg";
-import Beanie from "../images/beanie-icon.png";
+//import Beanie from "../images/beanie-icon.png";
+import Nichijou from "../images/Nichijou.svg";
 
 const Container = styled.div`
   display: flex;
@@ -71,9 +72,16 @@ const LinkedInIcon = styled.img`
   padding: 1.5rem 1rem;
 `;
 
+/*
 const BeanieIcon = styled.img`
   height: 16rem;
   width: 16rem;
+  padding: 1.5rem 1rem;
+`; */
+
+const NichijouIcon = styled.img`
+  height: 20rem;
+  width: 20rem;
   padding: 1.5rem 1rem;
 `;
 
@@ -116,7 +124,7 @@ const Bio = () => (
             </a>
           </TextContainer>
           <ImageContainer>
-            <BeanieIcon src={Beanie} alt={author} />
+            <NichijouIcon src={Nichijou} alt={author} />
           </ImageContainer>
         </Container>
       );
