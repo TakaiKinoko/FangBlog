@@ -3,7 +3,7 @@ title: "Packing Files With Reprozip On MacOS Via Vagrant"
 date: "2019-12-08T00:10:03.284Z"
 ---
 
-I recently had to pack a project with **Reprozip** where all the dependencies are supposed to be installed within a **virtualenv**. Reprozip uses ptrace and thus only works on Linux, which means I had to set up a linux environment on my Mac. I mean, you can't call yourself a software engineer without having a Linux (virtual) machine, can you?! 😓
+I recently had to pack a project with **Reprozip** where all the dependencies can be nicely preserved. Reprozip uses ptrace and thus only works on Linux, which means I had to set up a linux environment on my Mac. I mean, you can't call yourself a software engineer without having a Linux (virtual) machine, can you?! 😓
 
 In case someone out there are faced with the same task, I've documented my setup process in this post.
 
@@ -119,7 +119,21 @@ In case you didn't know your **[vm_name]** just like myself, here's how you trac
 $ vagrant status
 ```
 
-### Example: Packing A Maven Project
+### Run Trace and Pack
+
+We’ll first trace all the system calls in execution by using Reprozip trace command:
+
+```sh
+$ reprozip trace <command>
+```
+
+![reprozip trace](./reprotrace.png)
+
+```sh
+$ reprozip pack <pack-name>
+```
+
+It gives an .rpz file which can then be `scp`ed to other system environments and be unzipped and ran.
 
 ### Terminate a VM
 
