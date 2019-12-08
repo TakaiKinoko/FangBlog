@@ -1,7 +1,6 @@
 ---
-title: "The CUDA Parallel Programming Model - 4.              
-\n Syncthreads Examples"
-date: "2019-12-07T13:25:03.284Z"
+title: "The CUDA Parallel Programming Model - 4. Syncthreads Examples"
+date: "2019-12-03T13:25:03.284Z"
 cover: "global.jpg"
 ---
 

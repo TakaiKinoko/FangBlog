@@ -1,6 +1,6 @@
 ---
 title: "The CUDA Parallel Programming Model - 1. Concepts"
-date: "2019-12-05T20:12:03.284Z"
+date: "2019-11-30T20:12:03.284Z"
 cover: "global.jpg"
 ---
 

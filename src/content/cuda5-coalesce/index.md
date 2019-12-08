@@ -1,6 +1,6 @@
 ---
-title: "The CUDA Parallel Programming Model - 5.Memory Coalescing"
-date: "2019-12-07T14:25:03.284Z"
+title: "The CUDA Parallel Programming Model - 5. Memory Coalescing"
+date: "2019-12-04T14:25:03.284Z"
 ---
 
 This post talks about a key factor to CUDA kernel performace: accessing data in the globle memory.

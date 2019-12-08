@@ -1,1 +1,169 @@
-{"componentChunkName":"component---src-pages-index-js","path":"/","webpackCompilationHash":"","result":{"data":{"site":{"siteMetadata":{"title":"FANG'S NOTEBOOK"}},"allMarkdownRemark":{"edges":[{"node":{"id":"53baaded-057f-5df7-a592-c0173552cd00","excerpt":"In this post, I talk about what happends when blocks are assigned to SMs, as well as CUDA code optimization across GPU architectures. Before this, I thought it…","fields":{"slug":"/cudaRandom/","readingTime":{"text":"9 min read"}},"frontmatter":{"date":"December 08, 2019","title":"Some CUDA Related Questions"}}},{"node":{"id":"fd5baa6f-a8e0-5317-96a7-4a1c8a207829","excerpt":"I recently had to pack a project with  Reprozip  where all the dependencies can be nicely preserved. Reprozip uses ptrace and thus only works on Linux, which…","fields":{"slug":"/install-reprozip/","readingTime":{"text":"3 min read"}},"frontmatter":{"date":"December 08, 2019","title":"Packing Files With Reprozip On MacOS Via Vagrant"}}},{"node":{"id":"de652e40-e1a9-5cdd-869f-5c6923eb60c9","excerpt":"CUDA Variable Type Qualifiers lifetime == kernel? If the lifetime of a variable is within a kernel execution, it must be declared  within the kernel function…","fields":{"slug":"/cudaProg2-Variables/","readingTime":{"text":"5 min read"}},"frontmatter":{"date":"December 07, 2019","title":"CUDA Programming - 2. CUDA Variable Type Qualifiers"}}},{"node":{"id":"0844d5dd-0ad9-5c49-9f9a-c3f9bd37eaf9","excerpt":"Notation Matrix  Matrix  Output Matrix  row counter:  column counter:   is the element at   position in the vertical direction and   position in the horizontal…","fields":{"slug":"/cudaProg1-matrixmult/","readingTime":{"text":"3 min read"}},"frontmatter":{"date":"December 07, 2019","title":"CUDA Programming - 1. Matrix Multiplication"}}},{"node":{"id":"ad729c81-c4a4-5f4d-b769-d5875d86e57e","excerpt":"DRAM bursting alone is not sufficient to realize the level of DRAM access bandwidth required by modern processors. In this post, I’ll talk more about how to…","fields":{"slug":"/cuda6-memoryparallel/","readingTime":{"text":"2 min read"}},"frontmatter":{"date":"December 07, 2019","title":"The CUDA Parallel Programming Model - 6. Memory Parallelism"}}},{"node":{"id":"444cfd98-bb37-592d-972d-7ff27a50935c","excerpt":"In progress!","fields":{"slug":"/cuda7-tiling/","readingTime":{"text":"1 min read"}},"frontmatter":{"date":"December 07, 2019","title":"The CUDA Parallel Programming Model - 7.Tiling"}}},{"node":{"id":"24b545e9-74b6-5be9-8d6a-f33611aa8b5e","excerpt":"This post talks about a key factor to CUDA kernel performace: accessing data in the globle memory. CUDA applications tend to process a massive amount of data…","fields":{"slug":"/cuda5-coalesce/","readingTime":{"text":"9 min read"}},"frontmatter":{"date":"December 07, 2019","title":"The CUDA Parallel Programming Model - 5.Memory Coalescing"}}},{"node":{"id":"863e4c7d-c15f-5dc9-ada5-e86eb540e778","excerpt":"This is the fourth post in a series about what I learnt in my GPU class at NYU this past fall. Here I collected several examples that showcase how the CUDA…","fields":{"slug":"/cuda4-sync/","readingTime":{"text":"2 min read"}},"frontmatter":{"date":"December 07, 2019","title":"The CUDA Parallel Programming Model - 4.               \n Syncthreads Examples"}}},{"node":{"id":"d1d0a483-646c-56db-bae5-fd42b2f06372","excerpt":"This is the third post in a series about what I learnt in my GPU class at NYU this past fall. Here I dive a bit deeper than the previous post into thread…","fields":{"slug":"/cuda3-thread-divergence/","readingTime":{"text":"4 min read"}},"frontmatter":{"date":"December 02, 2019","title":"The CUDA Parallel Programming Model - 3.               \n More On Thread Divergence"}}},{"node":{"id":"fa2ee5aa-dd46-59d1-9984-6289fedad9b8","excerpt":"This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about warps, why using warps from a SIMD…","fields":{"slug":"/cuda2-warp/","readingTime":{"text":"6 min read"}},"frontmatter":{"date":"December 01, 2019","title":"The CUDA Parallel Programming Model - 2. Warps"}}},{"node":{"id":"e92f1d62-ed13-5144-a5b9-ea2222379d8d","excerpt":"I took the  Graphics Processing Units  course at NYU this past fall. This is the first post in a series about what I learnt. Buckle up for lots of technical…","fields":{"slug":"/cuda1/","readingTime":{"text":"6 min read"}},"frontmatter":{"date":"November 30, 2019","title":"The CUDA Parallel Programming Model - 1. Concepts"}}}]}},"pageContext":{"isCreatedByStatefulCreatePages":true}}}
+{
+  "componentChunkName": "component---src-pages-index-js",
+  "path": "/",
+  "webpackCompilationHash": "",
+  "result": {
+    "data": {
+      "site": { "siteMetadata": { "title": "FANG'S NOTEBOOK" } },
+      "allMarkdownRemark": {
+        "edges": [
+          {
+            "node": {
+              "id": "53baaded-057f-5df7-a592-c0173552cd00",
+              "excerpt": "In this post, I talk about what happends when blocks are assigned to SMs, as well as CUDA code optimization across GPU architectures. Before this, I thought it…",
+              "fields": {
+                "slug": "/cudaRandom/",
+                "readingTime": { "text": "9 min read" }
+              },
+              "frontmatter": {
+                "date": "December 08, 2019",
+                "title": "Some CUDA Related Questions"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "fd5baa6f-a8e0-5317-96a7-4a1c8a207829",
+              "excerpt": "I recently had to pack a project with  Reprozip  where all the dependencies can be nicely preserved. Reprozip uses ptrace and thus only works on Linux, which…",
+              "fields": {
+                "slug": "/install-reprozip/",
+                "readingTime": { "text": "3 min read" }
+              },
+              "frontmatter": {
+                "date": "December 08, 2019",
+                "title": "Packing Files With Reprozip On MacOS Via Vagrant"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "de652e40-e1a9-5cdd-869f-5c6923eb60c9",
+              "excerpt": "CUDA Variable Type Qualifiers lifetime == kernel? If the lifetime of a variable is within a kernel execution, it must be declared  within the kernel function…",
+              "fields": {
+                "slug": "/cudaProg2-Variables/",
+                "readingTime": { "text": "5 min read" }
+              },
+              "frontmatter": {
+                "date": "December 07, 2019",
+                "title": "CUDA Programming - 2. CUDA Variable Type Qualifiers"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "0844d5dd-0ad9-5c49-9f9a-c3f9bd37eaf9",
+              "excerpt": "Notation Matrix  Matrix  Output Matrix  row counter:  column counter:   is the element at   position in the vertical direction and   position in the horizontal…",
+              "fields": {
+                "slug": "/cudaProg1-matrixmult/",
+                "readingTime": { "text": "3 min read" }
+              },
+              "frontmatter": {
+                "date": "December 07, 2019",
+                "title": "CUDA Programming - 1. Matrix Multiplication"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "444cfd98-bb37-592d-972d-7ff27a50935c",
+              "excerpt": "In progress!",
+              "fields": {
+                "slug": "/cuda7-tiling/",
+                "readingTime": { "text": "1 min read" }
+              },
+              "frontmatter": {
+                "date": "December 06, 2019",
+                "title": "The CUDA Parallel Programming Model - 7.Tiling"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "ad729c81-c4a4-5f4d-b769-d5875d86e57e",
+              "excerpt": "DRAM bursting alone is not sufficient to realize the level of DRAM access bandwidth required by modern processors. In this post, I’ll talk more about how to…",
+              "fields": {
+                "slug": "/cuda6-memoryparallel/",
+                "readingTime": { "text": "2 min read" }
+              },
+              "frontmatter": {
+                "date": "December 05, 2019",
+                "title": "The CUDA Parallel Programming Model - 6. Memory Parallelism"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "24b545e9-74b6-5be9-8d6a-f33611aa8b5e",
+              "excerpt": "This post talks about a key factor to CUDA kernel performace: accessing data in the globle memory. CUDA applications tend to process a massive amount of data…",
+              "fields": {
+                "slug": "/cuda5-coalesce/",
+                "readingTime": { "text": "9 min read" }
+              },
+              "frontmatter": {
+                "date": "December 04, 2019",
+                "title": "The CUDA Parallel Programming Model - 5. Memory Coalescing"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "863e4c7d-c15f-5dc9-ada5-e86eb540e778",
+              "excerpt": "This is the fourth post in a series about what I learnt in my GPU class at NYU this past fall. Here I collected several examples that showcase how the CUDA…",
+              "fields": {
+                "slug": "/cuda4-sync/",
+                "readingTime": { "text": "2 min read" }
+              },
+              "frontmatter": {
+                "date": "December 03, 2019",
+                "title": "The CUDA Parallel Programming Model - 4. Syncthreads Examples"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "d1d0a483-646c-56db-bae5-fd42b2f06372",
+              "excerpt": "This is the third post in a series about what I learnt in my GPU class at NYU this past fall. Here I dive a bit deeper than the previous post into thread…",
+              "fields": {
+                "slug": "/cuda3-thread-divergence/",
+                "readingTime": { "text": "4 min read" }
+              },
+              "frontmatter": {
+                "date": "December 02, 2019",
+                "title": "The CUDA Parallel Programming Model - 3.               \n More On Thread Divergence"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "fa2ee5aa-dd46-59d1-9984-6289fedad9b8",
+              "excerpt": "This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about warps, why using warps from a SIMD…",
+              "fields": {
+                "slug": "/cuda2-warp/",
+                "readingTime": { "text": "6 min read" }
+              },
+              "frontmatter": {
+                "date": "December 01, 2019",
+                "title": "The CUDA Parallel Programming Model - 2. Warps"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "e92f1d62-ed13-5144-a5b9-ea2222379d8d",
+              "excerpt": "I took the  Graphics Processing Units  course at NYU this past fall. This is the first post in a series about what I learnt. Buckle up for lots of technical…",
+              "fields": {
+                "slug": "/cuda1/",
+                "readingTime": { "text": "6 min read" }
+              },
+              "frontmatter": {
+                "date": "November 30, 2019",
+                "title": "The CUDA Parallel Programming Model - 1. Concepts"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "pageContext": { "isCreatedByStatefulCreatePages": true }
+  }
+}

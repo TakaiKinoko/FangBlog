@@ -1,6 +1,6 @@
 ---
 title: "The CUDA Parallel Programming Model - 6. Memory Parallelism"
-date: "2019-12-07T16:25:03.284Z"
+date: "2019-12-05T16:25:03.284Z"
 ---
 
 DRAM bursting alone is not sufficient to realize the level of DRAM access bandwidth required by modern processors. In this post, I'll talk more about how to achieve better memory parallelism.

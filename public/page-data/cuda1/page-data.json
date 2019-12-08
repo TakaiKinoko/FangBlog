@@ -14,7 +14,7 @@
         "fields": { "readingTime": { "text": "6 min read" } },
         "frontmatter": {
           "title": "The CUDA Parallel Programming Model - 1. Concepts",
-          "date": "December 05, 2019"
+          "date": "November 30, 2019"
         }
       }
     },

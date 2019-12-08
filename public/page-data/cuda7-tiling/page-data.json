@@ -14,7 +14,7 @@
         "fields": { "readingTime": { "text": "1 min read" } },
         "frontmatter": {
           "title": "The CUDA Parallel Programming Model - 7.Tiling",
-          "date": "December 07, 2019"
+          "date": "December 06, 2019"
         }
       }
     },
@@ -22,15 +22,15 @@
       "isCreatedByStatefulCreatePages": false,
       "slug": "/cuda7-tiling/",
       "previous": {
-        "fields": { "slug": "/cuda5-coalesce/" },
-        "frontmatter": {
-          "title": "The CUDA Parallel Programming Model - 5.Memory Coalescing"
-        }
-      },
-      "next": {
         "fields": { "slug": "/cuda6-memoryparallel/" },
         "frontmatter": {
           "title": "The CUDA Parallel Programming Model - 6. Memory Parallelism"
+        }
+      },
+      "next": {
+        "fields": { "slug": "/cudaProg1-matrixmult/" },
+        "frontmatter": {
+          "title": "CUDA Programming - 1. Matrix Multiplication"
         }
       }
     }

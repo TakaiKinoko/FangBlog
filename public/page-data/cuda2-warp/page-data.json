@@ -14,7 +14,7 @@
         "fields": { "readingTime": { "text": "6 min read" } },
         "frontmatter": {
           "title": "The CUDA Parallel Programming Model - 2. Warps",
-          "date": "December 06, 2019"
+          "date": "December 01, 2019"
         }
       }
     },

@@ -1,7 +1,7 @@
 ---
 title: "The CUDA Parallel Programming Model - 3.              
 \n More On Thread Divergence"
-date: "2019-12-07T12:12:03.284Z"
+date: "2019-12-02T12:12:03.284Z"
 cover: "global.jpg"
 ---
 
