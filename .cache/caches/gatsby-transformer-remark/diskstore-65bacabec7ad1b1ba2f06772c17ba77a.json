@@ -1,5 +1,0 @@
-{
-  "expireTime": 9007200830643547000,
-  "key": "transformer-remark-markdown-html-0105d9770f8bed6a71fe404a8875350b-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
-  "val": "<p>Kernels can be launched <strong>sequentially</strong> or <strong>in parallel</strong>. It’s just that if multiple kernels are launched in parallel, CUDA streams must be used.</p>\n<h2>What is a Stream?</h2>\n<p>In CUDA, stream refers to <strong>a single operation sequence</strong> on a GPU device. </p>\n<ul>\n<li>\n<p>Every CUDA kernel is invoked on an independent stream</p>\n</li>\n<li>\n<p>If only one kernel is invoked, the default stream, stream0, is used</p>\n</li>\n<li>\n<p>If n kernels are invoked in parallel, n streams need to be used</p>\n</li>\n</ul>"
-}

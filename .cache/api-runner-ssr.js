@@ -5,11 +5,17 @@ var plugins = [{
       plugin: require('/Users/fanghan/Desktop/FangBlog/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
+      plugin: require('/Users/fanghan/Desktop/FangBlog/node_modules/gatsby-remark-images/gatsby-ssr'),
+      options: {"plugins":[],"maxWidth":590,"showCaptions":true},
+    },{
       plugin: require('/Users/fanghan/Desktop/FangBlog/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       plugin: require('/Users/fanghan/Desktop/FangBlog/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-blog-starter","short_name":"starter","start_url":"/","background_color":"#30302F","theme_color":"#30302F","display":"minimal-ui","icon":"src/images/beanie-icon.png"},
+    },{
+      plugin: require('/Users/fanghan/Desktop/FangBlog/node_modules/gatsby-plugin-offline/gatsby-ssr'),
+      options: {"plugins":[]},
     },{
       plugin: require('/Users/fanghan/Desktop/FangBlog/gatsby-ssr'),
       options: {"plugins":[]},

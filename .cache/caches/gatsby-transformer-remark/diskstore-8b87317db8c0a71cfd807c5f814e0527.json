@@ -1,5 +1,0 @@
-{
-  "expireTime": 9007200830643345000,
-  "key": "transformer-remark-markdown-html-1d2eef723b03ca0b28da044f30aa9a0e-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
-  "val": "<p>In the previous posts, we have assumed that only one kernel is launched at a time. But this is not all that kernels can do. They can be launched <strong>sequentially</strong> or <strong>in parallel</strong>. It’s just that if multiple kernels are launched in parallel, </p>"
-}

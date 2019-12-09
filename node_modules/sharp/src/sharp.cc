@@ -1,4 +1,4 @@
-// Copyright 2013, 2014, 2015, 2016, 2017 Lovell Fuller and contributors.
+// Copyright 2013, 2014, 2015, 2016, 2017, 2018, 2019 Lovell Fuller and contributors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -51,4 +51,4 @@ NAN_MODULE_INIT(init) {
     Nan::GetFunction(Nan::New<v8::FunctionTemplate>(stats)).ToLocalChecked());
 }
 
-NODE_MODULE(sharp, init)
+NAN_MODULE_WORKER_ENABLED(sharp, init)
