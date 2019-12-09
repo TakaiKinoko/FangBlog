@@ -22,9 +22,9 @@
       "isCreatedByStatefulCreatePages": false,
       "slug": "/cudaProg1-matrixmult/",
       "previous": {
-        "fields": { "slug": "/cuda7-tiling/" },
+        "fields": { "slug": "/cuda9-stream2/" },
         "frontmatter": {
-          "title": "The CUDA Parallel Programming Model - 7.Tiling"
+          "title": "The CUDA Parallel Programming Model - 9. Interleave Operations by Stream"
         }
       },
       "next": {

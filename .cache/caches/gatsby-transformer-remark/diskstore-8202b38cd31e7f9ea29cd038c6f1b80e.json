@@ -1,0 +1,11 @@
+{
+  "expireTime": 9007200830648435000,
+  "key": "a934c299-bd66-5669-941a-45665fa50628{\"duotone\":false,\"grayscale\":false,\"toFormat\":\"\",\"width\":20,\"height\":10}",
+  "val": {
+    "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACH0lEQVQoz02SW08UQRBGe6Z7emd67tfd2V1QWVgElxjigwgS0BcVEU24hEhM1Gff/fnH2oVEHk6qeqb7S9VXpVymGM09ug2P4aaSKMwU4x1F/1wRJgrPU/ha8O/xHkf5rpQicoaTsw2UHXgMYrXC5R5htjx7RNl9bow8EkHt/4/mMSKo5Y5zlvGkFUFr6UdjxuMpLjK0raZpNHXtS/QpOkPaCLUh6zSuybBlLVTYqsEWBQMpygT3wipJLNNpx3A4ou8NNzeGyyvL1bXm5tZweJuzuCjY+1Lw6jqmPz/FnPzGnnwneP+L8OAraaIpKkecGlQQGGnLZxAq4lhLrtHaiCeBXNCCj5PoEn9FmmnyQpPlmlQoK0vdOqbrDVkZoCI3IEkyabVlIh5UbU6cFOJJSdt1jPqStUnK+tOKyXpNUVsaESwKs6J5EI/F70xyNRwl0nLP1nzG64M5bw57jo5mHB/P+Hi2zdsPW+y9O2Xxcpf9vSnDcUIhlSxE7DA39FVALhS1IFHVreXZrJUKhlJhwOczxSfh4pvi/EKx/zFi48855d1P7OwFqVhQFop1eTwrZYhLwfpBUFBlFUlblQylI4kTbCjeZZYwCmXXQtkxQ14qdi632P57R3X1g2S2TVp6xCKWlcv/mkRWLq9kKM5F4lcohhsq8adqQmkpJXaO1cACvRLPnMeTXZ/+aEG6uUtVLSdr6YYy+XHGfGeNsh7wDx/W9WHF5jZtAAAAAElFTkSuQmCC",
+    "width": 20,
+    "height": 10,
+    "aspectRatio": 2,
+    "originalName": "interleave.png"
+  }
+}

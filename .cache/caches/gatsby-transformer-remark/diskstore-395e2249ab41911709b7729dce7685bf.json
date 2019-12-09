@@ -1,0 +1,612 @@
+{
+  "expireTime": 9007200830648095000,
+  "key": "transformer-remark-markdown-ast-a3880fa40ee317a28d7f1a26a0af69e0-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In the last post, we saw how full concurrency can be achieved amongst streams. Here I’d like to talk about how CUDA operations from different streams may also be ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 163, "offset": 163 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "interleaved",
+                "position": {
+                  "start": { "line": 2, "column": 165, "offset": 165 },
+                  "end": { "line": 2, "column": 176, "offset": 176 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 163, "offset": 163 },
+              "end": { "line": 2, "column": 178, "offset": 178 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ", which is another programming model often used to effect concurrency.",
+            "position": {
+              "start": { "line": 2, "column": 178, "offset": 178 },
+              "end": { "line": 2, "column": 248, "offset": 248 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 248, "offset": 248 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Review CUDA Streams",
+            "position": {
+              "start": { "line": 4, "column": 5, "offset": 254 },
+              "end": { "line": 4, "column": 24, "offset": 273 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 250 },
+          "end": { "line": 4, "column": 24, "offset": 273 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A stream in CUDA is a sequence of operations that execute on the device in the order in which they are issued by the host code.",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 275 },
+              "end": { "line": 6, "column": 128, "offset": 402 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 275 },
+          "end": { "line": 6, "column": 128, "offset": 402 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "While operations within a stream are guaranteed to execute in the prescribed order, operations in different streams can be interleaved and, when possible, they can even run concurrently.",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 404 },
+              "end": { "line": 8, "column": 187, "offset": 590 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 404 },
+          "end": { "line": 8, "column": 187, "offset": 590 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Review CUDA Asynchronous Commands",
+            "position": {
+              "start": { "line": 10, "column": 5, "offset": 596 },
+              "end": { "line": 10, "column": 38, "offset": 629 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 592 },
+          "end": { "line": 10, "column": 38, "offset": 629 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Being asynchronous means that CUDA can perform these operations simultaneously",
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 631 },
+              "end": { "line": 12, "column": 79, "offset": 709 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 631 },
+          "end": { "line": 12, "column": 79, "offset": 709 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": true,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CUDA Kernel <<<>>>",
+                    "position": {
+                      "start": { "line": 14, "column": 3, "offset": 713 },
+                      "end": { "line": 14, "column": 21, "offset": 731 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 14, "column": 3, "offset": 713 },
+                  "end": { "line": 14, "column": 21, "offset": 731 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 711 },
+              "end": { "line": 15, "column": 1, "offset": 732 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "cudaMemcpyAsync (HostToDevice)",
+                    "position": {
+                      "start": { "line": 16, "column": 3, "offset": 735 },
+                      "end": { "line": 16, "column": 33, "offset": 765 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 16, "column": 3, "offset": 735 },
+                  "end": { "line": 16, "column": 33, "offset": 765 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 733 },
+              "end": { "line": 17, "column": 1, "offset": 766 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "cudaMemcpyAsync (DeviceToHost)",
+                    "position": {
+                      "start": { "line": 18, "column": 3, "offset": 769 },
+                      "end": { "line": 18, "column": 33, "offset": 799 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 18, "column": 3, "offset": 769 },
+                  "end": { "line": 18, "column": 33, "offset": 799 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 18, "column": 1, "offset": 767 },
+              "end": { "line": 19, "column": 1, "offset": 800 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Operations on the CPU",
+                    "position": {
+                      "start": { "line": 20, "column": 3, "offset": 803 },
+                      "end": { "line": 20, "column": 24, "offset": 824 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 20, "column": 3, "offset": 803 },
+                  "end": { "line": 20, "column": 24, "offset": 824 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 20, "column": 1, "offset": 801 },
+              "end": { "line": 20, "column": 24, "offset": 824 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 711 },
+          "end": { "line": 20, "column": 24, "offset": 824 },
+          "indent": [1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "🌟 What Can Happen Simultaneously 🌟",
+            "position": {
+              "start": { "line": 22, "column": 5, "offset": 830 },
+              "end": { "line": 22, "column": 41, "offset": 866 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 22, "column": 1, "offset": 826 },
+          "end": { "line": 22, "column": 42, "offset": 867 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": true,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "computation on the device ",
+                    "position": {
+                      "start": { "line": 24, "column": 3, "offset": 871 },
+                      "end": { "line": 24, "column": 29, "offset": 897 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 24, "column": 3, "offset": 871 },
+                  "end": { "line": 24, "column": 29, "offset": 897 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "loose": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "lots of CUDA kernels on GPU",
+                            "position": {
+                              "start": {
+                                "line": 25,
+                                "column": 7,
+                                "offset": 904
+                              },
+                              "end": {
+                                "line": 25,
+                                "column": 34,
+                                "offset": 931
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 25, "column": 7, "offset": 904 },
+                          "end": { "line": 25, "column": 34, "offset": 931 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 25, "column": 5, "offset": 902 },
+                      "end": { "line": 25, "column": 34, "offset": 931 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 25, "column": 5, "offset": 902 },
+                  "end": { "line": 25, "column": 34, "offset": 931 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 24, "column": 1, "offset": 869 },
+              "end": { "line": 26, "column": 1, "offset": 932 },
+              "indent": [1, 1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "data transfers between the host and device ",
+                    "position": {
+                      "start": { "line": 27, "column": 3, "offset": 935 },
+                      "end": { "line": 27, "column": 46, "offset": 978 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 27, "column": 3, "offset": 935 },
+                  "end": { "line": 27, "column": 46, "offset": 978 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "loose": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "html",
+                            "value": "<code class=\"language-text\">cudaMemcpyAsyncs</code>",
+                            "position": {
+                              "start": {
+                                "line": 28,
+                                "column": 7,
+                                "offset": 985
+                              },
+                              "end": {
+                                "line": 28,
+                                "column": 29,
+                                "offset": 1007
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "value": " both HostToDevice and DeviceToHost",
+                            "position": {
+                              "start": {
+                                "line": 28,
+                                "column": 29,
+                                "offset": 1007
+                              },
+                              "end": {
+                                "line": 28,
+                                "column": 64,
+                                "offset": 1042
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 28, "column": 7, "offset": 985 },
+                          "end": { "line": 28, "column": 64, "offset": 1042 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 28, "column": 5, "offset": 983 },
+                      "end": { "line": 28, "column": 64, "offset": 1042 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 28, "column": 5, "offset": 983 },
+                  "end": { "line": 28, "column": 64, "offset": 1042 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 27, "column": 1, "offset": 933 },
+              "end": { "line": 29, "column": 1, "offset": 1043 },
+              "indent": [1, 1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "computation on the CPU",
+                    "position": {
+                      "start": { "line": 30, "column": 3, "offset": 1046 },
+                      "end": { "line": 30, "column": 25, "offset": 1068 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 30, "column": 3, "offset": 1046 },
+                  "end": { "line": 30, "column": 25, "offset": 1068 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 30, "column": 1, "offset": 1044 },
+              "end": { "line": 30, "column": 25, "offset": 1068 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 24, "column": 1, "offset": 869 },
+          "end": { "line": 30, "column": 25, "offset": 1068 },
+          "indent": [1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Overlap Kernel Execution",
+            "position": {
+              "start": { "line": 33, "column": 4, "offset": 1074 },
+              "end": { "line": 33, "column": 28, "offset": 1098 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 33, "column": 1, "offset": 1071 },
+          "end": { "line": 33, "column": 28, "offset": 1098 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Overlap Computation and Data Transfers",
+            "position": {
+              "start": { "line": 36, "column": 4, "offset": 1104 },
+              "end": { "line": 36, "column": 42, "offset": 1142 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 36, "column": 1, "offset": 1101 },
+          "end": { "line": 36, "column": 42, "offset": 1142 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://developer.download.nvidia.com/CUDA/training/StreamsAndConcurrencyWebinar.pdf",
+            "children": [
+              {
+                "type": "text",
+                "value": "https://developer.download.nvidia.com/CUDA/training/StreamsAndConcurrencyWebinar.pdf",
+                "position": {
+                  "start": { "line": 40, "column": 1, "offset": 1146 },
+                  "end": { "line": 40, "column": 85, "offset": 1230 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 40, "column": 1, "offset": 1146 },
+              "end": { "line": 40, "column": 85, "offset": 1230 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 40, "column": 1, "offset": 1146 },
+          "end": { "line": 40, "column": 85, "offset": 1230 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 40, "column": 85, "offset": 1230 }
+    }
+  }
+}

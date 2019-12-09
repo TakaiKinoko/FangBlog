@@ -1,0 +1,232 @@
+{
+  "expireTime": 9007200830643461000,
+  "key": "transformer-remark-markdown-html-ast-5af9392e1885fd5dacff57a63c348cf6-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "In the previous posts, we have assumed that only one kernel is launched at a time. But this is not all that kernels can do. They can be launched ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 146, "offset": 146 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "sequentially",
+                "position": {
+                  "start": { "line": 2, "column": 148, "offset": 148 },
+                  "end": { "line": 2, "column": 160, "offset": 160 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 146, "offset": 146 },
+              "end": { "line": 2, "column": 162, "offset": 162 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " or ",
+            "position": {
+              "start": { "line": 2, "column": 162, "offset": 162 },
+              "end": { "line": 2, "column": 166, "offset": 166 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "in parallel",
+                "position": {
+                  "start": { "line": 2, "column": 168, "offset": 168 },
+                  "end": { "line": 2, "column": 179, "offset": 179 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 166, "offset": 166 },
+              "end": { "line": 2, "column": 181, "offset": 181 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". It’s just that if multiple kernels are launched in parallel, CUDA streams must be used.",
+            "position": {
+              "start": { "line": 2, "column": 181, "offset": 181 },
+              "end": { "line": 2, "column": 270, "offset": 270 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 270, "offset": 270 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "What is a Stream?",
+            "position": {
+              "start": { "line": 4, "column": 4, "offset": 275 },
+              "end": { "line": 4, "column": 21, "offset": 292 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 272 },
+          "end": { "line": 4, "column": 21, "offset": 292 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "In CUDA, stream refers to ",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 294 },
+              "end": { "line": 6, "column": 27, "offset": 320 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "a single operation sequence",
+                "position": {
+                  "start": { "line": 6, "column": 29, "offset": 322 },
+                  "end": { "line": 6, "column": 56, "offset": 349 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 27, "offset": 320 },
+              "end": { "line": 6, "column": 58, "offset": 351 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " on a GPU device. ",
+            "position": {
+              "start": { "line": 6, "column": 58, "offset": 351 },
+              "end": { "line": 6, "column": 76, "offset": 369 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 294 },
+          "end": { "line": 6, "column": 76, "offset": 369 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Every CUDA kernel is invoked on an independent stream. ",
+                    "position": {
+                      "start": { "line": 8, "column": 3, "offset": 373 },
+                      "end": { "line": 8, "column": 58, "offset": 428 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 8, "column": 3, "offset": 373 },
+                  "end": { "line": 8, "column": 58, "offset": 428 }
+                }
+              },
+              { "type": "text", "value": "\n" }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 371 },
+              "end": { "line": 9, "column": 1, "offset": 429 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "If only one kernel is invoked, the default stream, stream0, is used. If n kernels are invoked in parallel, n streams need to be used.",
+                    "position": {
+                      "start": { "line": 10, "column": 3, "offset": 432 },
+                      "end": { "line": 10, "column": 136, "offset": 565 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 10, "column": 3, "offset": 432 },
+                  "end": { "line": 10, "column": 136, "offset": 565 }
+                }
+              },
+              { "type": "text", "value": "\n" }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 430 },
+              "end": { "line": 10, "column": 136, "offset": 565 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 371 },
+          "end": { "line": 10, "column": 136, "offset": 565 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 10, "column": 136, "offset": 565 }
+    }
+  }
+}

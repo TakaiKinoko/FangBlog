@@ -1,0 +1,86 @@
+{
+  "expireTime": 9007200830643324000,
+  "key": "transformer-remark-markdown-html-ast-f4011125403ee4eeb34f439439afcfd9-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "In the previous posts, we have assumed that only one kernel is launched at a time. But this is not all that kernels can do. They can be launched ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 146, "offset": 146 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "sequentially",
+                "position": {
+                  "start": { "line": 2, "column": 148, "offset": 148 },
+                  "end": { "line": 2, "column": 160, "offset": 160 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 146, "offset": 146 },
+              "end": { "line": 2, "column": 162, "offset": 162 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " or ",
+            "position": {
+              "start": { "line": 2, "column": 162, "offset": 162 },
+              "end": { "line": 2, "column": 166, "offset": 166 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "in parallel",
+                "position": {
+                  "start": { "line": 2, "column": 168, "offset": 168 },
+                  "end": { "line": 2, "column": 179, "offset": 179 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 166, "offset": 166 },
+              "end": { "line": 2, "column": 181, "offset": 181 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": { "line": 2, "column": 181, "offset": 181 },
+              "end": { "line": 2, "column": 182, "offset": 182 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 182, "offset": 182 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 2, "column": 182, "offset": 182 }
+    }
+  }
+}

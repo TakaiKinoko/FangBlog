@@ -1,0 +1,11 @@
+{
+  "expireTime": 9007200830646353000,
+  "key": "9af639d7-8fb6-584d-9b52-a1bfca7aa569{\"duotone\":false,\"grayscale\":false,\"toFormat\":\"\",\"width\":20,\"height\":5}",
+  "val": {
+    "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABO0lEQVQY002PTUsCYRSF51dGJGopJEWbaJFtMiqC+heFWfg5k+kgfkHURl34MQoyzkZBkWZGx5lseTrzrloc3sO57733udJi+Y12pwNd17FarWBZFkzThLNeY7pc4k3T8D4cChXpa+MxPvi3zlcdjURWYk0ZDEQueZ4LwzAwYnHNIb4s28av50GbzRBMp7GfyQqF6M/KZdw0GrioVBArFJhlEMlmsfvyiutaDdJms0G320O71RKEvkxSbl0X2nSKvWQSwecUQpTvz4tFPNTruCyrOOSCALNwKoWdxyckmEkuG3v9Pjo8+z/hloTj+RxhUhzIMiKyInycFPefX0g0mzgplUQWVRQEcjlckVxyHAf6ZCJOtjlIDCThDxcZiwVi+TyO2OTL93FVxR0bE9UqTknrZ8cFGVGefctlfx5fQxMNO8WzAAAAAElFTkSuQmCC",
+    "width": 20,
+    "height": 5,
+    "aspectRatio": 4,
+    "originalName": "threads_concurr.png"
+  }
+}

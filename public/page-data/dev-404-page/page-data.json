@@ -10,8 +10,9 @@
           { "path": "/install-reprozip/" },
           { "path": "/cudaProg2-Variables/" },
           { "path": "/cudaProg1-matrixmult/" },
-          { "path": "/cuda6-memoryparallel/" },
+          { "path": "/cuda8-Stream/" },
           { "path": "/cuda7-tiling/" },
+          { "path": "/cuda6-memoryparallel/" },
           { "path": "/cuda5-coalesce/" },
           { "path": "/cuda4-sync/" },
           { "path": "/cuda3-thread-divergence/" },
@@ -19,7 +20,8 @@
           { "path": "/cuda1/" },
           { "path": "/404/" },
           { "path": "/" },
-          { "path": "/404.html" }
+          { "path": "/404.html" },
+          { "path": "/cuda9-stream2/" }
         ]
       }
     },

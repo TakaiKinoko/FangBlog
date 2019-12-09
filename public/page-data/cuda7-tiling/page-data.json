@@ -28,9 +28,9 @@
         }
       },
       "next": {
-        "fields": { "slug": "/cudaProg1-matrixmult/" },
+        "fields": { "slug": "/cuda8-Stream/" },
         "frontmatter": {
-          "title": "CUDA Programming - 1. Matrix Multiplication"
+          "title": "The CUDA Parallel Programming Model - 8. Concurrency by Stream"
         }
       }
     }

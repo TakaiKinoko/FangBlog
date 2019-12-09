@@ -1,0 +1,99 @@
+{
+  "expireTime": 9007200830646915000,
+  "key": "transformer-remark-markdown-html-ast-c40c5768be16182c00fffacb465a1653-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "In the last post, we saw how full concurrency can be achieved amongst streams. Here I’d like to talk about how CUDA operations from different streams may also be ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 163, "offset": 163 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "interleaved",
+                "position": {
+                  "start": { "line": 2, "column": 165, "offset": 165 },
+                  "end": { "line": 2, "column": 176, "offset": 176 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 163, "offset": 163 },
+              "end": { "line": 2, "column": 178, "offset": 178 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", which is another programming model often used to effect concurrency.",
+            "position": {
+              "start": { "line": 2, "column": 178, "offset": 178 },
+              "end": { "line": 2, "column": 248, "offset": 248 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 248, "offset": 248 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Review CUDA Asynchronous Commands",
+            "position": {
+              "start": { "line": 4, "column": 4, "offset": 253 },
+              "end": { "line": 4, "column": 37, "offset": 286 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 250 },
+          "end": { "line": 4, "column": 37, "offset": 286 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "CUDA Kernel <<<>>>\ncudaMemcpyAsync (HostToDevice)\ncudaMemcpyAsync (DeviceToHost)\nOperations on the CPU",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 288 },
+              "end": { "line": 9, "column": 22, "offset": 390 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 288 },
+          "end": { "line": 9, "column": 22, "offset": 390 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 9, "column": 22, "offset": 390 }
+    }
+  }
+}

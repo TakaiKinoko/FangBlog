@@ -1,0 +1,2047 @@
+{
+  "expireTime": 9007200830645699000,
+  "key": "transformer-remark-markdown-ast-07936798affbf4a699b04d3dd56b623e-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In the previous posts, we have sometimes assumed that only one kernel is launched at a time. But this is not all that kernels can do. They can be launched ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 156, "offset": 156 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "sequentially",
+                "position": {
+                  "start": { "line": 2, "column": 158, "offset": 158 },
+                  "end": { "line": 2, "column": 170, "offset": 170 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 156, "offset": 156 },
+              "end": { "line": 2, "column": 172, "offset": 172 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " or ",
+            "position": {
+              "start": { "line": 2, "column": 172, "offset": 172 },
+              "end": { "line": 2, "column": 176, "offset": 176 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "in parallel",
+                "position": {
+                  "start": { "line": 2, "column": 178, "offset": 178 },
+                  "end": { "line": 2, "column": 189, "offset": 189 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 176, "offset": 176 },
+              "end": { "line": 2, "column": 191, "offset": 191 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ". It’s just that if multiple kernels are launched in parallel, CUDA streams must be used.",
+            "position": {
+              "start": { "line": 2, "column": 191, "offset": 191 },
+              "end": { "line": 2, "column": 280, "offset": 280 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 280, "offset": 280 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Motivation",
+            "position": {
+              "start": { "line": 4, "column": 4, "offset": 285 },
+              "end": { "line": 4, "column": 14, "offset": 295 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 282 },
+          "end": { "line": 4, "column": 14, "offset": 295 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Heterogeneous computing",
+                "position": {
+                  "start": { "line": 6, "column": 3, "offset": 299 },
+                  "end": { "line": 6, "column": 26, "offset": 322 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 297 },
+              "end": { "line": 6, "column": 28, "offset": 324 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " is about efficiently using all processors in the system, including CPUs and GPUs. To do this, applications must ",
+            "position": {
+              "start": { "line": 6, "column": 28, "offset": 324 },
+              "end": { "line": 6, "column": 141, "offset": 437 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "execute functions concurrently",
+                "position": {
+                  "start": { "line": 6, "column": 143, "offset": 439 },
+                  "end": { "line": 6, "column": 173, "offset": 469 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 141, "offset": 437 },
+              "end": { "line": 6, "column": 175, "offset": 471 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " on multiple processors.",
+            "position": {
+              "start": { "line": 6, "column": 175, "offset": 471 },
+              "end": { "line": 6, "column": 199, "offset": 495 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 297 },
+          "end": { "line": 6, "column": 199, "offset": 495 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "CUDA Applications manage concurrency by executing ",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 497 },
+              "end": { "line": 8, "column": 51, "offset": 547 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "asynchronous",
+                "position": {
+                  "start": { "line": 8, "column": 53, "offset": 549 },
+                  "end": { "line": 8, "column": 65, "offset": 561 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 51, "offset": 547 },
+              "end": { "line": 8, "column": 67, "offset": 563 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " commands in streams. ",
+            "position": {
+              "start": { "line": 8, "column": 67, "offset": 563 },
+              "end": { "line": 8, "column": 89, "offset": 585 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 497 },
+          "end": { "line": 8, "column": 89, "offset": 585 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": true,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Each stream is a sequences of commands that execute ",
+                    "position": {
+                      "start": { "line": 10, "column": 3, "offset": 589 },
+                      "end": { "line": 10, "column": 55, "offset": 641 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "in order",
+                        "position": {
+                          "start": { "line": 10, "column": 57, "offset": 643 },
+                          "end": { "line": 10, "column": 65, "offset": 651 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 10, "column": 55, "offset": 641 },
+                      "end": { "line": 10, "column": 67, "offset": 653 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ". ",
+                    "position": {
+                      "start": { "line": 10, "column": 67, "offset": 653 },
+                      "end": { "line": 10, "column": 69, "offset": 655 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 10, "column": 3, "offset": 589 },
+                  "end": { "line": 10, "column": 69, "offset": 655 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 587 },
+              "end": { "line": 11, "column": 1, "offset": 656 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Different streams may execute their commands concurrently or ",
+                    "position": {
+                      "start": { "line": 12, "column": 3, "offset": 659 },
+                      "end": { "line": 12, "column": 64, "offset": 720 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "out of order",
+                        "position": {
+                          "start": { "line": 12, "column": 66, "offset": 722 },
+                          "end": { "line": 12, "column": 78, "offset": 734 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 12, "column": 64, "offset": 720 },
+                      "end": { "line": 12, "column": 80, "offset": 736 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " with respect to each other.",
+                    "position": {
+                      "start": { "line": 12, "column": 80, "offset": 736 },
+                      "end": { "line": 12, "column": 108, "offset": 764 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 12, "column": 3, "offset": 659 },
+                  "end": { "line": 12, "column": 108, "offset": 764 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 657 },
+              "end": { "line": 12, "column": 108, "offset": 764 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 587 },
+          "end": { "line": 12, "column": 108, "offset": 764 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "What is a Stream?",
+            "position": {
+              "start": { "line": 14, "column": 4, "offset": 769 },
+              "end": { "line": 14, "column": 21, "offset": 786 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 766 },
+          "end": { "line": 14, "column": 21, "offset": 786 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In CUDA, stream refers to ",
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 788 },
+              "end": { "line": 16, "column": 27, "offset": 814 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "a single operation sequence",
+                "position": {
+                  "start": { "line": 16, "column": 29, "offset": 816 },
+                  "end": { "line": 16, "column": 56, "offset": 843 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 16, "column": 27, "offset": 814 },
+              "end": { "line": 16, "column": 58, "offset": 845 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " on a GPU device.",
+            "position": {
+              "start": { "line": 16, "column": 58, "offset": 845 },
+              "end": { "line": 16, "column": 75, "offset": 862 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 16, "column": 1, "offset": 788 },
+          "end": { "line": 16, "column": 75, "offset": 862 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": true,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Every CUDA kernel is invoked on an independent stream",
+                    "position": {
+                      "start": { "line": 18, "column": 3, "offset": 866 },
+                      "end": { "line": 18, "column": 56, "offset": 919 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 18, "column": 3, "offset": 866 },
+                  "end": { "line": 18, "column": 56, "offset": 919 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 18, "column": 1, "offset": 864 },
+              "end": { "line": 19, "column": 1, "offset": 920 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "If only one kernel is invoked, the default stream, stream0, is used",
+                    "position": {
+                      "start": { "line": 20, "column": 3, "offset": 923 },
+                      "end": { "line": 20, "column": 70, "offset": 990 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 20, "column": 3, "offset": 923 },
+                  "end": { "line": 20, "column": 70, "offset": 990 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 20, "column": 1, "offset": 921 },
+              "end": { "line": 21, "column": 1, "offset": 991 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "When you execute asynchronous CUDA commands without specifying a stream, the runtime uses the default stream",
+                    "position": {
+                      "start": { "line": 22, "column": 3, "offset": 994 },
+                      "end": { "line": 22, "column": 111, "offset": 1102 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 22, "column": 3, "offset": 994 },
+                  "end": { "line": 22, "column": 111, "offset": 1102 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 22, "column": 1, "offset": 992 },
+              "end": { "line": 23, "column": 1, "offset": 1103 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "If n kernels are invoked in parallel, n streams need to be used",
+                    "position": {
+                      "start": { "line": 24, "column": 3, "offset": 1106 },
+                      "end": { "line": 24, "column": 66, "offset": 1169 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 24, "column": 3, "offset": 1106 },
+                  "end": { "line": 24, "column": 66, "offset": 1169 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 24, "column": 1, "offset": 1104 },
+              "end": { "line": 24, "column": 66, "offset": 1169 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 18, "column": 1, "offset": 864 },
+          "end": { "line": 24, "column": 66, "offset": 1169 },
+          "indent": [1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "html",
+        "lang": "c",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\">  kernel<span class=\"token operator\">&lt;&lt;</span><span class=\"token operator\">&lt;</span> blocks<span class=\"token punctuation\">,</span> threads<span class=\"token punctuation\">,</span> bytes <span class=\"token operator\">>></span><span class=\"token operator\">></span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>    <span class=\"token comment\">// default stream</span>\n  kernel<span class=\"token operator\">&lt;&lt;</span><span class=\"token operator\">&lt;</span> blocks<span class=\"token punctuation\">,</span> threads<span class=\"token punctuation\">,</span> bytes<span class=\"token punctuation\">,</span> <span class=\"token number\">0</span> <span class=\"token operator\">>></span><span class=\"token operator\">></span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span> <span class=\"token comment\">// also default stream</span></code></pre></div>",
+        "position": {
+          "start": { "line": 26, "column": 1, "offset": 1171 },
+          "end": { "line": 29, "column": 4, "offset": 1310 },
+          "indent": [1, 1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In CUDA, we can run multiple kernels on different streams concurrently. Typically, we can improve performance by increasing number of concurrent streams by setting a higher degree of parallelism.",
+            "position": {
+              "start": { "line": 31, "column": 1, "offset": 1312 },
+              "end": { "line": 31, "column": 196, "offset": 1507 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 31, "column": 1, "offset": 1312 },
+          "end": { "line": 31, "column": 196, "offset": 1507 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Asynchronous Commands",
+            "position": {
+              "start": { "line": 33, "column": 4, "offset": 1512 },
+              "end": { "line": 33, "column": 25, "offset": 1533 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 33, "column": 1, "offset": 1509 },
+          "end": { "line": 33, "column": 25, "offset": 1533 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "side note on blocking & non-blocking",
+            "position": {
+              "start": { "line": 35, "column": 5, "offset": 1539 },
+              "end": { "line": 35, "column": 41, "offset": 1575 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 35, "column": 1, "offset": 1535 },
+          "end": { "line": 35, "column": 41, "offset": 1575 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A function is said to be blocking if it calls an operating system function that waits for an event to occur or a time period to elapse.",
+            "position": {
+              "start": { "line": 37, "column": 1, "offset": 1577 },
+              "end": { "line": 37, "column": 136, "offset": 1712 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 37, "column": 1, "offset": 1577 },
+          "end": { "line": 37, "column": 136, "offset": 1712 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Whilst a blocking call is waiting, the operating system can often remove that thread from the scheduler, so it takes no CPU time until the event has occurred or the time has elapsed. ",
+            "position": {
+              "start": { "line": 39, "column": 1, "offset": 1714 },
+              "end": { "line": 39, "column": 184, "offset": 1897 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 39, "column": 1, "offset": 1714 },
+          "end": { "line": 39, "column": 184, "offset": 1897 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Once the event has occurred then the thread is placed back in the scheduler and can run when allocated a time slice. A thread that is running a blocking call is said to be blocked.",
+            "position": {
+              "start": { "line": 41, "column": 1, "offset": 1899 },
+              "end": { "line": 41, "column": 181, "offset": 2079 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 41, "column": 1, "offset": 1899 },
+          "end": { "line": 41, "column": 181, "offset": 2079 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Non-blocking threads meaning threads competing for a shared resource do not have their execution indefinitely postponed by mutual exclusion.",
+            "position": {
+              "start": { "line": 43, "column": 1, "offset": 2081 },
+              "end": { "line": 43, "column": 141, "offset": 2221 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 43, "column": 1, "offset": 2081 },
+          "end": { "line": 43, "column": 141, "offset": 2221 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "asynchronous commands, non-blocking",
+            "position": {
+              "start": { "line": 45, "column": 5, "offset": 2227 },
+              "end": { "line": 45, "column": 40, "offset": 2262 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 45, "column": 1, "offset": 2223 },
+          "end": { "line": 45, "column": 40, "offset": 2262 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Asynchronous commands return control to the calling host thread before the device has finished the requested task (they are ",
+            "position": {
+              "start": { "line": 47, "column": 1, "offset": 2264 },
+              "end": { "line": 47, "column": 125, "offset": 2388 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "non-blocking",
+                "position": {
+                  "start": { "line": 47, "column": 127, "offset": 2390 },
+                  "end": { "line": 47, "column": 139, "offset": 2402 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 47, "column": 125, "offset": 2388 },
+              "end": { "line": 47, "column": 141, "offset": 2404 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": "). These commands are:",
+            "position": {
+              "start": { "line": 47, "column": 141, "offset": 2404 },
+              "end": { "line": 47, "column": 163, "offset": 2426 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 47, "column": 1, "offset": 2264 },
+          "end": { "line": 47, "column": 163, "offset": 2426 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Kernel launches",
+                    "position": {
+                      "start": { "line": 49, "column": 3, "offset": 2430 },
+                      "end": { "line": 49, "column": 18, "offset": 2445 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 49, "column": 3, "offset": 2430 },
+                  "end": { "line": 49, "column": 18, "offset": 2445 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 49, "column": 1, "offset": 2428 },
+              "end": { "line": 49, "column": 18, "offset": 2445 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Memory copies between two addresses to the same device memory",
+                    "position": {
+                      "start": { "line": 50, "column": 3, "offset": 2448 },
+                      "end": { "line": 50, "column": 64, "offset": 2509 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 50, "column": 3, "offset": 2448 },
+                  "end": { "line": 50, "column": 64, "offset": 2509 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 50, "column": 1, "offset": 2446 },
+              "end": { "line": 50, "column": 64, "offset": 2509 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Memory copies from host to device of a memory block of 64 KB or less",
+                    "position": {
+                      "start": { "line": 51, "column": 3, "offset": 2512 },
+                      "end": { "line": 51, "column": 71, "offset": 2580 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 51, "column": 3, "offset": 2512 },
+                  "end": { "line": 51, "column": 71, "offset": 2580 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 51, "column": 1, "offset": 2510 },
+              "end": { "line": 51, "column": 71, "offset": 2580 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Memory copies performed by functions with the Async suffix",
+                    "position": {
+                      "start": { "line": 52, "column": 3, "offset": 2583 },
+                      "end": { "line": 52, "column": 61, "offset": 2641 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 52, "column": 3, "offset": 2583 },
+                  "end": { "line": 52, "column": 61, "offset": 2641 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 52, "column": 1, "offset": 2581 },
+              "end": { "line": 52, "column": 61, "offset": 2641 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Memory set function calls",
+                    "position": {
+                      "start": { "line": 53, "column": 3, "offset": 2644 },
+                      "end": { "line": 53, "column": 28, "offset": 2669 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 53, "column": 3, "offset": 2644 },
+                  "end": { "line": 53, "column": 28, "offset": 2669 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 53, "column": 1, "offset": 2642 },
+              "end": { "line": 53, "column": 28, "offset": 2669 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 49, "column": 1, "offset": 2428 },
+          "end": { "line": 53, "column": 28, "offset": 2669 },
+          "indent": [1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "CUDA 7 introduced the per-thread default stream, that has two effects:",
+            "position": {
+              "start": { "line": 55, "column": 1, "offset": 2671 },
+              "end": { "line": 55, "column": 71, "offset": 2741 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 55, "column": 1, "offset": 2671 },
+          "end": { "line": 55, "column": 71, "offset": 2741 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "it gives each host thread its own default stream. This means that commands issued to the default stream by different host threads can run concurrently. ",
+                    "position": {
+                      "start": { "line": 57, "column": 4, "offset": 2746 },
+                      "end": { "line": 57, "column": 156, "offset": 2898 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 57, "column": 4, "offset": 2746 },
+                  "end": { "line": 57, "column": 156, "offset": 2898 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 57, "column": 1, "offset": 2743 },
+              "end": { "line": 57, "column": 156, "offset": 2898 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "these default streams are regular streams. This means that commands in the default stream may run concurrently with commands in non-default streams.",
+                    "position": {
+                      "start": { "line": 58, "column": 4, "offset": 2902 },
+                      "end": { "line": 58, "column": 152, "offset": 3050 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 58, "column": 4, "offset": 2902 },
+                  "end": { "line": 58, "column": 152, "offset": 3050 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 58, "column": 1, "offset": 2899 },
+              "end": { "line": 58, "column": 152, "offset": 3050 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 57, "column": 1, "offset": 2743 },
+          "end": { "line": 58, "column": 152, "offset": 3050 },
+          "indent": [1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To learn more about how to invoke these options in ",
+            "position": {
+              "start": { "line": 60, "column": 1, "offset": 3052 },
+              "end": { "line": 60, "column": 52, "offset": 3103 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">nvcc</code>",
+            "position": {
+              "start": { "line": 60, "column": 52, "offset": 3103 },
+              "end": { "line": 60, "column": 62, "offset": 3113 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ", check out the ",
+            "position": {
+              "start": { "line": 60, "column": 62, "offset": 3113 },
+              "end": { "line": 60, "column": 78, "offset": 3129 },
+              "indent": []
+            }
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "CUDA C Programming Guide",
+                "position": {
+                  "start": { "line": 60, "column": 79, "offset": 3130 },
+                  "end": { "line": 60, "column": 103, "offset": 3154 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 60, "column": 78, "offset": 3129 },
+              "end": { "line": 60, "column": 104, "offset": 3155 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": { "line": 60, "column": 104, "offset": 3155 },
+              "end": { "line": 60, "column": 105, "offset": 3156 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 60, "column": 1, "offset": 3052 },
+          "end": { "line": 60, "column": 105, "offset": 3156 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Visualize",
+            "position": {
+              "start": { "line": 62, "column": 4, "offset": 3161 },
+              "end": { "line": 62, "column": 13, "offset": 3170 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 62, "column": 1, "offset": 3158 },
+          "end": { "line": 62, "column": 13, "offset": 3170 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "a multi-stream example",
+            "position": {
+              "start": { "line": 64, "column": 5, "offset": 3176 },
+              "end": { "line": 64, "column": 27, "offset": 3198 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 64, "column": 1, "offset": 3172 },
+          "end": { "line": 64, "column": 27, "offset": 3198 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "c",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\"><span class=\"token keyword\">const</span> <span class=\"token keyword\">int</span> N <span class=\"token operator\">=</span> <span class=\"token number\">1</span> <span class=\"token operator\">&lt;&lt;</span> <span class=\"token number\">20</span><span class=\"token punctuation\">;</span>\n\n__global__ <span class=\"token keyword\">void</span> <span class=\"token function\">kernel</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">float</span> <span class=\"token operator\">*</span>x<span class=\"token punctuation\">,</span> <span class=\"token keyword\">int</span> n<span class=\"token punctuation\">)</span>\n<span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">int</span> tid <span class=\"token operator\">=</span> threadIdx<span class=\"token punctuation\">.</span>x <span class=\"token operator\">+</span> blockIdx<span class=\"token punctuation\">.</span>x <span class=\"token operator\">*</span> blockDim<span class=\"token punctuation\">.</span>x<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">for</span> <span class=\"token punctuation\">(</span><span class=\"token keyword\">int</span> i <span class=\"token operator\">=</span> tid<span class=\"token punctuation\">;</span> i <span class=\"token operator\">&lt;</span> n<span class=\"token punctuation\">;</span> i <span class=\"token operator\">+</span><span class=\"token operator\">=</span> blockDim<span class=\"token punctuation\">.</span>x <span class=\"token operator\">*</span> gridDim<span class=\"token punctuation\">.</span>x<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n        x<span class=\"token punctuation\">[</span>i<span class=\"token punctuation\">]</span> <span class=\"token operator\">=</span> <span class=\"token function\">sqrt</span><span class=\"token punctuation\">(</span><span class=\"token function\">pow</span><span class=\"token punctuation\">(</span><span class=\"token number\">3.14159</span><span class=\"token punctuation\">,</span>i<span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token keyword\">int</span> <span class=\"token function\">main</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span>\n<span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> <span class=\"token keyword\">int</span> num_streams <span class=\"token operator\">=</span> <span class=\"token number\">8</span><span class=\"token punctuation\">;</span>\n\n    cudaStream_t streams<span class=\"token punctuation\">[</span>num_streams<span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">float</span> <span class=\"token operator\">*</span>data<span class=\"token punctuation\">[</span>num_streams<span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n\n    <span class=\"token keyword\">for</span> <span class=\"token punctuation\">(</span><span class=\"token keyword\">int</span> i <span class=\"token operator\">=</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span> i <span class=\"token operator\">&lt;</span> num_streams<span class=\"token punctuation\">;</span> i<span class=\"token operator\">++</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n        <span class=\"token function\">cudaStreamCreate</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&amp;</span>streams<span class=\"token punctuation\">[</span>i<span class=\"token punctuation\">]</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n \n        <span class=\"token function\">cudaMalloc</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&amp;</span>data<span class=\"token punctuation\">[</span>i<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span> N <span class=\"token operator\">*</span> <span class=\"token keyword\">sizeof</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">float</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n        \n        <span class=\"token comment\">// launch one worker kernel per stream</span>\n        kernel<span class=\"token operator\">&lt;&lt;</span><span class=\"token operator\">&lt;</span><span class=\"token number\">1</span><span class=\"token punctuation\">,</span> <span class=\"token number\">64</span><span class=\"token punctuation\">,</span> <span class=\"token number\">0</span><span class=\"token punctuation\">,</span> streams<span class=\"token punctuation\">[</span>i<span class=\"token punctuation\">]</span><span class=\"token operator\">>></span><span class=\"token operator\">></span><span class=\"token punctuation\">(</span>data<span class=\"token punctuation\">[</span>i<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span> N<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\n        <span class=\"token comment\">// launch a dummy kernel on the default stream</span>\n        kernel<span class=\"token operator\">&lt;&lt;</span><span class=\"token operator\">&lt;</span><span class=\"token number\">1</span><span class=\"token punctuation\">,</span> <span class=\"token number\">1</span><span class=\"token operator\">>></span><span class=\"token operator\">></span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span><span class=\"token punctuation\">,</span> <span class=\"token number\">0</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n\n    <span class=\"token function\">cudaDeviceReset</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\n    <span class=\"token keyword\">return</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span></code></pre></div>",
+        "position": {
+          "start": { "line": 66, "column": 1, "offset": 3200 },
+          "end": { "line": 100, "column": 4, "offset": 3927 },
+          "indent": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "no concurrency",
+            "position": {
+              "start": { "line": 102, "column": 5, "offset": 3933 },
+              "end": { "line": 102, "column": 19, "offset": 3947 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 102, "column": 1, "offset": 3929 },
+          "end": { "line": 102, "column": 19, "offset": 3947 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./no_concurr.png",
+            "alt": "no_concurrency",
+            "position": {
+              "start": { "line": 103, "column": 1, "offset": 3948 },
+              "end": { "line": 103, "column": 36, "offset": 3983 },
+              "indent": []
+            },
+            "value": "<a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/272b7042291aad899de9779d6aeee7f2/9c6a9/no_concurr.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 28.61328125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAABFUlEQVQY021Qy06DQBSd//8TF267YGFME5PSEEyEFgpEah9RGmB4TSW6OJ47Tl25OLnvc8+9auX7yLMcfd+jaRrUdY1Wa1Rti4bWMK/p11JzaF0sVmYsnK/KskSapui6zqIn3lnwdjs8ZBmC/d7Gn8bAjCOmYYBmj0BE/M2JT6goirH215ZdCrLVDtCmhwMe4xheksDj0uR0wvFywTxNMCQeHaF2pAL1EkUk9C2RbBE7sLknDAe/rlf7greqgkfyBbHkVdH5jA/XKwtualVRFNhuNlah5uBNqfgCu4ixqJl5suS2VP7El9wHAZacf6byhj1CrvK8QBiG3EBF/JMkxf6HUU6l/Z7n358yfqXygIrvSO5R2A/Pxb5g6rg+PQAAAABJRU5ErkJggg=='); background-size: cover; display: block;\"\n    ></span>\n    <img\n        class=\"gatsby-resp-image-image\"\n        style=\"width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;\"\n        alt=\"no_concurrency\"\n        title=\"\"\n        src=\"/static/272b7042291aad899de9779d6aeee7f2/d7711/no_concurr.png\"\n        srcset=\"/static/272b7042291aad899de9779d6aeee7f2/a695b/no_concurr.png 148w,\n/static/272b7042291aad899de9779d6aeee7f2/2f273/no_concurr.png 295w,\n/static/272b7042291aad899de9779d6aeee7f2/d7711/no_concurr.png 590w,\n/static/272b7042291aad899de9779d6aeee7f2/5e66f/no_concurr.png 885w,\n/static/272b7042291aad899de9779d6aeee7f2/9c6a9/no_concurr.png 1024w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n      />\n  </span>\n  </a>"
+          }
+        ],
+        "position": {
+          "start": { "line": 103, "column": 1, "offset": 3948 },
+          "end": { "line": 103, "column": 36, "offset": 3983 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "with concurrency",
+            "position": {
+              "start": { "line": 105, "column": 5, "offset": 3989 },
+              "end": { "line": 105, "column": 21, "offset": 4005 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 105, "column": 1, "offset": 3985 },
+          "end": { "line": 105, "column": 21, "offset": 4005 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./no_concurr.png",
+            "alt": "no_concurrency",
+            "position": {
+              "start": { "line": 106, "column": 1, "offset": 4006 },
+              "end": { "line": 106, "column": 36, "offset": 4041 },
+              "indent": []
+            },
+            "value": "<a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/272b7042291aad899de9779d6aeee7f2/9c6a9/no_concurr.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 28.61328125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAABFUlEQVQY021Qy06DQBSd//8TF267YGFME5PSEEyEFgpEah9RGmB4TSW6OJ47Tl25OLnvc8+9auX7yLMcfd+jaRrUdY1Wa1Rti4bWMK/p11JzaF0sVmYsnK/KskSapui6zqIn3lnwdjs8ZBmC/d7Gn8bAjCOmYYBmj0BE/M2JT6goirH215ZdCrLVDtCmhwMe4xheksDj0uR0wvFywTxNMCQeHaF2pAL1EkUk9C2RbBE7sLknDAe/rlf7greqgkfyBbHkVdH5jA/XKwtualVRFNhuNlah5uBNqfgCu4ixqJl5suS2VP7El9wHAZacf6byhj1CrvK8QBiG3EBF/JMkxf6HUU6l/Z7n358yfqXygIrvSO5R2A/Pxb5g6rg+PQAAAABJRU5ErkJggg=='); background-size: cover; display: block;\"\n    ></span>\n    <img\n        class=\"gatsby-resp-image-image\"\n        style=\"width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;\"\n        alt=\"no_concurrency\"\n        title=\"\"\n        src=\"/static/272b7042291aad899de9779d6aeee7f2/d7711/no_concurr.png\"\n        srcset=\"/static/272b7042291aad899de9779d6aeee7f2/a695b/no_concurr.png 148w,\n/static/272b7042291aad899de9779d6aeee7f2/2f273/no_concurr.png 295w,\n/static/272b7042291aad899de9779d6aeee7f2/d7711/no_concurr.png 590w,\n/static/272b7042291aad899de9779d6aeee7f2/5e66f/no_concurr.png 885w,\n/static/272b7042291aad899de9779d6aeee7f2/9c6a9/no_concurr.png 1024w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n      />\n  </span>\n  </a>"
+          }
+        ],
+        "position": {
+          "start": { "line": 106, "column": 1, "offset": 4006 },
+          "end": { "line": 106, "column": 36, "offset": 4041 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Between Streams",
+            "position": {
+              "start": { "line": 108, "column": 4, "offset": 4046 },
+              "end": { "line": 108, "column": 19, "offset": 4061 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 108, "column": 1, "offset": 4043 },
+          "end": { "line": 108, "column": 19, "offset": 4061 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The concurrent streams are ",
+            "position": {
+              "start": { "line": 110, "column": 1, "offset": 4063 },
+              "end": { "line": 110, "column": 28, "offset": 4090 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "independent",
+                "position": {
+                  "start": { "line": 110, "column": 30, "offset": 4092 },
+                  "end": { "line": 110, "column": 41, "offset": 4103 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 110, "column": 28, "offset": 4090 },
+              "end": { "line": 110, "column": 43, "offset": 4105 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ", which means that streams neither communicate nor have any inter-stream dependency.",
+            "position": {
+              "start": { "line": 110, "column": 43, "offset": 4105 },
+              "end": { "line": 110, "column": 127, "offset": 4189 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 110, "column": 1, "offset": 4063 },
+          "end": { "line": 110, "column": 127, "offset": 4189 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "However, different streams may have different execution times (",
+            "position": {
+              "start": { "line": 112, "column": 1, "offset": 4191 },
+              "end": { "line": 112, "column": 64, "offset": 4254 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "asynchronous",
+                "position": {
+                  "start": { "line": 112, "column": 66, "offset": 4256 },
+                  "end": { "line": 112, "column": 78, "offset": 4268 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 112, "column": 64, "offset": 4254 },
+              "end": { "line": 112, "column": 80, "offset": 4270 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": "), and we cannot guarantee that all streams will complete at the same time. To ensure all streams are synchronized, use a synchronization barrier.",
+            "position": {
+              "start": { "line": 112, "column": 80, "offset": 4270 },
+              "end": { "line": 112, "column": 226, "offset": 4416 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 112, "column": 1, "offset": 4191 },
+          "end": { "line": 112, "column": 226, "offset": 4416 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Synchronize Streams",
+            "position": {
+              "start": { "line": 114, "column": 4, "offset": 4421 },
+              "end": { "line": 114, "column": 23, "offset": 4440 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 114, "column": 1, "offset": 4418 },
+          "end": { "line": 114, "column": 23, "offset": 4440 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "There are two types of stream synchronization in CUDA. A programmer can place the synchronization barrier explicitly, to synchronize tasks such as memory operations. Some functions are implicitly synchronized, which means one or all streams must complete before proceeding to the next section.",
+            "position": {
+              "start": { "line": 116, "column": 1, "offset": 4442 },
+              "end": { "line": 116, "column": 294, "offset": 4735 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 116, "column": 1, "offset": 4442 },
+          "end": { "line": 116, "column": 294, "offset": 4735 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "explicit synchronization",
+            "position": {
+              "start": { "line": 118, "column": 5, "offset": 4741 },
+              "end": { "line": 118, "column": 29, "offset": 4765 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 118, "column": 1, "offset": 4737 },
+          "end": { "line": 118, "column": 29, "offset": 4765 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Invoking multiple concurrent kernels requires slightly more programming than invoking one kernel at a time:",
+            "position": {
+              "start": { "line": 120, "column": 1, "offset": 4767 },
+              "end": { "line": 120, "column": 108, "offset": 4874 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 120, "column": 1, "offset": 4767 },
+          "end": { "line": 120, "column": 108, "offset": 4874 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Kernels need to be assigned to different streams and invoked asynchronously",
+                    "position": {
+                      "start": { "line": 122, "column": 3, "offset": 4878 },
+                      "end": { "line": 122, "column": 78, "offset": 4953 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 122, "column": 3, "offset": 4878 },
+                  "end": { "line": 122, "column": 78, "offset": 4953 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 122, "column": 1, "offset": 4876 },
+              "end": { "line": 122, "column": 78, "offset": 4953 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Kernel launch and memory transfer functions need to be assigned to the same stream",
+                    "position": {
+                      "start": { "line": 123, "column": 3, "offset": 4956 },
+                      "end": { "line": 123, "column": 85, "offset": 5038 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 123, "column": 3, "offset": 4956 },
+                  "end": { "line": 123, "column": 85, "offset": 5038 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 123, "column": 1, "offset": 4954 },
+              "end": { "line": 123, "column": 85, "offset": 5038 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "pinned memory must be used",
+                    "position": {
+                      "start": { "line": 124, "column": 3, "offset": 5041 },
+                      "end": { "line": 124, "column": 29, "offset": 5067 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 124, "column": 3, "offset": 5041 },
+                  "end": { "line": 124, "column": 29, "offset": 5067 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 124, "column": 1, "offset": 5039 },
+              "end": { "line": 124, "column": 29, "offset": 5067 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Asynchronous memory transfer API functions must be used",
+                    "position": {
+                      "start": { "line": 125, "column": 3, "offset": 5070 },
+                      "end": { "line": 125, "column": 58, "offset": 5125 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 125, "column": 3, "offset": 5070 },
+                  "end": { "line": 125, "column": 58, "offset": 5125 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 125, "column": 1, "offset": 5068 },
+              "end": { "line": 125, "column": 58, "offset": 5125 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "the synchronization barrier cudaStreamSynchronize() must be used to ensure all tasks are synchronized",
+                    "position": {
+                      "start": { "line": 126, "column": 3, "offset": 5128 },
+                      "end": { "line": 126, "column": 104, "offset": 5229 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 126, "column": 3, "offset": 5128 },
+                  "end": { "line": 126, "column": 104, "offset": 5229 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 126, "column": 1, "offset": 5126 },
+              "end": { "line": 126, "column": 104, "offset": 5229 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 122, "column": 1, "offset": 4876 },
+          "end": { "line": 126, "column": 104, "offset": 5229 },
+          "indent": [1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "implicit synchronization",
+            "position": {
+              "start": { "line": 128, "column": 5, "offset": 5235 },
+              "end": { "line": 128, "column": 29, "offset": 5259 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 128, "column": 1, "offset": 5231 },
+          "end": { "line": 128, "column": 29, "offset": 5259 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The following operations are implicitly synchronized; therefore, no barrier is needed:",
+            "position": {
+              "start": { "line": 130, "column": 1, "offset": 5261 },
+              "end": { "line": 130, "column": 87, "offset": 5347 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 130, "column": 1, "offset": 5261 },
+          "end": { "line": 130, "column": 87, "offset": 5347 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "page-locked memory allocation ",
+                    "position": {
+                      "start": { "line": 132, "column": 3, "offset": 5351 },
+                      "end": { "line": 132, "column": 33, "offset": 5381 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 132, "column": 3, "offset": 5351 },
+                  "end": { "line": 132, "column": 33, "offset": 5381 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "loose": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "cudaMallocHost",
+                            "position": {
+                              "start": {
+                                "line": 133,
+                                "column": 7,
+                                "offset": 5388
+                              },
+                              "end": {
+                                "line": 133,
+                                "column": 21,
+                                "offset": 5402
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 133, "column": 7, "offset": 5388 },
+                          "end": { "line": 133, "column": 21, "offset": 5402 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 133, "column": 5, "offset": 5386 },
+                      "end": { "line": 133, "column": 21, "offset": 5402 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "cudaHostAlloc",
+                            "position": {
+                              "start": {
+                                "line": 134,
+                                "column": 7,
+                                "offset": 5409
+                              },
+                              "end": {
+                                "line": 134,
+                                "column": 20,
+                                "offset": 5422
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 134, "column": 7, "offset": 5409 },
+                          "end": { "line": 134, "column": 20, "offset": 5422 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 134, "column": 5, "offset": 5407 },
+                      "end": { "line": 134, "column": 20, "offset": 5422 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 133, "column": 5, "offset": 5386 },
+                  "end": { "line": 134, "column": 20, "offset": 5422 },
+                  "indent": [5]
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 132, "column": 1, "offset": 5349 },
+              "end": { "line": 134, "column": 20, "offset": 5422 },
+              "indent": [1, 1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "device memory allocation",
+                    "position": {
+                      "start": { "line": 135, "column": 3, "offset": 5425 },
+                      "end": { "line": 135, "column": 27, "offset": 5449 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 135, "column": 3, "offset": 5425 },
+                  "end": { "line": 135, "column": 27, "offset": 5449 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "loose": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "cudaMalloc",
+                            "position": {
+                              "start": {
+                                "line": 136,
+                                "column": 7,
+                                "offset": 5456
+                              },
+                              "end": {
+                                "line": 136,
+                                "column": 17,
+                                "offset": 5466
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 136, "column": 7, "offset": 5456 },
+                          "end": { "line": 136, "column": 17, "offset": 5466 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 136, "column": 5, "offset": 5454 },
+                      "end": { "line": 136, "column": 17, "offset": 5466 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 136, "column": 5, "offset": 5454 },
+                  "end": { "line": 136, "column": 17, "offset": 5466 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 135, "column": 1, "offset": 5423 },
+              "end": { "line": 136, "column": 17, "offset": 5466 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Non-asynchronized memory operation",
+                    "position": {
+                      "start": { "line": 137, "column": 3, "offset": 5469 },
+                      "end": { "line": 137, "column": 37, "offset": 5503 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 137, "column": 3, "offset": 5469 },
+                  "end": { "line": 137, "column": 37, "offset": 5503 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "loose": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "cudaMemcpy",
+                            "position": {
+                              "start": {
+                                "line": 138,
+                                "column": 7,
+                                "offset": 5510
+                              },
+                              "end": {
+                                "line": 138,
+                                "column": 17,
+                                "offset": 5520
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 138, "column": 7, "offset": 5510 },
+                          "end": { "line": 138, "column": 17, "offset": 5520 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 138, "column": 5, "offset": 5508 },
+                      "end": { "line": 138, "column": 17, "offset": 5520 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 138, "column": 5, "offset": 5508 },
+                  "end": { "line": 138, "column": 17, "offset": 5520 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 137, "column": 1, "offset": 5467 },
+              "end": { "line": 138, "column": 17, "offset": 5520 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Memory configuration",
+                    "position": {
+                      "start": { "line": 139, "column": 3, "offset": 5523 },
+                      "end": { "line": 139, "column": 23, "offset": 5543 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 139, "column": 3, "offset": 5523 },
+                  "end": { "line": 139, "column": 23, "offset": 5543 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "loose": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "loose": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "cudaDeviceSetCacheConfig",
+                            "position": {
+                              "start": {
+                                "line": 140,
+                                "column": 7,
+                                "offset": 5550
+                              },
+                              "end": {
+                                "line": 140,
+                                "column": 31,
+                                "offset": 5574
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 140, "column": 7, "offset": 5550 },
+                          "end": { "line": 140, "column": 31, "offset": 5574 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 140, "column": 5, "offset": 5548 },
+                      "end": { "line": 140, "column": 31, "offset": 5574 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 140, "column": 5, "offset": 5548 },
+                  "end": { "line": 140, "column": 31, "offset": 5574 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 139, "column": 1, "offset": 5521 },
+              "end": { "line": 140, "column": 31, "offset": 5574 },
+              "indent": [1]
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 132, "column": 1, "offset": 5349 },
+          "end": { "line": 140, "column": 31, "offset": 5574 },
+          "indent": [1, 1, 1, 1, 1, 1, 1, 1]
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 140, "column": 31, "offset": 5574 }
+    }
+  }
+}

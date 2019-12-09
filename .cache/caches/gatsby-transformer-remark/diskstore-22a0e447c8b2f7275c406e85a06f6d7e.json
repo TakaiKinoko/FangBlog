@@ -1,0 +1,32 @@
+{
+  "expireTime": 9007200830643308000,
+  "key": "transformer-remark-markdown-html-ast-662f3a48a5a8115f50f2977fce655313-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "In the previous posts, we have assumed that only one kernel is launched at a time. But this is not the all that kernels can do. They can be launched sequentially or in parallel.",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 178, "offset": 178 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 178, "offset": 178 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 2, "column": 178, "offset": 178 }
+    }
+  }
+}

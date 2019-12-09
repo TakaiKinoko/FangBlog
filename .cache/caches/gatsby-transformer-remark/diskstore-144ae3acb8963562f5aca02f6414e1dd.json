@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830646543000,
+  "key": "transformer-remark-markdown-html-dd6957163f840ee9d9b22c57ea991e4d-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<p>In the previous posts, we have sometimes assumed that only one kernel is launched at a time. But this is not all that kernels can do. They can be launched <strong>sequentially</strong> or <strong>in parallel</strong>. It’s just that if multiple kernels are launched in parallel, CUDA streams must be used.</p>"
+}

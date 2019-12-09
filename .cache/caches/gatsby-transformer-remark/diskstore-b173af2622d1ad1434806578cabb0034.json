@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830646923000,
+  "key": "transformer-remark-markdown-html-45ddf11853e0e39d5f9137468a1e67b7-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<p>In the last post, we saw how full concurrency can be achieved amongst streams. Here I’d like to talk about how CUDA operations from different streams may also be <strong>interleaved</strong>, which is another programming model often used to effect concurrency.</p>\n<h2>Review CUDA Asynchronous Commands</h2>\n<ul>\n<li>CUDA Kernel &#x3C;&#x3C;&#x3C;>>></li>\n<li>cudaMemcpyAsync (HostToDevice)</li>\n<li>cudaMemcpyAsync (DeviceToHost)</li>\n<li>Operations on the CPU</li>\n</ul>"
+}
