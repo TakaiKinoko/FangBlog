@@ -85,7 +85,7 @@ Due to the hugely increased number of registers, a **warp’s context (it’s re
 
    First, more on CUDA runtime:
 
-   ### Notes On CUDA Runtime
+   #### Notes On CUDA Runtime
 
    - The runtime system:
 
@@ -96,6 +96,8 @@ Due to the hugely increased number of registers, a **warp’s context (it’s re
    - CUDA runtime automatically reduces the number of blocks assgined to each SM until resource usage is under limit.
 
    Then, coming back to the point that we have **zero-cost context switch for warps** now, preassign resources to blocks (which in terms of execution is a bunch of warps) will make it that when warps are scheduled, their resources are already on-chip. So effectively we can achieve **zero-cost scheduling**.
+
+   Also, CUDA ensures that a block can begin execution only when the runtime system has secured all resources need for **all threads** in the block to complete execution. When a thread of a block is assigned to an execution resource, all other threads in the same block are also assigned to the same resource. This condition ensures the temporal proximity of all threads in a block and prevents excessive or indefinite waiting time during barrier synchronization. (more about barrier synchronization, see: [The CUDA Parallel Programming Model - 4. Syncthreads Examples](./cuda4-sync)). Otherwise, a thread that never arrives at the barrier synchronization point because it doesn't have access to the necessary resources can cause everyone else to wait forever.
 
 ## Part 2. Can CUDA Code Be Optimized For All GPUs?
 

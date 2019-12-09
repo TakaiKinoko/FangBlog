@@ -1,0 +1,880 @@
+{
+  "expireTime": 9007200830672473000,
+  "key": "transformer-remark-markdown-html-ast-439618d71239278679e3465820f2b96f-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "This is the fourth post in a series about what I learnt in my GPU class at NYU this past fall. Here I collected several examples that showcase how the CUDA ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 157, "offset": 157 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">__syncthreads()</code>",
+            "position": {
+              "start": { "line": 2, "column": 157, "offset": 157 },
+              "end": { "line": 2, "column": 174, "offset": 174 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " command should (or should not) be used.",
+            "position": {
+              "start": { "line": 2, "column": 174, "offset": 174 },
+              "end": { "line": 2, "column": 214, "offset": 214 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 214, "offset": 214 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Some Notes On Synchronization",
+            "position": {
+              "start": { "line": 4, "column": 5, "offset": 220 },
+              "end": { "line": 4, "column": 34, "offset": 249 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 216 },
+          "end": { "line": 4, "column": 34, "offset": 249 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "barrier synchronization",
+            "position": {
+              "start": { "line": 6, "column": 6, "offset": 256 },
+              "end": { "line": 6, "column": 29, "offset": 279 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 251 },
+          "end": { "line": 6, "column": 29, "offset": 279 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "To coordinate the execution of multiple threads, CUDA allows threads in the same block to coordinate their activities by using a barrier synchronization function ",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 281 },
+              "end": { "line": 8, "column": 163, "offset": 443 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">__syncthreads()</code>",
+            "position": {
+              "start": { "line": 8, "column": 163, "offset": 443 },
+              "end": { "line": 8, "column": 180, "offset": 460 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". This process ensures that all threads in a block have completed a phase of their execution of the kernel before any of them can proceed to the next phase.",
+            "position": {
+              "start": { "line": 8, "column": 180, "offset": 460 },
+              "end": { "line": 8, "column": 336, "offset": 616 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 281 },
+          "end": { "line": 8, "column": 336, "offset": 616 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">__syncthreads()</code>",
+                "position": {
+                  "start": { "line": 10, "column": 3, "offset": 620 },
+                  "end": { "line": 10, "column": 20, "offset": 637 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " is called by a kernel function",
+                "position": {
+                  "start": { "line": 10, "column": 20, "offset": 637 },
+                  "end": { "line": 10, "column": 51, "offset": 668 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 618 },
+              "end": { "line": 11, "column": 1, "offset": 669 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "The thread that makes the call will be held at the calling location until ",
+                "position": {
+                  "start": { "line": 12, "column": 3, "offset": 672 },
+                  "end": { "line": 12, "column": 77, "offset": 746 }
+                }
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "every thread in the block",
+                    "position": {
+                      "start": { "line": 12, "column": 79, "offset": 748 },
+                      "end": { "line": 12, "column": 104, "offset": 773 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 12, "column": 77, "offset": 746 },
+                  "end": { "line": 12, "column": 106, "offset": 775 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " reaches the location",
+                "position": {
+                  "start": { "line": 12, "column": 106, "offset": 775 },
+                  "end": { "line": 12, "column": 127, "offset": 796 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 670 },
+              "end": { "line": 13, "column": 1, "offset": 797 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Threads in different blocks ",
+                "position": {
+                  "start": { "line": 14, "column": 3, "offset": 800 },
+                  "end": { "line": 14, "column": 31, "offset": 828 }
+                }
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "cannot",
+                    "position": {
+                      "start": { "line": 14, "column": 33, "offset": 830 },
+                      "end": { "line": 14, "column": 39, "offset": 836 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 14, "column": 31, "offset": 828 },
+                  "end": { "line": 14, "column": 41, "offset": 838 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " synchronize! CUDA runtime system can execute blocks in any order.",
+                "position": {
+                  "start": { "line": 14, "column": 41, "offset": 838 },
+                  "end": { "line": 14, "column": 107, "offset": 904 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 798 },
+              "end": { "line": 14, "column": 107, "offset": 904 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 618 },
+          "end": { "line": 14, "column": 107, "offset": 904 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Barrier synchronization is a simple and popular method for coordinating parallel activities. ",
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 906 },
+              "end": { "line": 16, "column": 94, "offset": 999 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 16, "column": 1, "offset": 906 },
+          "end": { "line": 16, "column": 94, "offset": 999 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "resources assignment and temporal proximity of threads",
+            "position": {
+              "start": { "line": 18, "column": 6, "offset": 1006 },
+              "end": { "line": 18, "column": 60, "offset": 1060 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 18, "column": 1, "offset": 1001 },
+          "end": { "line": 18, "column": 60, "offset": 1060 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "CUDA also assigns execution resources to all threads in a block as a unit. A block can begin execution only when the runtime system has secured all resources needed for all threads in the block to complete execution.  All threads in the same block are assigned the same resources.",
+            "position": {
+              "start": { "line": 20, "column": 1, "offset": 1062 },
+              "end": { "line": 20, "column": 281, "offset": 1342 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 20, "column": 1, "offset": 1062 },
+          "end": { "line": 20, "column": 281, "offset": 1342 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "This condition ensures the temporal proximity of all threads in a block and prevents excessive or indefinite waiting time during barrier synchronization",
+            "position": {
+              "start": { "line": 22, "column": 1, "offset": 1344 },
+              "end": { "line": 22, "column": 153, "offset": 1496 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 22, "column": 1, "offset": 1344 },
+          "end": { "line": 22, "column": 153, "offset": 1496 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "tradeoff",
+            "position": {
+              "start": { "line": 24, "column": 6, "offset": 1503 },
+              "end": { "line": 24, "column": 14, "offset": 1511 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 24, "column": 1, "offset": 1498 },
+          "end": { "line": 24, "column": 14, "offset": 1511 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The above leads to an important tradeoff in the design of CUDA barrier synchronization. By not allowing threads in different blocks to perform barrier synchronization with each other, the CUDA runtime system can ",
+            "position": {
+              "start": { "line": 26, "column": 1, "offset": 1513 },
+              "end": { "line": 26, "column": 213, "offset": 1725 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "execute blocks in any order",
+                "position": {
+                  "start": { "line": 26, "column": 215, "offset": 1727 },
+                  "end": { "line": 26, "column": 242, "offset": 1754 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 26, "column": 213, "offset": 1725 },
+              "end": { "line": 26, "column": 244, "offset": 1756 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " relative to each other because none of them need to wait for each other. This flexibility enables scalable implementations shown in the figure below:",
+            "position": {
+              "start": { "line": 26, "column": 244, "offset": 1756 },
+              "end": { "line": 26, "column": 394, "offset": 1906 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 26, "column": 1, "offset": 1513 },
+          "end": { "line": 26, "column": 394, "offset": 1906 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Example 1",
+            "position": {
+              "start": { "line": 30, "column": 4, "offset": 1913 },
+              "end": { "line": 30, "column": 13, "offset": 1922 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 30, "column": 1, "offset": 1910 },
+          "end": { "line": 30, "column": 13, "offset": 1922 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\">__shared__ <span class=\"token keyword\">float</span> partialSum<span class=\"token punctuation\">[</span>SIZE<span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\npartialSum<span class=\"token punctuation\">[</span>threadIdx<span class=\"token punctuation\">.</span>x<span class=\"token punctuation\">]</span> <span class=\"token operator\">=</span> X<span class=\"token punctuation\">[</span>blockIdx<span class=\"token punctuation\">.</span>x <span class=\"token operator\">*</span> blockDim<span class=\"token punctuation\">.</span>x <span class=\"token operator\">+</span> threadIdx<span class=\"token punctuation\">.</span>x<span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">unsigned</span> <span class=\"token keyword\">int</span> t <span class=\"token operator\">=</span> threadIdx<span class=\"token punctuation\">.</span>x<span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">for</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">unsigned</span> <span class=\"token keyword\">int</span> stride <span class=\"token operator\">=</span> <span class=\"token number\">1</span><span class=\"token punctuation\">;</span> stride <span class=\"token operator\">&lt;</span> blockDim<span class=\"token punctuation\">.</span>x<span class=\"token punctuation\">;</span> stride <span class=\"token operator\">*=</span> <span class=\"token number\">2</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">{</span>\n     <span class=\"token function\">__syncthreads</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n     <span class=\"token keyword\">if</span><span class=\"token punctuation\">(</span>t <span class=\"token operator\">%</span> <span class=\"token punctuation\">(</span><span class=\"token number\">2</span><span class=\"token operator\">*</span>stride<span class=\"token punctuation\">)</span> <span class=\"token operator\">==</span> <span class=\"token number\">0</span><span class=\"token punctuation\">)</span>\n          partialSum<span class=\"token punctuation\">[</span>t<span class=\"token punctuation\">]</span> <span class=\"token operator\">+=</span> partialSum<span class=\"token punctuation\">[</span>t<span class=\"token operator\">+</span>stride<span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span></code></pre></div>",
+        "position": {
+          "start": { "line": 32, "column": 1, "offset": 1924 },
+          "end": { "line": 41, "column": 4, "offset": 2231 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": { "line": 43, "column": 1, "offset": 2233 },
+              "end": { "line": 43, "column": 5, "offset": 2237 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">__syncthreads()</code>",
+            "position": {
+              "start": { "line": 43, "column": 5, "offset": 2237 },
+              "end": { "line": 43, "column": 22, "offset": 2254 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " statement in the for-loop ensures that all partial sums for the previous iteration have been generated and before any one of the threads is allowed to begin the current iteration. This way, all threads that enter the second iteration will be using the values produced in the first iteration.",
+            "position": {
+              "start": { "line": 43, "column": 22, "offset": 2254 },
+              "end": { "line": 43, "column": 314, "offset": 2546 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 43, "column": 1, "offset": 2233 },
+          "end": { "line": 43, "column": 314, "offset": 2546 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Example 2",
+            "position": {
+              "start": { "line": 45, "column": 4, "offset": 2551 },
+              "end": { "line": 45, "column": 13, "offset": 2560 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 45, "column": 1, "offset": 2548 },
+          "end": { "line": 45, "column": 13, "offset": 2560 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "How to sync threads when there’s ",
+            "position": {
+              "start": { "line": 47, "column": 1, "offset": 2562 },
+              "end": { "line": 47, "column": 34, "offset": 2595 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "thread divergence",
+                "position": {
+                  "start": { "line": 47, "column": 36, "offset": 2597 },
+                  "end": { "line": 47, "column": 53, "offset": 2614 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 47, "column": 34, "offset": 2595 },
+              "end": { "line": 47, "column": 55, "offset": 2616 }
+            }
+          },
+          {
+            "type": "text",
+            "value": "?",
+            "position": {
+              "start": { "line": 47, "column": 55, "offset": 2616 },
+              "end": { "line": 47, "column": 56, "offset": 2617 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 47, "column": 1, "offset": 2562 },
+          "end": { "line": 47, "column": 56, "offset": 2617 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">__syncthreads()</code>",
+            "position": {
+              "start": { "line": 49, "column": 1, "offset": 2619 },
+              "end": { "line": 49, "column": 18, "offset": 2636 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is a barrier statement in CUDA, where if it’s present, ",
+            "position": {
+              "start": { "line": 49, "column": 18, "offset": 2636 },
+              "end": { "line": 49, "column": 74, "offset": 2692 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "must be executed by all threads in a block",
+                "position": {
+                  "start": { "line": 49, "column": 76, "offset": 2694 },
+                  "end": { "line": 49, "column": 118, "offset": 2736 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 49, "column": 74, "offset": 2692 },
+              "end": { "line": 49, "column": 120, "offset": 2738 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". ",
+            "position": {
+              "start": { "line": 49, "column": 120, "offset": 2738 },
+              "end": { "line": 49, "column": 122, "offset": 2740 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 49, "column": 1, "offset": 2619 },
+          "end": { "line": 49, "column": 122, "offset": 2740 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "When a ",
+                "position": {
+                  "start": { "line": 51, "column": 3, "offset": 2744 },
+                  "end": { "line": 51, "column": 10, "offset": 2751 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">__syncthreads()</code>",
+                "position": {
+                  "start": { "line": 51, "column": 10, "offset": 2751 },
+                  "end": { "line": 51, "column": 27, "offset": 2768 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " statement is placed in an if-statement, either all or none of the threads in a block execute the path that includes the ",
+                "position": {
+                  "start": { "line": 51, "column": 27, "offset": 2768 },
+                  "end": { "line": 51, "column": 148, "offset": 2889 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">__syncthreads()</code>",
+                "position": {
+                  "start": { "line": 51, "column": 148, "offset": 2889 },
+                  "end": { "line": 51, "column": 165, "offset": 2906 }
+                }
+              },
+              {
+                "type": "text",
+                "value": ".",
+                "position": {
+                  "start": { "line": 51, "column": 165, "offset": 2906 },
+                  "end": { "line": 51, "column": 166, "offset": 2907 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 51, "column": 1, "offset": 2742 },
+              "end": { "line": 52, "column": 1, "offset": 2908 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "For an ",
+                "position": {
+                  "start": { "line": 53, "column": 3, "offset": 2911 },
+                  "end": { "line": 53, "column": 10, "offset": 2918 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">if-then-else</code>",
+                "position": {
+                  "start": { "line": 53, "column": 10, "offset": 2918 },
+                  "end": { "line": 53, "column": 24, "offset": 2932 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " statement, if each path has a ",
+                "position": {
+                  "start": { "line": 53, "column": 24, "offset": 2932 },
+                  "end": { "line": 53, "column": 55, "offset": 2963 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">__syncthreads()</code>",
+                "position": {
+                  "start": { "line": 53, "column": 55, "offset": 2963 },
+                  "end": { "line": 53, "column": 72, "offset": 2980 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " statement, either all threads in a block execute the ",
+                "position": {
+                  "start": { "line": 53, "column": 72, "offset": 2980 },
+                  "end": { "line": 53, "column": 126, "offset": 3034 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">then-path</code>",
+                "position": {
+                  "start": { "line": 53, "column": 126, "offset": 3034 },
+                  "end": { "line": 53, "column": 137, "offset": 3045 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " or all execute the ",
+                "position": {
+                  "start": { "line": 53, "column": 137, "offset": 3045 },
+                  "end": { "line": 53, "column": 157, "offset": 3065 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">else-path</code>",
+                "position": {
+                  "start": { "line": 53, "column": 157, "offset": 3065 },
+                  "end": { "line": 53, "column": 168, "offset": 3076 }
+                }
+              },
+              {
+                "type": "text",
+                "value": ". Because the two ",
+                "position": {
+                  "start": { "line": 53, "column": 168, "offset": 3076 },
+                  "end": { "line": 53, "column": 186, "offset": 3094 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">__syncthreads()</code>",
+                "position": {
+                  "start": { "line": 53, "column": 186, "offset": 3094 },
+                  "end": { "line": 53, "column": 203, "offset": 3111 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " are different barrier synchronization points. If a thread in a block executes the ",
+                "position": {
+                  "start": { "line": 53, "column": 203, "offset": 3111 },
+                  "end": { "line": 53, "column": 286, "offset": 3194 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">then-path</code>",
+                "position": {
+                  "start": { "line": 53, "column": 286, "offset": 3194 },
+                  "end": { "line": 53, "column": 297, "offset": 3205 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " and another executes the ",
+                "position": {
+                  "start": { "line": 53, "column": 297, "offset": 3205 },
+                  "end": { "line": 53, "column": 323, "offset": 3231 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">else-path</code>",
+                "position": {
+                  "start": { "line": 53, "column": 323, "offset": 3231 },
+                  "end": { "line": 53, "column": 334, "offset": 3242 }
+                }
+              },
+              {
+                "type": "text",
+                "value": ", they would be waiting at different barrier synchronization points and end up waiting for each other forever.",
+                "position": {
+                  "start": { "line": 53, "column": 334, "offset": 3242 },
+                  "end": { "line": 53, "column": 444, "offset": 3352 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 53, "column": 1, "offset": 2909 },
+              "end": { "line": 53, "column": 444, "offset": 3352 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 51, "column": 1, "offset": 2742 },
+          "end": { "line": 53, "column": 444, "offset": 3352 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The code below is problematic because of exactly the above reason. Some threads will be stuck in the ",
+            "position": {
+              "start": { "line": 55, "column": 1, "offset": 3354 },
+              "end": { "line": 55, "column": 102, "offset": 3455 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">if</code>",
+            "position": {
+              "start": { "line": 55, "column": 102, "offset": 3455 },
+              "end": { "line": 55, "column": 106, "offset": 3459 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " branch whereas others in the ",
+            "position": {
+              "start": { "line": 55, "column": 106, "offset": 3459 },
+              "end": { "line": 55, "column": 136, "offset": 3489 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">else</code>",
+            "position": {
+              "start": { "line": 55, "column": 136, "offset": 3489 },
+              "end": { "line": 55, "column": 142, "offset": 3495 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " branch — deadlock!",
+            "position": {
+              "start": { "line": 55, "column": 142, "offset": 3495 },
+              "end": { "line": 55, "column": 162, "offset": 3515 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 55, "column": 1, "offset": 3354 },
+          "end": { "line": 55, "column": 162, "offset": 3515 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\"><span class=\"token keyword\">if</span><span class=\"token punctuation\">{</span>\n     <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>\n     <span class=\"token function\">__syncthreads</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span><span class=\"token keyword\">else</span><span class=\"token punctuation\">{</span>\n     <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>\n     <span class=\"token function\">__syncthreads</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span></code></pre></div>",
+        "position": {
+          "start": { "line": 57, "column": 1, "offset": 3517 },
+          "end": { "line": 65, "column": 4, "offset": 3600 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "To fix it is simple:",
+            "position": {
+              "start": { "line": 67, "column": 1, "offset": 3602 },
+              "end": { "line": 67, "column": 21, "offset": 3622 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 67, "column": 1, "offset": 3602 },
+          "end": { "line": 67, "column": 21, "offset": 3622 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\"><span class=\"token keyword\">if</span><span class=\"token punctuation\">{</span>\n     <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>\n<span class=\"token punctuation\">}</span><span class=\"token keyword\">else</span><span class=\"token punctuation\">{</span>\n     <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>\n<span class=\"token punctuation\">}</span>\n<span class=\"token function\">__syncthreads</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span></code></pre></div>",
+        "position": {
+          "start": { "line": 69, "column": 1, "offset": 3624 },
+          "end": { "line": 76, "column": 4, "offset": 3680 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 77, "column": 1, "offset": 3681 }
+    }
+  }
+}

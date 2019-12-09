@@ -1,0 +1,509 @@
+{
+  "expireTime": 9007200830670755000,
+  "key": "transformer-remark-markdown-ast-ca6ca5d1510ec63e3d2402d953b9c185-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is the fourth post in a series about what I learnt in my GPU class at NYU this past fall. Here I collected several examples that showcase how the CUDA ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 157, "offset": 157 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">__syncthreads()</code>",
+            "position": {
+              "start": { "line": 2, "column": 157, "offset": 157 },
+              "end": { "line": 2, "column": 174, "offset": 174 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " command should (or should not) be used.",
+            "position": {
+              "start": { "line": 2, "column": 174, "offset": 174 },
+              "end": { "line": 2, "column": 214, "offset": 214 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 214, "offset": 214 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Some Notes On Synchronization",
+            "position": {
+              "start": { "line": 4, "column": 5, "offset": 220 },
+              "end": { "line": 4, "column": 34, "offset": 249 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 216 },
+          "end": { "line": 4, "column": 34, "offset": 249 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To coordinate the execution of multiple threads, CUDA allows threads in the same block to coordinate their activities by using a barrier synchronization function ",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 251 },
+              "end": { "line": 6, "column": 163, "offset": 413 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">__syncthreads()</code>",
+            "position": {
+              "start": { "line": 6, "column": 163, "offset": 413 },
+              "end": { "line": 6, "column": 180, "offset": 430 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ". When  ",
+            "position": {
+              "start": { "line": 6, "column": 180, "offset": 430 },
+              "end": { "line": 6, "column": 188, "offset": 438 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 251 },
+          "end": { "line": 6, "column": 188, "offset": 438 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": true,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "html",
+                    "value": "<code class=\"language-text\">__syncthreads()</code>",
+                    "position": {
+                      "start": { "line": 8, "column": 3, "offset": 442 },
+                      "end": { "line": 8, "column": 20, "offset": 459 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " is called by a kernel function",
+                    "position": {
+                      "start": { "line": 8, "column": 20, "offset": 459 },
+                      "end": { "line": 8, "column": 51, "offset": 490 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 8, "column": 3, "offset": 442 },
+                  "end": { "line": 8, "column": 51, "offset": 490 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 440 },
+              "end": { "line": 9, "column": 1, "offset": 491 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The thread that makes the call will be held at the calling location until ",
+                    "position": {
+                      "start": { "line": 10, "column": 3, "offset": 494 },
+                      "end": { "line": 10, "column": 77, "offset": 568 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "every thread in the block",
+                        "position": {
+                          "start": { "line": 10, "column": 79, "offset": 570 },
+                          "end": { "line": 10, "column": 104, "offset": 595 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 10, "column": 77, "offset": 568 },
+                      "end": { "line": 10, "column": 106, "offset": 597 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " reaches the location",
+                    "position": {
+                      "start": { "line": 10, "column": 106, "offset": 597 },
+                      "end": { "line": 10, "column": 127, "offset": 618 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 10, "column": 3, "offset": 494 },
+                  "end": { "line": 10, "column": 127, "offset": 618 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 492 },
+              "end": { "line": 11, "column": 1, "offset": 619 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Threads in different blocks ",
+                    "position": {
+                      "start": { "line": 12, "column": 3, "offset": 622 },
+                      "end": { "line": 12, "column": 31, "offset": 650 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "cannot",
+                        "position": {
+                          "start": { "line": 12, "column": 33, "offset": 652 },
+                          "end": { "line": 12, "column": 39, "offset": 658 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 12, "column": 31, "offset": 650 },
+                      "end": { "line": 12, "column": 41, "offset": 660 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " synchronize! CUDA runtime system can execute blocks in any order.",
+                    "position": {
+                      "start": { "line": 12, "column": 41, "offset": 660 },
+                      "end": { "line": 12, "column": 107, "offset": 726 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 12, "column": 3, "offset": 622 },
+                  "end": { "line": 12, "column": 107, "offset": 726 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 620 },
+              "end": { "line": 12, "column": 107, "offset": 726 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 440 },
+          "end": { "line": 12, "column": 107, "offset": 726 },
+          "indent": [1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Example 1",
+            "position": {
+              "start": { "line": 14, "column": 4, "offset": 731 },
+              "end": { "line": 14, "column": 13, "offset": 740 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 728 },
+          "end": { "line": 14, "column": 13, "offset": 740 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "c",
+        "meta": null,
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\">__shared__ <span class=\"token keyword\">float</span> partialSum<span class=\"token punctuation\">[</span>SIZE<span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\npartialSum<span class=\"token punctuation\">[</span>threadIdx<span class=\"token punctuation\">.</span>x<span class=\"token punctuation\">]</span> <span class=\"token operator\">=</span> X<span class=\"token punctuation\">[</span>blockIdx<span class=\"token punctuation\">.</span>x <span class=\"token operator\">*</span> blockDim<span class=\"token punctuation\">.</span>x <span class=\"token operator\">+</span> threadIdx<span class=\"token punctuation\">.</span>x<span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">unsigned</span> <span class=\"token keyword\">int</span> t <span class=\"token operator\">=</span> threadIdx<span class=\"token punctuation\">.</span>x<span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">for</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">unsigned</span> <span class=\"token keyword\">int</span> stride <span class=\"token operator\">=</span> <span class=\"token number\">1</span><span class=\"token punctuation\">;</span> stride <span class=\"token operator\">&lt;</span> blockDim<span class=\"token punctuation\">.</span>x<span class=\"token punctuation\">;</span> stride <span class=\"token operator\">*=</span> <span class=\"token number\">2</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">{</span>\n     <span class=\"token function\">__syncthreads</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n     <span class=\"token keyword\">if</span><span class=\"token punctuation\">(</span>t <span class=\"token operator\">%</span> <span class=\"token punctuation\">(</span><span class=\"token number\">2</span><span class=\"token operator\">*</span>stride<span class=\"token punctuation\">)</span> <span class=\"token operator\">==</span> <span class=\"token number\">0</span><span class=\"token punctuation\">)</span>\n          partialSum<span class=\"token punctuation\">[</span>t<span class=\"token punctuation\">]</span> <span class=\"token operator\">+=</span> partialSum<span class=\"token punctuation\">[</span>t<span class=\"token operator\">+</span>stride<span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span></code></pre></div>",
+        "position": {
+          "start": { "line": 16, "column": 1, "offset": 742 },
+          "end": { "line": 25, "column": 4, "offset": 1049 },
+          "indent": [1, 1, 1, 1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": { "line": 27, "column": 1, "offset": 1051 },
+              "end": { "line": 27, "column": 5, "offset": 1055 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">__syncthreads()</code>",
+            "position": {
+              "start": { "line": 27, "column": 5, "offset": 1055 },
+              "end": { "line": 27, "column": 22, "offset": 1072 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " statement in the for-loop ensures that all partial sums for the previous iteration have been generated and before any one of the threads is allowed to begin the current iteration. This way, all threads that enter the second iteration will be using the values produced in the first iteration.",
+            "position": {
+              "start": { "line": 27, "column": 22, "offset": 1072 },
+              "end": { "line": 27, "column": 314, "offset": 1364 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 27, "column": 1, "offset": 1051 },
+          "end": { "line": 27, "column": 314, "offset": 1364 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Example 2",
+            "position": {
+              "start": { "line": 29, "column": 4, "offset": 1369 },
+              "end": { "line": 29, "column": 13, "offset": 1378 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 29, "column": 1, "offset": 1366 },
+          "end": { "line": 29, "column": 13, "offset": 1378 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "How to sync threads when there’s ",
+            "position": {
+              "start": { "line": 31, "column": 1, "offset": 1380 },
+              "end": { "line": 31, "column": 34, "offset": 1413 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "thread divergence",
+                "position": {
+                  "start": { "line": 31, "column": 36, "offset": 1415 },
+                  "end": { "line": 31, "column": 53, "offset": 1432 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 31, "column": 34, "offset": 1413 },
+              "end": { "line": 31, "column": 55, "offset": 1434 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": "?",
+            "position": {
+              "start": { "line": 31, "column": 55, "offset": 1434 },
+              "end": { "line": 31, "column": 56, "offset": 1435 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 31, "column": 1, "offset": 1380 },
+          "end": { "line": 31, "column": 56, "offset": 1435 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The code below is problematic because some threads will be stuck in the ",
+            "position": {
+              "start": { "line": 33, "column": 1, "offset": 1437 },
+              "end": { "line": 33, "column": 73, "offset": 1509 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">if</code>",
+            "position": {
+              "start": { "line": 33, "column": 73, "offset": 1509 },
+              "end": { "line": 33, "column": 77, "offset": 1513 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " branch whereas others in the ",
+            "position": {
+              "start": { "line": 33, "column": 77, "offset": 1513 },
+              "end": { "line": 33, "column": 107, "offset": 1543 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">else</code>",
+            "position": {
+              "start": { "line": 33, "column": 107, "offset": 1543 },
+              "end": { "line": 33, "column": 113, "offset": 1549 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " branch — deadlock!",
+            "position": {
+              "start": { "line": 33, "column": 113, "offset": 1549 },
+              "end": { "line": 33, "column": 133, "offset": 1569 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 33, "column": 1, "offset": 1437 },
+          "end": { "line": 33, "column": 133, "offset": 1569 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "c",
+        "meta": null,
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\"><span class=\"token keyword\">if</span><span class=\"token punctuation\">{</span>\n     <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>\n     <span class=\"token function\">__syncthreads</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span><span class=\"token keyword\">else</span><span class=\"token punctuation\">{</span>\n     <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>\n     <span class=\"token function\">__syncthreads</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span></code></pre></div>",
+        "position": {
+          "start": { "line": 35, "column": 1, "offset": 1571 },
+          "end": { "line": 43, "column": 4, "offset": 1654 },
+          "indent": [1, 1, 1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To fix it is simple:",
+            "position": {
+              "start": { "line": 45, "column": 1, "offset": 1656 },
+              "end": { "line": 45, "column": 21, "offset": 1676 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 45, "column": 1, "offset": 1656 },
+          "end": { "line": 45, "column": 21, "offset": 1676 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "c",
+        "meta": null,
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\"><span class=\"token keyword\">if</span><span class=\"token punctuation\">{</span>\n     <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>\n<span class=\"token punctuation\">}</span><span class=\"token keyword\">else</span><span class=\"token punctuation\">{</span>\n     <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>\n<span class=\"token punctuation\">}</span>\n<span class=\"token function\">__syncthreads</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span></code></pre></div>",
+        "position": {
+          "start": { "line": 47, "column": 1, "offset": 1678 },
+          "end": { "line": 54, "column": 4, "offset": 1734 },
+          "indent": [1, 1, 1, 1, 1, 1, 1]
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 55, "column": 1, "offset": 1735 }
+    }
+  }
+}
