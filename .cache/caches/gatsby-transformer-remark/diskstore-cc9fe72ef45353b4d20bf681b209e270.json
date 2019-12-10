@@ -1,0 +1,4768 @@
+{
+  "expireTime": 9007200830754004000,
+  "key": "transformer-remark-markdown-ast-cdf0a8a25857d4b4174dff6cd8750c9c-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is the second post in a series about what I learnt in my GPU class at NYU this past fall. This will be mostly about warps, why using warps from a SIMD hardware standpoint, and how warps can be a dangerous thing to deal with.",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 230, "offset": 230 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 230, "offset": 230 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Table of Contents",
+            "position": {
+              "start": { "line": 4, "column": 4, "offset": 235 },
+              "end": { "line": 4, "column": 21, "offset": 252 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 232 },
+          "end": { "line": 4, "column": 21, "offset": 252 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "More About Threads",
+                    "position": {
+                      "start": { "line": 6, "column": 4, "offset": 257 },
+                      "end": { "line": 6, "column": 22, "offset": 275 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 6, "column": 4, "offset": 257 },
+                  "end": { "line": 6, "column": 22, "offset": 275 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": true,
+                "start": 1,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Kernel threads hierarchy",
+                            "position": {
+                              "start": {
+                                "line": 7,
+                                "column": 7,
+                                "offset": 282
+                              },
+                              "end": { "line": 7, "column": 31, "offset": 306 },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 7, "column": 7, "offset": 282 },
+                          "end": { "line": 7, "column": 31, "offset": 306 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 7, "column": 4, "offset": 279 },
+                      "end": { "line": 7, "column": 31, "offset": 306 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Synchronization of threads?",
+                            "position": {
+                              "start": {
+                                "line": 8,
+                                "column": 7,
+                                "offset": 313
+                              },
+                              "end": { "line": 8, "column": 34, "offset": 340 },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 8, "column": 7, "offset": 313 },
+                          "end": { "line": 8, "column": 34, "offset": 340 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 8, "column": 4, "offset": 310 },
+                      "end": { "line": 8, "column": 34, "offset": 340 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 7, "column": 4, "offset": 279 },
+                  "end": { "line": 8, "column": 34, "offset": 340 },
+                  "indent": [4]
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 254 },
+              "end": { "line": 8, "column": 34, "offset": 340 },
+              "indent": [1, 1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Warp",
+                    "position": {
+                      "start": { "line": 9, "column": 4, "offset": 344 },
+                      "end": { "line": 9, "column": 8, "offset": 348 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 9, "column": 4, "offset": 344 },
+                  "end": { "line": 9, "column": 8, "offset": 348 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": true,
+                "start": 1,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "practical reasons",
+                            "position": {
+                              "start": {
+                                "line": 10,
+                                "column": 7,
+                                "offset": 355
+                              },
+                              "end": {
+                                "line": 10,
+                                "column": 24,
+                                "offset": 372
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 10, "column": 7, "offset": 355 },
+                          "end": { "line": 10, "column": 24, "offset": 372 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 10, "column": 4, "offset": 352 },
+                      "end": { "line": 10, "column": 24, "offset": 372 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "strong",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "SIMD hardware",
+                                "position": {
+                                  "start": {
+                                    "line": 11,
+                                    "column": 9,
+                                    "offset": 381
+                                  },
+                                  "end": {
+                                    "line": 11,
+                                    "column": 22,
+                                    "offset": 394
+                                  },
+                                  "indent": []
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 11,
+                                "column": 7,
+                                "offset": 379
+                              },
+                              "end": {
+                                "line": 11,
+                                "column": 24,
+                                "offset": 396
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 11, "column": 7, "offset": 379 },
+                          "end": { "line": 11, "column": 24, "offset": 396 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 11, "column": 4, "offset": 376 },
+                      "end": { "line": 11, "column": 24, "offset": 396 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "practical reasons to share control unit amongst processing units",
+                            "position": {
+                              "start": {
+                                "line": 12,
+                                "column": 7,
+                                "offset": 403
+                              },
+                              "end": {
+                                "line": 12,
+                                "column": 71,
+                                "offset": 467
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 12, "column": 7, "offset": 403 },
+                          "end": { "line": 12, "column": 71, "offset": 467 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 12, "column": 4, "offset": 400 },
+                      "end": { "line": 12, "column": 71, "offset": 467 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "warp as an execution unit",
+                            "position": {
+                              "start": {
+                                "line": 13,
+                                "column": 7,
+                                "offset": 474
+                              },
+                              "end": {
+                                "line": 13,
+                                "column": 32,
+                                "offset": 499
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 13, "column": 7, "offset": 474 },
+                          "end": { "line": 13, "column": 32, "offset": 499 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 13, "column": 4, "offset": 471 },
+                      "end": { "line": 13, "column": 32, "offset": 499 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "latency tolerance and zero-overhead thread scheduling",
+                            "position": {
+                              "start": {
+                                "line": 14,
+                                "column": 7,
+                                "offset": 506
+                              },
+                              "end": {
+                                "line": 14,
+                                "column": 60,
+                                "offset": 559
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 14, "column": 7, "offset": 506 },
+                          "end": { "line": 14, "column": 60, "offset": 559 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 14, "column": 4, "offset": 503 },
+                      "end": { "line": 14, "column": 60, "offset": 559 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 10, "column": 4, "offset": 352 },
+                  "end": { "line": 14, "column": 60, "offset": 559 },
+                  "indent": [4, 4, 4, 4]
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 9, "column": 1, "offset": 341 },
+              "end": { "line": 14, "column": 60, "offset": 559 },
+              "indent": [1, 1, 1, 1, 1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "How Are Blocks Partitioned?",
+                    "position": {
+                      "start": { "line": 15, "column": 4, "offset": 563 },
+                      "end": { "line": 15, "column": 31, "offset": 590 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 15, "column": 4, "offset": 563 },
+                  "end": { "line": 15, "column": 31, "offset": 590 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": true,
+                "start": 1,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "1D block",
+                            "position": {
+                              "start": {
+                                "line": 16,
+                                "column": 7,
+                                "offset": 597
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 15,
+                                "offset": 605
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 16, "column": 7, "offset": 597 },
+                          "end": { "line": 16, "column": 15, "offset": 605 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 16, "column": 4, "offset": 594 },
+                      "end": { "line": 16, "column": 15, "offset": 605 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "2D block",
+                            "position": {
+                              "start": {
+                                "line": 17,
+                                "column": 7,
+                                "offset": 612
+                              },
+                              "end": {
+                                "line": 17,
+                                "column": 15,
+                                "offset": 620
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 17, "column": 7, "offset": 612 },
+                          "end": { "line": 17, "column": 15, "offset": 620 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 17, "column": 4, "offset": 609 },
+                      "end": { "line": 17, "column": 15, "offset": 620 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "3D block",
+                            "position": {
+                              "start": {
+                                "line": 18,
+                                "column": 7,
+                                "offset": 627
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 15,
+                                "offset": 635
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 18, "column": 7, "offset": 627 },
+                          "end": { "line": 18, "column": 15, "offset": 635 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 18, "column": 4, "offset": 624 },
+                      "end": { "line": 18, "column": 15, "offset": 635 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 16, "column": 4, "offset": 594 },
+                  "end": { "line": 18, "column": 15, "offset": 635 },
+                  "indent": [4, 4]
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 15, "column": 1, "offset": 560 },
+              "end": { "line": 18, "column": 15, "offset": 635 },
+              "indent": [1, 1, 1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Warp Execution",
+                    "position": {
+                      "start": { "line": 19, "column": 4, "offset": 639 },
+                      "end": { "line": 19, "column": 18, "offset": 653 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 19, "column": 4, "offset": 639 },
+                  "end": { "line": 19, "column": 18, "offset": 653 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": true,
+                "start": 1,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "when is it good?",
+                            "position": {
+                              "start": {
+                                "line": 20,
+                                "column": 7,
+                                "offset": 660
+                              },
+                              "end": {
+                                "line": 20,
+                                "column": 23,
+                                "offset": 676
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 20, "column": 7, "offset": 660 },
+                          "end": { "line": 20, "column": 23, "offset": 676 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 20, "column": 4, "offset": 657 },
+                      "end": { "line": 20, "column": 23, "offset": 676 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "when is it bad? ",
+                            "position": {
+                              "start": {
+                                "line": 21,
+                                "column": 7,
+                                "offset": 683
+                              },
+                              "end": {
+                                "line": 21,
+                                "column": 23,
+                                "offset": 699
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "strong",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "thread divergence",
+                                "position": {
+                                  "start": {
+                                    "line": 21,
+                                    "column": 25,
+                                    "offset": 701
+                                  },
+                                  "end": {
+                                    "line": 21,
+                                    "column": 42,
+                                    "offset": 718
+                                  },
+                                  "indent": []
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 21,
+                                "column": 23,
+                                "offset": 699
+                              },
+                              "end": {
+                                "line": 21,
+                                "column": 44,
+                                "offset": 720
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 21, "column": 7, "offset": 683 },
+                          "end": { "line": 21, "column": 44, "offset": 720 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 21, "column": 4, "offset": 680 },
+                      "end": { "line": 21, "column": 44, "offset": 720 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "multipass aproach & divergence",
+                            "position": {
+                              "start": {
+                                "line": 22,
+                                "column": 10,
+                                "offset": 730
+                              },
+                              "end": {
+                                "line": 22,
+                                "column": 40,
+                                "offset": 760
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 22, "column": 10, "offset": 730 },
+                          "end": { "line": 22, "column": 40, "offset": 760 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 22, "column": 5, "offset": 725 },
+                      "end": { "line": 22, "column": 40, "offset": 760 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "if-else example",
+                            "position": {
+                              "start": {
+                                "line": 23,
+                                "column": 10,
+                                "offset": 770
+                              },
+                              "end": {
+                                "line": 23,
+                                "column": 25,
+                                "offset": 785
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 23, "column": 10, "offset": 770 },
+                          "end": { "line": 23, "column": 25, "offset": 785 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 23, "column": 5, "offset": 765 },
+                      "end": { "line": 23, "column": 25, "offset": 785 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "for-loop example",
+                            "position": {
+                              "start": {
+                                "line": 24,
+                                "column": 10,
+                                "offset": 795
+                              },
+                              "end": {
+                                "line": 24,
+                                "column": 26,
+                                "offset": 811
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 24, "column": 10, "offset": 795 },
+                          "end": { "line": 24, "column": 26, "offset": 811 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 24, "column": 5, "offset": 790 },
+                      "end": { "line": 24, "column": 26, "offset": 811 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "other scenarios",
+                            "position": {
+                              "start": {
+                                "line": 25,
+                                "column": 10,
+                                "offset": 821
+                              },
+                              "end": {
+                                "line": 25,
+                                "column": 25,
+                                "offset": 836
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 25, "column": 10, "offset": 821 },
+                          "end": { "line": 25, "column": 25, "offset": 836 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 25, "column": 5, "offset": 816 },
+                      "end": { "line": 25, "column": 25, "offset": 836 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 20, "column": 4, "offset": 657 },
+                  "end": { "line": 25, "column": 25, "offset": 836 },
+                  "indent": [4, 5, 5, 5, 5]
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 19, "column": 1, "offset": 636 },
+              "end": { "line": 25, "column": 25, "offset": 836 },
+              "indent": [1, 1, 1, 1, 1, 1]
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 254 },
+          "end": { "line": 25, "column": 25, "offset": 836 },
+          "indent": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "More About Threads",
+            "position": {
+              "start": { "line": 27, "column": 4, "offset": 841 },
+              "end": { "line": 27, "column": 22, "offset": 859 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 27, "column": 1, "offset": 838 },
+          "end": { "line": 27, "column": 22, "offset": 859 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Kernel Threads Hierarchy",
+            "position": {
+              "start": { "line": 29, "column": 5, "offset": 865 },
+              "end": { "line": 29, "column": 29, "offset": 889 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 29, "column": 1, "offset": 861 },
+          "end": { "line": 29, "column": 29, "offset": 889 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Recall that launching a CUDA kernel will generate a grid of threads organized as a ",
+            "position": {
+              "start": { "line": 31, "column": 1, "offset": 891 },
+              "end": { "line": 31, "column": 84, "offset": 974 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "two-level",
+                "position": {
+                  "start": { "line": 31, "column": 86, "offset": 976 },
+                  "end": { "line": 31, "column": 95, "offset": 985 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 31, "column": 84, "offset": 974 },
+              "end": { "line": 31, "column": 97, "offset": 987 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " hierarchy.",
+            "position": {
+              "start": { "line": 31, "column": 97, "offset": 987 },
+              "end": { "line": 31, "column": 108, "offset": 998 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 31, "column": 1, "offset": 891 },
+          "end": { "line": 31, "column": 108, "offset": 998 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": true,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "top level: a 1/2/3-dimensional array of blocks.",
+                    "position": {
+                      "start": { "line": 33, "column": 4, "offset": 1003 },
+                      "end": { "line": 33, "column": 51, "offset": 1050 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 33, "column": 4, "offset": 1003 },
+                  "end": { "line": 33, "column": 51, "offset": 1050 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 33, "column": 1, "offset": 1000 },
+              "end": { "line": 34, "column": 1, "offset": 1051 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "bottom level: each block consists of a 1/2/3-dimensional array of threads.",
+                    "position": {
+                      "start": { "line": 35, "column": 4, "offset": 1055 },
+                      "end": { "line": 35, "column": 78, "offset": 1129 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 35, "column": 4, "offset": 1055 },
+                  "end": { "line": 35, "column": 78, "offset": 1129 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 35, "column": 1, "offset": 1052 },
+              "end": { "line": 35, "column": 78, "offset": 1129 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 33, "column": 1, "offset": 1000 },
+          "end": { "line": 35, "column": 78, "offset": 1129 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Thread Assignment",
+            "position": {
+              "start": { "line": 37, "column": 5, "offset": 1135 },
+              "end": { "line": 37, "column": 22, "offset": 1152 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 37, "column": 1, "offset": 1131 },
+          "end": { "line": 37, "column": 22, "offset": 1152 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": true,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Threads are assigned to execution ",
+                    "position": {
+                      "start": { "line": 39, "column": 3, "offset": 1156 },
+                      "end": { "line": 39, "column": 37, "offset": 1190 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "resources",
+                        "position": {
+                          "start": { "line": 39, "column": 39, "offset": 1192 },
+                          "end": { "line": 39, "column": 48, "offset": 1201 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 39, "column": 37, "offset": 1190 },
+                      "end": { "line": 39, "column": 50, "offset": 1203 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " on a ",
+                    "position": {
+                      "start": { "line": 39, "column": 50, "offset": 1203 },
+                      "end": { "line": 39, "column": 56, "offset": 1209 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "block-by-block",
+                        "position": {
+                          "start": { "line": 39, "column": 58, "offset": 1211 },
+                          "end": { "line": 39, "column": 72, "offset": 1225 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 39, "column": 56, "offset": 1209 },
+                      "end": { "line": 39, "column": 74, "offset": 1227 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " basis.",
+                    "position": {
+                      "start": { "line": 39, "column": 74, "offset": 1227 },
+                      "end": { "line": 39, "column": 81, "offset": 1234 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 39, "column": 3, "offset": 1156 },
+                  "end": { "line": 39, "column": 81, "offset": 1234 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 39, "column": 1, "offset": 1154 },
+              "end": { "line": 40, "column": 1, "offset": 1235 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "But the unit of thread scheduling is warp.",
+                    "position": {
+                      "start": { "line": 41, "column": 3, "offset": 1238 },
+                      "end": { "line": 41, "column": 45, "offset": 1280 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 41, "column": 3, "offset": 1238 },
+                  "end": { "line": 41, "column": 45, "offset": 1280 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 41, "column": 1, "offset": 1236 },
+              "end": { "line": 41, "column": 45, "offset": 1280 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 39, "column": 1, "offset": 1154 },
+          "end": { "line": 41, "column": 45, "offset": 1280 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Synchronization of Threads?",
+            "position": {
+              "start": { "line": 43, "column": 5, "offset": 1286 },
+              "end": { "line": 43, "column": 32, "offset": 1313 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 43, "column": 1, "offset": 1282 },
+          "end": { "line": 43, "column": 32, "offset": 1313 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Conceptually, threads in a block can execute in any order, just like blocks.",
+            "position": {
+              "start": { "line": 45, "column": 1, "offset": 1315 },
+              "end": { "line": 45, "column": 77, "offset": 1391 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 45, "column": 1, "offset": 1315 },
+          "end": { "line": 45, "column": 77, "offset": 1391 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When an algorithm needs to execute in ",
+            "position": {
+              "start": { "line": 47, "column": 1, "offset": 1393 },
+              "end": { "line": 47, "column": 39, "offset": 1431 },
+              "indent": []
+            }
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "phases",
+                "position": {
+                  "start": { "line": 47, "column": 40, "offset": 1432 },
+                  "end": { "line": 47, "column": 46, "offset": 1438 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 47, "column": 39, "offset": 1431 },
+              "end": { "line": 47, "column": 47, "offset": 1439 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": { "line": 47, "column": 47, "offset": 1439 },
+              "end": { "line": 47, "column": 49, "offset": 1441 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "barrier synchronizations",
+                "position": {
+                  "start": { "line": 47, "column": 51, "offset": 1443 },
+                  "end": { "line": 47, "column": 75, "offset": 1467 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 47, "column": 49, "offset": 1441 },
+              "end": { "line": 47, "column": 77, "offset": 1469 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " should be used to ensure that all threads have completed a common phase before they start the next one.",
+            "position": {
+              "start": { "line": 47, "column": 77, "offset": 1469 },
+              "end": { "line": 47, "column": 181, "offset": 1573 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 47, "column": 1, "offset": 1393 },
+          "end": { "line": 47, "column": 181, "offset": 1573 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "But the correctness of executing a kernel should not depend on the synchrony amongst threads.",
+            "position": {
+              "start": { "line": 49, "column": 1, "offset": 1575 },
+              "end": { "line": 49, "column": 94, "offset": 1668 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 49, "column": 1, "offset": 1575 },
+          "end": { "line": 49, "column": 94, "offset": 1668 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "More on barrier synchronization: ",
+            "position": {
+              "start": { "line": 51, "column": 1, "offset": 1670 },
+              "end": { "line": 51, "column": 34, "offset": 1703 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/cuda4-sync",
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 4. Syncthreads Examples",
+                "position": {
+                  "start": { "line": 51, "column": 35, "offset": 1704 },
+                  "end": { "line": 51, "column": 96, "offset": 1765 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 51, "column": 34, "offset": 1703 },
+              "end": { "line": 51, "column": 110, "offset": 1779 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 51, "column": 1, "offset": 1670 },
+          "end": { "line": 51, "column": 110, "offset": 1779 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Warp",
+            "position": {
+              "start": { "line": 53, "column": 4, "offset": 1784 },
+              "end": { "line": 53, "column": 8, "offset": 1788 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 53, "column": 1, "offset": 1781 },
+          "end": { "line": 53, "column": 8, "offset": 1788 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Due to hardware cost considerations, CUDA devices currently bundle multiple threads for execution, which leads to performance limitations.",
+            "position": {
+              "start": { "line": 55, "column": 1, "offset": 1790 },
+              "end": { "line": 55, "column": 139, "offset": 1928 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 55, "column": 1, "offset": 1790 },
+          "end": { "line": 55, "column": 139, "offset": 1928 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": true,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "🧐",
+                    "position": {
+                      "start": { "line": 57, "column": 3, "offset": 1932 },
+                      "end": { "line": 57, "column": 5, "offset": 1934 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Each thread block is partitioned into warps",
+                        "position": {
+                          "start": { "line": 57, "column": 7, "offset": 1936 },
+                          "end": { "line": 57, "column": 50, "offset": 1979 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 57, "column": 5, "offset": 1934 },
+                      "end": { "line": 57, "column": 52, "offset": 1981 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " when the block is assigned to an SM.",
+                    "position": {
+                      "start": { "line": 57, "column": 52, "offset": 1981 },
+                      "end": { "line": 57, "column": 89, "offset": 2018 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 57, "column": 3, "offset": 1932 },
+                  "end": { "line": 57, "column": 89, "offset": 2018 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 57, "column": 1, "offset": 1930 },
+              "end": { "line": 58, "column": 1, "offset": 2019 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The warp is a unit of thread scheduling in SMs.",
+                    "position": {
+                      "start": { "line": 59, "column": 3, "offset": 2022 },
+                      "end": { "line": 59, "column": 50, "offset": 2069 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 59, "column": 3, "offset": 2022 },
+                  "end": { "line": 59, "column": 50, "offset": 2069 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 59, "column": 1, "offset": 2020 },
+              "end": { "line": 60, "column": 1, "offset": 2070 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Each warp consists of 32 threads of consecutive thredIdx values.",
+                    "position": {
+                      "start": { "line": 61, "column": 3, "offset": 2073 },
+                      "end": { "line": 61, "column": 67, "offset": 2137 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 61, "column": 3, "offset": 2073 },
+                  "end": { "line": 61, "column": 67, "offset": 2137 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 61, "column": 1, "offset": 2071 },
+              "end": { "line": 62, "column": 1, "offset": 2138 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The execution of warps is implemented by an SIMD hardware.",
+                    "position": {
+                      "start": { "line": 63, "column": 3, "offset": 2141 },
+                      "end": { "line": 63, "column": 61, "offset": 2199 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 63, "column": 3, "offset": 2141 },
+                  "end": { "line": 63, "column": 61, "offset": 2199 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 63, "column": 1, "offset": 2139 },
+              "end": { "line": 64, "column": 1, "offset": 2200 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Warps can be executed by the SMs in any order. No way to tell who’s going to finish first.",
+                    "position": {
+                      "start": { "line": 65, "column": 3, "offset": 2203 },
+                      "end": { "line": 65, "column": 93, "offset": 2293 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 65, "column": 3, "offset": 2203 },
+                  "end": { "line": 65, "column": 93, "offset": 2293 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 65, "column": 1, "offset": 2201 },
+              "end": { "line": 65, "column": 93, "offset": 2293 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 57, "column": 1, "offset": 1930 },
+          "end": { "line": 65, "column": 93, "offset": 2293 },
+          "indent": [1, 1, 1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "practical reasons for warps",
+            "position": {
+              "start": { "line": 67, "column": 6, "offset": 2300 },
+              "end": { "line": 67, "column": 33, "offset": 2327 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 67, "column": 1, "offset": 2295 },
+          "end": { "line": 67, "column": 33, "offset": 2327 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This implementation (doesn’t just exist to annoy programmers) helps:",
+            "position": {
+              "start": { "line": 69, "column": 1, "offset": 2329 },
+              "end": { "line": 69, "column": 69, "offset": 2397 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 69, "column": 1, "offset": 2329 },
+          "end": { "line": 69, "column": 69, "offset": 2397 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": true,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "reducing hardware manufacturing cost",
+                    "position": {
+                      "start": { "line": 71, "column": 4, "offset": 2402 },
+                      "end": { "line": 71, "column": 40, "offset": 2438 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 71, "column": 4, "offset": 2402 },
+                  "end": { "line": 71, "column": 40, "offset": 2438 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 71, "column": 1, "offset": 2399 },
+              "end": { "line": 72, "column": 1, "offset": 2439 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "lower runtime operation electricity cost",
+                    "position": {
+                      "start": { "line": 73, "column": 4, "offset": 2443 },
+                      "end": { "line": 73, "column": 44, "offset": 2483 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 73, "column": 4, "offset": 2443 },
+                  "end": { "line": 73, "column": 44, "offset": 2483 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 73, "column": 1, "offset": 2440 },
+              "end": { "line": 74, "column": 1, "offset": 2484 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "enable coalescing of memory accesses (which will be the topic of some later post)",
+                    "position": {
+                      "start": { "line": 75, "column": 4, "offset": 2488 },
+                      "end": { "line": 75, "column": 85, "offset": 2569 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 75, "column": 4, "offset": 2488 },
+                  "end": { "line": 75, "column": 85, "offset": 2569 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 75, "column": 1, "offset": 2485 },
+              "end": { "line": 75, "column": 85, "offset": 2569 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 71, "column": 1, "offset": 2399 },
+          "end": { "line": 75, "column": 85, "offset": 2569 },
+          "indent": [1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "SIMD hardware",
+            "position": {
+              "start": { "line": 77, "column": 6, "offset": 2576 },
+              "end": { "line": 77, "column": 19, "offset": 2589 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 77, "column": 1, "offset": 2571 },
+          "end": { "line": 77, "column": 19, "offset": 2589 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./processor.png",
+            "alt": "SIMD SM",
+            "position": {
+              "start": { "line": 79, "column": 1, "offset": 2591 },
+              "end": { "line": 79, "column": 28, "offset": 2618 },
+              "indent": []
+            },
+            "value": "<figure class=\"gatsby-resp-image-figure\" style=\"\">\n    <span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/dd7852cc44b3614e54dbf83a6304f750/0aa3a/processor.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 65.51155115511551%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACDElEQVQ4y21T2ZLaQAzk/z9nK8kmu7BcAZbl8jFg4wNMFbzYYK4qjqeOWsSbEPIgjy1pWq2WXLper9jvD2rb7Q55vlXbbHL9PhyO/43tdnuN8SzscrmgROd8vkAQRHAcg+k0hO8HCMMYtuWiXm+i3X6H6441hzGeo5GNXm8Ay3IwHFqaz6IlVve8qYINBiOMx55e5oVatY5vX5/xVqnpZfpt21X7+Oij0+nqnX5/qEXyXABJ37aNAhVgPBuNpiQOEIWRsA7gTTwp7GMiZxzP9DRmomRYII7nKkeJDzrJgNTJjNUtOanv6XRCmqZYrVZYJAlWy6XotUOSLLR9ykUCD4AvL2U8PX1BufwmujWklQG2eY4szQRoIYPZK7BxDcIglBZvWhOITB8Au92eMlOWYo7jIssyHI9HZXcQwL0wC6T9pbAMVYoQs1nyCDgRQM+fwgj1MJohkIndtJyoBKORJQN4F60c9RkzFg19NQLdtbxeb7QC6ZMpjYn0VWXKtEqlitbPjsaM8TTX90O4v4fC/EiIKGCWbT7FJX0a2242W5qs/nmil1qtjq4Xc4rd/QQsGHJtSPnWwm11uAY90ZO6DmXPWKAjy90WwGKtmM93XzS9Y8gHK1HgwhgkKBf69bWCWq2B788/tH0y+TuXfwgLkLUCns9nnWaa3luWrfWfpcbr9Z/3f/NojHM3ifULGb2fyrgSzdgAAAAASUVORK5CYII='); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"SIMD SM\"\n        title=\"SIMD SM\"\n        src=\"/static/dd7852cc44b3614e54dbf83a6304f750/799d3/processor.png\"\n        srcset=\"/static/dd7852cc44b3614e54dbf83a6304f750/00d96/processor.png 148w,\n/static/dd7852cc44b3614e54dbf83a6304f750/0b23c/processor.png 295w,\n/static/dd7852cc44b3614e54dbf83a6304f750/799d3/processor.png 590w,\n/static/dd7852cc44b3614e54dbf83a6304f750/2a3d6/processor.png 885w,\n/static/dd7852cc44b3614e54dbf83a6304f750/ae92f/processor.png 1180w,\n/static/dd7852cc44b3614e54dbf83a6304f750/0aa3a/processor.png 1212w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>\n    <figcaption class=\"gatsby-resp-image-figcaption\">SIMD SM</figcaption>\n  </figure>"
+          }
+        ],
+        "position": {
+          "start": { "line": 79, "column": 1, "offset": 2591 },
+          "end": { "line": 79, "column": 28, "offset": 2618 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": true,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The processor has only ",
+                    "position": {
+                      "start": { "line": 81, "column": 3, "offset": 2622 },
+                      "end": { "line": 81, "column": 26, "offset": 2645 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "emphasis",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "one",
+                        "position": {
+                          "start": { "line": 81, "column": 27, "offset": 2646 },
+                          "end": { "line": 81, "column": 30, "offset": 2649 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 81, "column": 26, "offset": 2645 },
+                      "end": { "line": 81, "column": 31, "offset": 2650 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " ",
+                    "position": {
+                      "start": { "line": 81, "column": 31, "offset": 2650 },
+                      "end": { "line": 81, "column": 32, "offset": 2651 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "control unit",
+                        "position": {
+                          "start": { "line": 81, "column": 34, "offset": 2653 },
+                          "end": { "line": 81, "column": 46, "offset": 2665 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 81, "column": 32, "offset": 2651 },
+                      "end": { "line": 81, "column": 48, "offset": 2667 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " that fetches and decodes instruction.",
+                    "position": {
+                      "start": { "line": 81, "column": 48, "offset": 2667 },
+                      "end": { "line": 81, "column": 86, "offset": 2705 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 81, "column": 3, "offset": 2622 },
+                  "end": { "line": 81, "column": 86, "offset": 2705 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 81, "column": 1, "offset": 2620 },
+              "end": { "line": 82, "column": 1, "offset": 2706 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The same control signal goes to ",
+                    "position": {
+                      "start": { "line": 83, "column": 3, "offset": 2709 },
+                      "end": { "line": 83, "column": 35, "offset": 2741 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "emphasis",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "multiple",
+                        "position": {
+                          "start": { "line": 83, "column": 36, "offset": 2742 },
+                          "end": { "line": 83, "column": 44, "offset": 2750 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 83, "column": 35, "offset": 2741 },
+                      "end": { "line": 83, "column": 45, "offset": 2751 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " ",
+                    "position": {
+                      "start": { "line": 83, "column": 45, "offset": 2751 },
+                      "end": { "line": 83, "column": 46, "offset": 2752 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "processing units",
+                        "position": {
+                          "start": { "line": 83, "column": 48, "offset": 2754 },
+                          "end": { "line": 83, "column": 64, "offset": 2770 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 83, "column": 46, "offset": 2752 },
+                      "end": { "line": 83, "column": 66, "offset": 2772 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ", each of which executes one of the threads in a warp.",
+                    "position": {
+                      "start": { "line": 83, "column": 66, "offset": 2772 },
+                      "end": { "line": 83, "column": 120, "offset": 2826 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 83, "column": 3, "offset": 2709 },
+                  "end": { "line": 83, "column": 120, "offset": 2826 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 83, "column": 1, "offset": 2707 },
+              "end": { "line": 84, "column": 1, "offset": 2827 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Since all ",
+                    "position": {
+                      "start": { "line": 85, "column": 3, "offset": 2830 },
+                      "end": { "line": 85, "column": 13, "offset": 2840 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "processing units",
+                        "position": {
+                          "start": { "line": 85, "column": 15, "offset": 2842 },
+                          "end": { "line": 85, "column": 31, "offset": 2858 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 85, "column": 13, "offset": 2840 },
+                      "end": { "line": 85, "column": 33, "offset": 2860 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " are controlled by the same instruction, their execution differences are due to the different operands in the ",
+                    "position": {
+                      "start": { "line": 85, "column": 33, "offset": 2860 },
+                      "end": { "line": 85, "column": 143, "offset": 2970 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "register files",
+                        "position": {
+                          "start": {
+                            "line": 85,
+                            "column": 145,
+                            "offset": 2972
+                          },
+                          "end": { "line": 85, "column": 159, "offset": 2986 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 85, "column": 143, "offset": 2970 },
+                      "end": { "line": 85, "column": 161, "offset": 2988 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": { "line": 85, "column": 161, "offset": 2988 },
+                      "end": { "line": 85, "column": 162, "offset": 2989 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 85, "column": 3, "offset": 2830 },
+                  "end": { "line": 85, "column": 162, "offset": 2989 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 85, "column": 1, "offset": 2828 },
+              "end": { "line": 85, "column": 162, "offset": 2989 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 81, "column": 1, "offset": 2620 },
+          "end": { "line": 85, "column": 162, "offset": 2989 },
+          "indent": [1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is called Single-Instruction-Multiple-Data in processor design.",
+            "position": {
+              "start": { "line": 87, "column": 1, "offset": 2991 },
+              "end": { "line": 87, "column": 69, "offset": 3059 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 87, "column": 1, "offset": 2991 },
+          "end": { "line": 87, "column": 69, "offset": 3059 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 5,
+        "children": [
+          {
+            "type": "text",
+            "value": "practical reasons to share control unit amongst processing units",
+            "position": {
+              "start": { "line": 89, "column": 7, "offset": 3067 },
+              "end": { "line": 89, "column": 71, "offset": 3131 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 89, "column": 1, "offset": 3061 },
+          "end": { "line": 89, "column": 71, "offset": 3131 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": true,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Control units are quite complex:",
+                    "position": {
+                      "start": { "line": 91, "column": 3, "offset": 3135 },
+                      "end": { "line": 91, "column": 35, "offset": 3167 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 91, "column": 3, "offset": 3135 },
+                  "end": { "line": 91, "column": 35, "offset": 3167 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "spread": true,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "sophisticated logic for fetching instructions",
+                            "position": {
+                              "start": {
+                                "line": 93,
+                                "column": 5,
+                                "offset": 3173
+                              },
+                              "end": {
+                                "line": 93,
+                                "column": 50,
+                                "offset": 3218
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 93, "column": 5, "offset": 3173 },
+                          "end": { "line": 93, "column": 50, "offset": 3218 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 93, "column": 3, "offset": 3171 },
+                      "end": { "line": 94, "column": 1, "offset": 3219 },
+                      "indent": [1]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "access ports to the instruction memory",
+                            "position": {
+                              "start": {
+                                "line": 95,
+                                "column": 5,
+                                "offset": 3224
+                              },
+                              "end": {
+                                "line": 95,
+                                "column": 43,
+                                "offset": 3262
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 95, "column": 5, "offset": 3224 },
+                          "end": { "line": 95, "column": 43, "offset": 3262 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 95, "column": 3, "offset": 3222 },
+                      "end": { "line": 96, "column": 1, "offset": 3263 },
+                      "indent": [1]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "on-chip instruction caches to reduce the latency of instruction fetch.",
+                            "position": {
+                              "start": {
+                                "line": 97,
+                                "column": 5,
+                                "offset": 3268
+                              },
+                              "end": {
+                                "line": 97,
+                                "column": 75,
+                                "offset": 3338
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 97, "column": 5, "offset": 3268 },
+                          "end": { "line": 97, "column": 75, "offset": 3338 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 97, "column": 3, "offset": 3266 },
+                      "end": { "line": 97, "column": 75, "offset": 3338 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 93, "column": 3, "offset": 3171 },
+                  "end": { "line": 97, "column": 75, "offset": 3338 },
+                  "indent": [1, 3, 1, 3]
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 91, "column": 1, "offset": 3133 },
+              "end": { "line": 98, "column": 1, "offset": 3339 },
+              "indent": [1, 1, 1, 1, 1, 1, 1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Having multiple processing units share a control unit can result in significant reduction in hardware manufacturing cost and power consumption.",
+                    "position": {
+                      "start": { "line": 99, "column": 3, "offset": 3342 },
+                      "end": { "line": 99, "column": 146, "offset": 3485 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 99, "column": 3, "offset": 3342 },
+                  "end": { "line": 99, "column": 146, "offset": 3485 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 99, "column": 1, "offset": 3340 },
+              "end": { "line": 99, "column": 146, "offset": 3485 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 91, "column": 1, "offset": 3133 },
+          "end": { "line": 99, "column": 146, "offset": 3485 },
+          "indent": [1, 1, 1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "warp as an execution unit",
+            "position": {
+              "start": { "line": 101, "column": 5, "offset": 3491 },
+              "end": { "line": 101, "column": 30, "offset": 3516 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 101, "column": 1, "offset": 3487 },
+          "end": { "line": 101, "column": 30, "offset": 3516 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "An SM is designed to execute all threads in a warp following the SIMD model — at any instant in time, one instruction is fetched and executed for all threads in a warp. In the picture below, there’s a single instruction fetch/dispatch shared among execution units(SPs) in th eSM. These threads will apply the same instruction to different portions of the data. Consequently, all threads in a warp will always have the ",
+            "position": {
+              "start": { "line": 103, "column": 1, "offset": 3518 },
+              "end": { "line": 103, "column": 420, "offset": 3937 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "same execution timing",
+                "position": {
+                  "start": { "line": 103, "column": 422, "offset": 3939 },
+                  "end": { "line": 103, "column": 443, "offset": 3960 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 103, "column": 420, "offset": 3937 },
+              "end": { "line": 103, "column": 445, "offset": 3962 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": { "line": 103, "column": 445, "offset": 3962 },
+              "end": { "line": 103, "column": 446, "offset": 3963 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 103, "column": 1, "offset": 3518 },
+          "end": { "line": 103, "column": 446, "offset": 3963 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./warp.png",
+            "alt": null,
+            "position": {
+              "start": { "line": 105, "column": 1, "offset": 3965 },
+              "end": { "line": 105, "column": 16, "offset": 3980 },
+              "indent": []
+            },
+            "value": "<span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/7d0d5d70a704e8cdf6e5ff7a7a40aeb5/76aaf/warp.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 85.04098360655738%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAACbklEQVQ4y5VTS0uyYRDtp9kf0EWQIClYuBKJXLkxKlcRoQXeUAjBTSgEIbRIyGgZFYqXvGSm5rUiW3Wxzvedgef9SiL6BobneY/znJk5M07hr72/v+P19RXPz894eXnB29sbYTn5TZzOuJ/wj48PTPHS7XaRzWbRbrdxdXWFRqMhj+r1OvL5PG5ublAul3F7eysPeS8WixJXrVbR6XSgTAgJNJtNVCoVCSoUCjg/P5cExOgkvbi4kCSMvby8FLzVauHs7Ay1Wu0rIf34+BgbGxtYW1vD0dGRPGQliUQCKysrCIVCUhFJiSeTSXg8Hvj9fkmgETKLIrTZbJifn8fJyYm0z8yRSASzs7NYXl6WttnB9fU1otEojEYjVldXJblGSIHZ3v7+vlS3vr6O09NTPD09SZs7OztCRmI+fHx8FM1jsRhcLpcQUxIh5GRo4/EY/X4fDw8PuL+/l6qZiN+8c3DsgjGM7fV6Ui1jh8MhRqPRvwoVqTJWwOqoFyeqTjploPN3JvtssjaKjKfaJwam02kZQiAQEAk2NzdlYMFgEOFwGKlUCoPBQHuneKYmM9DYBh9sbW1he3sbPp9P7iT1er3iu7u72l5+7vBbQmpC8UulkqwDJ802uSq5XE5ap6bU80dC1TKX2+12w+l04vDwUKtaYdwAlXhS/28Jubgmkwk6nQ7xeFwwrsXMzAymp6dxcHAgGDX8VYVc2qWlJVitVuzt7QlGvRwOh2CZTEYj/HWFCwsL0Ov1Ij6Ni2+xWGAwGGQD/ptwcXERc3NzXyq02+0wm81ahRzKj4TqRy723d2d9q/hnSe/FcaB0Cc1/AOSB7cMs9u41gAAAABJRU5ErkJggg=='); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"warp\"\n        title=\"warp\"\n        src=\"/static/7d0d5d70a704e8cdf6e5ff7a7a40aeb5/799d3/warp.png\"\n        srcset=\"/static/7d0d5d70a704e8cdf6e5ff7a7a40aeb5/00d96/warp.png 148w,\n/static/7d0d5d70a704e8cdf6e5ff7a7a40aeb5/0b23c/warp.png 295w,\n/static/7d0d5d70a704e8cdf6e5ff7a7a40aeb5/799d3/warp.png 590w,\n/static/7d0d5d70a704e8cdf6e5ff7a7a40aeb5/2a3d6/warp.png 885w,\n/static/7d0d5d70a704e8cdf6e5ff7a7a40aeb5/76aaf/warp.png 976w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>"
+          }
+        ],
+        "position": {
+          "start": { "line": 105, "column": 1, "offset": 3965 },
+          "end": { "line": 105, "column": 16, "offset": 3980 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The picture also shows a number of SPs. In general:",
+            "position": {
+              "start": { "line": 107, "column": 1, "offset": 3982 },
+              "end": { "line": 107, "column": 52, "offset": 4033 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 107, "column": 1, "offset": 3982 },
+          "end": { "line": 107, "column": 52, "offset": 4033 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "there are fewer SPs than the threads assigned to each SM",
+                    "position": {
+                      "start": { "line": 109, "column": 3, "offset": 4037 },
+                      "end": { "line": 109, "column": 59, "offset": 4093 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 109, "column": 3, "offset": 4037 },
+                  "end": { "line": 109, "column": 59, "offset": 4093 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 109, "column": 1, "offset": 4035 },
+              "end": { "line": 109, "column": 59, "offset": 4093 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "each SM has only enough hardware to execute instructions from a small subset of all threads assigned to the SM at any point in time.",
+                    "position": {
+                      "start": { "line": 110, "column": 3, "offset": 4096 },
+                      "end": { "line": 110, "column": 135, "offset": 4228 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 110, "column": 3, "offset": 4096 },
+                  "end": { "line": 110, "column": 135, "offset": 4228 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 110, "column": 1, "offset": 4094 },
+              "end": { "line": 110, "column": 135, "offset": 4228 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 109, "column": 1, "offset": 4035 },
+          "end": { "line": 110, "column": 135, "offset": 4228 },
+          "indent": [1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In early GPU designs, each SM can execute only one instruction for a single warp at any given instant.",
+            "position": {
+              "start": { "line": 112, "column": 1, "offset": 4230 },
+              "end": { "line": 112, "column": 103, "offset": 4332 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 112, "column": 1, "offset": 4230 },
+          "end": { "line": 112, "column": 103, "offset": 4332 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In recent designs, each SM can execute instructions for a small number of warps at any point in time.",
+            "position": {
+              "start": { "line": 114, "column": 1, "offset": 4334 },
+              "end": { "line": 114, "column": 102, "offset": 4435 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 114, "column": 1, "offset": 4334 },
+          "end": { "line": 114, "column": 102, "offset": 4435 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "latency tolerance and zero-overhead thread scheduling",
+            "position": {
+              "start": { "line": 116, "column": 5, "offset": 4441 },
+              "end": { "line": 116, "column": 58, "offset": 4494 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 116, "column": 1, "offset": 4437 },
+          "end": { "line": 116, "column": 58, "offset": 4494 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In either cases from above, the hardware can execute instructions for a small subset of all warps in the SM. Then why do we have so many warps in an SM?",
+            "position": {
+              "start": { "line": 118, "column": 1, "offset": 4496 },
+              "end": { "line": 118, "column": 153, "offset": 4648 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 118, "column": 1, "offset": 4496 },
+          "end": { "line": 118, "column": 153, "offset": 4648 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is how CUDA processors efficiently execute ",
+            "position": {
+              "start": { "line": 120, "column": 1, "offset": 4650 },
+              "end": { "line": 120, "column": 49, "offset": 4698 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "long-latency operations",
+                "position": {
+                  "start": { "line": 120, "column": 51, "offset": 4700 },
+                  "end": { "line": 120, "column": 74, "offset": 4723 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 120, "column": 49, "offset": 4698 },
+              "end": { "line": 120, "column": 76, "offset": 4725 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ", such as global memory accesses.",
+            "position": {
+              "start": { "line": 120, "column": 76, "offset": 4725 },
+              "end": { "line": 120, "column": 109, "offset": 4758 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 120, "column": 1, "offset": 4650 },
+          "end": { "line": 120, "column": 109, "offset": 4758 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When an instruction to be executed by a warp needs to wait for the result of a previously initiated long-latency operation, the warp is not selected for execution. ",
+            "position": {
+              "start": { "line": 122, "column": 1, "offset": 4760 },
+              "end": { "line": 122, "column": 165, "offset": 4924 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Instead, another resident warp that is no longer waiting for results will be selected for execution",
+                "position": {
+                  "start": { "line": 122, "column": 167, "offset": 4926 },
+                  "end": { "line": 122, "column": 266, "offset": 5025 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 122, "column": 165, "offset": 4924 },
+              "end": { "line": 122, "column": 268, "offset": 5027 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ". If more than one warp is ready for execution, a priority mechanism is used to select one for execution. (see more about warps’ 0-cost context switch in ",
+            "position": {
+              "start": { "line": 122, "column": 268, "offset": 5027 },
+              "end": { "line": 122, "column": 422, "offset": 5181 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/cudaRandom",
+            "children": [
+              {
+                "type": "text",
+                "value": "Some CUDA Related Questions",
+                "position": {
+                  "start": { "line": 122, "column": 423, "offset": 5182 },
+                  "end": { "line": 122, "column": 450, "offset": 5209 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 122, "column": 422, "offset": 5181 },
+              "end": { "line": 122, "column": 464, "offset": 5223 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ").",
+            "position": {
+              "start": { "line": 122, "column": 464, "offset": 5223 },
+              "end": { "line": 122, "column": 466, "offset": 5225 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 122, "column": 1, "offset": 4760 },
+          "end": { "line": 122, "column": 466, "offset": 5225 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This mechanism of filling the latency time of operations with work from other threads is often called ",
+            "position": {
+              "start": { "line": 124, "column": 1, "offset": 5227 },
+              "end": { "line": 124, "column": 103, "offset": 5329 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "“latency tolerance”",
+                "position": {
+                  "start": { "line": 124, "column": 105, "offset": 5331 },
+                  "end": { "line": 124, "column": 124, "offset": 5350 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 124, "column": 103, "offset": 5329 },
+              "end": { "line": 124, "column": 126, "offset": 5352 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " or “latency hiding” (see “Latency Tolerance” sidebar).",
+            "position": {
+              "start": { "line": 124, "column": 126, "offset": 5352 },
+              "end": { "line": 124, "column": 181, "offset": 5407 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 124, "column": 1, "offset": 5227 },
+          "end": { "line": 124, "column": 181, "offset": 5407 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Warp scheduling is also used for tolerating other types of operation latencies, such as pipelined floating-point arithmetic and branch instructions. ",
+            "position": {
+              "start": { "line": 126, "column": 1, "offset": 5409 },
+              "end": { "line": 126, "column": 150, "offset": 5558 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Given a sufficient number of warps, the hardware will likely find a warp to execute at any point in time",
+                "position": {
+                  "start": { "line": 126, "column": 152, "offset": 5560 },
+                  "end": { "line": 126, "column": 256, "offset": 5664 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 126, "column": 150, "offset": 5558 },
+              "end": { "line": 126, "column": 258, "offset": 5666 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ", thus making full use of the execution hardware in spite of these long-latency operations.",
+            "position": {
+              "start": { "line": 126, "column": 258, "offset": 5666 },
+              "end": { "line": 126, "column": 349, "offset": 5757 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 126, "column": 1, "offset": 5409 },
+          "end": { "line": 126, "column": 349, "offset": 5757 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The selection of ready warps for execution ",
+            "position": {
+              "start": { "line": 128, "column": 1, "offset": 5759 },
+              "end": { "line": 128, "column": 44, "offset": 5802 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "avoids introducing idle or wasted time",
+                "position": {
+                  "start": { "line": 128, "column": 46, "offset": 5804 },
+                  "end": { "line": 128, "column": 84, "offset": 5842 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 128, "column": 44, "offset": 5802 },
+              "end": { "line": 128, "column": 86, "offset": 5844 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " into the execution timeline, which is referred to as ",
+            "position": {
+              "start": { "line": 128, "column": 86, "offset": 5844 },
+              "end": { "line": 128, "column": 140, "offset": 5898 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "zero-overhead thread scheduling",
+                "position": {
+                  "start": { "line": 128, "column": 142, "offset": 5900 },
+                  "end": { "line": 128, "column": 173, "offset": 5931 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 128, "column": 140, "offset": 5898 },
+              "end": { "line": 128, "column": 175, "offset": 5933 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ". With warp scheduling, the long waiting time of warp instructions is “hidden” by executing instructions from other warps.",
+            "position": {
+              "start": { "line": 128, "column": 175, "offset": 5933 },
+              "end": { "line": 128, "column": 297, "offset": 6055 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 128, "column": 1, "offset": 5759 },
+          "end": { "line": 128, "column": 297, "offset": 6055 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "This ability to tolerate long-latency operations is the main reason GPUs do not dedicate nearly as much chip area to cache memories and branch prediction mechanisms as do CPUs",
+                "position": {
+                  "start": { "line": 130, "column": 3, "offset": 6059 },
+                  "end": { "line": 130, "column": 178, "offset": 6234 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 130, "column": 1, "offset": 6057 },
+              "end": { "line": 130, "column": 180, "offset": 6236 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ". Thus, GPUs can dedicate more of its chip area to floating-point execution resources.",
+            "position": {
+              "start": { "line": 130, "column": 180, "offset": 6236 },
+              "end": { "line": 130, "column": 266, "offset": 6322 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 130, "column": 1, "offset": 6057 },
+          "end": { "line": 130, "column": 266, "offset": 6322 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "How Are Blocks Partitioned?",
+            "position": {
+              "start": { "line": 132, "column": 4, "offset": 6327 },
+              "end": { "line": 132, "column": 31, "offset": 6354 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 132, "column": 1, "offset": 6324 },
+          "end": { "line": 132, "column": 31, "offset": 6354 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Based on thread indices. Thread IDs within a warp are consecutive and increasing.",
+            "position": {
+              "start": { "line": 134, "column": 1, "offset": 6356 },
+              "end": { "line": 134, "column": 82, "offset": 6437 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 134, "column": 1, "offset": 6356 },
+          "end": { "line": 134, "column": 82, "offset": 6437 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": true,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Example with ",
+                    "position": {
+                      "start": { "line": 136, "column": 4, "offset": 6442 },
+                      "end": { "line": 136, "column": 17, "offset": 6455 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "emphasis",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "1D thread block",
+                        "position": {
+                          "start": {
+                            "line": 136,
+                            "column": 18,
+                            "offset": 6456
+                          },
+                          "end": { "line": 136, "column": 33, "offset": 6471 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 136, "column": 17, "offset": 6455 },
+                      "end": { "line": 136, "column": 34, "offset": 6472 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ":",
+                    "position": {
+                      "start": { "line": 136, "column": 34, "offset": 6472 },
+                      "end": { "line": 136, "column": 35, "offset": 6473 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 136, "column": 4, "offset": 6442 },
+                  "end": { "line": 136, "column": 35, "offset": 6473 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "spread": true,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "only threadIdx.x is used, threadIdx.x values within a warp are consecutive and increasing.",
+                            "position": {
+                              "start": {
+                                "line": 138,
+                                "column": 6,
+                                "offset": 6480
+                              },
+                              "end": {
+                                "line": 138,
+                                "column": 96,
+                                "offset": 6570
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 138, "column": 6, "offset": 6480 },
+                          "end": { "line": 138, "column": 96, "offset": 6570 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 138, "column": 4, "offset": 6478 },
+                      "end": { "line": 139, "column": 1, "offset": 6571 },
+                      "indent": [1]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "for a warp size of 32:",
+                            "position": {
+                              "start": {
+                                "line": 140,
+                                "column": 6,
+                                "offset": 6577
+                              },
+                              "end": {
+                                "line": 140,
+                                "column": 28,
+                                "offset": 6599
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 140, "column": 6, "offset": 6577 },
+                          "end": { "line": 140, "column": 28, "offset": 6599 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 140, "column": 4, "offset": 6575 },
+                      "end": { "line": 141, "column": 1, "offset": 6600 },
+                      "indent": [1]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "warp 0: thread 0 ~ thread 31",
+                            "position": {
+                              "start": {
+                                "line": 142,
+                                "column": 8,
+                                "offset": 6608
+                              },
+                              "end": {
+                                "line": 142,
+                                "column": 36,
+                                "offset": 6636
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 142, "column": 8, "offset": 6608 },
+                          "end": { "line": 142, "column": 36, "offset": 6636 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 142, "column": 5, "offset": 6605 },
+                      "end": { "line": 143, "column": 1, "offset": 6637 },
+                      "indent": [1]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "warp 1: thread 32 ~ thread 63",
+                            "position": {
+                              "start": {
+                                "line": 144,
+                                "column": 8,
+                                "offset": 6645
+                              },
+                              "end": {
+                                "line": 144,
+                                "column": 37,
+                                "offset": 6674
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 144, "column": 8, "offset": 6645 },
+                          "end": { "line": 144, "column": 37, "offset": 6674 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 144, "column": 5, "offset": 6642 },
+                      "end": { "line": 145, "column": 1, "offset": 6675 },
+                      "indent": [1]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "warp n: thread 32 × n ~ thread 32(n + 1) - 1",
+                            "position": {
+                              "start": {
+                                "line": 146,
+                                "column": 8,
+                                "offset": 6683
+                              },
+                              "end": {
+                                "line": 146,
+                                "column": 52,
+                                "offset": 6727
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 146, "column": 8, "offset": 6683 },
+                          "end": { "line": 146, "column": 52, "offset": 6727 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 146, "column": 5, "offset": 6680 },
+                      "end": { "line": 147, "column": 1, "offset": 6728 },
+                      "indent": [1]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "for a block of which the size is not a multiple of 32:",
+                            "position": {
+                              "start": {
+                                "line": 148,
+                                "column": 6,
+                                "offset": 6734
+                              },
+                              "end": {
+                                "line": 148,
+                                "column": 60,
+                                "offset": 6788
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 148, "column": 6, "offset": 6734 },
+                          "end": { "line": 148, "column": 60, "offset": 6788 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 148, "column": 4, "offset": 6732 },
+                      "end": { "line": 148, "column": 60, "offset": 6788 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "the last warp will be ",
+                            "position": {
+                              "start": {
+                                "line": 149,
+                                "column": 8,
+                                "offset": 6796
+                              },
+                              "end": {
+                                "line": 149,
+                                "column": 30,
+                                "offset": 6818
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "strong",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "padded with extra threads",
+                                "position": {
+                                  "start": {
+                                    "line": 149,
+                                    "column": 32,
+                                    "offset": 6820
+                                  },
+                                  "end": {
+                                    "line": 149,
+                                    "column": 57,
+                                    "offset": 6845
+                                  },
+                                  "indent": []
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 149,
+                                "column": 30,
+                                "offset": 6818
+                              },
+                              "end": {
+                                "line": 149,
+                                "column": 59,
+                                "offset": 6847
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "value": " to fill up the 32 threads.",
+                            "position": {
+                              "start": {
+                                "line": 149,
+                                "column": 59,
+                                "offset": 6847
+                              },
+                              "end": {
+                                "line": 149,
+                                "column": 86,
+                                "offset": 6874
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 149, "column": 8, "offset": 6796 },
+                          "end": { "line": 149, "column": 86, "offset": 6874 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 149, "column": 5, "offset": 6793 },
+                      "end": { "line": 149, "column": 86, "offset": 6874 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 138, "column": 4, "offset": 6478 },
+                  "end": { "line": 149, "column": 86, "offset": 6874 },
+                  "indent": [1, 4, 1, 5, 1, 5, 1, 5, 1, 4, 5]
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 136, "column": 1, "offset": 6439 },
+              "end": { "line": 150, "column": 1, "offset": 6875 },
+              "indent": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "emphasis",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "2D thread block",
+                        "position": {
+                          "start": { "line": 151, "column": 5, "offset": 6880 },
+                          "end": { "line": 151, "column": 20, "offset": 6895 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 151, "column": 4, "offset": 6879 },
+                      "end": { "line": 151, "column": 21, "offset": 6896 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ":",
+                    "position": {
+                      "start": { "line": 151, "column": 21, "offset": 6896 },
+                      "end": { "line": 151, "column": 22, "offset": 6897 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 151, "column": 4, "offset": 6879 },
+                  "end": { "line": 151, "column": 22, "offset": 6897 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "the dimensions will be ",
+                            "position": {
+                              "start": {
+                                "line": 153,
+                                "column": 6,
+                                "offset": 6904
+                              },
+                              "end": {
+                                "line": 153,
+                                "column": 29,
+                                "offset": 6927
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "emphasis",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "projected into a linear order",
+                                "position": {
+                                  "start": {
+                                    "line": 153,
+                                    "column": 30,
+                                    "offset": 6928
+                                  },
+                                  "end": {
+                                    "line": 153,
+                                    "column": 59,
+                                    "offset": 6957
+                                  },
+                                  "indent": []
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 153,
+                                "column": 29,
+                                "offset": 6927
+                              },
+                              "end": {
+                                "line": 153,
+                                "column": 60,
+                                "offset": 6958
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "value": " ",
+                            "position": {
+                              "start": {
+                                "line": 153,
+                                "column": 60,
+                                "offset": 6958
+                              },
+                              "end": {
+                                "line": 153,
+                                "column": 61,
+                                "offset": 6959
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "strong",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "before",
+                                "position": {
+                                  "start": {
+                                    "line": 153,
+                                    "column": 63,
+                                    "offset": 6961
+                                  },
+                                  "end": {
+                                    "line": 153,
+                                    "column": 69,
+                                    "offset": 6967
+                                  },
+                                  "indent": []
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 153,
+                                "column": 61,
+                                "offset": 6959
+                              },
+                              "end": {
+                                "line": 153,
+                                "column": 71,
+                                "offset": 6969
+                              },
+                              "indent": []
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "value": " partitioning into warps",
+                            "position": {
+                              "start": {
+                                "line": 153,
+                                "column": 71,
+                                "offset": 6969
+                              },
+                              "end": {
+                                "line": 153,
+                                "column": 95,
+                                "offset": 6993
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 153, "column": 6, "offset": 6904 },
+                          "end": { "line": 153, "column": 95, "offset": 6993 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 153, "column": 4, "offset": 6902 },
+                      "end": { "line": 153, "column": 95, "offset": 6993 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 153, "column": 4, "offset": 6902 },
+                  "end": { "line": 153, "column": 95, "offset": 6993 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "html",
+                    "title": null,
+                    "url": "./2D.png",
+                    "alt": "linearized2D",
+                    "position": {
+                      "start": { "line": 155, "column": 4, "offset": 6998 },
+                      "end": { "line": 155, "column": 29, "offset": 7023 },
+                      "indent": []
+                    },
+                    "value": "<figure class=\"gatsby-resp-image-figure\" style=\"\">\n    <span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/1b336777349cc0288199bf1472bf368c/ec071/2D.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 49.479166666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+UlEQVQoz32Sy2tTQRSHxyLiQhe6kyLYxLQWi48/wY1QEP+Agi7cdFOJq+qiK6la3ChUDD7y2CiIYCiCj4WF4KO2AUVFTaBJm9uY9BHyvHndeyefc29aTG31wMecYc785jxGsG6tVsthw7fNtEroxivFS8VrxXMa1hcV4ETReXfDxPZi0vHXshHS0R0szQmWol1oM4Lc/BCyZcdZSCm3Cm6XmWUYVBS59+9Y3reHzN7dZNSa7RKsXjjPT01jPh4nkUjQbDY33RVbyjRNCvmC489GvnFy1yUGxEVO7PTiFsOMDgVZWcuQTC6gKeFarbZZsHNjqKxKpRLWeinTnz4gTrsUBxFnDiFO7efsxAh/W2dSKkPp9KzRqCqxvOqPoU4s6uUq2mqCqy9GufJ0hMtTXrzhYZ58fuTMo2mYGKahBmdiyjaWtNoZNhpQrf550X5C53/W+ueJ0PUY2eVbSjBEpRxQwwiSm/ZRnLyHHgpS9j+gEvTz+PYz7j6cIRD4iM/3lsk7b7gfCRCMBgjNhfDP+gl/DSOKxSkWF7tJpw+TSrpZyLtIj/WycqCPtMdF1uOhcPwY54546XbfxOMeV1yn7+g1PGMD9N5w0z/RT894D4O+QbtkiaX6IGUHqjf21zHqdX6pScZ+fCcWi5NKaVQquhqe2UbFdWL38zfzOrIVqOrk/wAAAABJRU5ErkJggg=='); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"linearized2D\"\n        title=\"linearized2D\"\n        src=\"/static/1b336777349cc0288199bf1472bf368c/799d3/2D.png\"\n        srcset=\"/static/1b336777349cc0288199bf1472bf368c/00d96/2D.png 148w,\n/static/1b336777349cc0288199bf1472bf368c/0b23c/2D.png 295w,\n/static/1b336777349cc0288199bf1472bf368c/799d3/2D.png 590w,\n/static/1b336777349cc0288199bf1472bf368c/2a3d6/2D.png 885w,\n/static/1b336777349cc0288199bf1472bf368c/ae92f/2D.png 1180w,\n/static/1b336777349cc0288199bf1472bf368c/ec071/2D.png 1536w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>\n    <figcaption class=\"gatsby-resp-image-figcaption\">linearized2D</figcaption>\n  </figure>"
+                  }
+                ],
+                "position": {
+                  "start": { "line": 155, "column": 4, "offset": 6998 },
+                  "end": { "line": 155, "column": 29, "offset": 7023 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "determine the linear order: place the rows with larger y and z coordinates after those with lower ones.",
+                            "position": {
+                              "start": {
+                                "line": 157,
+                                "column": 6,
+                                "offset": 7030
+                              },
+                              "end": {
+                                "line": 157,
+                                "column": 109,
+                                "offset": 7133
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 157, "column": 6, "offset": 7030 },
+                          "end": { "line": 157, "column": 109, "offset": 7133 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 157, "column": 4, "offset": 7028 },
+                      "end": { "line": 157, "column": 109, "offset": 7133 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 157, "column": 4, "offset": 7028 },
+                  "end": { "line": 157, "column": 109, "offset": 7133 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 151, "column": 1, "offset": 6876 },
+              "end": { "line": 158, "column": 1, "offset": 7134 },
+              "indent": [1, 1, 1, 1, 1, 1, 1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "emphasis",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "3D thread block",
+                        "position": {
+                          "start": { "line": 159, "column": 5, "offset": 7139 },
+                          "end": { "line": 159, "column": 20, "offset": 7154 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 159, "column": 4, "offset": 7138 },
+                      "end": { "line": 159, "column": 21, "offset": 7155 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ":",
+                    "position": {
+                      "start": { "line": 159, "column": 21, "offset": 7155 },
+                      "end": { "line": 159, "column": 22, "offset": 7156 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 159, "column": 4, "offset": 7138 },
+                  "end": { "line": 159, "column": 22, "offset": 7156 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "spread": true,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "first place all threads of which the threadIdx.z value is 0 into the linear order. Among these threads, they are treated as a 2D block as shown in above picture",
+                            "position": {
+                              "start": {
+                                "line": 161,
+                                "column": 6,
+                                "offset": 7163
+                              },
+                              "end": {
+                                "line": 161,
+                                "column": 166,
+                                "offset": 7323
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 161, "column": 6, "offset": 7163 },
+                          "end": { "line": 161, "column": 166, "offset": 7323 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 161, "column": 4, "offset": 7161 },
+                      "end": { "line": 162, "column": 1, "offset": 7324 },
+                      "indent": [1]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "example: a 3D thread block of dimensions 2 × 8 × 4",
+                            "position": {
+                              "start": {
+                                "line": 163,
+                                "column": 6,
+                                "offset": 7330
+                              },
+                              "end": {
+                                "line": 163,
+                                "column": 56,
+                                "offset": 7380
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 163, "column": 6, "offset": 7330 },
+                          "end": { "line": 163, "column": 56, "offset": 7380 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 163, "column": 4, "offset": 7328 },
+                      "end": { "line": 164, "column": 1, "offset": 7381 },
+                      "indent": [1]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "total 64 threads",
+                            "position": {
+                              "start": {
+                                "line": 165,
+                                "column": 8,
+                                "offset": 7389
+                              },
+                              "end": {
+                                "line": 165,
+                                "column": 24,
+                                "offset": 7405
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 165, "column": 8, "offset": 7389 },
+                          "end": { "line": 165, "column": 24, "offset": 7405 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 165, "column": 5, "offset": 7386 },
+                      "end": { "line": 166, "column": 1, "offset": 7406 },
+                      "indent": [1]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "warp 0: T(0,0,0) ~ T(0,7,3)",
+                            "position": {
+                              "start": {
+                                "line": 167,
+                                "column": 8,
+                                "offset": 7414
+                              },
+                              "end": {
+                                "line": 167,
+                                "column": 35,
+                                "offset": 7441
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 167, "column": 8, "offset": 7414 },
+                          "end": { "line": 167, "column": 35, "offset": 7441 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 167, "column": 5, "offset": 7411 },
+                      "end": { "line": 168, "column": 1, "offset": 7442 },
+                      "indent": [1]
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "warp 1: T(1,0,0) ~ T(1,7,3)",
+                            "position": {
+                              "start": {
+                                "line": 169,
+                                "column": 8,
+                                "offset": 7450
+                              },
+                              "end": {
+                                "line": 169,
+                                "column": 35,
+                                "offset": 7477
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 169, "column": 8, "offset": 7450 },
+                          "end": { "line": 169, "column": 35, "offset": 7477 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 169, "column": 5, "offset": 7447 },
+                      "end": { "line": 169, "column": 35, "offset": 7477 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 161, "column": 4, "offset": 7161 },
+                  "end": { "line": 169, "column": 35, "offset": 7477 },
+                  "indent": [1, 4, 1, 5, 1, 5, 1, 5]
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 159, "column": 1, "offset": 7135 },
+              "end": { "line": 169, "column": 35, "offset": 7477 },
+              "indent": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 136, "column": 1, "offset": 6439 },
+          "end": { "line": 169, "column": 35, "offset": 7477 },
+          "indent": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Warp Execution",
+            "position": {
+              "start": { "line": 171, "column": 4, "offset": 7482 },
+              "end": { "line": 171, "column": 18, "offset": 7496 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 171, "column": 1, "offset": 7479 },
+          "end": { "line": 171, "column": 18, "offset": 7496 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "All threads of a warp are executed by the SIMD hardware as a bundle, where the same instruction is run for all threads.",
+            "position": {
+              "start": { "line": 173, "column": 1, "offset": 7498 },
+              "end": { "line": 173, "column": 120, "offset": 7617 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 173, "column": 1, "offset": 7498 },
+          "end": { "line": 173, "column": 120, "offset": 7617 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Warp is the unit of ",
+            "position": {
+              "start": { "line": 175, "column": 1, "offset": 7619 },
+              "end": { "line": 175, "column": 21, "offset": 7639 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "thread scheduling",
+                "position": {
+                  "start": { "line": 175, "column": 23, "offset": 7641 },
+                  "end": { "line": 175, "column": 40, "offset": 7658 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 175, "column": 21, "offset": 7639 },
+              "end": { "line": 175, "column": 42, "offset": 7660 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " in SMs.",
+            "position": {
+              "start": { "line": 175, "column": 42, "offset": 7660 },
+              "end": { "line": 175, "column": 50, "offset": 7668 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 175, "column": 1, "offset": 7619 },
+          "end": { "line": 175, "column": 50, "offset": 7668 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "when is it good?",
+            "position": {
+              "start": { "line": 177, "column": 5, "offset": 7674 },
+              "end": { "line": 177, "column": 21, "offset": 7690 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 177, "column": 1, "offset": 7670 },
+          "end": { "line": 177, "column": 21, "offset": 7690 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When all threads within a warp follow the same control flow.",
+            "position": {
+              "start": { "line": 179, "column": 1, "offset": 7692 },
+              "end": { "line": 179, "column": 61, "offset": 7752 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 179, "column": 1, "offset": 7692 },
+          "end": { "line": 179, "column": 61, "offset": 7752 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For example, for an if-else construct, the execution works well when either all threads execute the if part or all execute the else part.",
+            "position": {
+              "start": { "line": 181, "column": 1, "offset": 7754 },
+              "end": { "line": 181, "column": 138, "offset": 7891 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 181, "column": 1, "offset": 7754 },
+          "end": { "line": 181, "column": 138, "offset": 7891 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "when is it bad?",
+            "position": {
+              "start": { "line": 183, "column": 5, "offset": 7897 },
+              "end": { "line": 183, "column": 20, "offset": 7912 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 183, "column": 1, "offset": 7893 },
+          "end": { "line": 183, "column": 20, "offset": 7912 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When threads within a warp take different control flow paths, the SIMD hardware will take ",
+            "position": {
+              "start": { "line": 185, "column": 1, "offset": 7914 },
+              "end": { "line": 185, "column": 91, "offset": 8004 },
+              "indent": []
+            }
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "multiple passes",
+                "position": {
+                  "start": { "line": 185, "column": 92, "offset": 8005 },
+                  "end": { "line": 185, "column": 107, "offset": 8020 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 185, "column": 91, "offset": 8004 },
+              "end": { "line": 185, "column": 108, "offset": 8021 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " through these divergent paths. During each pass, the threads that follow the other path are not allowed to take effect.",
+            "position": {
+              "start": { "line": 185, "column": 108, "offset": 8021 },
+              "end": { "line": 185, "column": 228, "offset": 8141 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 185, "column": 1, "offset": 7914 },
+          "end": { "line": 185, "column": 228, "offset": 8141 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "These passes are ",
+            "position": {
+              "start": { "line": 187, "column": 1, "offset": 8143 },
+              "end": { "line": 187, "column": 18, "offset": 8160 },
+              "indent": []
+            }
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "sequential",
+                "position": {
+                  "start": { "line": 187, "column": 19, "offset": 8161 },
+                  "end": { "line": 187, "column": 29, "offset": 8171 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 187, "column": 18, "offset": 8160 },
+              "end": { "line": 187, "column": 30, "offset": 8172 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " to each other, thus they will add to the execution time.",
+            "position": {
+              "start": { "line": 187, "column": 30, "offset": 8172 },
+              "end": { "line": 187, "column": 87, "offset": 8229 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 187, "column": 1, "offset": 8143 },
+          "end": { "line": 187, "column": 87, "offset": 8229 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "multipass aproach & divergence",
+            "position": {
+              "start": { "line": 189, "column": 6, "offset": 8236 },
+              "end": { "line": 189, "column": 36, "offset": 8266 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 189, "column": 1, "offset": 8231 },
+          "end": { "line": 189, "column": 36, "offset": 8266 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": true,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The ",
+                    "position": {
+                      "start": { "line": 191, "column": 3, "offset": 8270 },
+                      "end": { "line": 191, "column": 7, "offset": 8274 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "multipass approach",
+                        "position": {
+                          "start": { "line": 191, "column": 9, "offset": 8276 },
+                          "end": { "line": 191, "column": 27, "offset": 8294 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 191, "column": 7, "offset": 8274 },
+                      "end": { "line": 191, "column": 29, "offset": 8296 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " to ",
+                    "position": {
+                      "start": { "line": 191, "column": 29, "offset": 8296 },
+                      "end": { "line": 191, "column": 33, "offset": 8300 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "divergent warp execution",
+                        "position": {
+                          "start": {
+                            "line": 191,
+                            "column": 35,
+                            "offset": 8302
+                          },
+                          "end": { "line": 191, "column": 59, "offset": 8326 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 191, "column": 33, "offset": 8300 },
+                      "end": { "line": 191, "column": 61, "offset": 8328 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " extends the SIMD hardware’s ability to implement the full semantics of CUDA threads. While the hardware executes the same instruction for all threads in a warp, it selectively lets the threads take effect in each pass only, allowing every thread to take its own control flow path. This preserves the independence of threads while taking advantage of the reduced cost of SIMD hardware.",
+                    "position": {
+                      "start": { "line": 191, "column": 61, "offset": 8328 },
+                      "end": { "line": 191, "column": 446, "offset": 8713 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 191, "column": 3, "offset": 8270 },
+                  "end": { "line": 191, "column": 446, "offset": 8713 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 191, "column": 1, "offset": 8268 },
+              "end": { "line": 192, "column": 1, "offset": 8714 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "When threads ",
+                    "position": {
+                      "start": { "line": 193, "column": 3, "offset": 8717 },
+                      "end": { "line": 193, "column": 16, "offset": 8730 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "emphasis",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "in the same warp",
+                        "position": {
+                          "start": {
+                            "line": 193,
+                            "column": 17,
+                            "offset": 8731
+                          },
+                          "end": { "line": 193, "column": 33, "offset": 8747 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 193, "column": 16, "offset": 8730 },
+                      "end": { "line": 193, "column": 34, "offset": 8748 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " follow different paths of control flow, we say that these threads ",
+                    "position": {
+                      "start": { "line": 193, "column": 34, "offset": 8748 },
+                      "end": { "line": 193, "column": 101, "offset": 8815 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "diverge",
+                        "position": {
+                          "start": {
+                            "line": 193,
+                            "column": 103,
+                            "offset": 8817
+                          },
+                          "end": { "line": 193, "column": 110, "offset": 8824 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 193, "column": 101, "offset": 8815 },
+                      "end": { "line": 193, "column": 112, "offset": 8826 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " in their execution.",
+                    "position": {
+                      "start": { "line": 193, "column": 112, "offset": 8826 },
+                      "end": { "line": 193, "column": 132, "offset": 8846 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 193, "column": 3, "offset": 8717 },
+                  "end": { "line": 193, "column": 132, "offset": 8846 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 193, "column": 1, "offset": 8715 },
+              "end": { "line": 193, "column": 132, "offset": 8846 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 191, "column": 1, "offset": 8268 },
+          "end": { "line": 193, "column": 132, "offset": 8846 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "if-else example",
+            "position": {
+              "start": { "line": 195, "column": 6, "offset": 8853 },
+              "end": { "line": 195, "column": 21, "offset": 8868 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 195, "column": 1, "offset": 8848 },
+          "end": { "line": 195, "column": 21, "offset": 8868 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In the if-else example, divergence arises if some threads in a warp take the then path and some the else path. The cost of divergence is the ",
+            "position": {
+              "start": { "line": 197, "column": 1, "offset": 8870 },
+              "end": { "line": 197, "column": 142, "offset": 9011 },
+              "indent": []
+            }
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "extra pass",
+                "position": {
+                  "start": { "line": 197, "column": 143, "offset": 9012 },
+                  "end": { "line": 197, "column": 153, "offset": 9022 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 197, "column": 142, "offset": 9011 },
+              "end": { "line": 197, "column": 154, "offset": 9023 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " the hardware needs to take to allow the threads in a warp to make their own decisions.",
+            "position": {
+              "start": { "line": 197, "column": 154, "offset": 9023 },
+              "end": { "line": 197, "column": 241, "offset": 9110 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 197, "column": 1, "offset": 8870 },
+          "end": { "line": 197, "column": 241, "offset": 9110 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "for-loop example",
+            "position": {
+              "start": { "line": 199, "column": 6, "offset": 9117 },
+              "end": { "line": 199, "column": 22, "offset": 9133 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 199, "column": 1, "offset": 9112 },
+          "end": { "line": 199, "column": 22, "offset": 9133 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If threads in a warp execute a for loop that can iterate ",
+            "position": {
+              "start": { "line": 201, "column": 1, "offset": 9135 },
+              "end": { "line": 201, "column": 58, "offset": 9192 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "six, seven, or eight",
+                "position": {
+                  "start": { "line": 201, "column": 60, "offset": 9194 },
+                  "end": { "line": 201, "column": 80, "offset": 9214 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 201, "column": 58, "offset": 9192 },
+              "end": { "line": 201, "column": 82, "offset": 9216 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " times for different threads:",
+            "position": {
+              "start": { "line": 201, "column": 82, "offset": 9216 },
+              "end": { "line": 201, "column": 111, "offset": 9245 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 201, "column": 1, "offset": 9135 },
+          "end": { "line": 201, "column": 111, "offset": 9245 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "All threads will finish the first six iterations together.",
+                    "position": {
+                      "start": { "line": 203, "column": 3, "offset": 9249 },
+                      "end": { "line": 203, "column": 61, "offset": 9307 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 203, "column": 3, "offset": 9249 },
+                  "end": { "line": 203, "column": 61, "offset": 9307 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 203, "column": 1, "offset": 9247 },
+              "end": { "line": 203, "column": 61, "offset": 9307 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Two passes will be used to execute the seventh iteration, one for those that take the iteration and one for those that do not.",
+                    "position": {
+                      "start": { "line": 204, "column": 3, "offset": 9310 },
+                      "end": { "line": 204, "column": 129, "offset": 9436 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 204, "column": 3, "offset": 9310 },
+                  "end": { "line": 204, "column": 129, "offset": 9436 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 204, "column": 1, "offset": 9308 },
+              "end": { "line": 204, "column": 129, "offset": 9436 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Two passes will be used to execute the eighth iteration, one for those that take the iteration and one for those that do not.",
+                    "position": {
+                      "start": { "line": 205, "column": 3, "offset": 9439 },
+                      "end": { "line": 205, "column": 128, "offset": 9564 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 205, "column": 3, "offset": 9439 },
+                  "end": { "line": 205, "column": 128, "offset": 9564 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 205, "column": 1, "offset": 9437 },
+              "end": { "line": 205, "column": 128, "offset": 9564 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 203, "column": 1, "offset": 9247 },
+          "end": { "line": 205, "column": 128, "offset": 9564 },
+          "indent": [1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "other scenarios",
+            "position": {
+              "start": { "line": 207, "column": 6, "offset": 9571 },
+              "end": { "line": 207, "column": 21, "offset": 9586 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 207, "column": 1, "offset": 9566 },
+          "end": { "line": 207, "column": 21, "offset": 9586 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In terms of source statements, a control construct can result in thread divergence when its decision condition is based on threadIdx values.",
+            "position": {
+              "start": { "line": 209, "column": 1, "offset": 9588 },
+              "end": { "line": 209, "column": 141, "offset": 9728 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 209, "column": 1, "offset": 9588 },
+          "end": { "line": 209, "column": 141, "offset": 9728 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For example, the statement ",
+            "position": {
+              "start": { "line": 211, "column": 1, "offset": 9730 },
+              "end": { "line": 211, "column": 28, "offset": 9757 },
+              "indent": []
+            }
+          },
+          {
+            "type": "html",
+            "value": "<code class=\"language-text\">if (threadIdx.x. &gt; 2) {}</code>",
+            "position": {
+              "start": { "line": 211, "column": 28, "offset": 9757 },
+              "end": { "line": 211, "column": 54, "offset": 9783 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " causes the threads to follow two divergent control flow paths. Threads 0, 1, and 2 follow a different path than threads 3, 4, 5, etc.",
+            "position": {
+              "start": { "line": 211, "column": 54, "offset": 9783 },
+              "end": { "line": 211, "column": 188, "offset": 9917 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 211, "column": 1, "offset": 9730 },
+          "end": { "line": 211, "column": 188, "offset": 9917 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Similarly, a loop can cause thread divergence if its loop condition is based on thread index values.",
+            "position": {
+              "start": { "line": 213, "column": 1, "offset": 9919 },
+              "end": { "line": 213, "column": 101, "offset": 10019 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 213, "column": 1, "offset": 9919 },
+          "end": { "line": 213, "column": 101, "offset": 10019 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 214, "column": 1, "offset": 10020 }
+    }
+  }
+}

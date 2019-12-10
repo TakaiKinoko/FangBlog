@@ -9,7 +9,7 @@ CUDA applications tend to process a massive amount of data from the global memor
 
 **Tiling** techniques are engineered that utilize **shared memories** to reduce the total amount of data that must be acessed from the global memory (read about tiling techniques here [The CUDA Parallel Programming Model - 6.Tiling](/cuda6-tiling)).
 
-I this post we talk about **memory coalescing** techniques that can more effectively move data from the global memory into **shared memories and registers**.
+In this post I'd like to introduce **memory coalescing** techniques that can more effectively move data from the global memory into **shared memories and registers**.
 
 Memory coalescing techniques are often used _in conjunction with tiling techniques_ to allow CUDA devices to reach their performance potential by more efficiently utilizing the global memory bandwidth.
 
@@ -31,7 +31,7 @@ Because this is a very slow process relative to the desired data access speed (s
 
 Each time a DRAM location is accessed, **a range of consecutive locations that includes the requested location are actually accessed**.
 
-Many sensors are provided in each DRAM chip and they work in parallel. Each senses the content of a bit within these consecutive locations.
+Many sensors are provided in each DRAM chip and they work in parallel, each senses the content of a bit within these consecutive locations.
 
 Once detected by the sensors, the data from all these consecutive locations can be transferred at very high-speed to the processor. These consecutive locations accessed and delivered are referred to as **DRAM bursts**.
 
@@ -47,7 +47,7 @@ Current CUDA devices employ a technique that allows the programmers to achieve h
 
 - This technique takes advantage of the fact that **threads in a warp execute the same instruction at any given point in time**.
 
-- The most favorable access pattern is achieved when all threads in a warp access consecutive global memory locations.
+- The most favorable access pattern is achieved when all threads in a warp access **consecutive global memory locations**.
 
 - When all threads in a warp execute a load instruction, the hardware detects whether they access consecutive global memory locations. If that's the case, the hardware combines (**coalesces**) all these accesses into a consolidated access to consecutive DRAM locations.
 

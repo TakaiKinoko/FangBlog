@@ -1,1 +1,31 @@
-{"componentChunkName":"component---cache-dev-404-page-js","path":"/dev-404-page/","result":{"data":{"allSitePage":{"nodes":[{"path":"/cudaRandom-resourceAssignment/"},{"path":"/cudaRandom/"},{"path":"/install-reprozip/"},{"path":"/cudaProg2-Variables/"},{"path":"/cudaProg1-matrixmult/"},{"path":"/cuda9-stream2/"},{"path":"/cuda8-Stream/"},{"path":"/cuda5-coalesce/"},{"path":"/cuda4-sync/"},{"path":"/cuda3-thread-divergence/"},{"path":"/cuda1/"},{"path":"/404/"},{"path":"/"},{"path":"/404.html"},{"path":"/cudaRandom-latency/"},{"path":"/cuda2-warp/"},{"path":"/cuda7-tiling/"},{"path":"/cuda6-memoryparallel/"}]}},"pageContext":{"isCreatedByStatefulCreatePages":true}}}
+{
+  "componentChunkName": "component---cache-dev-404-page-js",
+  "path": "/dev-404-page/",
+  "result": {
+    "data": {
+      "allSitePage": {
+        "nodes": [
+          { "path": "/cudaRandom-latency/" },
+          { "path": "/cudaRandom-resourceAssignment/" },
+          { "path": "/cudaRandom/" },
+          { "path": "/install-reprozip/" },
+          { "path": "/cudaProg2-Variables/" },
+          { "path": "/cudaProg1-matrixmult/" },
+          { "path": "/cuda9-stream2/" },
+          { "path": "/cuda8-Stream/" },
+          { "path": "/cuda7-tiling/" },
+          { "path": "/cuda6-memoryparallel/" },
+          { "path": "/cuda5-coalesce/" },
+          { "path": "/cuda4-sync/" },
+          { "path": "/cuda3-thread-divergence/" },
+          { "path": "/cuda1/" },
+          { "path": "/404/" },
+          { "path": "/" },
+          { "path": "/404.html" },
+          { "path": "/cuda2-warp/" }
+        ]
+      }
+    },
+    "pageContext": { "isCreatedByStatefulCreatePages": true }
+  }
+}
