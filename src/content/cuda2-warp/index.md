@@ -55,19 +55,23 @@ But the correctness of executing a kernel should not depend on the synchrony amo
 
 Due to hardware cost considerations, CUDA devices currently bundle multiple threads for execution, which leads to performance limitations.
 
-- 🧐**Each thread block is partitioned into warps**.
+- 🧐**Each thread block is partitioned into warps** when the block is assigned to an SM.
+
+- The warp is a unit of thread scheduling in SMs.
+
+- Each warp consists of 32 threads of consecutive thredIdx values.
 
 - The execution of warps is implemented by an SIMD hardware.
 
-- warps can be executed by the SMs in any order. No way to tell who's going to finish first.
+- Warps can be executed by the SMs in any order. No way to tell who's going to finish first.
 
-#### practical reasons
+#### practical reasons for warps
 
 This implementation (doesn't just exist to annoy programmers) helps:
 
 1. reducing hardware manufacturing cost
 
-1. lower run0time operation electricity cost
+1. lower runtime operation electricity cost
 
 1. enable coalescing of memory accesses (which will be the topic of some later post)
 
@@ -94,6 +98,37 @@ This is called Single-Instruction-Multiple-Data in processor design.
   - on-chip instruction caches to reduce the latency of instruction fetch.
 
 - Having multiple processing units share a control unit can result in significant reduction in hardware manufacturing cost and power consumption.
+
+### warp as an execution unit
+
+An SM is designed to execute all threads in a warp following the SIMD model -- at any instant in time, one instruction is fetched and executed for all threads in a warp. In the picture below, there's a single instruction fetch/dispatch shared among execution units(SPs) in th eSM. These threads will apply the same instruction to different portions of the data. Consequently, all threads in a warp will always have the **same execution timing**.
+
+![](./warp.png)
+
+The picture also shows a number of SPs. In general:
+
+- there are fewer SPs than the threads assigned to each SM
+- each SM has only enough hardware to execute instructions from a small subset of all threads assigned to the SM at any point in time.
+
+In early GPU designs, each SM can execute only one instruction for a single warp at any given instant.
+
+In recent designs, each SM can execute instructions for a small number of warps at any point in time.
+
+### latency tolerance and zero-overhead thread scheduling
+
+In either cases from above, the hardware can execute instructions for a small subset of all warps in the SM. Then why do we have so many warps in an SM?
+
+This is how CUDA processors efficiently execute **long-latency operations**, such as global memory accesses.
+
+When an instruction to be executed by a warp needs to wait for the result of a previously initiated long-latency operation, the warp is not selected for execution. **Instead, another resident warp that is no longer waiting for results will be selected for execution**. If more than one warp is ready for execution, a priority mechanism is used to select one for execution. (see more about warps' 0-cost context switch in [Some CUDA Related Questions](/cudaRandom)).
+
+This mechanism of filling the latency time of operations with work from other threads is often called **“latency tolerance”** or “latency hiding” (see “Latency Tolerance” sidebar).
+
+Warp scheduling is also used for tolerating other types of operation latencies, such as pipelined floating-point arithmetic and branch instructions. **Given a sufficient number of warps, the hardware will likely find a warp to execute at any point in time**, thus making full use of the execution hardware in spite of these long-latency operations.
+
+The selection of ready warps for execution **avoids introducing idle or wasted time** into the execution timeline, which is referred to as **zero-overhead thread scheduling**. With warp scheduling, the long waiting time of warp instructions is “hidden” by executing instructions from other warps.
+
+**This ability to tolerate long-latency operations is the main reason GPUs do not dedicate nearly as much chip area to cache memories and branch prediction mechanisms as do CPUs**. Thus, GPUs can dedicate more of its chip area to floating-point execution resources.
 
 ## How Are Blocks Partitioned?
 

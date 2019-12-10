@@ -1,1 +1,37 @@
-{"componentChunkName":"component---src-templates-blog-post-js","path":"/cuda7-tiling/","result":{"data":{"site":{"siteMetadata":{"title":"FANG'S NOTEBOOK","author":"Fang Cabrera"}},"markdownRemark":{"id":"444cfd98-bb37-592d-972d-7ff27a50935c","excerpt":"In progress!","html":"<p>In progress!</p>","fields":{"readingTime":{"text":"1 min read"}},"frontmatter":{"title":"The CUDA Parallel Programming Model - 7.Tiling","date":"December 06, 2019"}}},"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"/cuda7-tiling/","previous":{"fields":{"slug":"/cuda6-memoryparallel/"},"frontmatter":{"title":"The CUDA Parallel Programming Model - 6. Memory Parallelism"}},"next":{"fields":{"slug":"/cuda8-Stream/"},"frontmatter":{"title":"The CUDA Parallel Programming Model - 8. Concurrency by Stream"}}}}}
+{
+  "componentChunkName": "component---src-templates-blog-post-js",
+  "path": "/cuda7-tiling/",
+  "result": {
+    "data": {
+      "site": {
+        "siteMetadata": { "title": "FANG'S NOTEBOOK", "author": "Fang Cabrera" }
+      },
+      "markdownRemark": {
+        "id": "444cfd98-bb37-592d-972d-7ff27a50935c",
+        "excerpt": "",
+        "html": "",
+        "fields": { "readingTime": { "text": "0 min read" } },
+        "frontmatter": {
+          "title": "The CUDA Parallel Programming Model - 7.Tiling",
+          "date": "December 06, 2019"
+        }
+      }
+    },
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": false,
+      "slug": "/cuda7-tiling/",
+      "previous": {
+        "fields": { "slug": "/cuda6-memoryparallel/" },
+        "frontmatter": {
+          "title": "The CUDA Parallel Programming Model - 6. Memory Parallelism"
+        }
+      },
+      "next": {
+        "fields": { "slug": "/cuda8-Stream/" },
+        "frontmatter": {
+          "title": "The CUDA Parallel Programming Model - 8. Concurrency by Stream"
+        }
+      }
+    }
+  }
+}

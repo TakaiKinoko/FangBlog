@@ -1,0 +1,158 @@
+{
+  "expireTime": 9007200830736928000,
+  "key": "transformer-remark-markdown-ast-c9fdbf74cdc1918492071071aa7f51a9-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "I briefly talked about how CUDA processors hide long-latency operations such as global memory accesses through their warp-scheduling mechanism in ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 147, "offset": 147 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/cuda2-warp",
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 2. Warps",
+                "position": {
+                  "start": { "line": 2, "column": 148, "offset": 148 },
+                  "end": { "line": 2, "column": 194, "offset": 194 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 147, "offset": 147 },
+              "end": { "line": 2, "column": 208, "offset": 208 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": { "line": 2, "column": 208, "offset": 208 },
+              "end": { "line": 2, "column": 209, "offset": 209 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 209, "offset": 209 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Recap",
+            "position": {
+              "start": { "line": 4, "column": 4, "offset": 214 },
+              "end": { "line": 4, "column": 9, "offset": 219 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 211 },
+          "end": { "line": 4, "column": 9, "offset": 219 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Unlike CPUs, GPUs do not dedicate as much chip area to cache memories and branch prediction mechanisms. This is because GPUs have the ability to tolerate long-latency operations.",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 221 },
+              "end": { "line": 6, "column": 179, "offset": 399 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 221 },
+          "end": { "line": 6, "column": 179, "offset": 399 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "GPU SMs are designed in the way that each SM can execute only a small number of warps at any given time. But still there are ",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 401 },
+              "end": { "line": 8, "column": 126, "offset": 526 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 401 },
+          "end": { "line": 8, "column": 126, "offset": 526 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Assume that a CUDA device allows up to 8 blocks and 1024 threads per SM, whichever becomes a limitation first. Furthermore, it allows up to 512 threads in each block. For image blur, should we use 8 ×8, 16 ×16, or 32 ×32 thread blocks? To answer the question, we can analyze the pros and cons of each choice. If we use 8 ×8 blocks, each block would have only 64 threads. We will need 1024/64 =12 blocks to fully occupy an SM. However, each SM can only allow up to 8 blocks; thus, we will end up with only 64 ×8 =512 threads in each SM. This limited number implies that the SM execution resources will likely be underutilized because fewer warps will be available to schedule around long-latency operations.",
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 530 },
+              "end": { "line": 12, "column": 707, "offset": 1236 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 530 },
+          "end": { "line": 12, "column": 707, "offset": 1236 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The 16 ×16 blocks result in 256 threads per block, implying that each SM can take 1024/256 =4 blocks. This number is within the 8-block limitation and is a good configuration as it will allow us a full thread capacity in each SM and a maximal number of warps for scheduling around the long-latency operations. The 32 ×32 blocks would give 1024 threads in each block, which exceeds the 512 threads per block limitation of this device. Only 16 ×16 blocks allow a maximal number of threads assigned to each SM.",
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 1238 },
+              "end": { "line": 14, "column": 508, "offset": 1745 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 1238 },
+          "end": { "line": 14, "column": 508, "offset": 1745 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 14, "column": 508, "offset": 1745 }
+    }
+  }
+}

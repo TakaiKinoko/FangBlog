@@ -1,0 +1,326 @@
+{
+  "expireTime": 9007200830737316000,
+  "key": "transformer-remark-markdown-html-ast-00af184378e8db59a47bc94fb68bc89b-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "I briefly talked about how CUDA processors hide long-latency operations such as global memory accesses through their warp-scheduling mechanism in ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 147, "offset": 147 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "a",
+            "properties": { "href": "/cuda2-warp" },
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 2. Warps",
+                "position": {
+                  "start": { "line": 2, "column": 148, "offset": 148 },
+                  "end": { "line": 2, "column": 194, "offset": 194 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 147, "offset": 147 },
+              "end": { "line": 2, "column": 208, "offset": 208 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": { "line": 2, "column": 208, "offset": 208 },
+              "end": { "line": 2, "column": 209, "offset": 209 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 209, "offset": 209 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Recap",
+            "position": {
+              "start": { "line": 4, "column": 4, "offset": 214 },
+              "end": { "line": 4, "column": 9, "offset": 219 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 211 },
+          "end": { "line": 4, "column": 9, "offset": 219 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Unlike CPUs, GPUs do not dedicate as much chip area to cache memories and branch prediction mechanisms. This is because GPUs have the ability to tolerate long-latency operations.",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 221 },
+              "end": { "line": 6, "column": 179, "offset": 399 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 221 },
+          "end": { "line": 6, "column": 179, "offset": 399 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "GPU SMs are designed in the way that each SM can execute only a small number of warps at any given time. However, the number of warps residing on the SM is much bigger than what can actually be executed. The reason for this is, when a warp is currently waiting for result from a ",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 401 },
+              "end": { "line": 8, "column": 280, "offset": 680 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "long-latency operation",
+                "position": {
+                  "start": { "line": 8, "column": 282, "offset": 682 },
+                  "end": { "line": 8, "column": 304, "offset": 704 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 280, "offset": 680 },
+              "end": { "line": 8, "column": 306, "offset": 706 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", such as:",
+            "position": {
+              "start": { "line": 8, "column": 306, "offset": 706 },
+              "end": { "line": 8, "column": 316, "offset": 716 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 401 },
+          "end": { "line": 8, "column": 316, "offset": 716 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "global memory access",
+                "position": {
+                  "start": { "line": 10, "column": 3, "offset": 720 },
+                  "end": { "line": 10, "column": 23, "offset": 740 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 718 },
+              "end": { "line": 10, "column": 23, "offset": 740 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "floating-point arithmetic",
+                "position": {
+                  "start": { "line": 11, "column": 3, "offset": 743 },
+                  "end": { "line": 11, "column": 28, "offset": 768 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 11, "column": 1, "offset": 741 },
+              "end": { "line": 11, "column": 28, "offset": 768 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "branch instructions",
+                "position": {
+                  "start": { "line": 12, "column": 3, "offset": 771 },
+                  "end": { "line": 12, "column": 22, "offset": 790 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 769 },
+              "end": { "line": 12, "column": 22, "offset": 790 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 718 },
+          "end": { "line": 12, "column": 22, "offset": 790 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "the warp scheduler on the SM will pick another warp that’s ready to execute, therefore avoids idle time. By having a sufficient number of warps on the SM, the hardware will likely fo find a warp to execute at any point in time.",
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 792 },
+              "end": { "line": 14, "column": 228, "offset": 1019 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 792 },
+          "end": { "line": 14, "column": 228, "offset": 1019 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Having zero idle time or wasted time is referred to as ",
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 1021 },
+              "end": { "line": 16, "column": 56, "offset": 1076 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "zero-overhead thread scheduling",
+                "position": {
+                  "start": { "line": 16, "column": 58, "offset": 1078 },
+                  "end": { "line": 16, "column": 89, "offset": 1109 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 16, "column": 56, "offset": 1076 },
+              "end": { "line": 16, "column": 91, "offset": 1111 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " in processor designs.",
+            "position": {
+              "start": { "line": 16, "column": 91, "offset": 1111 },
+              "end": { "line": 16, "column": 113, "offset": 1133 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 16, "column": 1, "offset": 1021 },
+          "end": { "line": 16, "column": 113, "offset": 1133 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Assume that a CUDA device allows up to 8 blocks and 1024 threads per SM, whichever becomes a limitation first. Furthermore, it allows up to 512 threads in each block. For image blur, should we use 8 ×8, 16 ×16, or 32 ×32 thread blocks? To answer the question, we can analyze the pros and cons of each choice. If we use 8 ×8 blocks, each block would have only 64 threads. We will need 1024/64 =12 blocks to fully occupy an SM. However, each SM can only allow up to 8 blocks; thus, we will end up with only 64 ×8 =512 threads in each SM. This limited number implies that the SM execution resources will likely be underutilized because fewer warps will be available to schedule around long-latency operations.",
+            "position": {
+              "start": { "line": 18, "column": 1, "offset": 1135 },
+              "end": { "line": 18, "column": 707, "offset": 1841 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 18, "column": 1, "offset": 1135 },
+          "end": { "line": 18, "column": 707, "offset": 1841 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The 16 ×16 blocks result in 256 threads per block, implying that each SM can take 1024/256 =4 blocks. This number is within the 8-block limitation and is a good configuration as it will allow us a full thread capacity in each SM and a maximal number of warps for scheduling around the long-latency operations. The 32 ×32 blocks would give 1024 threads in each block, which exceeds the 512 threads per block limitation of this device. Only 16 ×16 blocks allow a maximal number of threads assigned to each SM.",
+            "position": {
+              "start": { "line": 20, "column": 1, "offset": 1843 },
+              "end": { "line": 20, "column": 508, "offset": 2350 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 20, "column": 1, "offset": 1843 },
+          "end": { "line": 20, "column": 508, "offset": 2350 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 20, "column": 508, "offset": 2350 }
+    }
+  }
+}
