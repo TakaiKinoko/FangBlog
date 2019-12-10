@@ -100,7 +100,7 @@ Since all threads within a warp executes the same instruction, they all execute 
 
 If the above doesn't make sense to you 🧐, read the post on the matrix application kernel here: [CUDA Programming Examples - 1. Matrix Multiplication](/cuda7-matrixmult)
 
-#### a coalesced access pattern
+#### a coalesced access pattern -- example of N
 
 ![a coalesced access pattern](./coalescedP.jpg)
 
@@ -132,7 +132,6 @@ __global__ void MatrixMulKernel (float* M, float* N, float* P, int Width){
 
 - Since **adjacent threads** have consecutive threadIdx.x values, their accessed elements will have consecutive addresses.
 
-![example](./block.jpg)
 In the pictured example, we are using only 1 block to calculate the entire P matrix, where:
 
 - block size: 4 \* 4
@@ -161,7 +160,7 @@ In the pictured example, we are using only 1 block to calculate the entire P mat
   ```
   The N elements accessed by `T0, T1, T2, T3` in this iteration are `N[5], N[6], N[7], and N[8]`, as shown with the “Load iteration 1” box.
 
-#### an un-coalesced access pattern -- e.g. M
+#### an un-coalesced access pattern -- example of M
 
 ![an un-coalesced access pattern](./uncoalescedP.jpg)
 
