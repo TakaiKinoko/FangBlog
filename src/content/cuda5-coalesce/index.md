@@ -57,7 +57,7 @@ Current CUDA devices employ a technique that allows the programmers to achieve h
 
 ### matrix multiplication example
 
-Recall from [The CUDA Parallel Programming Model - 2. Warps](/cuda2-warp) that multidimensional array elements in CUDA are placed into the linearly addressed memory space according to the **row-major** convention.
+Recall from [The CUDA Parallel Programming Model - 2. Warps](/cuda2-warp) that multidimensional array elements in CUDA are placed into the linearized addressed memory space according to the **row-major** convention.
 
 Say we have a kernel that computes `M x N`, where both M and N are 2D row-major array.
 
@@ -100,7 +100,7 @@ Since all threads within a warp executes the same instruction, they all execute 
 
 If the above doesn't make sense to you 🧐, read the post on the matrix application kernel here: [CUDA Programming Examples - 1. Matrix Multiplication](/cuda7-matrixmult)
 
-#### a coalesced access pattern -- e.g. N
+#### a coalesced access pattern
 
 ![a coalesced access pattern](./coalescedP.jpg)
 
