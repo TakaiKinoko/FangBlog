@@ -49,7 +49,7 @@ Current CUDA devices employ a technique that allows the programmers to achieve h
 
 - The most favorable access pattern is achieved when all threads in a warp access **consecutive global memory locations**.
 
-- When all threads in a warp execute a load instruction, the hardware detects whether they access consecutive global memory locations. If that's the case, the hardware combines (**coalesces**) all these accesses into a consolidated access to consecutive DRAM locations.
+- **When all threads in a warp execute a load instruction, the hardware detects whether they access consecutive global memory locations**. If that's the case, the hardware combines (**coalesces**) all these accesses into a consolidated access to consecutive DRAM locations.
 
 - For example, for a given load instruction of a warp, if thread 0 accesses global memory location N2, thread 1 location N+1, thread 2 location N+2, and so on, all these accesses will be coalesced into a single request for consecutive locations when accessing the DRAMs.
 
