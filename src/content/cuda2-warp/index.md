@@ -31,7 +31,7 @@ This is the second post in a series about what I learnt in my GPU class at NYU t
 
 ## More About Threads
 
-### Kernel threads hierarchy
+### Kernel Threads Hierarchy
 
 Recall that launching a CUDA kernel will generate a grid of threads organized as a **two-level** hierarchy.
 
@@ -45,13 +45,15 @@ Recall that launching a CUDA kernel will generate a grid of threads organized as
 
 - But the unit of thread scheduling is warp.
 
-### Synchronization of threads?
+### Synchronization of Threads?
 
 Conceptually, threads in a block can execute in any order, just like blocks.
 
 When an algorithm needs to execute in _phases_, **barrier synchronizations** should be used to ensure that all threads have completed a common phase before they start the next one.
 
 But the correctness of executing a kernel should not depend on the synchrony amongst threads.
+
+More on barrier synchronization: [The CUDA Parallel Programming Model - 4. Syncthreads Examples](/cuda4-sync)
 
 ## Warp
 
@@ -79,7 +81,7 @@ This implementation (doesn't just exist to annoy programmers) helps:
 
 #### SIMD hardware
 
-![processor](./processor.png)
+![SIMD SM](./processor.png)
 
 - The processor has only _one_ **control unit** that fetches and decodes instruction.
 
@@ -99,11 +101,11 @@ This is called Single-Instruction-Multiple-Data in processor design.
 
   - on-chip instruction caches to reduce the latency of instruction fetch.
 
-- Having multiple processing units share a control unit can result in significant reduction in hardware manufacturing cost and power consumption.
+* Having multiple processing units share a control unit can result in significant reduction in hardware manufacturing cost and power consumption.
 
 ### warp as an execution unit
 
-An SM is designed to execute all threads in a warp following the SIMD model -- at any instant in time, one instruction is fetched and executed for all threads in a warp. In the picture below, there's a single instruction fetch/dispatch shared among execution units(SPs) in th eSM. These threads will apply the same instruction to different portions of the data. Consequently, all threads in a warp will always have the **same execution timing**.
+An SM is designed to execute all threads in a warp following the SIMD model -- at any instant in time, one instruction is fetched and executed for all threads in a warp. In the picture below, there's a single instruction fetch/dispatch shared among execution units(SPs) in the SM. These threads will apply the same instruction to different portions of the data. Consequently, all threads in a warp will always have the **same execution timing**.
 
 ![](./warp.png)
 
@@ -155,21 +157,23 @@ Based on thread indices. Thread IDs within a warp are consecutive and increasing
 
    - the dimensions will be _projected into a linear order_ **before** partitioning into warps
 
-   ![linearized2D](./2D.png)
+   ![2D block lineariztion](./2D.png)
 
    - determine the linear order: place the rows with larger y and z coordinates after those with lower ones.
 
 1. _3D thread block_:
 
-   - first place all threads of which the threadIdx.z value is 0 into the linear order. Among these threads, they are treated as a 2D block as shown in above picture
+   - first place all threads of which the **threadIdx.z** value is 0 into the linear order. Among these threads, they are treated as a 2D block.
 
-   - example: a 3D thread block of dimensions 2 × 8 × 4
+![3D block lineariztion pattern](./3D.jpg)
 
-     - total 64 threads
+- example: a 3D thread block of dimensions 2 × 8 × 4
 
-     - warp 0: T(0,0,0) ~ T(0,7,3)
+  - total 64 threads
 
-     - warp 1: T(1,0,0) ~ T(1,7,3)
+  - warp 0: T(0,0,0) ~ T(0,7,3)
+
+  - warp 1: T(1,0,0) ~ T(1,7,3)
 
 ## Warp Execution
 
