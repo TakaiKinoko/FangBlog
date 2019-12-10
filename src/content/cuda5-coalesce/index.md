@@ -115,7 +115,7 @@ __global__ void MatrixMulKernel (float* M, float* N, float* P, int Width){
     // calculate the col index of the P element and N
     int Col = blockIdx.x * blockDim.x + threadIdx.x;
 
-    if((Row < Width) && (Col < Width>)){
+    if((Row < Width) && (Col < Width)){
         float Pvalue = 0;
         //each thread computes one element of the block sub-matrix
         for(int k = 0; k < Width; k++) {
@@ -132,6 +132,7 @@ __global__ void MatrixMulKernel (float* M, float* N, float* P, int Width){
 
 - Since **adjacent threads** have consecutive threadIdx.x values, their accessed elements will have consecutive addresses.
 
+![example](./block.jpg)
 In the pictured example, we are using only 1 block to calculate the entire P matrix, where:
 
 - block size: 4 \* 4
