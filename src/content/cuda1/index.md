@@ -84,7 +84,7 @@ Each SM has:
 - a set of execution units
 - a set of registers
 
-- a chunch of shared memory.
+- a chunk of shared memory.
 
 ### 🧐warp
 
@@ -115,7 +115,7 @@ TODO
 
 ## Memory Hierarchy
 
-![memory architecture](./memory.jpg)
+![](./memory.jpg)
 
 ### between CPU and GPU
 
@@ -135,7 +135,7 @@ Shared memory and registers are on-chip memories that are not visible to the hos
 
 1. data is first initialized here for the GPU to work on
 
-![global](./global.png)
+![](./global.png)
 
 ### shared memory
 
@@ -149,7 +149,7 @@ Shared memory and registers are on-chip memories that are not visible to the hos
 
 1. only exists for the lifetime of the block
 
-![global](./shared.png)
+![](./shared.png)
 
 ### local memory
 
@@ -159,7 +159,7 @@ Shared memory and registers are on-chip memories that are not visible to the hos
 
 1. generally handled automatically by the **compiler**
 
-![global](./local.png)
+![](./local.png)
 
 ### registers
 
@@ -183,7 +183,7 @@ To improve **compute-to-global-memory-access ratio** and thus achieve high execu
 
 Although both on-chip, they differ significantly in functionality and cost of access.
 
-![shared v.s. registers](./shared&registers.jpg)
+![shared memory v.s. registers](./shared&registers.jpg)
 
 #### background knowledge on how processors access different memory types
 
