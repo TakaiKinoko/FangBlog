@@ -1,0 +1,355 @@
+{
+  "expireTime": 9007200830739072000,
+  "key": "transformer-remark-markdown-html-ast-7ae58b673674f31e741d966bc9bd4813-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "There’s an intrinsic tradeoff in the use of device memories in CUDA: the ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 74, "offset": 74 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "global memory",
+                "position": {
+                  "start": { "line": 2, "column": 76, "offset": 76 },
+                  "end": { "line": 2, "column": 89, "offset": 89 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 74, "offset": 74 },
+              "end": { "line": 2, "column": 91, "offset": 91 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is large but slow, whereas the ",
+            "position": {
+              "start": { "line": 2, "column": 91, "offset": 91 },
+              "end": { "line": 2, "column": 123, "offset": 123 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "shared memory",
+                "position": {
+                  "start": { "line": 2, "column": 125, "offset": 125 },
+                  "end": { "line": 2, "column": 138, "offset": 138 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 123, "offset": 123 },
+              "end": { "line": 2, "column": 140, "offset": 140 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is small but fast.",
+            "position": {
+              "start": { "line": 2, "column": 140, "offset": 140 },
+              "end": { "line": 2, "column": 159, "offset": 159 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 159, "offset": 159 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "(To recap on the memory hierarchy: ",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 161 },
+              "end": { "line": 4, "column": 36, "offset": 196 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "a",
+            "properties": { "href": "/cuda1" },
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 1. Concepts",
+                "position": {
+                  "start": { "line": 4, "column": 37, "offset": 197 },
+                  "end": { "line": 4, "column": 86, "offset": 246 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 4, "column": 36, "offset": 196 },
+              "end": { "line": 4, "column": 95, "offset": 255 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", on how to specify memories for variables: ",
+            "position": {
+              "start": { "line": 4, "column": 95, "offset": 255 },
+              "end": { "line": 4, "column": 139, "offset": 299 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "a",
+            "properties": { "href": "/cudaProg2-Variables" },
+            "children": [
+              {
+                "type": "text",
+                "value": "CUDA Programming - 2. CUDA Variable Type Qualifiers",
+                "position": {
+                  "start": { "line": 4, "column": 140, "offset": 300 },
+                  "end": { "line": 4, "column": 191, "offset": 351 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 4, "column": 139, "offset": 299 },
+              "end": { "line": 4, "column": 214, "offset": 374 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".)",
+            "position": {
+              "start": { "line": 4, "column": 214, "offset": 374 },
+              "end": { "line": 4, "column": 216, "offset": 376 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 161 },
+          "end": { "line": 4, "column": 216, "offset": 376 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "A common strategy to reduce memory traffic is to partition the ",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 378 },
+              "end": { "line": 6, "column": 64, "offset": 441 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "data",
+                "position": {
+                  "start": { "line": 6, "column": 66, "offset": 443 },
+                  "end": { "line": 6, "column": 70, "offset": 447 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 64, "offset": 441 },
+              "end": { "line": 6, "column": 72, "offset": 449 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " into subsets called ",
+            "position": {
+              "start": { "line": 6, "column": 72, "offset": 449 },
+              "end": { "line": 6, "column": 93, "offset": 470 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "tiles",
+                "position": {
+                  "start": { "line": 6, "column": 95, "offset": 472 },
+                  "end": { "line": 6, "column": 100, "offset": 477 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 93, "offset": 470 },
+              "end": { "line": 6, "column": 102, "offset": 479 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " so that ",
+            "position": {
+              "start": { "line": 6, "column": 102, "offset": 479 },
+              "end": { "line": 6, "column": 111, "offset": 488 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "each tile fits into the shared memory",
+                "position": {
+                  "start": { "line": 6, "column": 113, "offset": 490 },
+                  "end": { "line": 6, "column": 150, "offset": 527 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 111, "offset": 488 },
+              "end": { "line": 6, "column": 152, "offset": 529 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". An important criterion is that kernel computation on these tiles can be performed independently of each other. Note that ",
+            "position": {
+              "start": { "line": 6, "column": 152, "offset": 529 },
+              "end": { "line": 6, "column": 275, "offset": 652 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "not",
+                "position": {
+                  "start": { "line": 6, "column": 277, "offset": 654 },
+                  "end": { "line": 6, "column": 280, "offset": 657 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 275, "offset": 652 },
+              "end": { "line": 6, "column": 282, "offset": 659 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " all data structures can be partitioned into tiles given an arbitrary kernel function.",
+            "position": {
+              "start": { "line": 6, "column": 282, "offset": 659 },
+              "end": { "line": 6, "column": 368, "offset": 745 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 378 },
+          "end": { "line": 6, "column": 368, "offset": 745 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The term “tile” draws on the analogy that a large wall (i.e., the global memory data) can be covered by tiles (i.e., subsets that each can fit into the shared memory).",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 747 },
+              "end": { "line": 8, "column": 168, "offset": 914 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 747 },
+          "end": { "line": 8, "column": 168, "offset": 914 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Using the example from ",
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 916 },
+              "end": { "line": 10, "column": 24, "offset": 939 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "a",
+            "properties": { "href": "/cudaProg1-matrixmult" },
+            "children": [
+              {
+                "type": "text",
+                "value": "CUDA Programming - 1. Matrix Multiplication",
+                "position": {
+                  "start": { "line": 10, "column": 25, "offset": 940 },
+                  "end": { "line": 10, "column": 68, "offset": 983 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 24, "offset": 939 },
+              "end": { "line": 10, "column": 92, "offset": 1007 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". ",
+            "position": {
+              "start": { "line": 10, "column": 92, "offset": 1007 },
+              "end": { "line": 10, "column": 94, "offset": 1009 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 916 },
+          "end": { "line": 10, "column": 94, "offset": 1009 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 10, "column": 94, "offset": 1009 }
+    }
+  }
+}

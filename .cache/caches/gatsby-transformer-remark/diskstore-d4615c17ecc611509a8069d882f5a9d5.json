@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830738441000,
+  "key": "transformer-remark-markdown-html-41c3b7a9a7d95559ee5acacfaffbc2a8-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<p>There’s an intrinsic tradeoff in the use of device memories in CUDA: the <strong>global memory</strong> is large but slow, whereas the <strong>shared memory</strong> is small but fast.</p>\n<p>To recap on the memory hierarchy: <a href=\"/cuda1\">The CUDA Parallel Programming Model - 1. Concepts</a>, on how to\nA common strategy is to partition the data into subsets called tiles so that each tile fits into the shared memory. The term “tile” draws on the analogy that a large wall (i.e., the global memory data) can be covered by tiles (i.e., subsets that each can fit into the shared memory). An important criterion is that kernel computation on these tiles can be performed independently of each other. Note that not all data structures can be partitioned into tiles given an arbitrary kernel function.</p>"
+}

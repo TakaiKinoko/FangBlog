@@ -1,0 +1,317 @@
+{
+  "expireTime": 9007200830738617000,
+  "key": "transformer-remark-markdown-ast-85965d1cb0cfd399b89908083997fcf7-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "There’s an intrinsic tradeoff in the use of device memories in CUDA: the ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 74, "offset": 74 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "global memory",
+                "position": {
+                  "start": { "line": 2, "column": 76, "offset": 76 },
+                  "end": { "line": 2, "column": 89, "offset": 89 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 74, "offset": 74 },
+              "end": { "line": 2, "column": 91, "offset": 91 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " is large but slow, whereas the ",
+            "position": {
+              "start": { "line": 2, "column": 91, "offset": 91 },
+              "end": { "line": 2, "column": 123, "offset": 123 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "shared memory",
+                "position": {
+                  "start": { "line": 2, "column": 125, "offset": 125 },
+                  "end": { "line": 2, "column": 138, "offset": 138 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 123, "offset": 123 },
+              "end": { "line": 2, "column": 140, "offset": 140 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " is small but fast. ",
+            "position": {
+              "start": { "line": 2, "column": 140, "offset": 140 },
+              "end": { "line": 2, "column": 160, "offset": 160 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 160, "offset": 160 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "(To recap on the memory hierarchy: ",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 162 },
+              "end": { "line": 4, "column": 36, "offset": 197 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/cuda1",
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 1. Concepts",
+                "position": {
+                  "start": { "line": 4, "column": 37, "offset": 198 },
+                  "end": { "line": 4, "column": 86, "offset": 247 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 4, "column": 36, "offset": 197 },
+              "end": { "line": 4, "column": 95, "offset": 256 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ", on how to specify memories for variables: ",
+            "position": {
+              "start": { "line": 4, "column": 95, "offset": 256 },
+              "end": { "line": 4, "column": 139, "offset": 300 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/cudaProg2-Variables",
+            "children": [
+              {
+                "type": "text",
+                "value": "CUDA Programming - 2. CUDA Variable Type Qualifiers",
+                "position": {
+                  "start": { "line": 4, "column": 140, "offset": 301 },
+                  "end": { "line": 4, "column": 191, "offset": 352 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 4, "column": 139, "offset": 300 },
+              "end": { "line": 4, "column": 214, "offset": 375 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ".)",
+            "position": {
+              "start": { "line": 4, "column": 214, "offset": 375 },
+              "end": { "line": 4, "column": 216, "offset": 377 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 162 },
+          "end": { "line": 4, "column": 216, "offset": 377 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A common strategy is to partition the ",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 379 },
+              "end": { "line": 6, "column": 39, "offset": 417 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "data",
+                "position": {
+                  "start": { "line": 6, "column": 41, "offset": 419 },
+                  "end": { "line": 6, "column": 45, "offset": 423 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 39, "offset": 417 },
+              "end": { "line": 6, "column": 47, "offset": 425 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " into subsets called ",
+            "position": {
+              "start": { "line": 6, "column": 47, "offset": 425 },
+              "end": { "line": 6, "column": 68, "offset": 446 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "tiles",
+                "position": {
+                  "start": { "line": 6, "column": 70, "offset": 448 },
+                  "end": { "line": 6, "column": 75, "offset": 453 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 68, "offset": 446 },
+              "end": { "line": 6, "column": 77, "offset": 455 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " so that ",
+            "position": {
+              "start": { "line": 6, "column": 77, "offset": 455 },
+              "end": { "line": 6, "column": 86, "offset": 464 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "each tile fits into the shared memory",
+                "position": {
+                  "start": { "line": 6, "column": 88, "offset": 466 },
+                  "end": { "line": 6, "column": 125, "offset": 503 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 86, "offset": 464 },
+              "end": { "line": 6, "column": 127, "offset": 505 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ". An important criterion is that kernel computation on these tiles can be performed independently of each other. Note that ",
+            "position": {
+              "start": { "line": 6, "column": 127, "offset": 505 },
+              "end": { "line": 6, "column": 250, "offset": 628 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "not",
+                "position": {
+                  "start": { "line": 6, "column": 252, "offset": 630 },
+                  "end": { "line": 6, "column": 255, "offset": 633 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 250, "offset": 628 },
+              "end": { "line": 6, "column": 257, "offset": 635 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " all data structures can be partitioned into tiles given an arbitrary kernel function.",
+            "position": {
+              "start": { "line": 6, "column": 257, "offset": 635 },
+              "end": { "line": 6, "column": 343, "offset": 721 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 379 },
+          "end": { "line": 6, "column": 343, "offset": 721 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The term “tile” draws on the analogy that a large wall (i.e., the global memory data) can be covered by tiles (i.e., subsets that each can fit into the shared memory). ",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 723 },
+              "end": { "line": 8, "column": 169, "offset": 891 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 723 },
+          "end": { "line": 8, "column": 169, "offset": 891 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 9, "column": 1, "offset": 892 }
+    }
+  }
+}

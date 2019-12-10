@@ -1,0 +1,1178 @@
+{
+  "expireTime": 9007200830740765000,
+  "key": "transformer-remark-markdown-html-ast-e5e451ec458a503910335f6289de8550-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "There’s an intrinsic tradeoff in the use of device memories in CUDA: the ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 74, "offset": 74 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "global memory",
+                "position": {
+                  "start": { "line": 2, "column": 76, "offset": 76 },
+                  "end": { "line": 2, "column": 89, "offset": 89 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 74, "offset": 74 },
+              "end": { "line": 2, "column": 91, "offset": 91 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is large but slow, whereas the ",
+            "position": {
+              "start": { "line": 2, "column": 91, "offset": 91 },
+              "end": { "line": 2, "column": 123, "offset": 123 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "shared memory",
+                "position": {
+                  "start": { "line": 2, "column": 125, "offset": 125 },
+                  "end": { "line": 2, "column": 138, "offset": 138 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 123, "offset": 123 },
+              "end": { "line": 2, "column": 140, "offset": 140 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is small but fast.",
+            "position": {
+              "start": { "line": 2, "column": 140, "offset": 140 },
+              "end": { "line": 2, "column": 159, "offset": 159 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 159, "offset": 159 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "(To recap on the memory hierarchy: ",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 161 },
+              "end": { "line": 4, "column": 36, "offset": 196 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "a",
+            "properties": { "href": "/cuda1" },
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 1. Concepts",
+                "position": {
+                  "start": { "line": 4, "column": 37, "offset": 197 },
+                  "end": { "line": 4, "column": 86, "offset": 246 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 4, "column": 36, "offset": 196 },
+              "end": { "line": 4, "column": 95, "offset": 255 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", on how to specify memories for variables: ",
+            "position": {
+              "start": { "line": 4, "column": 95, "offset": 255 },
+              "end": { "line": 4, "column": 139, "offset": 299 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "a",
+            "properties": { "href": "/cudaProg2-Variables" },
+            "children": [
+              {
+                "type": "text",
+                "value": "CUDA Programming - 2. CUDA Variable Type Qualifiers",
+                "position": {
+                  "start": { "line": 4, "column": 140, "offset": 300 },
+                  "end": { "line": 4, "column": 191, "offset": 351 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 4, "column": 139, "offset": 299 },
+              "end": { "line": 4, "column": 214, "offset": 374 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".)",
+            "position": {
+              "start": { "line": 4, "column": 214, "offset": 374 },
+              "end": { "line": 4, "column": 216, "offset": 376 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 161 },
+          "end": { "line": 4, "column": 216, "offset": 376 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "A common strategy to reduce memory traffic is to partition the ",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 378 },
+              "end": { "line": 6, "column": 64, "offset": 441 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "data",
+                "position": {
+                  "start": { "line": 6, "column": 66, "offset": 443 },
+                  "end": { "line": 6, "column": 70, "offset": 447 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 64, "offset": 441 },
+              "end": { "line": 6, "column": 72, "offset": 449 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " into subsets called ",
+            "position": {
+              "start": { "line": 6, "column": 72, "offset": 449 },
+              "end": { "line": 6, "column": 93, "offset": 470 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "tiles",
+                "position": {
+                  "start": { "line": 6, "column": 95, "offset": 472 },
+                  "end": { "line": 6, "column": 100, "offset": 477 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 93, "offset": 470 },
+              "end": { "line": 6, "column": 102, "offset": 479 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " so that ",
+            "position": {
+              "start": { "line": 6, "column": 102, "offset": 479 },
+              "end": { "line": 6, "column": 111, "offset": 488 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "each tile fits into the shared memory",
+                "position": {
+                  "start": { "line": 6, "column": 113, "offset": 490 },
+                  "end": { "line": 6, "column": 150, "offset": 527 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 111, "offset": 488 },
+              "end": { "line": 6, "column": 152, "offset": 529 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". An important criterion is that kernel computation on these tiles can be performed independently of each other. Note that ",
+            "position": {
+              "start": { "line": 6, "column": 152, "offset": 529 },
+              "end": { "line": 6, "column": 275, "offset": 652 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "not",
+                "position": {
+                  "start": { "line": 6, "column": 277, "offset": 654 },
+                  "end": { "line": 6, "column": 280, "offset": 657 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 275, "offset": 652 },
+              "end": { "line": 6, "column": 282, "offset": 659 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " all data structures can be partitioned into tiles given an arbitrary kernel function.",
+            "position": {
+              "start": { "line": 6, "column": 282, "offset": 659 },
+              "end": { "line": 6, "column": 368, "offset": 745 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 378 },
+          "end": { "line": 6, "column": 368, "offset": 745 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The term “tile” draws on the analogy that a large wall (i.e., the global memory data) can be covered by tiles (i.e., subsets that each can fit into the shared memory).",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 747 },
+              "end": { "line": 8, "column": 168, "offset": 914 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 747 },
+          "end": { "line": 8, "column": 168, "offset": 914 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "To illustrate the concept of tiling, we use the example from ",
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 916 },
+              "end": { "line": 10, "column": 62, "offset": 977 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "a",
+            "properties": { "href": "/cudaProg1-matrixmult" },
+            "children": [
+              {
+                "type": "text",
+                "value": "CUDA Programming - 1. Matrix Multiplication",
+                "position": {
+                  "start": { "line": 10, "column": 63, "offset": 978 },
+                  "end": { "line": 10, "column": 106, "offset": 1021 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 62, "offset": 977 },
+              "end": { "line": 10, "column": 130, "offset": 1045 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", assumes that we use four 2×2 blocks to compute the P matrix. The picture below highlights the computation performed by the four threads of block(0,0):",
+            "position": {
+              "start": { "line": 10, "column": 130, "offset": 1045 },
+              "end": { "line": 10, "column": 282, "offset": 1197 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 916 },
+          "end": { "line": 10, "column": 282, "offset": 1197 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/8a6ac4a5ad16d10fb7057c2042b31ad6/e1ec8/block.jpg\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 97.9320531757755%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAEFAgMG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHoKTfjm2g1IkJB/8QAGxAAAQQDAAAAAAAAAAAAAAAAAAECAwQUIDL/2gAIAQEAAQUCL3ZlKTP1/8QAFREBAQAAAAAAAAAAAAAAAAAAASD/2gAIAQMBAT8BRj//xAAWEQADAAAAAAAAAAAAAAAAAAABAiD/2gAIAQIBAT8BDR//xAAdEAABAgcAAAAAAAAAAAAAAAABAAIQERIgMkGh/9oACAEBAAY/Ak2GPE00AzGxb//EABsQAAICAwEAAAAAAAAAAAAAAAABEbEQIDFh/9oACAEBAAE/IStePQJ26EPrGiP/2gAMAwEAAgADAAAAEAAIAP/EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAEDAQE/EBR//8QAFREBAQAAAAAAAAAAAAAAAAAAASD/2gAIAQIBAT8QFSP/xAAgEAADAAAFBQAAAAAAAAAAAAAAATERIUFx8VFhkbHR/9oACAEBAAE/EDs57hays5l9HMJR4lN+Ba7iWVfnYayrnUS2n//Z'); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"block\"\n        title=\"block\"\n        src=\"/static/8a6ac4a5ad16d10fb7057c2042b31ad6/88218/block.jpg\"\n        srcset=\"/static/8a6ac4a5ad16d10fb7057c2042b31ad6/7237a/block.jpg 148w,\n/static/8a6ac4a5ad16d10fb7057c2042b31ad6/0cfdf/block.jpg 295w,\n/static/8a6ac4a5ad16d10fb7057c2042b31ad6/88218/block.jpg 590w,\n/static/8a6ac4a5ad16d10fb7057c2042b31ad6/e1ec8/block.jpg 677w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>",
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 1199 },
+              "end": { "line": 12, "column": 17, "offset": 1215 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 1199 },
+          "end": { "line": 12, "column": 17, "offset": 1215 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Another picture (below) is used to show the global memory accesses performed by block(0, 0). Among the four threads highlighted, a significant ",
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 1217 },
+              "end": { "line": 14, "column": 144, "offset": 1360 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "overlap",
+                "position": {
+                  "start": { "line": 14, "column": 146, "offset": 1362 },
+                  "end": { "line": 14, "column": 153, "offset": 1369 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 14, "column": 144, "offset": 1360 },
+              "end": { "line": 14, "column": 155, "offset": 1371 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " occurs in the M and N elements they access.",
+            "position": {
+              "start": { "line": 14, "column": 155, "offset": 1371 },
+              "end": { "line": 14, "column": 199, "offset": 1415 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 1217 },
+          "end": { "line": 14, "column": 199, "offset": 1415 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/383c503ca2b90562629741e19a053781/dfb83/block00.jpg\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 32.97985153764581%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAHABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAdiAsD//xAAXEAADAQAAAAAAAAAAAAAAAAAAARAh/9oACAEBAAEFAtFP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQAGPwJ//8QAGBAAAwEBAAAAAAAAAAAAAAAAAAEhYXH/2gAIAQEAAT8h6hDZdP/aAAwDAQACAAMAAAAQc8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAaEAEBAAIDAAAAAAAAAAAAAAABEQAhMUGR/9oACAEBAAE/EKo3o0vOBioM7wUbfTn/2Q=='); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"block00\"\n        title=\"block00\"\n        src=\"/static/383c503ca2b90562629741e19a053781/88218/block00.jpg\"\n        srcset=\"/static/383c503ca2b90562629741e19a053781/7237a/block00.jpg 148w,\n/static/383c503ca2b90562629741e19a053781/0cfdf/block00.jpg 295w,\n/static/383c503ca2b90562629741e19a053781/88218/block00.jpg 590w,\n/static/383c503ca2b90562629741e19a053781/77d57/block00.jpg 885w,\n/static/383c503ca2b90562629741e19a053781/dfb83/block00.jpg 943w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>",
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 1417 },
+              "end": { "line": 16, "column": 19, "offset": 1435 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 16, "column": 1, "offset": 1417 },
+          "end": { "line": 16, "column": 19, "offset": 1435 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "If thread(0, 0) and thread(0, 1) can be made to collaborate so that these M elements are only loaded from the global memory once, the total number of accesses to the global memory can be reduced by half.",
+            "position": {
+              "start": { "line": 18, "column": 1, "offset": 1437 },
+              "end": { "line": 18, "column": 204, "offset": 1640 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 18, "column": 1, "offset": 1437 },
+          "end": { "line": 18, "column": 204, "offset": 1640 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "(The potential reduction in global memory traffic in the matrix multiplication example is proportional to the dimension of the blocks used. With Width ×Width blocks, the potential reduction of global memory traffic would be Width. Thus, if we use 16 ×16 blocks, the global memory traffic can be potentially reduced to 1/16 through collaboration between threads)",
+            "position": {
+              "start": { "line": 20, "column": 1, "offset": 1642 },
+              "end": { "line": 20, "column": 362, "offset": 2003 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 20, "column": 1, "offset": 1642 },
+          "end": { "line": 20, "column": 362, "offset": 2003 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Tiled Algorithms",
+            "position": {
+              "start": { "line": 22, "column": 4, "offset": 2008 },
+              "end": { "line": 22, "column": 20, "offset": 2024 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 22, "column": 1, "offset": 2005 },
+          "end": { "line": 22, "column": 20, "offset": 2024 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "threads and their DRAM accesses",
+            "position": {
+              "start": { "line": 24, "column": 5, "offset": 2030 },
+              "end": { "line": 24, "column": 36, "offset": 2061 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 24, "column": 1, "offset": 2026 },
+          "end": { "line": 24, "column": 36, "offset": 2061 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Tiled algorithms are highly similar to carpooling arrangements. We can consider ",
+            "position": {
+              "start": { "line": 26, "column": 1, "offset": 2063 },
+              "end": { "line": 26, "column": 81, "offset": 2143 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "threads",
+                "position": {
+                  "start": { "line": 26, "column": 83, "offset": 2145 },
+                  "end": { "line": 26, "column": 90, "offset": 2152 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 26, "column": 81, "offset": 2143 },
+              "end": { "line": 26, "column": 92, "offset": 2154 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " accessing data values as commuters and ",
+            "position": {
+              "start": { "line": 26, "column": 92, "offset": 2154 },
+              "end": { "line": 26, "column": 132, "offset": 2194 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "DRAM access",
+                "position": {
+                  "start": { "line": 26, "column": 134, "offset": 2196 },
+                  "end": { "line": 26, "column": 145, "offset": 2207 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 26, "column": 132, "offset": 2194 },
+              "end": { "line": 26, "column": 147, "offset": 2209 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " requests as vehicles.",
+            "position": {
+              "start": { "line": 26, "column": 147, "offset": 2209 },
+              "end": { "line": 26, "column": 169, "offset": 2231 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 26, "column": 1, "offset": 2063 },
+          "end": { "line": 26, "column": 169, "offset": 2231 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "When the rate of DRAM requests exceeds the provisioned access ",
+            "position": {
+              "start": { "line": 28, "column": 1, "offset": 2233 },
+              "end": { "line": 28, "column": 63, "offset": 2295 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "bandwidth",
+                "position": {
+                  "start": { "line": 28, "column": 65, "offset": 2297 },
+                  "end": { "line": 28, "column": 74, "offset": 2306 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 28, "column": 63, "offset": 2295 },
+              "end": { "line": 28, "column": 76, "offset": 2308 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " of the DRAM system, traffic congestion arises and the arithmetic units become idle.",
+            "position": {
+              "start": { "line": 28, "column": 76, "offset": 2308 },
+              "end": { "line": 28, "column": 160, "offset": 2392 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 28, "column": 1, "offset": 2233 },
+          "end": { "line": 28, "column": 160, "offset": 2392 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "If multiple threads access data from the same DRAM location, they can potentially form a “carpool” and ",
+            "position": {
+              "start": { "line": 30, "column": 1, "offset": 2394 },
+              "end": { "line": 30, "column": 104, "offset": 2497 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "combine their accesses into one DRAM request",
+                "position": {
+                  "start": { "line": 30, "column": 106, "offset": 2499 },
+                  "end": { "line": 30, "column": 150, "offset": 2543 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 30, "column": 104, "offset": 2497 },
+              "end": { "line": 30, "column": 152, "offset": 2545 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": { "line": 30, "column": 152, "offset": 2545 },
+              "end": { "line": 30, "column": 153, "offset": 2546 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 30, "column": 1, "offset": 2394 },
+          "end": { "line": 30, "column": 153, "offset": 2546 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "However, this process requires a ",
+            "position": {
+              "start": { "line": 32, "column": 1, "offset": 2548 },
+              "end": { "line": 32, "column": 34, "offset": 2581 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "similar execution schedule",
+                "position": {
+                  "start": { "line": 32, "column": 36, "offset": 2583 },
+                  "end": { "line": 32, "column": 62, "offset": 2609 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 32, "column": 34, "offset": 2581 },
+              "end": { "line": 32, "column": 64, "offset": 2611 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for the threads so that their data accesses can be combined.",
+            "position": {
+              "start": { "line": 32, "column": 64, "offset": 2611 },
+              "end": { "line": 32, "column": 125, "offset": 2672 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 32, "column": 1, "offset": 2548 },
+          "end": { "line": 32, "column": 125, "offset": 2672 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "This scenario is shown in the picture below:",
+            "position": {
+              "start": { "line": 34, "column": 1, "offset": 2674 },
+              "end": { "line": 34, "column": 45, "offset": 2718 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 34, "column": 1, "offset": 2674 },
+          "end": { "line": 34, "column": 45, "offset": 2718 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "the cells at the center represent DRAM locations",
+                "position": {
+                  "start": { "line": 36, "column": 3, "offset": 2722 },
+                  "end": { "line": 36, "column": 51, "offset": 2770 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 36, "column": 1, "offset": 2720 },
+              "end": { "line": 37, "column": 1, "offset": 2771 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "an arrow from a DRAM location pointing to a thread represents an access by the thread to that location at the time marked by the head of the arrow",
+                "position": {
+                  "start": { "line": 38, "column": 3, "offset": 2774 },
+                  "end": { "line": 38, "column": 149, "offset": 2920 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 38, "column": 1, "offset": 2772 },
+              "end": { "line": 39, "column": 1, "offset": 2921 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "the top portion shows two threads that access the same data elements with similar timing",
+                "position": {
+                  "start": { "line": 40, "column": 3, "offset": 2924 },
+                  "end": { "line": 40, "column": 91, "offset": 3012 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 40, "column": 1, "offset": 2922 },
+              "end": { "line": 41, "column": 1, "offset": 3013 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "the bottom half shows two threads that access their common data at varying times i.e., the accesses by Thread 2 lag significantly behind their corresponding accesses by Thread 1.",
+                "position": {
+                  "start": { "line": 42, "column": 3, "offset": 3016 },
+                  "end": { "line": 42, "column": 181, "offset": 3194 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 42, "column": 1, "offset": 3014 },
+              "end": { "line": 42, "column": 181, "offset": 3194 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 36, "column": 1, "offset": 2720 },
+          "end": { "line": 42, "column": 181, "offset": 3194 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/8e1a2a97d68a8fbbc53aada41de8761a/d55e0/tiled.jpg\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 51.68792198049512%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEDBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAAB60tSRFSP/8QAGhAAAgIDAAAAAAAAAAAAAAAAAAECERASQf/aAAgBAQABBQKbp7PDO0f/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAbEAACAQUAAAAAAAAAAAAAAAAAIQEgMTKRof/aAAgBAQAGPwJPRbsGdH//xAAbEAEBAAIDAQAAAAAAAAAAAAABABFRMWGBsf/aAAgBAQABPyFwwfQ+3fsRBUOslyiYaL//2gAMAwEAAgADAAAAEMv/AP/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EGf/xAAWEQEBAQAAAAAAAAAAAAAAAAABEFH/2gAIAQIBAT8QEyf/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhQTFRYbHx/9oACAEBAAE/EASxM1U9p1Xxcii1LXjiEHjZAIEEvc+NP//Z'); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"tiled\"\n        title=\"tiled\"\n        src=\"/static/8e1a2a97d68a8fbbc53aada41de8761a/88218/tiled.jpg\"\n        srcset=\"/static/8e1a2a97d68a8fbbc53aada41de8761a/7237a/tiled.jpg 148w,\n/static/8e1a2a97d68a8fbbc53aada41de8761a/0cfdf/tiled.jpg 295w,\n/static/8e1a2a97d68a8fbbc53aada41de8761a/88218/tiled.jpg 590w,\n/static/8e1a2a97d68a8fbbc53aada41de8761a/77d57/tiled.jpg 885w,\n/static/8e1a2a97d68a8fbbc53aada41de8761a/5a917/tiled.jpg 1180w,\n/static/8e1a2a97d68a8fbbc53aada41de8761a/d55e0/tiled.jpg 1333w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>",
+            "position": {
+              "start": { "line": 44, "column": 1, "offset": 3196 },
+              "end": { "line": 44, "column": 17, "offset": 3212 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 44, "column": 1, "offset": 3196 },
+          "end": { "line": 44, "column": 17, "offset": 3212 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "the reason the bottom is an undesirable arrangement is that data elements that are brought back from the DRAM need to be stored in the on-chip memory for an extended time, waiting to be consumed by Thread 2. A large number of data elements will need to be stored, resulting in an excessive on-chip memory requirement.",
+            "position": {
+              "start": { "line": 46, "column": 1, "offset": 3214 },
+              "end": { "line": 46, "column": 318, "offset": 3531 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 46, "column": 1, "offset": 3214 },
+          "end": { "line": 46, "column": 318, "offset": 3531 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "tiling as a parallel algorithm",
+            "position": {
+              "start": { "line": 49, "column": 5, "offset": 3538 },
+              "end": { "line": 49, "column": 35, "offset": 3568 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 49, "column": 1, "offset": 3534 },
+          "end": { "line": 49, "column": 35, "offset": 3568 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "In the context of parallel computing, tiling is a program transformation technique that ",
+            "position": {
+              "start": { "line": 51, "column": 1, "offset": 3570 },
+              "end": { "line": 51, "column": 89, "offset": 3658 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "localizes the memory locations accessed among threads and the timing of their accesses",
+                "position": {
+                  "start": { "line": 51, "column": 91, "offset": 3660 },
+                  "end": { "line": 51, "column": 177, "offset": 3746 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 51, "column": 89, "offset": 3658 },
+              "end": { "line": 51, "column": 179, "offset": 3748 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". ",
+            "position": {
+              "start": { "line": 51, "column": 179, "offset": 3748 },
+              "end": { "line": 51, "column": 181, "offset": 3750 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 51, "column": 1, "offset": 3570 },
+          "end": { "line": 51, "column": 181, "offset": 3750 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "It divides the long access sequences of each thread into ",
+            "position": {
+              "start": { "line": 53, "column": 1, "offset": 3752 },
+              "end": { "line": 53, "column": 58, "offset": 3809 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "phases",
+                "position": {
+                  "start": { "line": 53, "column": 60, "offset": 3811 },
+                  "end": { "line": 53, "column": 66, "offset": 3817 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 53, "column": 58, "offset": 3809 },
+              "end": { "line": 53, "column": 68, "offset": 3819 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and uses ",
+            "position": {
+              "start": { "line": 53, "column": 68, "offset": 3819 },
+              "end": { "line": 53, "column": 78, "offset": 3829 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "barrier synchronization",
+                "position": {
+                  "start": { "line": 53, "column": 80, "offset": 3831 },
+                  "end": { "line": 53, "column": 103, "offset": 3854 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 53, "column": 78, "offset": 3829 },
+              "end": { "line": 53, "column": 105, "offset": 3856 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to keep the timing of accesses to each section at close intervals. ",
+            "position": {
+              "start": { "line": 53, "column": 105, "offset": 3856 },
+              "end": { "line": 53, "column": 173, "offset": 3924 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 53, "column": 1, "offset": 3752 },
+          "end": { "line": 53, "column": 173, "offset": 3924 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "This technique controls the amount of on-chip memory required by localizing the accesses both in time and in space. In terms of our carpool analogy, we force the threads that form the “carpool” group to follow approximately the same execution timing.",
+            "position": {
+              "start": { "line": 55, "column": 1, "offset": 3926 },
+              "end": { "line": 55, "column": 251, "offset": 4176 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 55, "column": 1, "offset": 3926 },
+          "end": { "line": 55, "column": 251, "offset": 4176 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "example",
+            "position": {
+              "start": { "line": 57, "column": 5, "offset": 4182 },
+              "end": { "line": 57, "column": 12, "offset": 4189 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 57, "column": 1, "offset": 4178 },
+          "end": { "line": 57, "column": 12, "offset": 4189 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "A tiled matrix multiplication algorithm is shown in the picture below:",
+            "position": {
+              "start": { "line": 59, "column": 1, "offset": 4191 },
+              "end": { "line": 59, "column": 71, "offset": 4261 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 59, "column": 1, "offset": 4191 },
+          "end": { "line": 59, "column": 71, "offset": 4261 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/3774b92e3dbb1f7ee4047d901d93eb16/dc940/example.jpg\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 96.97406340057638%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIDBAUG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAAfQcG+Mti1TLoCQP/8QAHhAAAgIABwAAAAAAAAAAAAAAAAECAwQREhMhMjP/2gAIAQEAAQUCMd6SXO7cW62ZIU2R6n//xAAVEQEBAAAAAAAAAAAAAAAAAAABIP/aAAgBAwEBPwFI/8QAFhEAAwAAAAAAAAAAAAAAAAAAAQIg/9oACAECAQE/AQ0f/8QAHxAAAgECBwAAAAAAAAAAAAAAAAECEXEQEiExMlKR/9oACAEBAAY/AhWOMRaS8IvLV06myI2Fh//EACEQAAIABAcBAAAAAAAAAAAAAAABIUGR8BExUXGhsdHx/9oACAEBAAE/ITjO2XrwTtSrZDLiJZHE+cTqjYaiYn//2gAMAwEAAgADAAAAEGfHAP/EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAEDAQE/EFI//8QAFxEBAAMAAAAAAAAAAAAAAAAAAREgMf/aAAgBAgEBPxCRxp//xAAfEAACAgIBBQAAAAAAAAAAAAABEQAhMVGRQYGhwdH/2gAIAQEAAT8QgOgHb8IFKK9mMwrKG8WO6DSZAWixoseI7JIFrjq1BCc5LHkxn04n/9k='); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"example\"\n        title=\"example\"\n        src=\"/static/3774b92e3dbb1f7ee4047d901d93eb16/88218/example.jpg\"\n        srcset=\"/static/3774b92e3dbb1f7ee4047d901d93eb16/7237a/example.jpg 148w,\n/static/3774b92e3dbb1f7ee4047d901d93eb16/0cfdf/example.jpg 295w,\n/static/3774b92e3dbb1f7ee4047d901d93eb16/88218/example.jpg 590w,\n/static/3774b92e3dbb1f7ee4047d901d93eb16/dc940/example.jpg 694w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>",
+            "position": {
+              "start": { "line": 61, "column": 1, "offset": 4263 },
+              "end": { "line": 61, "column": 19, "offset": 4281 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 61, "column": 1, "offset": 4263 },
+          "end": { "line": 61, "column": 19, "offset": 4281 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The basic idea is ",
+            "position": {
+              "start": { "line": 63, "column": 1, "offset": 4283 },
+              "end": { "line": 63, "column": 19, "offset": 4301 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "em",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "for the threads to collaboratively load subsets of the M and N elements into the shared memory before they individually use these elements in their dot product calculation",
+                "position": {
+                  "start": { "line": 63, "column": 20, "offset": 4302 },
+                  "end": { "line": 63, "column": 191, "offset": 4473 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 63, "column": 19, "offset": 4301 },
+              "end": { "line": 63, "column": 192, "offset": 4474 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". The size of the shared memory is quite small, and the capacity of the shared memory should not be exceeded when these M and N elements are loaded into the shared memory. This condition can be satisfied by dividing the M and N matrices into smaller tiles so that they can fit into the shared memory. In the simplest form, the tile dimensions equal those of the block.",
+            "position": {
+              "start": { "line": 63, "column": 192, "offset": 4474 },
+              "end": { "line": 63, "column": 560, "offset": 4842 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 63, "column": 1, "offset": 4283 },
+          "end": { "line": 63, "column": 560, "offset": 4842 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "In the picture above, we divide M and N into 2 ×2 tiles. The dot product calculations performed by each thread are now divided into phases. In each phase, all threads in a block collaborate to load a tile of M and a tile of N into the shared memory. This collaboration can be accomplished by having every thread in a block to load one M element and one N element into the shared memory, as illustrated in Fig. 4.15. Each row in Fig. 4.15 shows the execution activities of a thread. Note that time progresses from left to right. We only need to show the activities of threads in block0,0; all of the other blocks have the same behavior. The shared memory array for the M elements is called Mds, and that for the N elements is called Nds. At the beginning of Phase 1, the four threads of block0,0 collaboratively load a tile of M into a shared memory: thread0,0 loads M0,0 into Mds0,0, thread0,1 loads M0,1 into Mds0,1, thread1,0 loads M1,0 into Mds1,0, and thread1,1 loads M1,1 into Mds1,1, as shown in the second column in Fig. 4.15. A tile of N is also similarly loaded, as presented in the third column in Fig. 4.15.",
+            "position": {
+              "start": { "line": 65, "column": 1, "offset": 4844 },
+              "end": { "line": 65, "column": 1119, "offset": 5962 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 65, "column": 1, "offset": 4844 },
+          "end": { "line": 65, "column": 1119, "offset": 5962 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 65, "column": 1119, "offset": 5962 }
+    }
+  }
+}

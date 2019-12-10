@@ -15,6 +15,8 @@ This is the second post in a series about what I learnt in my GPU class at NYU t
    1. practical reasons
    1. **SIMD hardware**
    1. practical reasons to share control unit amongst processing units
+   1. warp as an execution unit
+   1. latency tolerance and zero-overhead thread scheduling
 1. How Are Blocks Partitioned?
    1. 1D block
    1. 2D block

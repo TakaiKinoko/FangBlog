@@ -1,0 +1,881 @@
+{
+  "expireTime": 9007200830741965000,
+  "key": "transformer-remark-markdown-html-ast-a5fd34ed5b32727a2dcd88d6f9fc3652-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 5, "offset": 5 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "compute-to-global-memory-access",
+                "position": {
+                  "start": { "line": 2, "column": 7, "offset": 7 },
+                  "end": { "line": 2, "column": 38, "offset": 38 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 5, "offset": 5 },
+              "end": { "line": 2, "column": 40, "offset": 40 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " ratio has major implications on the performance of a CUDA kernel. Programs whose execution speed is limited by memory access throughput as memory-bound programs.",
+            "position": {
+              "start": { "line": 2, "column": 40, "offset": 40 },
+              "end": { "line": 2, "column": 202, "offset": 202 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 202, "offset": 202 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Memory as a Limiting Factor to Parallelism",
+            "position": {
+              "start": { "line": 4, "column": 4, "offset": 207 },
+              "end": { "line": 4, "column": 46, "offset": 249 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 204 },
+          "end": { "line": 4, "column": 46, "offset": 249 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "the more the thread",
+            "position": {
+              "start": { "line": 6, "column": 5, "offset": 255 },
+              "end": { "line": 6, "column": 24, "offset": 274 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 251 },
+          "end": { "line": 6, "column": 25, "offset": 275 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "While CUDA registers and shared memory can be extremely effective in reducing the number of accesses to global memory, one must be careful to stay within the capacity of these memories. These memories are forms of resources necessary for thread execution. Each CUDA device offers limited resources, thereby ",
+            "position": {
+              "start": { "line": 7, "column": 1, "offset": 276 },
+              "end": { "line": 7, "column": 308, "offset": 583 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "limiting the number of threads that can simultaneously reside in the SM for a given application",
+                "position": {
+                  "start": { "line": 7, "column": 310, "offset": 585 },
+                  "end": { "line": 7, "column": 405, "offset": 680 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 7, "column": 308, "offset": 583 },
+              "end": { "line": 7, "column": 407, "offset": 682 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". In general, ",
+            "position": {
+              "start": { "line": 7, "column": 407, "offset": 682 },
+              "end": { "line": 7, "column": 421, "offset": 696 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "the more resources each thread requires, the fewer the threads that can reside in each SM, and likewise, the fewer the threads that can run in parallel in the entire device",
+                "position": {
+                  "start": { "line": 7, "column": 423, "offset": 698 },
+                  "end": { "line": 7, "column": 595, "offset": 870 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 7, "column": 421, "offset": 696 },
+              "end": { "line": 7, "column": 597, "offset": 872 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": { "line": 7, "column": 597, "offset": 872 },
+              "end": { "line": 7, "column": 598, "offset": 873 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 7, "column": 1, "offset": 276 },
+          "end": { "line": 7, "column": 598, "offset": 873 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [],
+        "position": {
+          "start": { "line": 9, "column": 1, "offset": 875 },
+          "end": { "line": 9, "column": 5, "offset": 879 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "To illustrate the interaction between register usage of a kernel and the level of parallelism that a device can support, assume that in a current-generation device D, each SM can accommodate up to 1536 threads and 16,384 registers. While 16,384 is a large number, each thread is only allowed to use a very limited number of registers, considering the number of threads that can reside in each SM. To support 1536 threads, each thread can use only 16,384/1536 =10 registers. If each thread uses 11 registers, the number of threads that can be executed concurrently in each SM will be reduced. Such reduction occurs at the block granularity; e.g., if each block contains 512 threads, the reduction of threads will be accomplished by reducing 512 threads at a time. Thus, the next smaller number of threads from 1536 will be 1024, indicating a 1/3 reduction of threads that can simultaneously reside in each SM. This procedure can substantially reduce the number of warps available for scheduling, thereby decreasing the ability of the processor to find useful work in the presence of long-latency operations.",
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 880 },
+              "end": { "line": 10, "column": 1107, "offset": 1986 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 880 },
+          "end": { "line": 10, "column": 1107, "offset": 1986 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Memory Parallism",
+            "position": {
+              "start": { "line": 15, "column": 4, "offset": 1994 },
+              "end": { "line": 15, "column": 20, "offset": 2010 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 15, "column": 1, "offset": 1991 },
+          "end": { "line": 15, "column": 20, "offset": 2010 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "DRAM bursting alone is not sufficient to realize the level of DRAM access bandwidth required by modern processors. In this post, I’ll talk more about how to achieve better memory parallelism.",
+            "position": {
+              "start": { "line": 17, "column": 1, "offset": 2012 },
+              "end": { "line": 17, "column": 192, "offset": 2203 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 17, "column": 1, "offset": 2012 },
+          "end": { "line": 17, "column": 192, "offset": 2203 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Forms of Parallel Organization",
+            "position": {
+              "start": { "line": 19, "column": 4, "offset": 2208 },
+              "end": { "line": 19, "column": 34, "offset": 2238 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 19, "column": 1, "offset": 2205 },
+          "end": { "line": 19, "column": 34, "offset": 2238 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "banks",
+                "position": {
+                  "start": { "line": 21, "column": 3, "offset": 2242 },
+                  "end": { "line": 21, "column": 8, "offset": 2247 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 21, "column": 1, "offset": 2240 },
+              "end": { "line": 21, "column": 8, "offset": 2247 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "channels",
+                "position": {
+                  "start": { "line": 22, "column": 3, "offset": 2250 },
+                  "end": { "line": 22, "column": 11, "offset": 2258 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 22, "column": 1, "offset": 2248 },
+              "end": { "line": 22, "column": 11, "offset": 2258 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 21, "column": 1, "offset": 2240 },
+          "end": { "line": 22, "column": 11, "offset": 2258 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<figure class=\"gatsby-resp-image-figure\" style=\"\">\n    <span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/46b5fc4fac4cc0c278e6734391a3089d/7e3f6/channel%26banks.jpg\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 43.699999999999996%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHtbSYwwf/EABoQAAEFAQAAAAAAAAAAAAAAAAABAhARMUH/2gAIAQEAAQUCo6mDY//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABUQAQEAAAAAAAAAAAAAAAAAAAEg/9oACAEBAAY/Amv/xAAZEAACAwEAAAAAAAAAAAAAAAABEQAQMZH/2gAIAQEAAT8hZQjxHFMmv//aAAwDAQACAAMAAAAQ0A//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAeEAEAAgIBBQAAAAAAAAAAAAABADERIRBBUWGh0f/aAAgBAQABPxBUsu63esS9lB7qr5AETZnr5hU97j//2Q=='); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"Channel and banks\"\n        title=\"Channel and banks\"\n        src=\"/static/46b5fc4fac4cc0c278e6734391a3089d/88218/channel%26banks.jpg\"\n        srcset=\"/static/46b5fc4fac4cc0c278e6734391a3089d/7237a/channel%26banks.jpg 148w,\n/static/46b5fc4fac4cc0c278e6734391a3089d/0cfdf/channel%26banks.jpg 295w,\n/static/46b5fc4fac4cc0c278e6734391a3089d/88218/channel%26banks.jpg 590w,\n/static/46b5fc4fac4cc0c278e6734391a3089d/77d57/channel%26banks.jpg 885w,\n/static/46b5fc4fac4cc0c278e6734391a3089d/7e3f6/channel%26banks.jpg 1000w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>\n    <figcaption class=\"gatsby-resp-image-figcaption\">Channel and banks</figcaption>\n  </figure>",
+            "position": {
+              "start": { "line": 24, "column": 1, "offset": 2260 },
+              "end": { "line": 24, "column": 42, "offset": 2301 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 24, "column": 1, "offset": 2260 },
+          "end": { "line": 24, "column": 42, "offset": 2301 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "A processor contains one or more channels.",
+                "position": {
+                  "start": { "line": 26, "column": 3, "offset": 2305 },
+                  "end": { "line": 26, "column": 45, "offset": 2347 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 26, "column": 1, "offset": 2303 },
+              "end": { "line": 26, "column": 45, "offset": 2347 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Each channel is a ",
+                "position": {
+                  "start": { "line": 27, "column": 3, "offset": 2350 },
+                  "end": { "line": 27, "column": 21, "offset": 2368 }
+                }
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "memory controller",
+                    "position": {
+                      "start": { "line": 27, "column": 23, "offset": 2370 },
+                      "end": { "line": 27, "column": 40, "offset": 2387 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 27, "column": 21, "offset": 2368 },
+                  "end": { "line": 27, "column": 42, "offset": 2389 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " with a ",
+                "position": {
+                  "start": { "line": 27, "column": 42, "offset": 2389 },
+                  "end": { "line": 27, "column": 50, "offset": 2397 }
+                }
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "bus",
+                    "position": {
+                      "start": { "line": 27, "column": 52, "offset": 2399 },
+                      "end": { "line": 27, "column": 55, "offset": 2402 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 27, "column": 50, "offset": 2397 },
+                  "end": { "line": 27, "column": 57, "offset": 2404 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " that connects a set of ",
+                "position": {
+                  "start": { "line": 27, "column": 57, "offset": 2404 },
+                  "end": { "line": 27, "column": 81, "offset": 2428 }
+                }
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "DRAM banks",
+                    "position": {
+                      "start": { "line": 27, "column": 83, "offset": 2430 },
+                      "end": { "line": 27, "column": 93, "offset": 2440 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 27, "column": 81, "offset": 2428 },
+                  "end": { "line": 27, "column": 95, "offset": 2442 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " to the processor.",
+                "position": {
+                  "start": { "line": 27, "column": 95, "offset": 2442 },
+                  "end": { "line": 27, "column": 113, "offset": 2460 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 27, "column": 1, "offset": 2348 },
+              "end": { "line": 27, "column": 113, "offset": 2460 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 26, "column": 1, "offset": 2303 },
+          "end": { "line": 27, "column": 113, "offset": 2460 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Bus",
+            "position": {
+              "start": { "line": 29, "column": 5, "offset": 2466 },
+              "end": { "line": 29, "column": 8, "offset": 2469 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 29, "column": 1, "offset": 2462 },
+          "end": { "line": 29, "column": 8, "offset": 2469 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The data transfer bandwidth of a bus is defined by its ",
+            "position": {
+              "start": { "line": 31, "column": 1, "offset": 2471 },
+              "end": { "line": 31, "column": 56, "offset": 2526 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "em",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "width",
+                "position": {
+                  "start": { "line": 31, "column": 57, "offset": 2527 },
+                  "end": { "line": 31, "column": 62, "offset": 2532 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 31, "column": 56, "offset": 2526 },
+              "end": { "line": 31, "column": 63, "offset": 2533 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": { "line": 31, "column": 63, "offset": 2533 },
+              "end": { "line": 31, "column": 68, "offset": 2538 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "em",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "clock frequency",
+                "position": {
+                  "start": { "line": 31, "column": 69, "offset": 2539 },
+                  "end": { "line": 31, "column": 84, "offset": 2554 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 31, "column": 68, "offset": 2538 },
+              "end": { "line": 31, "column": 85, "offset": 2555 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": { "line": 31, "column": 85, "offset": 2555 },
+              "end": { "line": 31, "column": 86, "offset": 2556 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 31, "column": 1, "offset": 2471 },
+          "end": { "line": 31, "column": 86, "offset": 2556 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Modern double data rate (DDR) busses perform two data transfers per clock cycle:",
+            "position": {
+              "start": { "line": 33, "column": 1, "offset": 2558 },
+              "end": { "line": 33, "column": 81, "offset": 2638 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 33, "column": 1, "offset": 2558 },
+          "end": { "line": 33, "column": 81, "offset": 2638 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "one at the rising edge of each clock cycle",
+                "position": {
+                  "start": { "line": 35, "column": 3, "offset": 2642 },
+                  "end": { "line": 35, "column": 45, "offset": 2684 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 35, "column": 1, "offset": 2640 },
+              "end": { "line": 35, "column": 45, "offset": 2684 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "one at the falling edge of each clock cycle",
+                "position": {
+                  "start": { "line": 36, "column": 3, "offset": 2687 },
+                  "end": { "line": 36, "column": 46, "offset": 2730 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 36, "column": 1, "offset": 2685 },
+              "end": { "line": 36, "column": 46, "offset": 2730 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 35, "column": 1, "offset": 2640 },
+          "end": { "line": 36, "column": 46, "offset": 2730 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "is DDR enough?",
+            "position": {
+              "start": { "line": 38, "column": 6, "offset": 2737 },
+              "end": { "line": 38, "column": 20, "offset": 2751 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 38, "column": 1, "offset": 2732 },
+          "end": { "line": 38, "column": 20, "offset": 2751 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "For example, a 64-bit DDR bus with a clock frequency of 1 GHz has a bandwidth of ",
+            "position": {
+              "start": { "line": 40, "column": 1, "offset": 2753 },
+              "end": { "line": 40, "column": 82, "offset": 2834 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">8B*2*1 GHz =16 GB/sec</code>",
+            "position": {
+              "start": { "line": 40, "column": 82, "offset": 2834 },
+              "end": { "line": 40, "column": 105, "offset": 2857 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". This seems to be a large number but is often ",
+            "position": {
+              "start": { "line": 40, "column": 105, "offset": 2857 },
+              "end": { "line": 40, "column": 152, "offset": 2904 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "too small",
+                "position": {
+                  "start": { "line": 40, "column": 154, "offset": 2906 },
+                  "end": { "line": 40, "column": 163, "offset": 2915 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 40, "column": 152, "offset": 2904 },
+              "end": { "line": 40, "column": 165, "offset": 2917 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for modern CPUs and GPUs.",
+            "position": {
+              "start": { "line": 40, "column": 165, "offset": 2917 },
+              "end": { "line": 40, "column": 191, "offset": 2943 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 40, "column": 1, "offset": 2753 },
+          "end": { "line": 40, "column": 191, "offset": 2943 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "A modern CPU might require a memory bandwidth of at least 32 GB/s, it’s 2 channels for this example.",
+                "position": {
+                  "start": { "line": 42, "column": 3, "offset": 2947 },
+                  "end": { "line": 42, "column": 103, "offset": 3047 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 42, "column": 1, "offset": 2945 },
+              "end": { "line": 42, "column": 103, "offset": 3047 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "a modern GPU might require 128 GB/s. For this example, it’s 8 channels.",
+                "position": {
+                  "start": { "line": 43, "column": 3, "offset": 3050 },
+                  "end": { "line": 43, "column": 74, "offset": 3121 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 43, "column": 1, "offset": 3048 },
+              "end": { "line": 43, "column": 74, "offset": 3121 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 42, "column": 1, "offset": 2945 },
+          "end": { "line": 43, "column": 74, "offset": 3121 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Banks",
+            "position": {
+              "start": { "line": 45, "column": 5, "offset": 3127 },
+              "end": { "line": 45, "column": 10, "offset": 3132 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 45, "column": 1, "offset": 3123 },
+          "end": { "line": 45, "column": 10, "offset": 3132 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "The number of banks connected to a channel is determined by the what’s required to ",
+            "position": {
+              "start": { "line": 47, "column": 1, "offset": 3134 },
+              "end": { "line": 47, "column": 84, "offset": 3217 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "fully utilize the data transfer bandwidth of the bus",
+                "position": {
+                  "start": { "line": 47, "column": 86, "offset": 3219 },
+                  "end": { "line": 47, "column": 138, "offset": 3271 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 47, "column": 84, "offset": 3217 },
+              "end": { "line": 47, "column": 140, "offset": 3273 }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". This is illustrated in the picture below. Each bank contains an array of DRAM cells, the sensing amplifiers for accessing these cells, and the interface for delivering bursts of data to the bus.",
+            "position": {
+              "start": { "line": 47, "column": 140, "offset": 3273 },
+              "end": { "line": 47, "column": 336, "offset": 3469 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 47, "column": 1, "offset": 3134 },
+          "end": { "line": 47, "column": 336, "offset": 3469 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<figure class=\"gatsby-resp-image-figure\" style=\"\">\n    <span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/c18804ecc1f3c9991bb174711fc73701/e6d19/banks.jpg\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 44.766146993318486%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAdhLKBYP/8QAGhAAAgIDAAAAAAAAAAAAAAAAAQIRIQAQMf/aAAgBAQABBQJqyaCyD3X/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAQSAhgZH/2gAIAQEABj8CeD4XD//EABsQAAICAwEAAAAAAAAAAAAAAAERABAhMWFR/9oACAEBAAE/IT0THw4MYRHkKSz7g1DYr//aAAwDAQACAAMAAAAQw8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAeEAEAAgEEAwAAAAAAAAAAAAABADERECFhoXGBwf/aAAgBAQABPxDkgw7LuAEULVTyUMxEWFl9gOn3PsKn/9k='); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"banks\"\n        title=\"banks\"\n        src=\"/static/c18804ecc1f3c9991bb174711fc73701/88218/banks.jpg\"\n        srcset=\"/static/c18804ecc1f3c9991bb174711fc73701/7237a/banks.jpg 148w,\n/static/c18804ecc1f3c9991bb174711fc73701/0cfdf/banks.jpg 295w,\n/static/c18804ecc1f3c9991bb174711fc73701/88218/banks.jpg 590w,\n/static/c18804ecc1f3c9991bb174711fc73701/77d57/banks.jpg 885w,\n/static/c18804ecc1f3c9991bb174711fc73701/e6d19/banks.jpg 898w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>\n    <figcaption class=\"gatsby-resp-image-figcaption\">banks</figcaption>\n  </figure>",
+            "position": {
+              "start": { "line": 49, "column": 1, "offset": 3471 },
+              "end": { "line": 49, "column": 22, "offset": 3492 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 49, "column": 1, "offset": 3471 },
+          "end": { "line": 49, "column": 22, "offset": 3492 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "(More about interleaved data distribution later…)",
+            "position": {
+              "start": { "line": 51, "column": 1, "offset": 3494 },
+              "end": { "line": 51, "column": 52, "offset": 3545 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 51, "column": 1, "offset": 3494 },
+          "end": { "line": 51, "column": 52, "offset": 3545 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 52, "column": 1, "offset": 3546 }
+    }
+  }
+}
