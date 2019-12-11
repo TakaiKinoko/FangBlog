@@ -183,6 +183,14 @@ In the pictured example, we are using only 1 block to calculate the entire P mat
 
 - The M elements accessed by `T0, T1, T2, T3` are `M[0], M[4], M[8], and M[12]`, as shown with the “Load iteration 0” box in the above figure. These elements are not in consecutive locations in the global memory. The hardware cannot coalesce these accesses into a consolidated access.
 
+### note on alignment
+
+When accessing words of size 1, 2, 4, 8, or 16 bytes and are aligned, compiler translates this to 1 global memory instruction.
+
+But if size and alignment requirements are not met, compiler would translate it to multiple global memory access instructions.
+
+You can enforce the compiler to align using `__align(x)__`, for example: `struct __align(16)__{...};`
+
 ## Corner Turning
 
 What if we have to iterate through data along the row direction?

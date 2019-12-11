@@ -135,6 +135,17 @@ Shared memory and registers are on-chip memories that are not visible to the hos
 
 1. data is first initialized here for the GPU to work on
 
+1. two main challenges regarding gloabl memory:
+
+   - long latency
+   - relatively limited bandwidth
+
+1. techniques and hardwares to deal with the limitations of global memory:
+
+   - make use of shared memory available in SMs to reduce trips to global memory (read more about **tiling** in [The CUDA Parallel Programming Model - 7.Tiling](/cuda7-tiling))
+   - more effectively move data from global memory to shared memory and registers using **coalescing** (read more about coalescing in [The CUDA Parallel Programming Model - 5. Memory Coalescing](/cuda5-coalesce))
+   - use cache which automatically coalesce most of kernel access patterns (e.g. the L2 cache in Fermi and later GPUs make coaleced accesses by default)
+
 ![](./global.png)
 
 ### shared memory
