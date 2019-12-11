@@ -1,0 +1,317 @@
+{
+  "expireTime": 9007200830837751000,
+  "key": "transformer-remark-markdown-html-ast-76fdd3a425fc79837eb86d6472278b0d-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Unified Virtual Address Space (UVA)",
+            "position": {
+              "start": { "line": 2, "column": 4, "offset": 4 },
+              "end": { "line": 2, "column": 39, "offset": 39 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 39, "offset": 39 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "From CUDA 4.0 and on, UVA has been an important feature. It",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 41 },
+              "end": { "line": 4, "column": 60, "offset": 100 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 41 },
+          "end": { "line": 4, "column": 60, "offset": 100 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "puts all CUDA execution, host and GPUs, in the same address space",
+                "position": {
+                  "start": { "line": 5, "column": 3, "offset": 103 },
+                  "end": { "line": 5, "column": 68, "offset": 168 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 5, "column": 1, "offset": 101 },
+              "end": { "line": 5, "column": 68, "offset": 168 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Requires Fermi-class GPU and above",
+                "position": {
+                  "start": { "line": 6, "column": 3, "offset": 171 },
+                  "end": { "line": 6, "column": 37, "offset": 205 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 169 },
+              "end": { "line": 6, "column": 37, "offset": 205 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Requires 64-bit application",
+                "position": {
+                  "start": { "line": 7, "column": 3, "offset": 208 },
+                  "end": { "line": 7, "column": 30, "offset": 235 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 7, "column": 1, "offset": 206 },
+              "end": { "line": 7, "column": 30, "offset": 235 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Call ",
+                "position": {
+                  "start": { "line": 8, "column": 3, "offset": 238 },
+                  "end": { "line": 8, "column": 8, "offset": 243 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">cudaGetDeviceProperties()</code>",
+                "position": {
+                  "start": { "line": 8, "column": 8, "offset": 243 },
+                  "end": { "line": 8, "column": 35, "offset": 270 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " for all participating devices and check ",
+                "position": {
+                  "start": { "line": 8, "column": 35, "offset": 270 },
+                  "end": { "line": 8, "column": 76, "offset": 311 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">unifiedAddressing</code>",
+                "position": {
+                  "start": { "line": 8, "column": 76, "offset": 311 },
+                  "end": { "line": 8, "column": 95, "offset": 330 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " flag",
+                "position": {
+                  "start": { "line": 8, "column": 95, "offset": 330 },
+                  "end": { "line": 8, "column": 100, "offset": 335 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 236 },
+              "end": { "line": 8, "column": 100, "offset": 335 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 5, "column": 1, "offset": 101 },
+          "end": { "line": 8, "column": 100, "offset": 335 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<figure class=\"gatsby-resp-image-figure\" style=\"\">\n    <span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/716ff7cbec1625aebc2078e7c552f7a4/d4c84/uva.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 53.36481700118064%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACjklEQVQoz1WSzU8TYRDGty20XbbsLsu23e1+dLctsdCCRQ0BkaC2ioIgKBoVMH5BCCdNIMbEiCbIxYMHNSZ+HPyKMYaLdy8m/l0/t1sFOUzmmbwzzzvPzAiCIPDPIpFI6NsSEbIFiYzfQbct0u2IaJZIV04kW5TQnQ50VyKZiv2t2+MQ/idsWsZU6alY+H1Z+oddKkcsyrUctZECh0aLVIccBoY9KoEv12wMS9tXL0iShGmaZDKZ0DuujefnMbJGEBtBbNGtdRGLxVC7ZBzHJpdr5jkBtsh7DpqmhfWJRAJBVVUs20FPpykUCnheHssKOvR9DMMIYo90OhP+LopimKfpaYqlUvih67rkLBO/4JFKpVqSNbkTz8y2JOsGKUkOsWXmg/lEW3P6K8k2stha691zeohHRaJCO07O25vhyYXbXHn8HEVWuLcZ4FszgRyXrZf3GG8Mtwij0ZB05s4a9UevObO2yPrTS9y+P83NjUnWt29Q6ikgRJtJ649Z/fqTtJbm1bcnbGytUOnrZ+f3Cy5fn2kRBjOMBX7q7kPG3vxi9e02zz7d5OnHVbY/L/Pi+wNqg7VWh37eonFiNCw83jhK9eCBEE9fmMC0MvtOqtJb4uhQjVjQ8bnZ0+FSFEVl8nwdKSUiJOMC41Ob1Od3KPZajM/lGZl0sQci1C/20jeq7p5Ep9TOxOV3nJr/gNUTpzFfpjqq4w8mmFrsx691IIjJCLNXt1hY/UF5wKdxzWdsNk/xsMjUUh9DZ3K7i1HkJFeX37Ow8oVSVeXsUplDdZPeEYW5lQGqx3SEtrZ2cqZOwTeQZRnT6SZtqIEMBdPVyPs2YlIMCdvjcWxLx3UypDo7w3dNV5CVJu4Kzs/kD/8hOeOAj+GnAAAAAElFTkSuQmCC'); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"uva\"\n        title=\"uva\"\n        src=\"/static/716ff7cbec1625aebc2078e7c552f7a4/799d3/uva.png\"\n        srcset=\"/static/716ff7cbec1625aebc2078e7c552f7a4/00d96/uva.png 148w,\n/static/716ff7cbec1625aebc2078e7c552f7a4/0b23c/uva.png 295w,\n/static/716ff7cbec1625aebc2078e7c552f7a4/799d3/uva.png 590w,\n/static/716ff7cbec1625aebc2078e7c552f7a4/2a3d6/uva.png 885w,\n/static/716ff7cbec1625aebc2078e7c552f7a4/ae92f/uva.png 1180w,\n/static/716ff7cbec1625aebc2078e7c552f7a4/d4c84/uva.png 1694w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>\n    <figcaption class=\"gatsby-resp-image-figcaption\">uva</figcaption>\n  </figure>",
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 337 },
+              "end": { "line": 10, "column": 18, "offset": 354 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 337 },
+          "end": { "line": 10, "column": 18, "offset": 354 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "easier memory access with UVA",
+            "position": {
+              "start": { "line": 12, "column": 5, "offset": 360 },
+              "end": { "line": 12, "column": 34, "offset": 389 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 356 },
+          "end": { "line": 12, "column": 34, "offset": 389 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "UVA provides a ",
+                "position": {
+                  "start": { "line": 13, "column": 3, "offset": 392 },
+                  "end": { "line": 13, "column": 18, "offset": 407 }
+                }
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "single virtual memory address space",
+                    "position": {
+                      "start": { "line": 13, "column": 20, "offset": 409 },
+                      "end": { "line": 13, "column": 55, "offset": 444 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 13, "column": 18, "offset": 407 },
+                  "end": { "line": 13, "column": 57, "offset": 446 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " for all memory in the system, and enables pointers to be accessed from GPU code no matter where in the system they reside.",
+                "position": {
+                  "start": { "line": 13, "column": 57, "offset": 446 },
+                  "end": { "line": 13, "column": 180, "offset": 569 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 13, "column": 1, "offset": 390 },
+              "end": { "line": 13, "column": 180, "offset": 569 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Pointers returned by cudaHostAlloc() can be used directly from within kernels running on UVA enabled devices – Data cache in L2 of target device.",
+                "position": {
+                  "start": { "line": 14, "column": 4, "offset": 573 },
+                  "end": { "line": 14, "column": 149, "offset": 718 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 570 },
+              "end": { "line": 14, "column": 149, "offset": 718 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 13, "column": 1, "offset": 390 },
+          "end": { "line": 14, "column": 149, "offset": 718 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Unified Memory",
+            "position": {
+              "start": { "line": 16, "column": 4, "offset": 723 },
+              "end": { "line": 16, "column": 18, "offset": 737 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 16, "column": 1, "offset": 720 },
+          "end": { "line": 16, "column": 19, "offset": 738 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 16, "column": 19, "offset": 738 }
+    }
+  }
+}

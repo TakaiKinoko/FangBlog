@@ -1,0 +1,88 @@
+{
+  "expireTime": 9007200830837563000,
+  "key": "transformer-remark-markdown-html-ast-8071b2c97e7dc9ff3fe06868cea47e35-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Unified Virtual Address Space (UVA)",
+            "position": {
+              "start": { "line": 2, "column": 4, "offset": 4 },
+              "end": { "line": 2, "column": 39, "offset": 39 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 39, "offset": 39 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "From CUDA 4.0 and on, UVA has been an important feature.\n• puts all CUDA execution, host and GPUs, in the same address space\n• Requires Fermi-class GPU and above\n• Requires 64-bit application\n• Call cudaGetDeviceProperties() for all participating devices and check ",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 41 },
+              "end": { "line": 8, "column": 74, "offset": 306 }
+            }
+          },
+          {
+            "type": "raw",
+            "value": "<code class=\"language-text\">unifiedAddressing</code>",
+            "position": {
+              "start": { "line": 8, "column": 74, "offset": 306 },
+              "end": { "line": 8, "column": 93, "offset": 325 }
+            }
+          },
+          {
+            "type": "text",
+            "value": " flag",
+            "position": {
+              "start": { "line": 8, "column": 93, "offset": 325 },
+              "end": { "line": 8, "column": 98, "offset": 330 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 41 },
+          "end": { "line": 8, "column": 98, "offset": 330 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Unified Memory",
+            "position": {
+              "start": { "line": 12, "column": 4, "offset": 337 },
+              "end": { "line": 12, "column": 18, "offset": 351 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 334 },
+          "end": { "line": 12, "column": 19, "offset": 352 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 12, "column": 19, "offset": 352 }
+    }
+  }
+}

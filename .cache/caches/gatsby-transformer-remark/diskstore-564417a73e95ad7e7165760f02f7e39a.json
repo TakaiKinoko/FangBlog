@@ -1,0 +1,32 @@
+{
+  "expireTime": 9007200830838561000,
+  "key": "transformer-remark-markdown-html-ast-a62f140f082ef421b189c4182f144385-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Without dynamic parallelism, GPU is unable to create more work on itself dynamically depending on the data. Consequently ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 122, "offset": 122 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 122, "offset": 122 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 2, "column": 122, "offset": 122 }
+    }
+  }
+}

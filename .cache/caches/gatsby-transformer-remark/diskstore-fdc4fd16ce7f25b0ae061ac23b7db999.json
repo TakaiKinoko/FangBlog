@@ -1,0 +1,59 @@
+{
+  "expireTime": 9007200830836232000,
+  "key": "transformer-remark-markdown-html-ast-5db16a537441157851180ad3e35c2222-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "In the fifth post of the CUDA series (",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 39, "offset": 39 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "a",
+            "properties": { "href": "/cuda5-coalesce" },
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 5. Memory Coalescing",
+                "position": {
+                  "start": { "line": 2, "column": 40, "offset": 40 },
+                  "end": { "line": 2, "column": 98, "offset": 98 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 39, "offset": 39 },
+              "end": { "line": 2, "column": 116, "offset": 116 }
+            }
+          },
+          {
+            "type": "text",
+            "value": "), I put up a note on the effect of memory alignment on memory coalesce. This is the continuation",
+            "position": {
+              "start": { "line": 2, "column": 116, "offset": 116 },
+              "end": { "line": 2, "column": 213, "offset": 213 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 213, "offset": 213 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 3, "column": 1, "offset": 214 }
+    }
+  }
+}

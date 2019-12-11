@@ -1,0 +1,674 @@
+{
+  "expireTime": 9007200830836976000,
+  "key": "transformer-remark-markdown-html-ast-bf6ffd4d24a718025434d927494c7d36-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "In the fifth post of the CUDA series (",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 39, "offset": 39 }
+            }
+          },
+          {
+            "type": "element",
+            "tagName": "a",
+            "properties": { "href": "/cuda5-coalesce" },
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 5. Memory Coalescing",
+                "position": {
+                  "start": { "line": 2, "column": 40, "offset": 40 },
+                  "end": { "line": 2, "column": 98, "offset": 98 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 39, "offset": 39 },
+              "end": { "line": 2, "column": 116, "offset": 116 }
+            }
+          },
+          {
+            "type": "text",
+            "value": "), I put up a note on the effect of memory alignment on memory coalesce. Here I feel necessary to add a little bit more. ",
+            "position": {
+              "start": { "line": 2, "column": 116, "offset": 116 },
+              "end": { "line": 2, "column": 237, "offset": 237 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 237, "offset": 237 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Memory access on the GPU works much better if the data items are aligned. Hence, allocating 2D or 3D arrays so that every row starts at a 64-byte or 128-byte boundary address will imporve performance. However, this is hard to do for programmers.",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 239 },
+              "end": { "line": 4, "column": 246, "offset": 484 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 239 },
+          "end": { "line": 4, "column": 246, "offset": 484 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Don’t worry, CUDA offers special memory operations that take care of alignment for us. ",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 486 },
+              "end": { "line": 6, "column": 88, "offset": 573 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 486 },
+          "end": { "line": 6, "column": 88, "offset": 573 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "what is pitch",
+            "position": {
+              "start": { "line": 8, "column": 5, "offset": 579 },
+              "end": { "line": 8, "column": 18, "offset": 592 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 575 },
+          "end": { "line": 8, "column": 18, "offset": 592 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<figure class=\"gatsby-resp-image-figure\" style=\"\">\n    <span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/75bbb4beeaf6f008c9c48733c1b84884/aaf7d/pitch.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 76.56765676567656%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACMklEQVQ4y52UTU8TQRjH98LBkycPGuLJg3ow8WAwxJcDpC/W0kIP0hAPfgIPHlRYaCuCxm9gQtEPAQfZLTHSphhjJXow8YBUAwVazb70jbY7f2d2Z2C3ohifzT/z7DPZ3z7PPDMjgRshZH+0bJ+gViMoFgl0ncCgYg+bI1yWZXm+Y5LgMjEprGoChXdAPgesFfBHc38ndQfZXzWzAd3YQ0n/ho9fc/i08RZlYxeG2YJm0DmzCcOoQtd0WkXdzpwQy5uhxYHbP6oYe7qM0VkmBcOpBcSmFzH6REWcxWZUjD3L4kJ/GMd6ehC/dduTrbS/Hhy4VTERSaoITakIJzIYSi4jTHUzodoKTS0h8ngFJ85cgiRJGBgchL63ie/lz2i0dSdDscACOPKIgTKIpjKIpFQu7icVjMxmcepcvw0MBEP42ShivbSGektzMnQbAw7bQAE5EIsNJegyzKzg5FkH6PeFvCWz7bFRKeDLdp6+NlCq1ChQPQKY/Q3Y6bSdprAOma0daM0tFqbA6n8BxZ6Uuir+x5L/BgTxNKVEgbFpB8DAUbdoU6IpBTHalN7zV2xgMBD2Arv34WbZRHBSgW9iCX5ZgZ+NVAHqB2QVvvFXuJF8g+OnL9rA69cGDgeKblf0OuQXqxhP5zGRZiPV/Cruz2Vx7/lrPEjnIL98j/idu7jadxnyw8nDgeClO9ahanMxnx655jqKux/QJDs8duRZPoAy37lvuIiY57cKXyJx87hvm1/U4tgNsxaVUgAAAABJRU5ErkJggg=='); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"pitch\"\n        title=\"pitch\"\n        src=\"/static/75bbb4beeaf6f008c9c48733c1b84884/799d3/pitch.png\"\n        srcset=\"/static/75bbb4beeaf6f008c9c48733c1b84884/00d96/pitch.png 148w,\n/static/75bbb4beeaf6f008c9c48733c1b84884/0b23c/pitch.png 295w,\n/static/75bbb4beeaf6f008c9c48733c1b84884/799d3/pitch.png 590w,\n/static/75bbb4beeaf6f008c9c48733c1b84884/2a3d6/pitch.png 885w,\n/static/75bbb4beeaf6f008c9c48733c1b84884/ae92f/pitch.png 1180w,\n/static/75bbb4beeaf6f008c9c48733c1b84884/aaf7d/pitch.png 1818w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>\n    <figcaption class=\"gatsby-resp-image-figcaption\">pitch</figcaption>\n  </figure>",
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 594 },
+              "end": { "line": 10, "column": 22, "offset": 615 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 594 },
+          "end": { "line": 10, "column": 22, "offset": 615 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Pitch is a good technique to speedup memory access",
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 617 },
+              "end": { "line": 12, "column": 51, "offset": 667 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 617 },
+          "end": { "line": 12, "column": 51, "offset": 667 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "There are two drawbacks that you have to live with:",
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 669 },
+              "end": { "line": 14, "column": 52, "offset": 720 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 669 },
+          "end": { "line": 14, "column": 52, "offset": 720 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Some wasted space",
+                "position": {
+                  "start": { "line": 15, "column": 3, "offset": 723 },
+                  "end": { "line": 15, "column": 20, "offset": 740 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 15, "column": 1, "offset": 721 },
+              "end": { "line": 15, "column": 20, "offset": 740 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "A bit more complicated elements access",
+                "position": {
+                  "start": { "line": 16, "column": 4, "offset": 744 },
+                  "end": { "line": 16, "column": 42, "offset": 782 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 741 },
+              "end": { "line": 16, "column": 42, "offset": 782 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 15, "column": 1, "offset": 721 },
+          "end": { "line": 16, "column": 42, "offset": 782 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "cudaMallocPitch()",
+            "position": {
+              "start": { "line": 18, "column": 4, "offset": 787 },
+              "end": { "line": 18, "column": 21, "offset": 804 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 18, "column": 1, "offset": 784 },
+          "end": { "line": 18, "column": 21, "offset": 804 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Memory allocation of 2D arrays using this function will pad every row if necessary. The function determines the best pitch and returns it to the program.",
+            "position": {
+              "start": { "line": 20, "column": 1, "offset": 806 },
+              "end": { "line": 20, "column": 154, "offset": 959 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 20, "column": 1, "offset": 806 },
+          "end": { "line": 20, "column": 154, "offset": 959 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "signature",
+            "position": {
+              "start": { "line": 22, "column": 5, "offset": 965 },
+              "end": { "line": 22, "column": 14, "offset": 974 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 22, "column": 1, "offset": 961 },
+          "end": { "line": 22, "column": 14, "offset": 974 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\"><span class=\"token function\">cudaMallocPitch</span><span class=\"token punctuation\">(</span> <span class=\"token keyword\">void</span><span class=\"token operator\">*</span><span class=\"token operator\">*</span> devPtr<span class=\"token punctuation\">,</span>\n                size_t<span class=\"token operator\">*</span> pitch<span class=\"token punctuation\">,</span>\n                size_t widthInBytes<span class=\"token punctuation\">,</span>\n                size_t height<span class=\"token punctuation\">)</span> </code></pre></div>",
+        "position": {
+          "start": { "line": 23, "column": 1, "offset": 975 },
+          "end": { "line": 28, "column": 4, "offset": 1115 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "This allocates at least width (in bytes) X height array.",
+            "position": {
+              "start": { "line": 30, "column": 1, "offset": 1117 },
+              "end": { "line": 30, "column": 57, "offset": 1173 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 30, "column": 1, "offset": 1117 },
+          "end": { "line": 30, "column": 57, "offset": 1173 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "The value returned in pitch is the width in bytes of the allocation.",
+                "position": {
+                  "start": { "line": 31, "column": 3, "offset": 1176 },
+                  "end": { "line": 31, "column": 71, "offset": 1244 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 31, "column": 1, "offset": 1174 },
+              "end": { "line": 31, "column": 71, "offset": 1244 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "The above function determines the best pitch and returns it to the program.",
+                "position": {
+                  "start": { "line": 32, "column": 3, "offset": 1247 },
+                  "end": { "line": 32, "column": 78, "offset": 1322 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 32, "column": 1, "offset": 1245 },
+              "end": { "line": 32, "column": 78, "offset": 1322 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "It is strongly recommended to use this function for allocating 2D (and 3D) arrays. (also take a look at cudaMalloc3D())",
+                "position": {
+                  "start": { "line": 33, "column": 3, "offset": 1325 },
+                  "end": { "line": 33, "column": 122, "offset": 1444 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 33, "column": 1, "offset": 1323 },
+              "end": { "line": 33, "column": 122, "offset": 1444 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 31, "column": 1, "offset": 1174 },
+          "end": { "line": 33, "column": 122, "offset": 1444 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "cudaMemcpy2D()",
+            "position": {
+              "start": { "line": 36, "column": 4, "offset": 1450 },
+              "end": { "line": 36, "column": 18, "offset": 1464 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 36, "column": 1, "offset": 1447 },
+          "end": { "line": 36, "column": 18, "offset": 1464 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "This operation takes into account the pitch that was chosen by the memory allocation when copying memory.",
+            "position": {
+              "start": { "line": 38, "column": 1, "offset": 1466 },
+              "end": { "line": 38, "column": 106, "offset": 1571 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 38, "column": 1, "offset": 1466 },
+          "end": { "line": 38, "column": 106, "offset": 1571 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "signature",
+            "position": {
+              "start": { "line": 40, "column": 5, "offset": 1577 },
+              "end": { "line": 40, "column": 14, "offset": 1586 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 40, "column": 1, "offset": 1573 },
+          "end": { "line": 40, "column": 14, "offset": 1586 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\">cudaError_t cudaMemcpy2D <span class=\"token punctuation\">(</span> <span class=\"token keyword\">void</span> <span class=\"token operator\">*</span> dst<span class=\"token punctuation\">,</span>\n                        size_t dpitch<span class=\"token punctuation\">,</span>\n                        <span class=\"token keyword\">const</span> <span class=\"token keyword\">void</span> <span class=\"token operator\">*</span> src<span class=\"token punctuation\">,</span>\n                        size_t spitch<span class=\"token punctuation\">,</span>\n                        size_t width<span class=\"token punctuation\">,</span>\n                        size_t height<span class=\"token punctuation\">,</span>\n                        <span class=\"token keyword\">enum</span> <span class=\"token class-name\">cudaMemcpyKind</span> kind <span class=\"token punctuation\">)</span> </code></pre></div>",
+        "position": {
+          "start": { "line": 41, "column": 1, "offset": 1587 },
+          "end": { "line": 49, "column": 4, "offset": 1883 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "dst - Destination memory address",
+                "position": {
+                  "start": { "line": 50, "column": 3, "offset": 1886 },
+                  "end": { "line": 50, "column": 35, "offset": 1918 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 50, "column": 1, "offset": 1884 },
+              "end": { "line": 50, "column": 35, "offset": 1918 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "dpitch - Pitch of destination memory",
+                "position": {
+                  "start": { "line": 51, "column": 3, "offset": 1921 },
+                  "end": { "line": 51, "column": 39, "offset": 1957 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 51, "column": 1, "offset": 1919 },
+              "end": { "line": 51, "column": 39, "offset": 1957 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "src - Source memory address",
+                "position": {
+                  "start": { "line": 52, "column": 3, "offset": 1960 },
+                  "end": { "line": 52, "column": 30, "offset": 1987 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 52, "column": 1, "offset": 1958 },
+              "end": { "line": 52, "column": 30, "offset": 1987 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "spitch - Pitch of source memory",
+                "position": {
+                  "start": { "line": 53, "column": 3, "offset": 1990 },
+                  "end": { "line": 53, "column": 34, "offset": 2021 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 53, "column": 1, "offset": 1988 },
+              "end": { "line": 53, "column": 34, "offset": 2021 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "width - Width of matrix transfer (in bytes)",
+                "position": {
+                  "start": { "line": 54, "column": 3, "offset": 2024 },
+                  "end": { "line": 54, "column": 46, "offset": 2067 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 54, "column": 1, "offset": 2022 },
+              "end": { "line": 54, "column": 46, "offset": 2067 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "height - Height of matrix transfer (rows)",
+                "position": {
+                  "start": { "line": 55, "column": 3, "offset": 2070 },
+                  "end": { "line": 55, "column": 44, "offset": 2111 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 55, "column": 1, "offset": 2068 },
+              "end": { "line": 55, "column": 44, "offset": 2111 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "kind - Type of transfer",
+                "position": {
+                  "start": { "line": 56, "column": 3, "offset": 2114 },
+                  "end": { "line": 56, "column": 26, "offset": 2137 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 56, "column": 1, "offset": 2112 },
+              "end": { "line": 56, "column": 26, "offset": 2137 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 50, "column": 1, "offset": 1884 },
+          "end": { "line": 56, "column": 26, "offset": 2137 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "example — allocation",
+            "position": {
+              "start": { "line": 58, "column": 4, "offset": 2142 },
+              "end": { "line": 58, "column": 25, "offset": 2163 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 58, "column": 1, "offset": 2139 },
+          "end": { "line": 58, "column": 25, "offset": 2163 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\"><span class=\"token keyword\">int</span> <span class=\"token function\">main</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">int</span> argc<span class=\"token punctuation\">,</span> <span class=\"token keyword\">char</span> <span class=\"token operator\">*</span> argv<span class=\"token punctuation\">[</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">float</span> <span class=\"token operator\">*</span> A<span class=\"token punctuation\">,</span> <span class=\"token operator\">*</span>dA<span class=\"token punctuation\">;</span>\n    size_t pitch<span class=\"token punctuation\">;</span>\n\n    A <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token keyword\">float</span> <span class=\"token operator\">*</span><span class=\"token punctuation\">)</span><span class=\"token function\">malloc</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">sizeof</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">float</span><span class=\"token punctuation\">)</span><span class=\"token operator\">*</span>N<span class=\"token operator\">*</span>N<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token function\">cudaMallocPitch</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&amp;</span>dA<span class=\"token punctuation\">,</span> <span class=\"token operator\">&amp;</span>pitch<span class=\"token punctuation\">,</span> <span class=\"token keyword\">sizeof</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">float</span><span class=\"token punctuation\">)</span><span class=\"token operator\">*</span>N<span class=\"token punctuation\">,</span> N<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\n    <span class=\"token comment\">//copy memory from unpadded array A of 760 by 760 dimensions</span>\n    <span class=\"token comment\">//to more efficient dimensions on the device</span>\n    <span class=\"token function\">cudaMemcpy2D</span><span class=\"token punctuation\">(</span>dA<span class=\"token punctuation\">,</span>pitch<span class=\"token punctuation\">,</span>A<span class=\"token punctuation\">,</span><span class=\"token keyword\">sizeof</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">float</span><span class=\"token punctuation\">)</span><span class=\"token operator\">*</span>N<span class=\"token punctuation\">,</span><span class=\"token keyword\">sizeof</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">float</span><span class=\"token punctuation\">)</span><span class=\"token operator\">*</span>N<span class=\"token punctuation\">,</span>N<span class=\"token punctuation\">,</span>\n    cudaMemcpyHostToDevice<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span> \n    …\n<span class=\"token punctuation\">}</span></code></pre></div>",
+        "position": {
+          "start": { "line": 59, "column": 1, "offset": 2164 },
+          "end": { "line": 73, "column": 4, "offset": 2560 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "example — accessing",
+            "position": {
+              "start": { "line": 75, "column": 4, "offset": 2565 },
+              "end": { "line": 75, "column": 24, "offset": 2585 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 75, "column": 1, "offset": 2562 },
+          "end": { "line": 75, "column": 24, "offset": 2585 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\">__global__ <span class=\"token keyword\">void</span> <span class=\"token function\">MyKernel</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">float</span><span class=\"token operator\">*</span> devPtr<span class=\"token punctuation\">,</span> size_t pitch<span class=\"token punctuation\">,</span> <span class=\"token keyword\">int</span> width<span class=\"token punctuation\">,</span> <span class=\"token keyword\">int</span> height<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">for</span> <span class=\"token punctuation\">(</span><span class=\"token keyword\">int</span> r <span class=\"token operator\">=</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span> r <span class=\"token operator\">&lt;</span> height<span class=\"token punctuation\">;</span> <span class=\"token operator\">++</span>r<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n        <span class=\"token keyword\">float</span><span class=\"token operator\">*</span> row <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token keyword\">float</span><span class=\"token operator\">*</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">char</span><span class=\"token operator\">*</span><span class=\"token punctuation\">)</span>devPtr <span class=\"token operator\">+</span> r <span class=\"token operator\">*</span> pitch<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n        <span class=\"token keyword\">for</span> <span class=\"token punctuation\">(</span><span class=\"token keyword\">int</span> c <span class=\"token operator\">=</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span> c <span class=\"token operator\">&lt;</span> width<span class=\"token punctuation\">;</span> <span class=\"token operator\">++</span>c<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n            <span class=\"token keyword\">float</span> element <span class=\"token operator\">=</span> row<span class=\"token punctuation\">[</span>c<span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span> \n        <span class=\"token punctuation\">}</span>\n    <span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">}</span></code></pre></div>",
+        "position": {
+          "start": { "line": 76, "column": 1, "offset": 2586 },
+          "end": { "line": 85, "column": 4, "offset": 2867 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 85, "column": 4, "offset": 2867 }
+    }
+  }
+}

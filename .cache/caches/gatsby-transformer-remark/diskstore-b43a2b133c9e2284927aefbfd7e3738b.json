@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830837563000,
+  "key": "transformer-remark-markdown-html-8071b2c97e7dc9ff3fe06868cea47e35-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<h2>Unified Virtual Address Space (UVA)</h2>\n<p>From CUDA 4.0 and on, UVA has been an important feature.\n• puts all CUDA execution, host and GPUs, in the same address space\n• Requires Fermi-class GPU and above\n• Requires 64-bit application\n• Call cudaGetDeviceProperties() for all participating devices and check <code class=\"language-text\">unifiedAddressing</code> flag</p>\n<h2>Unified Memory</h2>"
+}

@@ -1,0 +1,62 @@
+{
+  "expireTime": 9007200830836061000,
+  "key": "transformer-remark-markdown-ast-a97138289584450ad41f3250a36ff420-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In the first post of the CUDA series (",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 39, "offset": 39 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/cuda1",
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 1. Concepts",
+                "position": {
+                  "start": { "line": 2, "column": 40, "offset": 40 },
+                  "end": { "line": 2, "column": 89, "offset": 89 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 39, "offset": 39 },
+              "end": { "line": 2, "column": 98, "offset": 98 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": "), ",
+            "position": {
+              "start": { "line": 2, "column": 98, "offset": 98 },
+              "end": { "line": 2, "column": 101, "offset": 101 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 101, "offset": 101 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 2, "column": 101, "offset": 101 }
+    }
+  }
+}

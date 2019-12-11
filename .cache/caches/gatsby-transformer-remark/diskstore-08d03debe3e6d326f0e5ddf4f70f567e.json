@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830836194000,
+  "key": "transformer-remark-markdown-html-9479eaabaa7759b80ca6164f3b925a6b-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<p>In the first post of the CUDA series (<a href=\"/cuda5-coalesce\">The CUDA Parallel Programming Model - 5. Memory Coalescing</a>), I put up a note on the effect of memory alignment</p>"
+}

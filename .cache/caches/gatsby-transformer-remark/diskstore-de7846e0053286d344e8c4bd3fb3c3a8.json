@@ -1,0 +1,1090 @@
+{
+  "expireTime": 9007200830839464000,
+  "key": "transformer-remark-markdown-ast-c58e36b82be4c95086f01e5bc9362a90-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Have you wondered if it’s possible to launch nested kernels (i.e. a kernel calls another kernel) in CUDA? Well, this is where dynamic parallelism comes into play.",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 163, "offset": 163 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 163, "offset": 163 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "No Dynamic Parallelism",
+            "position": {
+              "start": { "line": 4, "column": 4, "offset": 168 },
+              "end": { "line": 4, "column": 26, "offset": 190 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 165 },
+          "end": { "line": 4, "column": 26, "offset": 190 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Without dynamic parallelism, GPU is unable to create more work on itself dynamically depending on the data. Consequently data travels back and forth between the CPU and GPU many times. This was the case in older generations e.g. Fermi, see picture below:",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 192 },
+              "end": { "line": 6, "column": 255, "offset": 446 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 192 },
+          "end": { "line": 6, "column": 255, "offset": 446 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./fermi.png",
+            "alt": "fermi",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 448 },
+              "end": { "line": 8, "column": 22, "offset": 469 },
+              "indent": []
+            },
+            "value": "<figure class=\"gatsby-resp-image-figure\" style=\"\">\n    <span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/50ab2214f80a3820049d777e1d662621/7a2f6/fermi.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 100.47281323877068%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAACq0lEQVQ4y6WUS2/TQBSF7Rm/x/bEduI8nTRNnDZUolSFBlChLUSiou2CDQtWLJBYIbWqgA2PDa0qkJBY8VhVQurfPIwfpbUSpFQsjhx5PDfznXvPSLJmgbIARDwlSSpIliXwgEJRJai6DE0n0AwZQU0BcwkIkSb2SHq0Cq27DqN7F5JMC4u62Dx6yHB/x8H6Y4bRmGG4auDJCxf3dhlcj0wWVA2GsN6EabHJxVyqJoNSCVTJRMTv5HQJwcT3bqWBhTvbCIPSlGKKkPzPP5oq0/Hgt2Iw08x8IzQtxEoeDk8WsLxWTt9P9WuadMNEu9uDy+0UgZDMF9sxcXLWwWjL+9ugmQq6YQvx2iNELR+KJjyiNN1MKUE8rIJ7WfdlSb1kA8mtOH9Hc6XIJZRbfViGkZ/kAvngKEZ3wDHarGD/aABDfLN/1MftByEGS2W8+dqHbbt4fhhh71l0GbkPniCTBDlrAnMMfDrtYHFZjMh2gHff27AsCx9+RdjYDbC0Usbx7ya46+HVcQ1PX9azgvwcuZkgy1AUJfVRUTUMhjXhpQE/sNFbCFM7oi4XNphgtoFOj0NVVNQjG5WqnSPbXCD3YOpFZC8s4+PPGP2hj42dEK+/DEBkZYaxYTbm42vwfaeAzEsG3v9ooDfk2NzzhV8RKFELHS88z6eAV9uIb43RanppCjJkKnIrkLpVWMwU0gWSM9uQG8yFX4uga/olZIpaO8Tx6SKu54M9e1KYg7kEOSgil0MTb781MVzhWVLojBHktQ76N8doNhJk0WVVSeNniMuiN6jDcayrnVA3bdHRBjQxJhkySZHrc1V8PovFvPl5xmcsyLgnOnkDldBNryVKL5APTppizb1alksCeX5lC7VQeEWyyyHLMhWxYqkFV2uKGOxqqwsrv77+V38ASHzNIENPxjQAAAAASUVORK5CYII='); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"fermi\"\n        title=\"fermi\"\n        src=\"/static/50ab2214f80a3820049d777e1d662621/799d3/fermi.png\"\n        srcset=\"/static/50ab2214f80a3820049d777e1d662621/00d96/fermi.png 148w,\n/static/50ab2214f80a3820049d777e1d662621/0b23c/fermi.png 295w,\n/static/50ab2214f80a3820049d777e1d662621/799d3/fermi.png 590w,\n/static/50ab2214f80a3820049d777e1d662621/7a2f6/fermi.png 846w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>\n    <figcaption class=\"gatsby-resp-image-figcaption\">fermi</figcaption>\n  </figure>"
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 448 },
+          "end": { "line": 8, "column": 22, "offset": 469 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "With Dynamic Parallelism",
+            "position": {
+              "start": { "line": 10, "column": 4, "offset": 474 },
+              "end": { "line": 10, "column": 28, "offset": 498 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 471 },
+          "end": { "line": 10, "column": 28, "offset": 498 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "With dynamic parallelism, however:",
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 500 },
+              "end": { "line": 12, "column": 35, "offset": 534 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 500 },
+          "end": { "line": 12, "column": 35, "offset": 534 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "GPU can generate work on itself without involvement of CPU ",
+                    "position": {
+                      "start": { "line": 13, "column": 3, "offset": 537 },
+                      "end": { "line": 13, "column": 62, "offset": 596 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 13, "column": 3, "offset": 537 },
+                  "end": { "line": 13, "column": 62, "offset": 596 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "reduce the trips to CPU",
+                            "position": {
+                              "start": {
+                                "line": 14,
+                                "column": 8,
+                                "offset": 604
+                              },
+                              "end": {
+                                "line": 14,
+                                "column": 31,
+                                "offset": 627
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 14, "column": 8, "offset": 604 },
+                          "end": { "line": 14, "column": 31, "offset": 627 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 14, "column": 5, "offset": 601 },
+                      "end": { "line": 14, "column": 31, "offset": 627 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 14, "column": 5, "offset": 601 },
+                  "end": { "line": 14, "column": 31, "offset": 627 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 13, "column": 1, "offset": 535 },
+              "end": { "line": 14, "column": 31, "offset": 627 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Permits Dynamic Runtime decisions ",
+                    "position": {
+                      "start": { "line": 15, "column": 3, "offset": 630 },
+                      "end": { "line": 15, "column": 37, "offset": 664 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 15, "column": 3, "offset": 630 },
+                  "end": { "line": 15, "column": 37, "offset": 664 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "More freedom where data generated by the kernel decides how to partition the data for lower-level of the hierarchy.",
+                            "position": {
+                              "start": {
+                                "line": 16,
+                                "column": 8,
+                                "offset": 672
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 123,
+                                "offset": 787
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 16, "column": 8, "offset": 672 },
+                          "end": { "line": 16, "column": 123, "offset": 787 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 16, "column": 5, "offset": 669 },
+                      "end": { "line": 16, "column": 123, "offset": 787 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 16, "column": 5, "offset": 669 },
+                  "end": { "line": 16, "column": 123, "offset": 787 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 15, "column": 1, "offset": 628 },
+              "end": { "line": 16, "column": 123, "offset": 787 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Kernels can start new kernels — ",
+                    "position": {
+                      "start": { "line": 17, "column": 3, "offset": 790 },
+                      "end": { "line": 17, "column": 36, "offset": 823 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "recursion",
+                        "position": {
+                          "start": { "line": 17, "column": 38, "offset": 825 },
+                          "end": { "line": 17, "column": 47, "offset": 834 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 17, "column": 36, "offset": 823 },
+                      "end": { "line": 17, "column": 49, "offset": 836 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": "!!",
+                    "position": {
+                      "start": { "line": 17, "column": 49, "offset": 836 },
+                      "end": { "line": 17, "column": 51, "offset": 838 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 17, "column": 3, "offset": 790 },
+                  "end": { "line": 17, "column": 51, "offset": 838 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 17, "column": 1, "offset": 788 },
+              "end": { "line": 17, "column": 51, "offset": 838 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Streams can spawn new streams",
+                    "position": {
+                      "start": { "line": 18, "column": 3, "offset": 841 },
+                      "end": { "line": 18, "column": 32, "offset": 870 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 18, "column": 3, "offset": 841 },
+                  "end": { "line": 18, "column": 32, "offset": 870 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 18, "column": 1, "offset": 839 },
+              "end": { "line": 18, "column": 32, "offset": 870 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 13, "column": 1, "offset": 535 },
+          "end": { "line": 18, "column": 32, "offset": 870 },
+          "indent": [1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./kepler.png",
+            "alt": "kepler",
+            "position": {
+              "start": { "line": 20, "column": 1, "offset": 872 },
+              "end": { "line": 20, "column": 24, "offset": 895 },
+              "indent": []
+            },
+            "value": "<figure class=\"gatsby-resp-image-figure\" style=\"\">\n    <span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/24b92ace0dfe94ce81a5d0c6af27c43b/40275/kepler.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 98.82075471698114%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAChElEQVQ4y6VUW08TQRTe2Z2dvXa3u+32ynap2AtUgkUMFh5UKEaiaGNI0KgQ9cXERBM0GDEmPPioURLRBH+E8cVo4n/7nO3StKG2gD58e2bnnPnmXOYcgVAFcmIUshuAUAZBEPqg6gTJLIXMCCxHgm6K0AyCoMxQKDEYMbFrT+0c1OIctPIiqOMfKEgkSWTkZSWsrNu4ft/G1TULS6sxlCYVLN+JoXkrhmpd6bUXYDtJJFy3S9QDInbXoWdUJn06QnrOiPxTmL6M6pkpkL+Ee2JInN0r1ZHzA4jhTUSEKElcqcI/ncLD5yUkPLPfk8EQeIJNGIbRF0ptxsH+7wD+qH0ywj50ipHWsbyWQdzVTxL2MCXhaWBgCoWqRWBMgkTJMG+H36hqciRVGZTStlRVhROHknJiCkkKKy8OJuzcPlq2sb07AduO4ea6j7tPxjiJile7FYxPeag3kth6X4HCdDzaCnDtdmEA4UFRJqYtfPk1glTawcaLFDbf5WCaBj7/9HH+YgKNZhKffuShKga29zLY2MwODznh6Vi8EZLoqE27ODef4vlkWFjJIZOPIV+w2nrKW3b2Uhq1evLoHHa7J5TSoT2hJ3diZ//opyDLChRFbidf0/SeXEswTK291jSV27Hjefj0bQlXVnM8xDh29ivwi/G27sJCGm/2KmCyhsevi2htBMchFLHzdQStBx6KJRcfv+dxqhoRLrY8fPg2witv4OVuFveeHRRFYYy7rA30cGY+jWI5DsvWMdfMwo5HYecDC42FDC+KjLOzSZRribDLBART8yiPT0LTRZhW+FD5mKLiv0+b9ESDD4CxgeOrt80Ot1znvy0j8AHrpuA47v/PQo4/vpjNb2OTGgIAAAAASUVORK5CYII='); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"kepler\"\n        title=\"kepler\"\n        src=\"/static/24b92ace0dfe94ce81a5d0c6af27c43b/799d3/kepler.png\"\n        srcset=\"/static/24b92ace0dfe94ce81a5d0c6af27c43b/00d96/kepler.png 148w,\n/static/24b92ace0dfe94ce81a5d0c6af27c43b/0b23c/kepler.png 295w,\n/static/24b92ace0dfe94ce81a5d0c6af27c43b/799d3/kepler.png 590w,\n/static/24b92ace0dfe94ce81a5d0c6af27c43b/40275/kepler.png 848w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>\n    <figcaption class=\"gatsby-resp-image-figcaption\">kepler</figcaption>\n  </figure>"
+          }
+        ],
+        "position": {
+          "start": { "line": 20, "column": 1, "offset": 872 },
+          "end": { "line": 20, "column": 24, "offset": 895 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "code example",
+            "position": {
+              "start": { "line": 22, "column": 5, "offset": 901 },
+              "end": { "line": 22, "column": 17, "offset": 913 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 22, "column": 1, "offset": 897 },
+          "end": { "line": 22, "column": 17, "offset": 913 },
+          "indent": []
+        }
+      },
+      {
+        "type": "html",
+        "lang": "c",
+        "meta": null,
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\">__global__ <span class=\"token function\">ChildKernel</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">void</span><span class=\"token operator\">*</span> data<span class=\"token punctuation\">)</span><span class=\"token punctuation\">{</span>\n    <span class=\"token comment\">// operate on data</span>\n<span class=\"token punctuation\">}</span>\n\n__global__ <span class=\"token function\">ParentKernel</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">void</span><span class=\"token operator\">*</span> data<span class=\"token punctuation\">)</span><span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>threadIdx<span class=\"token punctuation\">.</span>x <span class=\"token operator\">==</span> <span class=\"token number\">0</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n        ChildKernel<span class=\"token operator\">&lt;&lt;</span><span class=\"token operator\">&lt;</span><span class=\"token number\">1</span><span class=\"token punctuation\">,</span> <span class=\"token number\">32</span><span class=\"token operator\">>></span><span class=\"token operator\">></span><span class=\"token punctuation\">(</span>data<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n        <span class=\"token function\">cudaThreadSynchronize</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n    <span class=\"token function\">syncthreads</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token comment\">//operate on data</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token comment\">// in host code</span>\nParentKernel<span class=\"token operator\">&lt;&lt;</span><span class=\"token operator\">&lt;</span><span class=\"token number\">8</span><span class=\"token punctuation\">,</span> <span class=\"token number\">32</span><span class=\"token operator\">>></span><span class=\"token operator\">></span><span class=\"token punctuation\">(</span>data<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span></code></pre></div>",
+        "position": {
+          "start": { "line": 23, "column": 1, "offset": 914 },
+          "end": { "line": 39, "column": 4, "offset": 1217 },
+          "indent": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Some Special Notes",
+            "position": {
+              "start": { "line": 41, "column": 4, "offset": 1222 },
+              "end": { "line": 41, "column": 22, "offset": 1240 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 41, "column": 1, "offset": 1219 },
+          "end": { "line": 41, "column": 22, "offset": 1240 },
+          "indent": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "asynchronous operation",
+            "position": {
+              "start": { "line": 43, "column": 5, "offset": 1246 },
+              "end": { "line": 43, "column": 27, "offset": 1268 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 43, "column": 1, "offset": 1242 },
+          "end": { "line": 43, "column": 27, "offset": 1268 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "As we have talked about before in ",
+            "position": {
+              "start": { "line": 45, "column": 1, "offset": 1270 },
+              "end": { "line": 45, "column": 35, "offset": 1304 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/cuda8-Stream",
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 8. Concurrency by Stream",
+                "position": {
+                  "start": { "line": 45, "column": 36, "offset": 1305 },
+                  "end": { "line": 45, "column": 98, "offset": 1367 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 45, "column": 35, "offset": 1304 },
+              "end": { "line": 45, "column": 114, "offset": 1383 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": ", device kernel launch is asynchronous.",
+            "position": {
+              "start": { "line": 45, "column": 114, "offset": 1383 },
+              "end": { "line": 45, "column": 153, "offset": 1422 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 45, "column": 1, "offset": 1270 },
+          "end": { "line": 45, "column": 153, "offset": 1422 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": true,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Successful execution of a kernel launch means that the kernel is queued",
+                    "position": {
+                      "start": { "line": 47, "column": 3, "offset": 1426 },
+                      "end": { "line": 47, "column": 74, "offset": 1497 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 47, "column": 3, "offset": 1426 },
+                  "end": { "line": 47, "column": 74, "offset": 1497 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "it may begin executing immediately",
+                            "position": {
+                              "start": {
+                                "line": 48,
+                                "column": 8,
+                                "offset": 1505
+                              },
+                              "end": {
+                                "line": 48,
+                                "column": 42,
+                                "offset": 1539
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 48, "column": 8, "offset": 1505 },
+                          "end": { "line": 48, "column": 42, "offset": 1539 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 48, "column": 5, "offset": 1502 },
+                      "end": { "line": 48, "column": 42, "offset": 1539 },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "or it may execute later when resources become available.",
+                            "position": {
+                              "start": {
+                                "line": 49,
+                                "column": 8,
+                                "offset": 1547
+                              },
+                              "end": {
+                                "line": 49,
+                                "column": 64,
+                                "offset": 1603
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 49, "column": 8, "offset": 1547 },
+                          "end": { "line": 49, "column": 64, "offset": 1603 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 49, "column": 5, "offset": 1544 },
+                      "end": { "line": 49, "column": 64, "offset": 1603 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 48, "column": 5, "offset": 1502 },
+                  "end": { "line": 49, "column": 64, "offset": 1603 },
+                  "indent": [5]
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 47, "column": 1, "offset": 1424 },
+              "end": { "line": 50, "column": 1, "offset": 1604 },
+              "indent": [1, 1, 1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Note that every thread that encounters a kernel launch executes it. So be careful!",
+                    "position": {
+                      "start": { "line": 51, "column": 3, "offset": 1607 },
+                      "end": { "line": 51, "column": 85, "offset": 1689 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 51, "column": 3, "offset": 1607 },
+                  "end": { "line": 51, "column": 85, "offset": 1689 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 51, "column": 1, "offset": 1605 },
+              "end": { "line": 52, "column": 1, "offset": 1690 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Child grids always complete before the parent grids that launch them, even if there is no explicit synchronization.",
+                    "position": {
+                      "start": { "line": 53, "column": 3, "offset": 1693 },
+                      "end": { "line": 53, "column": 118, "offset": 1808 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 53, "column": 3, "offset": 1693 },
+                  "end": { "line": 53, "column": 118, "offset": 1808 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 53, "column": 1, "offset": 1691 },
+              "end": { "line": 53, "column": 118, "offset": 1808 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 47, "column": 1, "offset": 1424 },
+          "end": { "line": 53, "column": 118, "offset": 1808 },
+          "indent": [1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "sequential execution of thread grids",
+            "position": {
+              "start": { "line": 55, "column": 5, "offset": 1814 },
+              "end": { "line": 55, "column": 41, "offset": 1850 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 55, "column": 1, "offset": 1810 },
+          "end": { "line": 55, "column": 41, "offset": 1850 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "By default, grids launched within a thread block are executed sequentially.",
+            "position": {
+              "start": { "line": 57, "column": 1, "offset": 1852 },
+              "end": { "line": 57, "column": 76, "offset": 1927 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 57, "column": 1, "offset": 1852 },
+          "end": { "line": 57, "column": 76, "offset": 1927 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": true,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "This happens even if grids are launched by different threads within the block.",
+                    "position": {
+                      "start": { "line": 59, "column": 3, "offset": 1931 },
+                      "end": { "line": 59, "column": 81, "offset": 2009 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 59, "column": 3, "offset": 1931 },
+                  "end": { "line": 59, "column": 81, "offset": 2009 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 59, "column": 1, "offset": 1929 },
+              "end": { "line": 60, "column": 1, "offset": 2010 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "To deal with this drawback, use streams",
+                    "position": {
+                      "start": { "line": 61, "column": 3, "offset": 2013 },
+                      "end": { "line": 61, "column": 42, "offset": 2052 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 61, "column": 3, "offset": 2013 },
+                  "end": { "line": 61, "column": 42, "offset": 2052 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 61, "column": 1, "offset": 2011 },
+              "end": { "line": 62, "column": 1, "offset": 2053 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "streams created on the host cannot be used on the device.",
+                    "position": {
+                      "start": { "line": 63, "column": 3, "offset": 2056 },
+                      "end": { "line": 63, "column": 60, "offset": 2113 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 63, "column": 3, "offset": 2056 },
+                  "end": { "line": 63, "column": 60, "offset": 2113 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 63, "column": 1, "offset": 2054 },
+              "end": { "line": 64, "column": 1, "offset": 2114 },
+              "indent": [1]
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Streams created in a block can be used by all threads in that block.",
+                    "position": {
+                      "start": { "line": 65, "column": 3, "offset": 2117 },
+                      "end": { "line": 65, "column": 71, "offset": 2185 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 65, "column": 3, "offset": 2117 },
+                  "end": { "line": 65, "column": 71, "offset": 2185 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 65, "column": 1, "offset": 2115 },
+              "end": { "line": 65, "column": 71, "offset": 2185 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 59, "column": 1, "offset": 1929 },
+          "end": { "line": 65, "column": 71, "offset": 2185 },
+          "indent": [1, 1, 1, 1, 1, 1]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "parent-child dependency",
+            "position": {
+              "start": { "line": 67, "column": 5, "offset": 2191 },
+              "end": { "line": 67, "column": 28, "offset": 2214 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 67, "column": 1, "offset": 2187 },
+          "end": { "line": 67, "column": 28, "offset": 2214 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If the parent kernel needs results computed by the child kernel to do its own work, it must ensure that the ",
+            "position": {
+              "start": { "line": 68, "column": 1, "offset": 2215 },
+              "end": { "line": 68, "column": 109, "offset": 2323 },
+              "indent": []
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "child grid",
+                "position": {
+                  "start": { "line": 68, "column": 111, "offset": 2325 },
+                  "end": { "line": 68, "column": 121, "offset": 2335 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 68, "column": 109, "offset": 2323 },
+              "end": { "line": 68, "column": 123, "offset": 2337 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " has finished execution before continuing. This is done by:",
+            "position": {
+              "start": { "line": 68, "column": 123, "offset": 2337 },
+              "end": { "line": 68, "column": 182, "offset": 2396 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 68, "column": 1, "offset": 2215 },
+          "end": { "line": 68, "column": 182, "offset": 2396 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "explicitly synchronizing using cudaDeviceSynchronize(void). ",
+                    "position": {
+                      "start": { "line": 69, "column": 3, "offset": 2399 },
+                      "end": { "line": 69, "column": 63, "offset": 2459 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 69, "column": 3, "offset": 2399 },
+                  "end": { "line": 69, "column": 63, "offset": 2459 },
+                  "indent": []
+                }
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": false,
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "This function waits for completion of all grids previously launched by the thread block from which it has been called.",
+                            "position": {
+                              "start": {
+                                "line": 70,
+                                "column": 7,
+                                "offset": 2466
+                              },
+                              "end": {
+                                "line": 70,
+                                "column": 125,
+                                "offset": 2584
+                              },
+                              "indent": []
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": { "line": 70, "column": 7, "offset": 2466 },
+                          "end": { "line": 70, "column": 125, "offset": 2584 },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 70, "column": 5, "offset": 2464 },
+                      "end": { "line": 70, "column": 125, "offset": 2584 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 70, "column": 5, "offset": 2464 },
+                  "end": { "line": 70, "column": 125, "offset": 2584 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 69, "column": 1, "offset": 2397 },
+              "end": { "line": 70, "column": 125, "offset": 2584 },
+              "indent": [1]
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 69, "column": 1, "offset": 2397 },
+          "end": { "line": 70, "column": 125, "offset": 2584 },
+          "indent": [1]
+        }
+      },
+      {
+        "type": "html",
+        "lang": "c",
+        "meta": null,
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\"><span class=\"token keyword\">void</span> <span class=\"token function\">threadBlockDeviceSynchronize</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">void</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">{</span>\n    <span class=\"token function\">__syncthreads</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span> <span class=\"token comment\">// ensure all launches have been executed</span>\n    <span class=\"token keyword\">if</span><span class=\"token punctuation\">(</span>threadIdx<span class=\"token punctuation\">.</span>x <span class=\"token operator\">==</span> <span class=\"token number\">0</span><span class=\"token punctuation\">)</span>\n        <span class=\"token function\">cudaDeviceSynchronize</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token function\">__syncthreads</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span></code></pre></div>",
+        "position": {
+          "start": { "line": 72, "column": 1, "offset": 2586 },
+          "end": { "line": 79, "column": 4, "offset": 2779 },
+          "indent": [1, 1, 1, 1, 1, 1, 1]
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 79, "column": 4, "offset": 2779 }
+    }
+  }
+}

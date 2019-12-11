@@ -1,0 +1,260 @@
+{
+  "expireTime": 9007200830838760000,
+  "key": "transformer-remark-markdown-ast-b53f43e62d72ea1ce73437c3164541ba-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Have you wondered if it’s possible to ",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 39, "offset": 39 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 39, "offset": 39 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Without dynamic parallelism, GPU is unable to create more work on itself dynamically depending on the data. Consequently data travels back and forth between the CPU and GPU many times. This was the case in older generations e.g. Fermi, see picture below:",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 41 },
+              "end": { "line": 4, "column": 255, "offset": 295 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 41 },
+          "end": { "line": 4, "column": 255, "offset": 295 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "html",
+            "title": null,
+            "url": "./fermi.png",
+            "alt": "fermi",
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 297 },
+              "end": { "line": 6, "column": 22, "offset": 318 },
+              "indent": []
+            },
+            "value": "<figure class=\"gatsby-resp-image-figure\" style=\"\">\n    <span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/50ab2214f80a3820049d777e1d662621/7a2f6/fermi.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 100.47281323877068%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAACq0lEQVQ4y6WUS2/TQBSF7Rm/x/bEduI8nTRNnDZUolSFBlChLUSiou2CDQtWLJBYIbWqgA2PDa0qkJBY8VhVQurfPIwfpbUSpFQsjhx5PDfznXvPSLJmgbIARDwlSSpIliXwgEJRJai6DE0n0AwZQU0BcwkIkSb2SHq0Cq27DqN7F5JMC4u62Dx6yHB/x8H6Y4bRmGG4auDJCxf3dhlcj0wWVA2GsN6EabHJxVyqJoNSCVTJRMTv5HQJwcT3bqWBhTvbCIPSlGKKkPzPP5oq0/Hgt2Iw08x8IzQtxEoeDk8WsLxWTt9P9WuadMNEu9uDy+0UgZDMF9sxcXLWwWjL+9ugmQq6YQvx2iNELR+KJjyiNN1MKUE8rIJ7WfdlSb1kA8mtOH9Hc6XIJZRbfViGkZ/kAvngKEZ3wDHarGD/aABDfLN/1MftByEGS2W8+dqHbbt4fhhh71l0GbkPniCTBDlrAnMMfDrtYHFZjMh2gHff27AsCx9+RdjYDbC0Usbx7ya46+HVcQ1PX9azgvwcuZkgy1AUJfVRUTUMhjXhpQE/sNFbCFM7oi4XNphgtoFOj0NVVNQjG5WqnSPbXCD3YOpFZC8s4+PPGP2hj42dEK+/DEBkZYaxYTbm42vwfaeAzEsG3v9ooDfk2NzzhV8RKFELHS88z6eAV9uIb43RanppCjJkKnIrkLpVWMwU0gWSM9uQG8yFX4uga/olZIpaO8Tx6SKu54M9e1KYg7kEOSgil0MTb781MVzhWVLojBHktQ76N8doNhJk0WVVSeNniMuiN6jDcayrnVA3bdHRBjQxJhkySZHrc1V8PovFvPl5xmcsyLgnOnkDldBNryVKL5APTppizb1alksCeX5lC7VQeEWyyyHLMhWxYqkFV2uKGOxqqwsrv77+V38ASHzNIENPxjQAAAAASUVORK5CYII='); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"fermi\"\n        title=\"fermi\"\n        src=\"/static/50ab2214f80a3820049d777e1d662621/799d3/fermi.png\"\n        srcset=\"/static/50ab2214f80a3820049d777e1d662621/00d96/fermi.png 148w,\n/static/50ab2214f80a3820049d777e1d662621/0b23c/fermi.png 295w,\n/static/50ab2214f80a3820049d777e1d662621/799d3/fermi.png 590w,\n/static/50ab2214f80a3820049d777e1d662621/7a2f6/fermi.png 846w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>\n    <figcaption class=\"gatsby-resp-image-figcaption\">fermi</figcaption>\n  </figure>"
+          }
+        ],
+        "position": {
+          "start": { "line": 6, "column": 1, "offset": 297 },
+          "end": { "line": 6, "column": 22, "offset": 318 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "With dynamic parallelism, however:",
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 320 },
+              "end": { "line": 8, "column": 35, "offset": 354 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 8, "column": 1, "offset": 320 },
+          "end": { "line": 8, "column": 35, "offset": 354 },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "GPU can generate work on itself without involvement of CPU.",
+                    "position": {
+                      "start": { "line": 9, "column": 3, "offset": 357 },
+                      "end": { "line": 9, "column": 62, "offset": 416 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 9, "column": 3, "offset": 357 },
+                  "end": { "line": 9, "column": 62, "offset": 416 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 9, "column": 1, "offset": 355 },
+              "end": { "line": 9, "column": 62, "offset": 416 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Permits Dynamic Runtime decisions.",
+                    "position": {
+                      "start": { "line": 10, "column": 3, "offset": 419 },
+                      "end": { "line": 10, "column": 37, "offset": 453 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 10, "column": 3, "offset": 419 },
+                  "end": { "line": 10, "column": 37, "offset": 453 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 417 },
+              "end": { "line": 10, "column": 37, "offset": 453 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Kernels can start new kernels",
+                    "position": {
+                      "start": { "line": 11, "column": 3, "offset": 456 },
+                      "end": { "line": 11, "column": 32, "offset": 485 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 11, "column": 3, "offset": 456 },
+                  "end": { "line": 11, "column": 32, "offset": 485 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 11, "column": 1, "offset": 454 },
+              "end": { "line": 11, "column": 32, "offset": 485 },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Streams can spawn new streams.",
+                    "position": {
+                      "start": { "line": 12, "column": 3, "offset": 488 },
+                      "end": { "line": 12, "column": 33, "offset": 518 },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 12, "column": 3, "offset": 488 },
+                  "end": { "line": 12, "column": 33, "offset": 518 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 12, "column": 1, "offset": 486 },
+              "end": { "line": 12, "column": 33, "offset": 518 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 9, "column": 1, "offset": 355 },
+          "end": { "line": 12, "column": 33, "offset": 518 },
+          "indent": [1, 1, 1]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "title": null,
+            "url": "./kepler.png",
+            "children": [
+              {
+                "type": "text",
+                "value": "!kepler",
+                "position": {
+                  "start": { "line": 14, "column": 2, "offset": 521 },
+                  "end": { "line": 14, "column": 9, "offset": 528 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 520 },
+              "end": { "line": 14, "column": 24, "offset": 543 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 520 },
+          "end": { "line": 14, "column": 24, "offset": 543 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 14, "column": 24, "offset": 543 }
+    }
+  }
+}

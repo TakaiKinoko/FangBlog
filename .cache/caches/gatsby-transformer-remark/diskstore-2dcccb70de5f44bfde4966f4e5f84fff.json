@@ -1,0 +1,81 @@
+{
+  "expireTime": 9007200830836268000,
+  "key": "transformer-remark-markdown-ast-3c084518b85ce6cb66da5741dc65dcc6-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In the fifth post of the CUDA series (",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 39, "offset": 39 },
+              "indent": []
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/cuda5-coalesce",
+            "children": [
+              {
+                "type": "text",
+                "value": "The CUDA Parallel Programming Model - 5. Memory Coalescing",
+                "position": {
+                  "start": { "line": 2, "column": 40, "offset": 40 },
+                  "end": { "line": 2, "column": 98, "offset": 98 },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 2, "column": 39, "offset": 39 },
+              "end": { "line": 2, "column": 116, "offset": 116 },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": "), I put up a note on the effect of memory alignment on memory coalesce. Here I feel necessary to add a little bit more. ",
+            "position": {
+              "start": { "line": 2, "column": 116, "offset": 116 },
+              "end": { "line": 2, "column": 237, "offset": 237 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 237, "offset": 237 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Memory access on the GPU works much better if the data items are aligned. ",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 239 },
+              "end": { "line": 4, "column": 75, "offset": 313 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 239 },
+          "end": { "line": 4, "column": 75, "offset": 313 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 5, "column": 1, "offset": 314 }
+    }
+  }
+}

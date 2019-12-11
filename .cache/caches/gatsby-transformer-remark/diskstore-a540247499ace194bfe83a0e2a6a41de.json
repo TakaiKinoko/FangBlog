@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830836454000,
+  "key": "transformer-remark-markdown-html-15692339fa3a177240144fe3e46ae5a7-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<p>In the fifth post of the CUDA series (<a href=\"/cuda5-coalesce\">The CUDA Parallel Programming Model - 5. Memory Coalescing</a>), I put up a note on the effect of memory alignment on memory coalesce. Here I feel necessary to add a little bit more. </p>\n<p>Memory access on the GPU works much better if the data items are aligned. Hence, allocating 2D or 3D arrays so that every row starts at a 64-byte or 128-byte boundary address will imporve performance. However, this is hard to do for programmers.</p>\n<p>Don’t worry, CUDA offers special memory operations that take care of alignment for us. </p>\n<h2>cudaMallocPitch()</h2>\n<p>Memory allocation of 2D arrays using this function will pad every row if necessary. The function determines the best pitch</p>\n<h2>cudaMemcpy2D()</h2>"
+}

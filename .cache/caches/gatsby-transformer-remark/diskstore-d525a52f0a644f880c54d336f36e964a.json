@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830838644000,
+  "key": "transformer-remark-markdown-html-720c1912412e84efac7d712fb407ab10-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<p>Without dynamic parallelism, GPU is unable to create more work on itself dynamically depending on the data. Consequently data travels back and forth between the CPU and GPU many times. This was the case in older generations e.g. Fermi, see picture below:</p>\n<p><img src=\"./fermi\" alt=\"fermi\"></p>"
+}

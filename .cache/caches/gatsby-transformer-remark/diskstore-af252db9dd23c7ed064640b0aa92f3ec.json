@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007200830836340000,
+  "key": "transformer-remark-markdown-html-996f5f58d68563f0f4b3994da03003ec-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": "<p>In the fifth post of the CUDA series (<a href=\"/cuda5-coalesce\">The CUDA Parallel Programming Model - 5. Memory Coalescing</a>), I put up a note on the effect of memory alignment on memory coalesce. Here I feel necessary to add a little bit more. </p>\n<p>Memory access on the GPU works much better if the data items are aligned. Hence, allocating 2D or 3D arrays so that every row starts at a 64-byte or 128-byte boundary address will imporve performance. However, this is hard to do for programmers.</p>"
+}

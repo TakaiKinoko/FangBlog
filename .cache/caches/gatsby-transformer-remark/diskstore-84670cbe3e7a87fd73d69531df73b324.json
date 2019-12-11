@@ -1,0 +1,809 @@
+{
+  "expireTime": 9007200830838149000,
+  "key": "transformer-remark-markdown-html-ast-af6282f69fd0a972d548c989036416c8-gatsby-remark-imagesgatsby-remark-responsive-iframegatsby-remark-prismjsgatsby-remark-copy-linked-filesgatsby-remark-smartypantsgatsby-remark-reading-time-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Unified Virtual Address Space (UVA)",
+            "position": {
+              "start": { "line": 2, "column": 4, "offset": 4 },
+              "end": { "line": 2, "column": 39, "offset": 39 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 39, "offset": 39 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "From CUDA 4.0 and on, UVA has been an important feature. It",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 41 },
+              "end": { "line": 4, "column": 60, "offset": 100 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 41 },
+          "end": { "line": 4, "column": 60, "offset": 100 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "puts all CUDA execution, host and GPUs, in the same address space",
+                "position": {
+                  "start": { "line": 5, "column": 3, "offset": 103 },
+                  "end": { "line": 5, "column": 68, "offset": 168 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 5, "column": 1, "offset": 101 },
+              "end": { "line": 5, "column": 68, "offset": 168 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Requires Fermi-class GPU and above",
+                "position": {
+                  "start": { "line": 6, "column": 3, "offset": 171 },
+                  "end": { "line": 6, "column": 37, "offset": 205 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 6, "column": 1, "offset": 169 },
+              "end": { "line": 6, "column": 37, "offset": 205 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Requires 64-bit application",
+                "position": {
+                  "start": { "line": 7, "column": 3, "offset": 208 },
+                  "end": { "line": 7, "column": 30, "offset": 235 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 7, "column": 1, "offset": 206 },
+              "end": { "line": 7, "column": 30, "offset": 235 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Call ",
+                "position": {
+                  "start": { "line": 8, "column": 3, "offset": 238 },
+                  "end": { "line": 8, "column": 8, "offset": 243 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">cudaGetDeviceProperties()</code>",
+                "position": {
+                  "start": { "line": 8, "column": 8, "offset": 243 },
+                  "end": { "line": 8, "column": 35, "offset": 270 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " for all participating devices and check ",
+                "position": {
+                  "start": { "line": 8, "column": 35, "offset": 270 },
+                  "end": { "line": 8, "column": 76, "offset": 311 }
+                }
+              },
+              {
+                "type": "raw",
+                "value": "<code class=\"language-text\">unifiedAddressing</code>",
+                "position": {
+                  "start": { "line": 8, "column": 76, "offset": 311 },
+                  "end": { "line": 8, "column": 95, "offset": 330 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " flag",
+                "position": {
+                  "start": { "line": 8, "column": 95, "offset": 330 },
+                  "end": { "line": 8, "column": 100, "offset": 335 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 8, "column": 1, "offset": 236 },
+              "end": { "line": 8, "column": 100, "offset": 335 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 5, "column": 1, "offset": 101 },
+          "end": { "line": 8, "column": 100, "offset": 335 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<figure class=\"gatsby-resp-image-figure\" style=\"\">\n    <span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/716ff7cbec1625aebc2078e7c552f7a4/d4c84/uva.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 53.36481700118064%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACjklEQVQoz1WSzU8TYRDGty20XbbsLsu23e1+dLctsdCCRQ0BkaC2ioIgKBoVMH5BCCdNIMbEiCbIxYMHNSZ+HPyKMYaLdy8m/l0/t1sFOUzmmbwzzzvPzAiCIPDPIpFI6NsSEbIFiYzfQbct0u2IaJZIV04kW5TQnQ50VyKZiv2t2+MQ/idsWsZU6alY+H1Z+oddKkcsyrUctZECh0aLVIccBoY9KoEv12wMS9tXL0iShGmaZDKZ0DuujefnMbJGEBtBbNGtdRGLxVC7ZBzHJpdr5jkBtsh7DpqmhfWJRAJBVVUs20FPpykUCnheHssKOvR9DMMIYo90OhP+LopimKfpaYqlUvih67rkLBO/4JFKpVqSNbkTz8y2JOsGKUkOsWXmg/lEW3P6K8k2stha691zeohHRaJCO07O25vhyYXbXHn8HEVWuLcZ4FszgRyXrZf3GG8Mtwij0ZB05s4a9UevObO2yPrTS9y+P83NjUnWt29Q6ikgRJtJ649Z/fqTtJbm1bcnbGytUOnrZ+f3Cy5fn2kRBjOMBX7q7kPG3vxi9e02zz7d5OnHVbY/L/Pi+wNqg7VWh37eonFiNCw83jhK9eCBEE9fmMC0MvtOqtJb4uhQjVjQ8bnZ0+FSFEVl8nwdKSUiJOMC41Ob1Od3KPZajM/lGZl0sQci1C/20jeq7p5Ep9TOxOV3nJr/gNUTpzFfpjqq4w8mmFrsx691IIjJCLNXt1hY/UF5wKdxzWdsNk/xsMjUUh9DZ3K7i1HkJFeX37Ow8oVSVeXsUplDdZPeEYW5lQGqx3SEtrZ2cqZOwTeQZRnT6SZtqIEMBdPVyPs2YlIMCdvjcWxLx3UypDo7w3dNV5CVJu4Kzs/kD/8hOeOAj+GnAAAAAElFTkSuQmCC'); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"uva\"\n        title=\"uva\"\n        src=\"/static/716ff7cbec1625aebc2078e7c552f7a4/799d3/uva.png\"\n        srcset=\"/static/716ff7cbec1625aebc2078e7c552f7a4/00d96/uva.png 148w,\n/static/716ff7cbec1625aebc2078e7c552f7a4/0b23c/uva.png 295w,\n/static/716ff7cbec1625aebc2078e7c552f7a4/799d3/uva.png 590w,\n/static/716ff7cbec1625aebc2078e7c552f7a4/2a3d6/uva.png 885w,\n/static/716ff7cbec1625aebc2078e7c552f7a4/ae92f/uva.png 1180w,\n/static/716ff7cbec1625aebc2078e7c552f7a4/d4c84/uva.png 1694w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>\n    <figcaption class=\"gatsby-resp-image-figcaption\">uva</figcaption>\n  </figure>",
+            "position": {
+              "start": { "line": 10, "column": 1, "offset": 337 },
+              "end": { "line": 10, "column": 18, "offset": 354 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 10, "column": 1, "offset": 337 },
+          "end": { "line": 10, "column": 18, "offset": 354 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "easier memory access with UVA",
+            "position": {
+              "start": { "line": 12, "column": 5, "offset": 360 },
+              "end": { "line": 12, "column": 34, "offset": 389 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 12, "column": 1, "offset": 356 },
+          "end": { "line": 12, "column": 34, "offset": 389 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Zero-copy",
+            "position": {
+              "start": { "line": 13, "column": 1, "offset": 390 },
+              "end": { "line": 13, "column": 10, "offset": 399 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 13, "column": 1, "offset": 390 },
+          "end": { "line": 13, "column": 10, "offset": 399 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "UVA provides a ",
+                "position": {
+                  "start": { "line": 14, "column": 3, "offset": 402 },
+                  "end": { "line": 14, "column": 18, "offset": 417 }
+                }
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "single virtual memory address space",
+                    "position": {
+                      "start": { "line": 14, "column": 20, "offset": 419 },
+                      "end": { "line": 14, "column": 55, "offset": 454 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 14, "column": 18, "offset": 417 },
+                  "end": { "line": 14, "column": 57, "offset": 456 }
+                }
+              },
+              {
+                "type": "text",
+                "value": " for all memory in the system, and enables pointers to be accessed from GPU code no matter where in the system they reside.",
+                "position": {
+                  "start": { "line": 14, "column": 57, "offset": 456 },
+                  "end": { "line": 14, "column": 180, "offset": 579 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 14, "column": 1, "offset": 400 },
+              "end": { "line": 15, "column": 1, "offset": 580 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Pointers returned by cudaHostAlloc() can be used directly from within kernels running on UVA enabled devices\n– Data cache in L2 of target device.",
+                "position": {
+                  "start": { "line": 16, "column": 4, "offset": 584 },
+                  "end": { "line": 17, "column": 41, "offset": 734 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 16, "column": 1, "offset": 581 },
+              "end": { "line": 17, "column": 41, "offset": 734 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 14, "column": 1, "offset": 400 },
+          "end": { "line": 17, "column": 41, "offset": 734 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "easier memory copy with UVA",
+            "position": {
+              "start": { "line": 19, "column": 5, "offset": 740 },
+              "end": { "line": 19, "column": 32, "offset": 767 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 19, "column": 1, "offset": 736 },
+          "end": { "line": 19, "column": 32, "offset": 767 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "between host and multiple devices",
+            "position": {
+              "start": { "line": 21, "column": 6, "offset": 774 },
+              "end": { "line": 21, "column": 39, "offset": 807 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 21, "column": 1, "offset": 769 },
+          "end": { "line": 21, "column": 39, "offset": 807 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\"><span class=\"token function\">cudaMemcpy</span><span class=\"token punctuation\">(</span>gpu0_buf<span class=\"token punctuation\">,</span> host_buf<span class=\"token punctuation\">,</span> buf_size<span class=\"token punctuation\">,</span> cudaMemcpyDefault<span class=\"token punctuation\">)</span>\n<span class=\"token function\">cudaMemcpy</span><span class=\"token punctuation\">(</span>gpu1_buf<span class=\"token punctuation\">,</span> host_buf<span class=\"token punctuation\">,</span> buf_size<span class=\"token punctuation\">,</span> cudaMemcpyDefault<span class=\"token punctuation\">)</span>\n<span class=\"token function\">cudaMemcpy</span><span class=\"token punctuation\">(</span>host_buf<span class=\"token punctuation\">,</span> gpu0_buf<span class=\"token punctuation\">,</span> buf_size<span class=\"token punctuation\">,</span> cudaMemcpyDefault<span class=\"token punctuation\">)</span>\n<span class=\"token function\">cudaMemcpy</span><span class=\"token punctuation\">(</span>host_buf<span class=\"token punctuation\">,</span> gpu1_buf<span class=\"token punctuation\">,</span> buf_size<span class=\"token punctuation\">,</span> cudaMemcpyDefault<span class=\"token punctuation\">)</span></code></pre></div>",
+        "position": {
+          "start": { "line": 22, "column": 1, "offset": 808 },
+          "end": { "line": 27, "column": 4, "offset": 1056 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "between two devices:",
+            "position": {
+              "start": { "line": 29, "column": 6, "offset": 1063 },
+              "end": { "line": 29, "column": 26, "offset": 1083 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 29, "column": 1, "offset": 1058 },
+          "end": { "line": 29, "column": 26, "offset": 1083 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\"><span class=\"token function\">cudaMemcpy</span><span class=\"token punctuation\">(</span>gpu0_buf<span class=\"token punctuation\">,</span> gpu1_buf<span class=\"token punctuation\">,</span> buf_size<span class=\"token punctuation\">,</span> cudaMemcpyDefault<span class=\"token punctuation\">)</span></code></pre></div>",
+        "position": {
+          "start": { "line": 30, "column": 1, "offset": 1084 },
+          "end": { "line": 32, "column": 4, "offset": 1152 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "cudaMemcpy() knows that our buffers are on different devices.",
+            "position": {
+              "start": { "line": 33, "column": 1, "offset": 1153 },
+              "end": { "line": 33, "column": 62, "offset": 1214 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 33, "column": 1, "offset": 1153 },
+          "end": { "line": 33, "column": 62, "offset": 1214 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h2",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Unified Memory",
+            "position": {
+              "start": { "line": 35, "column": 4, "offset": 1219 },
+              "end": { "line": 35, "column": 18, "offset": 1233 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 35, "column": 1, "offset": 1216 },
+          "end": { "line": 35, "column": 19, "offset": 1234 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Available for CUDA 6.0 and up.",
+            "position": {
+              "start": { "line": 37, "column": 1, "offset": 1236 },
+              "end": { "line": 37, "column": 31, "offset": 1266 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 37, "column": 1, "offset": 1236 },
+          "end": { "line": 37, "column": 31, "offset": 1266 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "raw",
+            "value": "<figure class=\"gatsby-resp-image-figure\" style=\"\">\n    <span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;\"\n    >\n      <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/880600ba85b509ae39620a262a6d5a22/c9629/unifiedMem.png\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n    <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 64.60905349794238%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACxElEQVQ4y62SaUhUURTHX30riMC+FEUrVBRKEBQIERVIywcJigiKINujQinJ1GxxVKyxpJo0l7TNFM1MHU2n3FPTNGksc8GFlrEsMY1p5r13f93xVVafPXC4/3vOuf97zp+jIE0IME6BrhtY1wVOp5HQNIHL5cG/Cv8zIcbiyhihQFWh1S4otgpKHwtycwTVlYLaZ4L8PEFqssBaIHhSKqgoF9hKBP0O8Q+p4gG/3UM6MCDo6xM4PsrifkFHu3Ef/Grg162C7m5Bj/SODsHQkPHO89zDoTBu9leHulDRdPfoqUsRVc2Nqv/GKm7NJe8ypun8cBuuenRVJVb10bgxpSRU9R+kvfAntnIhGS07qOu7wcWqJcRVe9P2uYj8N0FEPp3LnZdrSalvZWlMC4tMjVyueM/6BDvzzzewN7Pjj46KSxshqnwOwUUTJIkPhW3Bo/i4VaGqy0Jyw0aCCj05L0KttUwMrEc5WsHh7E5mRTxHOVbFirhmySYn8hBqskNLnS+hxZNIaVxPdU8cp0umctbmhd2RQ27rPkKKJpPauAxLjZ3pYU14hdQSbXsniVqYEvyMbWltY2vjkhoNOQext7/ky/AATs1JW89ruj90Mez6zjfXCE1vmnAMOhh2u+jt/yTzvTh1jY9fB0fxiNsttXRLrTWUtIYyTLZcThVmcORhKrszr7El3cyGpEhWW8JZfvkEi2OO4mMOwvdqCH6JEWxOi2ZnRjyHchI5UZDOudIszJV5PH7bhBJb9ogD2YnsuBfPppQoVl0Nw9scyOzIvSyIOshc036mhe1k5rkA5pkOMONsAItij7Ay/iR+N86z5baZPZkWjhfcJKulCuV+cw2XKvKJsuVwynqXY7LLgCwL22Whf2o06xIi8L0Swprr4fJDE1vTL7Dr/hUOP0giuOAWZ0qyuFieR0JtMeWdr8ZzsQ37Cav0Y2imXCJXAAAAAElFTkSuQmCC'); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"unified memory\"\n        title=\"unified memory\"\n        src=\"/static/880600ba85b509ae39620a262a6d5a22/799d3/unifiedMem.png\"\n        srcset=\"/static/880600ba85b509ae39620a262a6d5a22/00d96/unifiedMem.png 148w,\n/static/880600ba85b509ae39620a262a6d5a22/0b23c/unifiedMem.png 295w,\n/static/880600ba85b509ae39620a262a6d5a22/799d3/unifiedMem.png 590w,\n/static/880600ba85b509ae39620a262a6d5a22/2a3d6/unifiedMem.png 885w,\n/static/880600ba85b509ae39620a262a6d5a22/ae92f/unifiedMem.png 1180w,\n/static/880600ba85b509ae39620a262a6d5a22/c9629/unifiedMem.png 1458w\"\n        sizes=\"(max-width: 590px) 100vw, 590px\"\n        loading=\"lazy\"\n      />\n  </a>\n    </span>\n    <figcaption class=\"gatsby-resp-image-figcaption\">unified memory</figcaption>\n  </figure>",
+            "position": {
+              "start": { "line": 39, "column": 1, "offset": 1268 },
+              "end": { "line": 39, "column": 36, "offset": 1303 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 39, "column": 1, "offset": 1268 },
+          "end": { "line": 39, "column": 36, "offset": 1303 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Creates a pool of managed memory that is shared between the CPU and GPU.",
+            "position": {
+              "start": { "line": 41, "column": 1, "offset": 1305 },
+              "end": { "line": 41, "column": 73, "offset": 1377 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 41, "column": 1, "offset": 1305 },
+          "end": { "line": 41, "column": 73, "offset": 1377 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Managed memory is accessible to CPU and GPU with single pointers.",
+                "position": {
+                  "start": { "line": 42, "column": 3, "offset": 1380 },
+                  "end": { "line": 42, "column": 68, "offset": 1445 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 42, "column": 1, "offset": 1378 },
+              "end": { "line": 42, "column": 68, "offset": 1445 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "p",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Under the hood: data (granularity = pages) automatically migrates from CPU to GPU and among GPUs. ",
+                    "position": {
+                      "start": { "line": 43, "column": 3, "offset": 1448 },
+                      "end": { "line": 43, "column": 101, "offset": 1546 }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": { "line": 43, "column": 3, "offset": 1448 },
+                  "end": { "line": 43, "column": 101, "offset": 1546 }
+                }
+              },
+              { "type": "text", "value": "\n" },
+              {
+                "type": "element",
+                "tagName": "ul",
+                "properties": {},
+                "children": [
+                  { "type": "text", "value": "\n" },
+                  {
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Pascal GPU architecture is the first with hardware support for virtual memory page faulting and migration.",
+                        "position": {
+                          "start": { "line": 44, "column": 7, "offset": 1553 },
+                          "end": { "line": 44, "column": 113, "offset": 1659 }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": { "line": 44, "column": 5, "offset": 1551 },
+                      "end": { "line": 44, "column": 113, "offset": 1659 }
+                    }
+                  },
+                  { "type": "text", "value": "\n" }
+                ],
+                "position": {
+                  "start": { "line": 44, "column": 5, "offset": 1551 },
+                  "end": { "line": 44, "column": 113, "offset": 1659 }
+                }
+              },
+              { "type": "text", "value": "\n" }
+            ],
+            "position": {
+              "start": { "line": 43, "column": 1, "offset": 1446 },
+              "end": { "line": 44, "column": 113, "offset": 1659 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 42, "column": 1, "offset": 1378 },
+          "end": { "line": 44, "column": 113, "offset": 1659 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "usage",
+            "position": {
+              "start": { "line": 46, "column": 5, "offset": 1665 },
+              "end": { "line": 46, "column": 10, "offset": 1670 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 46, "column": 1, "offset": 1661 },
+          "end": { "line": 46, "column": 10, "offset": 1670 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "raw",
+        "value": "<div class=\"gatsby-highlight\" data-language=\"c\"><pre class=\"language-c\"><code class=\"language-c\">cudaError_t <span class=\"token function\">cudaMallocManaged</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">void</span><span class=\"token operator\">*</span><span class=\"token operator\">*</span> ptr<span class=\"token punctuation\">,</span> size_t size<span class=\"token punctuation\">)</span></code></pre></div>",
+        "position": {
+          "start": { "line": 48, "column": 1, "offset": 1672 },
+          "end": { "line": 50, "column": 4, "offset": 1735 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "ptr can be used by any GPU and CPU in the system.",
+            "position": {
+              "start": { "line": 51, "column": 1, "offset": 1736 },
+              "end": { "line": 51, "column": 50, "offset": 1785 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 51, "column": 1, "offset": 1736 },
+          "end": { "line": 51, "column": 50, "offset": 1785 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h4",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Pascal GPU:",
+            "position": {
+              "start": { "line": 53, "column": 6, "offset": 1792 },
+              "end": { "line": 53, "column": 17, "offset": 1803 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 53, "column": 1, "offset": 1787 },
+          "end": { "line": 53, "column": 18, "offset": 1804 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Pages may not be created until they are accessed by the GPU or the CPU. ",
+                "position": {
+                  "start": { "line": 54, "column": 3, "offset": 1807 },
+                  "end": { "line": 54, "column": 75, "offset": 1879 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 54, "column": 1, "offset": 1805 },
+              "end": { "line": 54, "column": 75, "offset": 1879 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Pages automatically migrate to the device (or host) that access them.\n• Pre-PASCAL (i.e. Kepler and Maxwell): – With single GPU, data will be allocated on the GPU device that is active when the call is made. – On multi-GPU systems, if some of the GPUs have peer-to-peer access disabled, the memory will be allocated so it is initially resident on the CPU.",
+                "position": {
+                  "start": { "line": 55, "column": 3, "offset": 1882 },
+                  "end": { "line": 56, "column": 286, "offset": 2237 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 55, "column": 1, "offset": 1880 },
+              "end": { "line": 56, "column": 286, "offset": 2237 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 54, "column": 1, "offset": 1805 },
+          "end": { "line": 56, "column": 286, "offset": 2237 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "h3",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "difference between UVA and unified memory",
+            "position": {
+              "start": { "line": 58, "column": 5, "offset": 2243 },
+              "end": { "line": 58, "column": 46, "offset": 2284 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 58, "column": 1, "offset": 2239 },
+          "end": { "line": 58, "column": 46, "offset": 2284 }
+        }
+      },
+      { "type": "text", "value": "\n" },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {},
+        "children": [
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Unified memory depends on UVA.",
+                "position": {
+                  "start": { "line": 59, "column": 3, "offset": 2287 },
+                  "end": { "line": 59, "column": 33, "offset": 2317 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 59, "column": 1, "offset": 2285 },
+              "end": { "line": 59, "column": 33, "offset": 2317 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "UVA does NOT move data automatically between CPU and GPU.",
+                "position": {
+                  "start": { "line": 60, "column": 3, "offset": 2320 },
+                  "end": { "line": 60, "column": 60, "offset": 2377 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 60, "column": 1, "offset": 2318 },
+              "end": { "line": 60, "column": 60, "offset": 2377 }
+            }
+          },
+          { "type": "text", "value": "\n" },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Unified memory gives higher performance than UVA.",
+                "position": {
+                  "start": { "line": 61, "column": 3, "offset": 2380 },
+                  "end": { "line": 61, "column": 52, "offset": 2429 }
+                }
+              }
+            ],
+            "position": {
+              "start": { "line": 61, "column": 1, "offset": 2378 },
+              "end": { "line": 61, "column": 52, "offset": 2429 }
+            }
+          },
+          { "type": "text", "value": "\n" }
+        ],
+        "position": {
+          "start": { "line": 59, "column": 1, "offset": 2285 },
+          "end": { "line": 61, "column": 52, "offset": 2429 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 61, "column": 52, "offset": 2429 }
+    }
+  }
+}
