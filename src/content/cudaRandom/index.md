@@ -193,9 +193,32 @@ Shared memory benefits meny problems, but it's not appropriate for all problems.
 another picture showing the same architecture.
 ![another](./fermi.png)
 
-#### memory hierarchy without L1 or L2
+#### invisible cache
 
-![no cache](./memoryhierarchy.png)
+##### local memory
+
+“Local” because each thread has its own private area
+
+Details:
+
+- Not really a “memory” – bytes are stored in **global memory**
+- Differences from global memory:
+  • Addressing is resolved by the compiler
+  • Stores are **cached in L1**
+- Used if the source code exceeds register limit
+
+It could hurt performance in two ways:
+
+- Increased memory traffic
+- Increased instruction count
+
+But Spilling/Local Memory usage isn’t always bad:
+
+- Local memory bytes can get contained within L1
+  - Avoids memory traffic increase
+- Additional instructions don’t matter much if code is not instruction-throughput limited
+
+![invisible cache](./memoryhierarchy.png)
 
 #### NVIDIA unified memory
 

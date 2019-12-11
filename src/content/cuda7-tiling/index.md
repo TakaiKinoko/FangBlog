@@ -7,7 +7,7 @@ There's an intrinsic tradeoff in the use of device memories in CUDA: the **globa
 
 (To recap on the memory hierarchy: [The CUDA Parallel Programming Model - 1. Concepts](/cuda1), on how to specify memories for variables: [CUDA Programming - 2. CUDA Variable Type Qualifiers](/cudaProg2-Variables).)
 
-A common strategy to reduce memory traffic is to partition the **data** into subsets called **tiles** so that **each tile fits into the shared memory**. An important criterion is that kernel computation on these tiles can be performed independently of each other. Note that **not** all data structures can be partitioned into tiles given an arbitrary kernel function.
+A common strategy to **reduce memory traffic** is to partition the data into subsets called **tiles** so that **each tile fits into the shared memory**. Tiling can also come in handy when the data is too big that to fit in the global memory. An important criterion is that kernel computation on these tiles can be performed independently of each other. Note that **not** all data structures can be partitioned into tiles given an arbitrary kernel function.
 
 The term “tile” draws on the analogy that a large wall (i.e., the global memory data) can be covered by tiles (i.e., subsets that each can fit into the shared memory).
 
